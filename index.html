@@ -1,11 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./estilos.css">
 </head>
 <body>
-    <h1>Prueba</h1>
+    <header>
+        <nav class="navprimario">
+                <div class="navprimario__menu-items">
+                    <div class="navprimario__menu-items-logo">
+                        <a class="navprimario__menu-logo" href="#" >
+                            <h2>Logo</h2>
+                            <img src="" alt="">
+                        </a>
+                    </div>
+
+                        <div class="navprimario__menu-items-buscador" >
+                            <input class="navprimario__menu-items-buscador-input" type="text" placeholder="Buscar">
+                            <button class="navprimario__menu-items-buscador-button" type="submit" >
+                                <img class="navprimario__menu-items-buscador-button-img" src="./assets/lupa.png" alt="Bus">
+                            </button>
+                        </div>
+
+                        <div class="navprimario__menu-items-carrito">
+                            <a class="navprimario__menu-items-carrito-link" href="#">
+                                <img class="navprimario__menu-items-carrito-img"src="./assets/carrito.png" alt="Carrito de compras">
+                            </a>
+                        </div>
+                    </ul>
+            </div>
+        </nav>
+
+        <nav class="navsecundario">
+            <ul class="navsecundario__menu">
+                <li class="navsecundario__menu-item">
+                    <a class="navsecundario__menu-item-link" href="#">Cursos</a>
+                </li>
+
+                <li class="navsecundario__menu-item">
+                    <a class="navsecundario__menu-item-link" href="#">Cursos</a>
+                </li>
+
+                <li class="navsecundario__menu-item">
+                    <a class="navsecundario__menu-item-link" href="#">Cursos</a>
+                </li>
+                <li class="navsecundario__menu-item">
+                    <a class="navsecundario__menu-item-link" href="#">Cursos</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <section class="section-imagenprincipal">
+            <img class="section-imagenprincipal-imagen-principal" src="./assets/imagen-principal.png" alt="Imagen principal">
+            <div class="section-imagenprincipal-flecha">
+
+                <a class="section-imagenprincipal-flecha-link" href="#">
+                    <img class="section-imagenprincipal-flecha-izquierda" src="./assets/flecha-izquierda.png" alt="">
+                </a>
+
+                <a class="section-imagenprincipal-flecha-link" href="#">
+                    <img class="section-imagenprincipal-flecha-derecha" src="./assets/flecha-derecha.png" alt="">
+                </a>
+            </div>
+        </section>
+        <section class="section-pasos" >
+            <h1 class="section-pasos-titulo" >pasos a seguir</h1>
+
+            <div class="section-pasos-recuadros">
+                <div class="section-pasos-recuadros-tarjeta">
+                    <h2 class="section-pasos-recuadros-tarjeta-titulo">
+                        primer paso
+                    </h2>
+                </div>
+
+                <div class="section-pasos-recuadros-tarjeta">
+                    <h2 class="section-pasos-recuadros-tarjeta-titulo">
+                        segundo paso
+                    </h2>
+                </div>
+
+                <div class="section-pasos-recuadros-tarjeta">
+                    <h2 class="section-pasos-recuadros-tarjeta-titulo">
+                        tercero paso
+                    </h2>
+                </div>
+
+                <div class="section-pasos-recuadros-tarjeta">
+                    <h2 class="section-pasos-recuadros-tarjeta-titulo">
+                        cuarto paso
+                    </h2>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
 </body>
 </html>
