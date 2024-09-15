@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+body {
+    background-color: rgb(39, 39, 39);
+    color: white;
+    width: 100%;
+}
+
+
+.titulo{
+    color: rgb(45, 86, 161);
+    font-weight: bolder;
+    font-size: 1.9em;
+    margin-bottom: 3%;
+}
+
+.subtitulos{
+    font-size: 1.6em;
+    font-weight: 300;
+    color: rgb(203, 214, 238);
+}
+
+.contenido{
+    margin-top:4% ;
+    display: flex;
+    gap: 10%;
+}
+
+
+.vista-previa-giftcard{
+    text-align: center;
+    margin-left: 13%;
+    margin-top: 5%;
+}
+
+.vista-previa-giftcard p {
+    margin-top: 15%;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+
+.giftcard-visualizacion {
+    width: 100%;
+    object-fit: contain; /* Mantiene la proporción dentro de su contenedor */
+}
+
+
+.personalizacion__nombres-del-destinatario {
+    width: 100%;
+    padding: 1%;
+}
+
+
+/*              Seleccionar el color               */
+.seleccionar-color {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8%;
+}
+
+.seleccionar-color__opciones {
+    display: flex;
+    gap: 6%;
+    margin-top: 4%;
+}
+
+.seleccionar-color__opciones__label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15%;
+}
+
+.circulo {
+    width: 55%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    margin-bottom: 5px;
+}
+
+
+/*              End Seleccionar el color               */
+
+
+
+/*             Seleccionar tamaño de la fuente        */
+
+.seleccionar-tamaño {
+    display: flex;
+    flex-direction: column;
+    margin-top: 8%;
+}
+
+.seleccionar-tamaño-opciones {
+    display: flex;
+    gap: 10%;
+    margin-top: 3%;
+    margin-left: 2.5%;
+}
+
+.seleccionar-tamaño-opciones__label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+}
+
+input[type="radio"] {
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+
+/*         End Seleccionar tamaño de la fuente              */
+
+.monto {
+    margin-top: 8%;
+    display: flex;
+    gap: 0.3%;
+}
+
+/*              Seleccionar el ubicacion del nombre                       */
+
+.imagen-de-la-ubicacion{
+    width: 75%;
+}
+
+.seleccionar-ubicacion{
+    margin-top: 8%;
+}
+
+.seleccionar-ubicacion__opciones{
+    display: flex;
+    margin-top: 3%;
+    gap: 10%;
+}
+
+.seleccionar-ubicacion__opciones__label{
+    display: flex;
+    align-items: center ;
+    flex-direction: column;
+}
+
+/*             End Seleccionar el ubicacion del nombre                       */
+
+
+/*              Seleccionar el fondo                       */
+
+.seleccionar-fondo {
+    margin-top: 8%;
+}
+
+.fondo {
+    width: 40px; 
+    height: 40px;
+    aspect-ratio: 1/1; /* Mantiene el cuadrado */
+    margin-bottom: 5%;
+}
+.seleccionar-fondo__opciones {
+    width: 100%;
+    margin-top: 3%;
+    display: flex;
+    gap: 10%;
+    margin-left: 3%;
+}
+
+.seleccionar-fondo__opciones__label{
+    display: flex;
+    flex-direction: column;
+}
+
+/*             End Seleccionar el fondo                       */
+
+
+
+.boton{
+    margin-top: 10%;
+}
+
+.boton__confirmar {
+    font-size: 1em;
+    font-weight: bold;
+    background-color:rgb(45, 86, 161);
+    width: 100%;
+    padding: 2.8%;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    border-radius: 30px;
+    cursor: pointer;
+}
