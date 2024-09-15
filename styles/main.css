@@ -1,46 +1,48 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-.section-imagenprincipal{
+.section-imagenprincipal {
     width: 100%;
     margin-bottom: -0.3%;
 
 }
 
 
-.section-imagenprincipal-imagen-principal{
+.section-imagenprincipal-imagen-principal {
     width: 100%;
 }
 
-.section-imagenprincipal-flecha{
+.section-imagenprincipal-flecha {
     display: flex;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
     padding: 1% 1%;
 
-    
+
 }
 
-.section-imagenprincipal-flecha-link{
+.section-imagenprincipal-flecha-link {
     display: flex;
     height: 20px;
 }
 
-.section-imagenprincipal-flecha-izquierda, .section-imagenprincipal-flecha-derecha{
+.section-imagenprincipal-flecha-izquierda,
+.section-imagenprincipal-flecha-derecha {
     width: 100%;
 }
 
 
 
-.section-pasos{
+.section-pasos {
     background-color: rgb(39, 39, 39);
     width: 100%;
-     padding-bottom: 3%;
+    padding-bottom: 3%;
 }
-.section-pasos-titulo{
+
+.section-pasos-titulo {
     color: white;
     text-transform: uppercase;
     font-size: 1.7em;
@@ -49,12 +51,13 @@
 }
 
 
-.section-pasos-recuadros{
+.section-pasos-recuadros {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-.section-pasos-recuadros-tarjeta{
+
+.section-pasos-recuadros-tarjeta {
     margin: 0% 1.8%;
     background-color: rgb(255, 255, 255);
     padding: 9% 4%;
@@ -62,7 +65,7 @@
     border-radius: 2px;
 }
 
-.section-pasos-recuadros-tarjeta-titulo{
+.section-pasos-recuadros-tarjeta-titulo {
     color: black;
     font-size: 0.8em;
     text-transform: uppercase;
@@ -70,3 +73,182 @@
     margin-block-start: 0px;
     /* ver esto de margin block */
 }
+
+/*Cursos destacados*/
+
+.fuente{
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+
+.main-subtitulo {
+    background-color: rgb(39, 39, 39);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
+    width: 100%;
+    padding-bottom: 3%;
+    padding-top: 3%;
+    text-align: center;
+    font-size: 1em;
+}
+
+.contenedor-tarjetas {
+    background-color: rgb(39, 39, 39);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 2em;
+
+}
+
+.tarjeta {
+    display: grid;
+    grid-template-areas: "img-precio img-precio"
+        "titulo titulo"
+        "horas modalidad"
+        "detalle detalle"
+        "comprar comprar";
+    background-color: rgb(255, 255, 255);
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    grid-row-gap: 0.5em;
+}
+
+.tarjeta__img-precio{
+    grid-area: img-precio;
+    position: relative;
+    text-align: center;
+    border-color: hwb(0 0% 100%);
+    border-style: solid;
+    margin: 0.5em;
+    min-height: 23em;
+    
+    
+}
+
+.tarjeta__imagen {
+    width: 90%;
+    margin: 0.5em;
+}
+
+.tarjeta__precio {
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    top: 80%;
+    left: 81.5%;
+    font-size: 1em;
+    padding: 0.5em;
+}
+
+.tarjeta__titulo {
+    grid-area: titulo;
+    font-size: 1.5em;
+    text-align: right;
+}
+
+.tarjeta__horas {
+    grid-area: horas;
+    text-align: center;
+    font-size: 1.2em;
+    position: relative;
+    top: 50%;
+}
+
+.tarjeta__modalidad {
+    grid-area: modalidad;
+    text-align: right;
+    font-size: 0.7em;
+    position: relative;
+    top: 50%;
+}
+
+.tarjeta__detalle {
+    grid-area: detalle;
+    text-align: right;
+}
+
+.tarjeta__comprar {
+    grid-area: comprar;
+    text-align: center;
+    padding: 1.5em;
+}
+
+.boton{
+    font-size: 0.8em;
+    padding: 1.5em;
+    text-decoration: none;
+    padding: 0.8em;
+    border-radius: 3em;
+}
+
+.boton--comprar{
+    background-color: rgb(45, 86, 161);
+    color: rgb(255, 255, 255);
+    border-color: rgb(0, 0, 0);
+}
+
+.boton--ver-detalle{
+    color: rgb(45, 86, 161);
+    font-weight: 700;
+}
+
+.contenedor-medios-de-pago{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: rgb(39, 39, 39);
+    padding-bottom: 1.5em;
+}
+
+.medio-de-pago{
+    width: 20%;
+    padding: 0.5em;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    color:rgb(255, 255, 255);
+}
+
+.footer__columna{
+    width: 33%;
+    text-align: center;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.footer__columna--titulo{
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+}
+
+.footer__columna--contenido{
+list-style-type: none;
+font-size: 0.8em;
+}
+
+.contenedor-redes-sociales{
+    display: flex;
+    justify-content: center;
+    margin-left: 1em;
+    margin-right: 1em;
+    
+}
+
+.icono-red-social{
+    width: 10%;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.menu--footer{
+text-decoration: none;
+color: rgb(255, 255, 255);
+}
+
