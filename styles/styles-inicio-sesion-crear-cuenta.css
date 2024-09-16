@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(39, 39, 39);
+    min-height: 27em;
+}
+
+.formulario {
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    box-shadow: 0 0 0.4em rgb(153, 151, 151);
+    border-radius: 2em;
+    background-image: url(../assets/fondo-form.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.formulario__titulo {
+    text-align: center;
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    color: rgb(255, 255, 255);
+}
+
+.formulario__label {
+    text-align: left;
+    font-size: 1.2em;
+    margin-top: 0.6em;
+    color: rgb(255, 255, 255);
+}
+
+.formulario__input {
+    padding: 0.5em;
+    border: 0.1em solid rgb(39, 39, 39);
+    border-radius: 0.7em;
+    background-color: rgb(204, 204, 204);
+    color: black;
+    font-size: 0.7em;
+}
+
+.formulario__olvido {
+    text-align: right;
+    font-size: 1em;
+    font-style: italic;
+    margin-bottom: 0.6em;
+    margin-top: 0.6em;
+    color: rgb(255, 255, 255);
+}
+
+.formulario__boton{
+    padding: 0.5em;
+    border: 0.1em solid rgb(39, 39, 39);
+    border-radius: 1.5em;
+    background-color: rgb(45, 86, 161);
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+.formulario__crear-cuenta{
+    text-align: center;
+    font-size: 1em;
+    margin-bottom: 0.6em;
+    margin-top: 0.6em;
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+}
+
+.link-crear-cuenta{
+text-decoration: none;
+color: rgb(255, 255, 255);
+font-weight: 700;
+}
+
+.formulario__msj{
+    text-align: center;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+}
+
+/*¿Podremos dejar esto en el header?*/
+.link-volver-atras{
+    display: block;
+    text-decoration: none;
+    font-style: italic;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    font-size: 0.9em;
+    text-align: left;
+    align-items: left;
+    background-color: rgb(39, 39, 39);
+    padding-left: 1em;
+}

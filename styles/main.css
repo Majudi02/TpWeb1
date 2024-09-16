@@ -111,6 +111,7 @@
     padding-left: 0.5em;
     padding-right: 0.5em;
     grid-row-gap: 0.5em;
+    box-shadow: 0 0 0.6em rgb(236, 234, 234);
 }
 
 .tarjeta__img-precio{
@@ -205,50 +206,5 @@
     padding: 0.5em;
 }
 
-.footer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    background-color: black;
-    color:rgb(255, 255, 255);
-}
 
-.footer__columna{
-    width: 33%;
-    text-align: center;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-
-.footer__columna--titulo{
-    font-size: 1em;
-    color: rgb(255, 255, 255);
-}
-
-.footer__columna--contenido{
-list-style-type: none;
-font-size: 0.8em;
-}
-
-.contenedor-redes-sociales{
-    display: flex;
-    justify-content: center;
-    margin-left: 1em;
-    margin-right: 1em;
-    
-}
-
-.icono-red-social{
-    width: 10%;
-    padding-left: 1em;
-    padding-right: 1em;
-}
-
-.menu--footer{
-text-decoration: none;
-color: rgb(255, 255, 255);
-}
 

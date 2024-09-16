@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear cuenta</title>
+    <link rel="stylesheet" href="../styles/header.css" />
+    <link rel="stylesheet" href="../styles/footer.css" />
+    <link rel="stylesheet" href="../styles/styles-carrito-compras.css" />
+    <link rel="stylesheet" href="../styles/styles-inicio-sesion-crear-cuenta.css" />
+</head>
+
+<body class="fuente">
+    <header>
+        <nav class="navprimario">
+            <div class="navprimario__menu-items">
+                <div class="navprimario__menu-items-logo">
+                    <a class="navprimario__menu-logo" href="../index.html">
+                        <img class="navprimario__menu-logo-img" src="../assets/logo.png" alt="logo">
+                    </a>
+                </div>
+
+                <div class="navprimario__menu-items-buscador">
+                    <input class="navprimario__menu-items-buscador-input" type="text" placeholder="Buscar">
+                    <button class="navprimario__menu-items-buscador-button" type="submit">
+                        <img class="navprimario__menu-items-buscador-button-img" src="../assets/lupa.png" alt="Buscar">
+                    </button>
+                </div>
+
+                <div class="navprimario__menu-items-carrito">
+                    <a class="navprimario__menu-items-carrito-link" href="../pages/carrito-compras.html">
+                        <img class="navprimario__menu-items-carrito-img" src="../assets/carrito.png"
+                            alt="Carrito de compras">
+                    </a>
+                </div>
+                </ul>
+            </div>
+        </nav>
+
+        <div></div>
+            <a class="link-volver-atras" href="./inicio-sesion.html">Volver atrás</a>
+        </div>
+
+    </header>
+
+    <main class="main">
+        <form class="formulario">
+            <h2 class="formulario__titulo">Crear nueva cuenta</h2>
+
+            <div>
+                <p class="formulario__msj">Por favor, complete la siguiente información:</p>
+            </div>
+
+            <label class="formulario__label" for="nombre">Nombre</label>
+            <input class="formulario__input" type="text" name="nombre" id="nombre" placeholder="Nombre" />
+
+            <label class="formulario__label" for="apellido">Apellido</label>
+            <input class="formulario__input" type="text" name="apellido" id="apellido" placeholder="Apellido" />
+
+            <label class="formulario__label" for="email">Correo electrónico</label>
+            <input class="formulario__input" type="email" name="email" id="email" placeholder="Correo electrónico" />
+
+            <label class="formulario__label" for="contraseña">Contraseña</label>
+            <input class="formulario__input" type="password" name="contraseña" id="contraseña"
+                placeholder="Contraseña" />
+
+            <input class="formulario__boton" type="submit" value="CREAR CUENTA" />
+
+        </form>
+    </main>
+
+    <footer class="footer fuente">
+        <div class="footer__columna">
+            <h2 class="footer__columna--titulo">Integrantes del grupo</h2>
+            <ul class="footer__columna--contenido">
+                <li>Aquino Camila</li>
+                <li>Di Nubila Mateo</li>
+                <li>Oddi Nicolas</li>
+                <li>Ortiz Franco</li>
+            </ul>
+        </div>
+
+        <div class="footer__columna">
+            <nav>
+                <ul class="footer__columna--contenido">
+                    <li><a class="menu--footer" href="#home">HOME</a></li>
+                    <li><a class="menu--footer" href="../pages/calendario.html">CALENDARIO</a></li>
+                    <li><a class="menu--footer" href="">GIFCARD</a></li> <!--Completar link-->
+                    <li><a class="menu--footer" href="">CONTACTO</a></li> <!--Completar link-->
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer__columna">
+            <div class="contenedor-redes-sociales">
+                <img class="icono-red-social" src="../assets/logo-fb.png" alt="logo-fb">
+                <!--completar vinculo externo-->
+                <img class="icono-red-social" src="../assets/logo-ig.png" alt="logo-ig">
+                <!--completar vinculo externo-->
+                <img class="icono-red-social" src="../assets/logo-tic-toc.png" alt="logo-tic-toc">
+                <!--completar vinculo externo-->
+            </div>
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
