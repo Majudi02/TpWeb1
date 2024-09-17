@@ -50,14 +50,7 @@
     font-size: 0.7em;
 }
 
-.formulario__olvido {
-    text-align: right;
-    font-size: 1em;
-    font-style: italic;
-    margin-bottom: 0.6em;
-    margin-top: 0.6em;
-    color: rgb(255, 255, 255);
-}
+
 
 .formulario__boton{
     padding: 0.5em;
