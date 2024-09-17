@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .section-imagenprincipal {
@@ -38,47 +39,56 @@
 
 .section-pasos {
     background-color: rgb(39, 39, 39);
-    width: 100%;
+    width: 80%;
     padding-bottom: 3%;
-}
-
-.section-pasos-titulo {
-    color: white;
-    text-transform: uppercase;
-    font-size: 1.4em;
-    text-align: center;
-    padding: 0.8%;
-}
+    padding-left: 10%;
+    padding-right: 10%;
+ }
 
 
 .section-pasos-recuadros {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 0.5em;
+    align-items: center;
+    justify-items: center;
+}
+
+/*.section-pasos-recuadros-tarjeta {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-}
+    align-items: center;
+    margin: 3%;
+    padding: 1%;
+}*/
 
-.section-pasos-recuadros-tarjeta {
-    margin: 0% 1.8%;
-    background-color: rgb(255, 255, 255);
-    padding: 9% 4%;
-    border-color: rgb(25, 25, 25);
-    border-radius: 2px;
-}
 
-.section-pasos-recuadros-tarjeta-titulo {
-    color: black;
-    font-size: 0.8em;
-    text-transform: uppercase;
+.section-pasos-recuadros--titulo{
+    display: block;
+    box-shadow: 0 0 0.4em rgb(153, 151, 151);
+    border-radius: 50%;
+    background-color: rgb(113, 122, 248);
+    padding: 0.4em;
     text-align: center;
-    margin-block-start: 0px;
-    /* ver esto de margin block */
+    font-size: 2.5em;
+    font-weight: 800;
+    color: rgb(0, 0, 0);
+    width: 1em;
+    height: 1em;
+}
+
+.section-pasos-recuadros--contenido {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-size: 1em;
+    text-align: center;
+    width: 60%;
+    text-transform: uppercase;
 }
 
 /*Cursos destacados*/
-
-.fuente{
-   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
 
 .main-subtitulo {
     background-color: rgb(39, 39, 39);
@@ -89,6 +99,7 @@
     padding-top: 3%;
     text-align: center;
     font-size: 1em;
+    text-transform: uppercase;
 }
 
 .contenedor-tarjetas {
@@ -96,8 +107,9 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 2em;
-
+    grid-gap: 2em 4em;
+    padding-left: 10em;
+    padding-right: 10em;
 }
 
 .tarjeta {
@@ -105,12 +117,14 @@
     grid-template-areas: "img-precio img-precio"
         "titulo titulo"
         "horas modalidad"
-        "detalle detalle"
+        "horas detalle"
         "comprar comprar";
     background-color: rgb(255, 255, 255);
     padding-left: 0.5em;
     padding-right: 0.5em;
-    grid-row-gap: 0.5em;
+    grid-row-gap: 0.2em;
+    align-items: center;
+    box-shadow: 0 0 0.3em rgb(255, 255, 255);
 }
 
 .tarjeta__img-precio{
@@ -119,8 +133,8 @@
     text-align: center;
     border-color: hwb(0 0% 100%);
     border-style: solid;
-    margin: 0.5em;
-    min-height: 23em;
+    margin: 0.2em;
+    min-height: 11em;
 
 
 }
@@ -134,15 +148,15 @@
     position: absolute;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-    top: 80%;
-    left: 81.5%;
+    top: 75%;
+    left: 73.5%;
     font-size: 1em;
     padding: 0.5em;
 }
 
 .tarjeta__titulo {
     grid-area: titulo;
-    font-size: 1.5em;
+    font-size: 1.3em;
     text-align: right;
 }
 
@@ -150,27 +164,24 @@
     grid-area: horas;
     text-align: center;
     font-size: 1.2em;
-    position: relative;
-    top: 50%;
 }
 
 .tarjeta__modalidad {
     grid-area: modalidad;
     text-align: right;
-    font-size: 0.7em;
-    position: relative;
-    top: 50%;
+    font-size: 0.8em;
 }
 
 .tarjeta__detalle {
     grid-area: detalle;
     text-align: right;
+    text-shadow: 0 0 1em rgb(17, 17, 17);
 }
 
 .tarjeta__comprar {
     grid-area: comprar;
     text-align: center;
-    padding: 1.5em;
+    padding: 1em;
 }
 
 .boton{
@@ -196,59 +207,17 @@
     display: flex;
     width: 100%;
     justify-content: center;
+    align-items: center;
     background-color: rgb(39, 39, 39);
     padding-bottom: 1.5em;
 }
 
 .medio-de-pago{
-    width: 20%;
+    width: 10%;
     padding: 0.5em;
 }
 
-.footer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    background-color: black;
-    color:rgb(255, 255, 255);
+.medio-de-pago--flecha{
+    width: 5%;
+    max-height: 3em;
 }
-
-.footer__columna{
-    width: 33%;
-    text-align: center;
-    padding-left: 2em;
-    padding-right: 2em;
-    padding-top: 1em;
-    padding-bottom: 1em;
-}
-
-.footer__columna--titulo{
-    font-size: 1em;
-    color: rgb(255, 255, 255);
-}
-
-.footer__columna--contenido{
-list-style-type: none;
-font-size: 0.8em;
-}
-
-.contenedor-redes-sociales{
-    display: flex;
-    justify-content: center;
-    margin-left: 1em;
-    margin-right: 1em;
-
-}
-
-.icono-red-social{
-    width: 10%;
-    padding-left: 1em;
-    padding-right: 1em;
-}
-
-.menu--footer{
-text-decoration: none;
-color: rgb(255, 255, 255);
-}
-

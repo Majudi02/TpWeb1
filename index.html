@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DevX</title>
     <!-- <link rel="stylesheet" href="./styles/estilos.css"> -->
     <link rel="stylesheet" href="./styles/footer.css">
     <link rel="stylesheet" href="./styles/header.css">
@@ -30,16 +30,17 @@
                     </button>
                 </div>
 
-                
+
 
                 <div class="navprimario__menu-items-carrito">
                     <div class="navprimario__menu-login">
-                        <a class="navprimario__menu-login-btn" href="#">Ingresar</a>
-                        <a class="navprimario__menu-login-btn" href="#">Registrarse</a>
+                        <a class="navprimario__menu-login-btn" href="./pages/inicio-sesion.html">INGRESAR</a>
+                        <a class="navprimario__menu-login-btn" href="./pages/crear-cuenta.html">REGISTRARSE</a>
                     </div>
                     <a class="navprimario__menu-items-carrito-link" href="../TpWeb1/pages/carrito-compras.html">
-                        <img class="navprimario__menu-items-carrito-img"src="./assets/carrito.png" alt="Carrito de compras">
-                     </a>
+                        <img class="navprimario__menu-items-carrito-img" src="./assets/carrito.png"
+                            alt="Carrito de compras">
+                    </a>
                 </div>
             </div>
         </nav>
@@ -61,6 +62,7 @@
         </nav>
 
     </header>
+   
     <main>
         <section class="section-imagenprincipal">
             <img class="section-imagenprincipal-imagen-principal" src="./assets/imagen-principal.png"
@@ -77,38 +79,35 @@
             </div> -->
         </section>
         <section class="section-pasos">
-            <h2 class="section-pasos-titulo">pasos a seguir</h2>
+            <div class="main-subtitulo">
+                <h2>pasos a seguir</h2>
+            </div>
 
             <div class="section-pasos-recuadros">
-                <div class="section-pasos-recuadros-tarjeta">
-                    <h3 class="section-pasos-recuadros-tarjeta-titulo">
-                        primer paso
-                    </h3>
-                </div>
+                <h3 class="section-pasos-recuadros--titulo">1</h3>
+                <h3 class="section-pasos-recuadros--titulo">2</h3>
+                <h3 class="section-pasos-recuadros--titulo">3</h3>
+                <h3 class="section-pasos-recuadros--titulo">4</h3>
 
-                <div class="section-pasos-recuadros-tarjeta">
-                    <h3 class="section-pasos-recuadros-tarjeta-titulo">
-                        segundo paso
-                    </h3>
-                </div>
+                <p class="section-pasos-recuadros--contenido">
+                    Creá tu cuenta y logueate
+                </p>
+                <p class="section-pasos-recuadros--contenido">
+                    Buscá el curso que más se adapte a vos o a tu empresa
+                </p>
+                <p class="section-pasos-recuadros--contenido">
+                    Pagá con el método que prefieras
+                </p>
+                <p class="section-pasos-recuadros--contenido">
+                    Comenzá a alcanzar tus objetivos
+                </p>
 
-                <div class="section-pasos-recuadros-tarjeta">
-                    <h3 class="section-pasos-recuadros-tarjeta-titulo">
-                        tercero paso
-                    </h3>
-                </div>
-
-                <div class="section-pasos-recuadros-tarjeta">
-                    <h3 class="section-pasos-recuadros-tarjeta-titulo">
-                        cuarto paso
-                    </h3>
-                </div>
             </div>
 
         </section>
 
 
-        <section class="fuente">
+        <section>
             <div class="main-subtitulo">
                 <h2>CURSOS DESTACADOS</h2>
             </div>
@@ -165,7 +164,7 @@
                 <article class="tarjeta"> <!--Tarjeta individual-->
                     <div class="tarjeta__img-precio">
                         <img src="./assets/r-studio.png" alt="logo-r-studio" class="tarjeta__imagen" />
-                        <!--<h3 class="tarjeta__precio">U$D 30</h3>-->
+                        <h3 class="tarjeta__precio">U$D 28</h3>
                     </div>
                     <h2 class="tarjeta__titulo">Aterrizando en R-Studio</h2>
                     <h3 class="tarjeta__horas">20 hs</h3>
@@ -182,7 +181,7 @@
                 <article class="tarjeta"> <!--Tarjeta individual-->
                     <div class="tarjeta__img-precio">
                         <img src="./assets/mysql.png" alt="logo-mysql" class="tarjeta__imagen" />
-                        <!--<h3 class="tarjeta__precio">U$D 30</h3>-->
+                        <h3 class="tarjeta__precio">U$D 40</h3>
                     </div>
                     <h2 class="tarjeta__titulo">MySQL para principiantes</h2>
                     <h3 class="tarjeta__horas">20 hs</h3>
@@ -199,7 +198,7 @@
                 <article class="tarjeta"> <!--Tarjeta individual-->
                     <div class="tarjeta__img-precio">
                         <img src="./assets/c++.png" alt="logo-c++" class="tarjeta__imagen" />
-                        <!--<h3 class="tarjeta__precio">U$D 30</h3>-->
+                        <h3 class="tarjeta__precio">U$D 30</h3>
                     </div>
                     <h2 class="tarjeta__titulo">Aprenda a programar en C++</h2>
                     <h3 class="tarjeta__horas">50 hs</h3>
@@ -214,43 +213,47 @@
             </div>
         </section>
 
-        <section class="fuente">
+        <section>
             <div class="main-subtitulo">
                 <h2>MEDIOS DE PAGO</h2>
             </div>
             <div class="contenedor-medios-de-pago">
+                <img class="medio-de-pago--flecha" src="./assets/flecha-izq-b.png" alt="flecha-izquierda">
                 <img class="medio-de-pago" src="./assets/tarjeta-visa.png" alt="tarjeta-visa" />
                 <img class="medio-de-pago" src="./assets/tarjeta-mastercard.png" alt="tarjeta-mastercard" />
                 <img class="medio-de-pago" src="./assets/american-express.png" alt="american-express" />
                 <img class="medio-de-pago" src="./assets/mercado-pago.png" alt="mercado-pago" />
+                <img class="medio-de-pago--flecha" src="./assets/flecha-der-b.png" alt="flecha-derecha">
             </div>
         </section>
     </main>
 
-    <footer class="footer fuente">
+    <footer class="footer">
         <div class="footer__columna">
-            <h2 class="footer__columna--titulo">Integrantes del grupo</h2>
-            <ul class="footer__columna--contenido">
-                <li>Aquino Camila</li>
-                <li>Di Nubila Mateo</li>
-                <li>Oddi Nicolas</li>
-                <li>Ortiz Franco</li>
+            <h2 class="footer__columna--titulo titulo--justificado-left">Integrantes del grupo</h2>
+            <ul class="footer__columna--integrantes">
+                <li>Aquino Camila, DNI: 39561810</li>
+                <li>Di Nubila Mateo, DNI: 44005180</li>
+                <li>Oddi Nicolas, DNI:</li>
+                <li>Ortiz Franco, DNI:</li>
             </ul>
         </div>
 
         <div class="footer__columna">
             <nav>
-                <ul class="footer__columna--contenido">
-                    <li><a class="menu--footer" href="#home">HOME</a></li>
-                    <li><a class="menu--footer" href="./pages/calendario.html">CALENDARIO</a></li>
-                    <li><a class="menu--footer" href="">GIFCARD</a></li> <!--Completar link-->
-                    <li><a class="menu--footer" href="">CONTACTO</a></li> <!--Completar link-->
+                <ul class="footer__columna--menu">
+                    <li><a class="link-menu" href="#home">HOME</a></li>
+                    <li><a class="link-menu" href="./pages/calendario.html">CALENDARIO</a></li>
+                    <li><a class="link-menu" href="">GIFCARD</a></li> <!--Completar link-->
+                    <li><a class="link-menu" href="">CONTACTO</a></li> <!--Completar link-->
                 </ul>
             </nav>
         </div>
 
         <div class="footer__columna">
-            <div class="contenedor-redes-sociales">
+            <h2 class="footer__columna--titulo titulo--justificado-center">Seguinos en</h2>
+
+            <div class="footer__columna--redes">
                 <img class="icono-red-social" src="./assets/logo-fb.png" alt="logo-fb"> <!--completar vinculo externo-->
                 <img class="icono-red-social" src="./assets/logo-ig.png" alt="logo-ig"> <!--completar vinculo externo-->
                 <img class="icono-red-social" src="./assets/logo-tic-toc.png" alt="logo-tic-toc">
@@ -260,7 +263,6 @@
 
     </footer>
 
-    <!--FIN CAMI-->
 </body>
 
 </html>

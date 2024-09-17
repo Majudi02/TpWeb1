@@ -1,8 +1,5 @@
-.fuente{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
- }
-
 .footer{
+    box-sizing: border-box;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -25,26 +22,52 @@
     color: rgb(255, 255, 255);
 }
 
-.footer__columna--contenido{
-list-style-type: none;
-font-size: 0.8em;
+.titulo--justificado-left{
+    text-align: left;
+    margin-left: 3.7em;
 }
 
-.contenedor-redes-sociales{
+.titulo--justificado-center{
+    text-align: center;
+    margin-bottom: 1.3em;
+}
+
+.footer__columna--integrantes{
+list-style-type: none;
+line-height: 1.5em;
+margin-top: 0.5em;
+text-align: left;
+margin-left: 2em;
+font-size: 0.9em;
+}
+
+.footer__columna--menu{
+    list-style-type: none;
+    font-size: 1em;
+    line-height: 1.7em;
+}
+
+.link-menu{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    text-shadow: 0 0 1em rgb(255, 255, 255);
+    }
+
+
+.footer__columna--redes{
     display: flex;
     justify-content: center;
-    margin-left: 1em;
-    margin-right: 1em;
-    
+    margin-left: 3em;
+    margin-right: 3em;
 }
+
 
 .icono-red-social{
     width: 10%;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
 }
 
-.menu--footer{
-text-decoration: none;
-color: rgb(255, 255, 255);
-}
+
+
