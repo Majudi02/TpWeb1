@@ -8,9 +8,7 @@
 body {
     width: 100%;
     background-color: rgb(39, 39, 39);
-    color: white
 }
-
 
 /* Informacion del curso */
 .curso {
@@ -18,18 +16,7 @@ body {
     margin-top: 4%;
     display: flex;
     align-items: flex-start;
-    margin-right: 2%;
-}
-
-
-/* con el fondo blanco
-.contenedor-imagen{
-    margin-right: 8%;
-    height: auto;
-    width: 30%;
-    background-color: #ccc;
-    padding: 1%;   
-    border-radius: 20px;
+    margin-right:2% ;
 }
 
 .curso_imagen {
@@ -197,3 +184,113 @@ input[type="checkbox"] {
     cursor: pointer;
     border: 2px solid #ccc;
 }
+
+
+/*inicio aside*/
+
+
+.contenedor-tarjetas {
+    background-color: rgb(39, 39, 39);
+    display: flex;
+    justify-content: center;
+    column-gap: 4%;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-top: 7%;
+    padding-bottom: 7%;
+}
+
+.tarjeta {
+    display: grid;
+    grid-template-areas: "img-precio img-precio"
+        "titulo titulo"
+        "horas modalidad"
+        "horas detalle"
+        "comprar comprar";
+    background-color: rgb(255, 255, 255);
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    grid-row-gap: 0.2em;
+    align-items: center;
+    box-shadow: 0 0 0.3em rgb(255, 255, 255);
+    width: 20%;
+}
+
+.tarjeta__img-precio{
+    grid-area: img-precio;
+    position: relative;
+    text-align: center;
+    border-color: hwb(0 0% 100%);
+    border-style: solid;
+    margin: 0.2em;
+    min-height: 6em;
+
+
+}
+
+.tarjeta__imagen {
+    width: 90%;
+    margin: 0.5em;
+}
+
+.tarjeta__precio {
+    position: absolute;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    top: 76%;
+    left: 70%;
+    font-size: 1em;
+    padding: 0.5em;
+}
+
+.tarjeta__titulo {
+    grid-area: titulo;
+    font-size: 1.3em;
+    text-align: right;
+}
+
+.tarjeta__horas {
+    grid-area: horas;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.tarjeta__modalidad {
+    grid-area: modalidad;
+    text-align: right;
+    font-size: 0.8em;
+}
+
+.tarjeta__detalle {
+    grid-area: detalle;
+    text-align: right;
+    text-shadow: 0 0 1em rgb(17, 17, 17);
+}
+
+.tarjeta__comprar {
+    grid-area: comprar;
+    text-align: center;
+    padding: 1em;
+}
+
+.boton{
+    font-size: 0.8em;
+    padding: 1.5em;
+    text-decoration: none;
+    padding: 0.8em;
+    border-radius: 3em;
+}
+
+.boton--comprar{
+    background-color: rgb(45, 86, 161);
+    color: rgb(255, 255, 255);
+    border-color: rgb(0, 0, 0);
+}
+
+.boton--ver-detalle{
+    color: rgb(45, 86, 161);
+    font-weight: 700;
+}
+
+
+/*Fin aside*/
