@@ -4,42 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crear cuenta</title>
+    <title>DevX-Crear cuenta</title>
     <link rel="stylesheet" href="../styles/header.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
-    <link rel="stylesheet" href="../styles/styles-carrito-compras.css" />
     <link rel="stylesheet" href="../styles/styles-inicio-sesion-crear-cuenta.css" />
 </head>
 
 <body class="fuente">
-    <header>
+    <header id="home">
         <nav class="navprimario">
             <div class="navprimario__menu-items">
                 <div class="navprimario__menu-items-logo">
                     <a class="navprimario__menu-logo" href="../index.html">
                         <img class="navprimario__menu-logo-img" src="../assets/logo.png" alt="logo">
                     </a>
+                    <h1 class="navprimario__menu-items-nombre">DevX</h1>
                 </div>
 
                 <div class="navprimario__menu-items-buscador">
                     <input class="navprimario__menu-items-buscador-input" type="text" placeholder="Buscar">
                     <button class="navprimario__menu-items-buscador-button" type="submit">
-                        <img class="navprimario__menu-items-buscador-button-img" src="../assets/lupa.png" alt="Buscar">
+                        <img class="navprimario__menu-items-buscador-button-img" src="../assets/lupa.png" alt="Bus">
                     </button>
                 </div>
 
+
+
                 <div class="navprimario__menu-items-carrito">
-                    <a class="navprimario__menu-items-carrito-link" href="../pages/carrito-compras.html">
+                    <div class="navprimario__menu-login">
+                        <a class="navprimario__menu-login-btn" href="./inicio-sesion.html">INGRESAR</a>
+                        <a class="navprimario__menu-login-btn" href="./crear-cuenta.html">REGISTRARSE</a>
+                    </div>
+                    <a class="navprimario__menu-items-carrito-link" href="./carrito-compras.html">
                         <img class="navprimario__menu-items-carrito-img" src="../assets/carrito.png"
                             alt="Carrito de compras">
                     </a>
                 </div>
-                </ul>
             </div>
         </nav>
 
+        <nav class="navsecundario">
+            <ul class="navsecundario__menu">
+                <li class="navsecundario__menu-item">
+                    <a class="navsecundario__menu-item-link" href="./giftcard.html">Gifcards</a>
+                </li>
+
+                <li class="navsecundario__menu-item">
+                    <a class="navsecundario__menu-item-link" href="./calendario.html">Calendario</a>
+                </li>
+
+                <li class="navsecundario__menu-item">
+                    <a class="navsecundario__menu-item-link" href="#">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+
+
+        <!--Ver si esto se ubica acá-->
         <div></div>
-            <a class="link-volver-atras" href="./inicio-sesion.html">Volver atrás</a>
+        <a class="link-volver-atras" href="../index.html">Volver atrás</a>
         </div>
 
     </header>
@@ -70,34 +93,34 @@
         </form>
     </main>
 
-    <footer class="footer fuente">
+    <footer class="footer">
         <div class="footer__columna">
-            <h2 class="footer__columna--titulo">Integrantes del grupo</h2>
-            <ul class="footer__columna--contenido">
-                <li>Aquino Camila</li>
-                <li>Di Nubila Mateo</li>
-                <li>Oddi Nicolas</li>
-                <li>Ortiz Franco</li>
+            <h2 class="footer__columna--titulo titulo--justificado-left">Integrantes del grupo</h2>
+            <ul class="footer__columna--integrantes">
+                <li>Aquino Camila, DNI: 39561810</li>
+                <li>Di Nubila Mateo, DNI: 44005180</li>
+                <li>Oddi Nicolas, DNI: 40885618</li>
+                <li>Ortiz Franco, DNI: 42998156</li>
             </ul>
         </div>
 
         <div class="footer__columna">
             <nav>
-                <ul class="footer__columna--contenido">
-                    <li><a class="menu--footer" href="#home">HOME</a></li>
-                    <li><a class="menu--footer" href="../pages/calendario.html">CALENDARIO</a></li>
-                    <li><a class="menu--footer" href="">GIFCARD</a></li> <!--Completar link-->
-                    <li><a class="menu--footer" href="">CONTACTO</a></li> <!--Completar link-->
+                <ul class="footer__columna--menu">
+                    <li><a class="link-menu" href="../index.html">HOME</a></li>
+                    <li><a class="link-menu" href="./calendario.html">CALENDARIO</a></li>
+                    <li><a class="link-menu" href="./giftcard.html">GIFCARD</a></li> 
+                    <li><a class="link-menu" href="">CONTACTO</a></li> <!--Completar link-->
                 </ul>
             </nav>
         </div>
 
         <div class="footer__columna">
-            <div class="contenedor-redes-sociales">
-                <img class="icono-red-social" src="../assets/logo-fb.png" alt="logo-fb">
-                <!--completar vinculo externo-->
-                <img class="icono-red-social" src="../assets/logo-ig.png" alt="logo-ig">
-                <!--completar vinculo externo-->
+            <h2 class="footer__columna--titulo titulo--justificado-center">Seguinos en</h2>
+
+            <div class="footer__columna--redes">
+                <img class="icono-red-social" src="../assets/logo-fb.png" alt="logo-fb"> <!--completar vinculo externo-->
+                <img class="icono-red-social" src="../assets/logo-ig.png" alt="logo-ig"> <!--completar vinculo externo-->
                 <img class="icono-red-social" src="../assets/logo-tic-toc.png" alt="logo-tic-toc">
                 <!--completar vinculo externo-->
             </div>
