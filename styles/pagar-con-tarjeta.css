@@ -1,0 +1,197 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: rgb(39, 39, 39);
+    color: white;
+    width: 100%;
+}
+
+section {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: flex-start; 
+    margin-top: 3%;
+}
+article {
+    flex: 1; /* Los artículos tomarán el mismo ancho */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin-left: 20%;
+   /* margin-top: 12%; */
+}
+
+
+label{
+    margin-top: 4%;
+    margin-bottom: 2%;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+input{
+    margin: 0;
+    padding: 1.5%;
+    border-radius:30px;
+    border: none;
+}
+
+.informacion-tarjeta-fila{
+    display: flex;
+    margin-top: 0.7%;
+}
+
+.vencimiento,.codigo-tarjeta{
+    margin-top: 1%;
+}
+
+.informacion-tarjeta-fila .vencimiento{
+    width:70%;
+}
+
+.informacion-tarjeta-fila .codigo-tarjeta{
+    margin-left: 1.5%;
+    width: 30%;
+}
+
+.monto {
+    display: flex;
+    justify-content: space-between; 
+    margin-top: 10%;
+    margin-bottom: 10%;
+}
+
+
+.botones{
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    gap: 20px; /* Añade un espacio entre los botones si es necesario */
+}
+
+.boton_cancelar, .boton_confirmar {
+    display: inline-block; /* Asegura que ambos sean elementos inline-block */
+    text-align: center;
+    padding: 2.5% 6%;
+    border-radius: 25px;
+    width: 35%;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 20%;
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.boton_cancelar {
+    background-color: rgb(199, 58, 58);
+    font-size: 0.9em;
+
+    padding: 2% 1%;
+    height: 10%;
+}
+
+.boton_confirmar {
+    background-color: rgb(45, 86, 161);
+}
+
+
+
+
+.boton_confirmar{
+    background-color: rgb(45, 86, 161);
+}
+
+/*
+button{
+    text-align: center;
+    padding: 2.5%  6%;
+    border-radius:25px ;
+    width: 40%;
+    background-color: rgb(45, 86, 161);
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+    */
+
+
+.cursos{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+}
+
+.cursos{
+    gap: 30px;
+    max-width: 37%; 
+}
+
+
+.curso-a-comprar {
+    display: flex;
+    margin-right: 23%;
+    background-color: #333;
+    border-radius: 30px; 
+}
+
+.curso-imagen {
+    padding: 2%;
+    width: 12%;
+    height: auto; 
+}
+
+.contenido-del-curso {
+    width: 100%;
+    padding: 0 1%;
+}
+
+.contenido-del-curso p {
+    font-size: 0.85em;
+    color: rgb(241, 239, 235);
+}
+
+.contenedor-del-precio{
+    display: flex;
+    margin-top: 2%;
+    justify-content:space-between; 
+    align-items: center; 
+}
+
+.contenedor-del-precio .titulo-del-curso{
+  margin-left: 2%;
+  font-weight: bolder;
+}
+
+
+.contenedor-del-precio .precio-del-curso{
+    font-size: 1em;
+    margin-right: 5%;
+}
+
+.contenido-del-curso .modalidad-del-curso{
+    margin-left: 2%;
+    margin-top: 0.5%;
+    font-size: 0.75em;
+    color: darkgray;
+}
+
+.precio-total{
+    display: flex;
+    justify-content: space-between;
+    max-width: 75%; 
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: 2% ;
+}
+
+.precio-total .total{
+    margin-left: 1%;
+}
+
+

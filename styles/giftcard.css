@@ -184,11 +184,11 @@ input[type="radio"] {
 }
 
 .boton__confirmar {
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: bold;
     background-color:rgb(45, 86, 161);
     width: 100%;
-    padding: 2.8%;
+    padding: 2.7% 7%;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
