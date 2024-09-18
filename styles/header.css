@@ -149,3 +149,15 @@
     text-transform: uppercase;
     font-size: 0.8em;
 }
+
+.navprimario__menu-items-carrito-numero{
+    font-weight: 700;
+    font-size: 0.8em;
+    color: #ffffff;
+    position: relative;
+    background: #3498dbdb;
+    border-radius: 100%;
+    padding: 0.2em 0.5em;
+    bottom: 0.6em;
+    right: 1.4em;
+}
