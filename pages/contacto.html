@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Contacto | DevX</title>
+    <link rel="stylesheet" href="../styles/styles-contacto.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    
+</head>
+
+<body>
+    <header id="home">
+        <nav class="navprimario">
+            <div class="navprimario__menu-items">
+                <div class="navprimario__menu-items-logo">
+                    <a class="navprimario__menu-logo" href="../index.html">
+                        <img class="navprimario__menu-logo-img" src="../assets/logo.png" alt="logo">
+                    </a>
+                    <h1 class="navprimario__menu-items-nombre">DevX</h1>
+                </div>
+
+                <div class="navprimario__menu-items-buscador">
+                    <input class="navprimario__menu-items-buscador-input" type="text" placeholder="Buscar">
+                    <button class="navprimario__menu-items-buscador-button" type="submit">
+                        <img class="navprimario__menu-items-buscador-button-img" src="../assets/lupa.png" alt="Bus">
+                    </button>
+                </div>
+
+
+
+                <div class="navprimario__menu-items-carrito">
+                    <div class="navprimario__menu-login">
+                        <a class="navprimario__menu-login-btn" href="./inicio-sesion.html">INGRESAR</a>
+                        <a class="navprimario__menu-login-btn" href="./crear-cuenta.html">REGISTRARSE</a>
+                    </div>
+                    <a class="navprimario__menu-items-carrito-link" href="../pages/carrito-compras.html">
+                        <img class="navprimario__menu-items-carrito-img" src="../assets/carrito.png"
+                            alt="Carrito de compras">
+                    </a>
+                    <p class="navprimario__menu-items-carrito-numero">4</p>
+                </div>
+            </div>
+        </nav>
+
+        <nav class="navsecundario">
+            <ul class="navsecundario__menu">
+                <li class="navsecundario__menu-item">
+                    <a class="navsecundario__menu-item-link" href="./giftcard.html">Gifcards</a>
+                </li>
+
+                <li class="navsecundario__menu-item">
+                    <a class="navsecundario__menu-item-link" href="./calendario.html">Calendario</a>
+                </li>
+
+                <li class="navsecundario__menu-item">
+                    <a class="navsecundario__menu-item-link" href="./contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="contenedor-formulario">
+            <h2>Contacto</h2>
+            <div class="formulario-contacto">
+                <form class="grupo-formulario">
+                    <input type="text" name="name" id="name" placeholder="Nombre" required>
+                    <input type="email" name="email" id="email" placeholder="Correo" required>
+                    <input type="tel" name="tel" id="tel" placeholder="Teléfono" required>
+                    <textarea name="mensaje" id="mensaje" placeholder="Mensaje" required></textarea>
+                </form>
+                <div class="grupo-formulario datos-contacto">
+                    <h3>Datos de Contacto </h3>
+                </div>
+            </div>
+            <button class="boton-enviar">Enviar</button>
+        </div>
+        <div class="ubicacion">
+            <h2>Ubicación</h2>
+            <div class="mapa">
+                <img src="../assets/mapa.png" alt="Ubicacion del lugar" />
+            </div>
+        </div>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer__columna">
+            <h2 class="footer__columna--titulo titulo--justificado-left">Integrantes del grupo</h2>
+            <ul class="footer__columna--integrantes">
+                <li>Aquino Camila, DNI: 39561810</li>
+                <li>Di Nubila Mateo, DNI: 44005180</li>
+                <li>Oddi Nicolas, DNI: 40885618</li>
+                <li>Ortiz Franco, DNI: 42998156</li>
+            </ul>
+        </div>
+
+        <div class="footer__columna">
+            <nav>
+                <ul class="footer__columna--menu">
+                    <li><a class="link-menu" href="../index.html">HOME</a></li>
+                    <li><a class="link-menu" href="./calendario.html">CALENDARIO</a></li>
+                    <li><a class="link-menu" href="./giftcard.html">GIFCARD</a></li>
+                    <li><a class="link-menu" href="./contacto.html">CONTACTO</a></li> <!--Completar link-->
+                </ul>
+            </nav>
+        </div>
+
+        <div class="footer__columna">
+            <h2 class="footer__columna--titulo titulo--justificado-center">Seguinos en</h2>
+
+            <div class="footer__columna--redes">
+                <img class="icono-red-social" src="../assets/logo-fb.png" alt="logo-fb"> <!--completar vinculo externo-->
+                <img class="icono-red-social" src="../assets/logo-ig.png" alt="logo-ig"> <!--completar vinculo externo-->
+                <img class="icono-red-social" src="../assets/logo-tic-toc.png" alt="logo-tic-toc">
+                <!--completar vinculo externo-->
+            </div>
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
