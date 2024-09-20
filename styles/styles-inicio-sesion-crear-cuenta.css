@@ -4,15 +4,20 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.main {
+.main{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(39, 39, 39);
+}
+
+.contenedor-formulario {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(39, 39, 39);
-    min-height: 33em;
+    min-height: 30em;
 }
 
-.formulario {
+.contenedor-formulario .formulario {
     padding: 1em;
     display: flex;
     flex-direction: column;
@@ -27,21 +32,21 @@
     margin-bottom: 0.5em;
 }
 
-.formulario__titulo {
+.contenedor-formulario .formulario .formulario__titulo {
     text-align: center;
     font-size: 1.8em;
     margin-bottom: 0.5em;
     color: rgb(255, 255, 255);
 }
 
-.formulario__label {
+.contenedor-formulario .formulario .formulario__label {
     text-align: left;
     font-size: 1.2em;
     margin-top: 0.6em;
     color: rgb(255, 255, 255);
 }
 
-.formulario__input {
+.contenedor-formulario .formulario .formulario__input {
     padding: 0.5em;
     border: 0.1em solid rgb(39, 39, 39);
     border-radius: 0.7em;
@@ -51,9 +56,21 @@
 }
 
 
+.contenedor-formulario .formulario .formulario__olvido{
+    text-decoration: none;
+    font-style: italic;
+    font-weight: 700;
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    text-align: right;
+    margin-top: 0.6em;
+}
 
-.formulario__boton{
+
+.contenedor-formulario .formulario .formulario__boton{
     padding: 0.5em;
+    text-decoration: none;
+    text-align: center;
     border: 0.1em solid rgb(39, 39, 39);
     border-radius: 1.5em;
     background-color: rgb(45, 86, 161);
@@ -62,7 +79,7 @@
     margin-top: 1em;
 }
 
-.formulario__crear-cuenta{
+.contenedor-formulario .formulario .formulario__crear-cuenta{
     text-align: center;
     font-size: 1em;
     margin-bottom: 0.6em;
@@ -71,29 +88,48 @@
     font-weight: 300;
 }
 
-.link-crear-cuenta{
+.contenedor-formulario .formulario .formulario__link-crear-cuenta{
 text-decoration: none;
 color: rgb(255, 255, 255);
 font-weight: 700;
 }
 
-.formulario__msj{
+.contenedor-formulario .formulario .formulario__indicaciones{
     text-align: center;
     font-size: 1em;
     color: rgb(255, 255, 255);
     font-weight: 400;
+    padding-bottom: 1em;
 }
 
-/*¿Podremos dejar esto en el header?*/
-.link-volver-atras{
-    display: block;
+/*Volver*/
+.volver-atras{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 0.5em;
+}
+
+.volver-atras .volver-atras__flecha{
+  width: 2%;  
+}
+
+.volver-atras .volver-atras__flecha .volver-atras__flecha--img{
+    display: inline;
+    background-color: rgb(255, 255, 255);
+    width: 95%;
+    border-radius: 50%;
+    text-align: right;
+}
+
+
+.volver-atras .volver-atras__texto{
     text-decoration: none;
-    font-style: italic;
     color: rgb(255, 255, 255);
-    font-weight: 400;
+    font-weight: 500;
     font-size: 0.9em;
-    text-align: left;
-    align-items: left;
-    background-color: rgb(39, 39, 39);
-    padding-left: 1em;
+    width: 3%;
+    text-align: right;
+    padding-right: 4%;
 }
