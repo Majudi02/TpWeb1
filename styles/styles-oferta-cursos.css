@@ -4,82 +4,6 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.section-imagenprincipal {
-    width: 100%;
-    margin-bottom: -4.3%;
-
-}
-
-
-.section-imagenprincipal-imagen-principal {
-    width: 100%;
-}
-
-.section-imagenprincipal-flecha {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    position: relative;
-    bottom: 20em;
-}
-
-.section-imagenprincipal-flecha-link {
-    display: flex;
-}
-
-.section-imagenprincipal-flecha-izquierda,
-.section-imagenprincipal-flecha-derecha {
-    width: 3em;
-    height: 3em;
-}
-.section-imagenprincipal-flecha-derecha{
-
-}
-
-
-.section-pasos {
-    background-color: rgb(39, 39, 39);
-    width: 80%;
-    padding-bottom: 3%;
-    padding-left: 10%;
-    padding-right: 10%;
- }
-
-
-.section-pasos-recuadros {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-row-gap: 0.5em;
-    align-items: center;
-    justify-items: center;
-}
-
-.section-pasos-recuadros__titulo{
-    display: block;
-    box-shadow: 0 0 0.4em rgb(153, 151, 151);
-    border-radius: 50%;
-    background-color: rgb(113, 122, 248);
-    padding: 0.4em;
-    text-align: center;
-    font-size: 2.5em;
-    font-weight: 800;
-    color: rgb(0, 0, 0);
-    width: 1em;
-    height: 1em;
-}
-
-.section-pasos-recuadros__contenido {
-    color: rgb(255, 255, 255);
-    font-weight: 600;
-    font-size: 1em;
-    text-align: center;
-    width: 60%;
-    text-transform: uppercase;
-}
-
-/*Cursos destacados*/
 
 .main__subtitulo {
     background-color: rgb(39, 39, 39);
@@ -97,10 +21,11 @@
     background-color: rgb(39, 39, 39);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 2em 4em;
     padding-left: 10em;
     padding-right: 10em;
+    padding-bottom: 2em;
 }
 
 .tarjeta {
@@ -191,21 +116,34 @@
     font-weight: 700;
 }
 
-.contenedor-medios-de-pago{
+.volver-atras{
     display: flex;
     width: 100%;
-    justify-content: center;
     align-items: center;
+    justify-content: flex-end;
+    padding-top: 0.5em;
     background-color: rgb(39, 39, 39);
-    padding-bottom: 1.5em;
 }
 
-.medio-de-pago{
-    width: 10%;
-    padding: 0.5em;
+.volver-atras .volver-atras__flecha{
+  width: 2%;  
 }
 
-.medio-de-pago--flecha{
-    width: 5%;
-    max-height: 3em;
+.volver-atras .volver-atras__flecha .volver-atras__flecha--img{
+    display: inline;
+    background-color: rgb(255, 255, 255);
+    width: 95%;
+    border-radius: 50%;
+    text-align: right;
+}
+
+
+.volver-atras .volver-atras__texto{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 0.9em;
+    width: 3%;
+    text-align: right;
+    padding-right: 4%;
 }
