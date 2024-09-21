@@ -6,10 +6,14 @@
 
 
 body {
-    width: 100%;
     background-color: rgb(39, 39, 39);
     color: rgb(255, 255, 255);
+    width: 100%;
+    overflow-x: hidden;
+
 }
+
+
 
 /* Informacion del curso */
 .curso {
@@ -20,7 +24,7 @@ body {
     margin-right: 2%;
 }
 
- /*  hacerlo asi por que el profe quiere */
+/*  hacerlo asi por que el profe quiere */
 .curso .curso_imagen {
     width: 12%;
     margin-right: 8%;
@@ -33,6 +37,8 @@ body {
     margin-right: 3%;
     padding-right: 12%;
 }
+
+
 
 .curso .curso_informacion .curso_informacion_button {
     margin-top: 1%;
@@ -55,7 +61,7 @@ body {
 /*    Contenido Por clase       */
 details {
     margin-top: 1.1%;
-    width: 27%;
+    width: 32%;
 }
 
 summary {
@@ -68,22 +74,20 @@ summary {
     font-weight: bold;
     display: flex;
     justify-content: space-between;
-    /* Alinea el texto y la flecha */
 }
 
 
 /* Se le agrega la flecha */
 summary::after {
     content: '\25BC';
-    /* Flecha hacia abajo */
     margin-left: 0.5%;
     transition: transform 0.3s ease;
-    /* Transición suave para la rotación */
+
 }
 
 details[open] summary::after {
     transform: rotate(-180deg);
-    /* Gira la flecha cuando se expande */
+
 }
 
 
@@ -139,14 +143,20 @@ details[open] summary::after {
     padding: 0.5%;
 }
 
-.docente-titulo {
-    margin-top: 7%;
+
+.docente-titulo , .curso-relacionado-titulo{
     font-size: 1.5em;
     text-align: center;
-    margin-bottom: 0.5%;
 }
 
-.docente_info_nombre {
+.docente-titulo{
+    margin-top: 7%;
+    margin-bottom: 1.5%;
+}
+
+
+.docente_info_nombre,
+.docente_info_nombre_celular {
     margin-top: 1%;
     font-size: 1.5em;
     margin-bottom: 0.5%;
@@ -154,17 +164,28 @@ details[open] summary::after {
 
 
 
-.docente_imagen {
-    max-width: 8.5%;
+.docente_imagen,
+.docente_info_imagen_celular {
     margin-right: 1%;
     margin-left: 2%;
-    border-radius: 80px;
+    border-radius:50%;
     padding: 1%;
 }
 
+.docente_imagen {
+    max-width: 8.5%;
+}
+
+.docente .docente_info .docente_info_imagen_celular {
+    display: none;
+}
+
+.docente .docente_info .docente_info_nombre_celular {
+    display: none;
+}
 
 
-.docente_info_nombre_calicacion-del-Curso {
+.docente_info_calificacion-del-curso {
     max-width: 6%;
     margin-bottom: 0.5%;
 }
@@ -194,6 +215,10 @@ input[type="checkbox"] {
 /*inicio aside*/
 
 
+.curso-relacionado-titulo{
+    margin:4em 0em;
+}
+
 .contenedor-tarjetas {
     background-color: rgb(39, 39, 39);
     display: flex;
@@ -201,7 +226,6 @@ input[type="checkbox"] {
     column-gap: 4%;
     padding-left: 3%;
     padding-right: 3%;
-    padding-top: 7%;
     padding-bottom: 7%;
 }
 
@@ -339,52 +363,145 @@ input[type="checkbox"] {
 
 
 
-/*      Celular        */
-@media  (max-width:446px){
 
-    body{
+
+/*      Celular        */
+@media screen and (max-width:400px) {
+
+    * {
         padding: 0%;
         margin: 0%;
+        overflow-x: hidden;
     }
 
-    .volver-atras{
+    main {
+        margin-inline: 1em;
+    }
+
+    main .volver-atras {
         display: none;
     }
 
-    .navprimario__menu-items-buscador{
-        display: none;
-    }
 
-    .curso_imagen {
-        width: 60%;
+    .navprimario__menu-items-buscador {
+        display: none !important;
     }
 
     .curso {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-left: 1em;
+        margin: 0;
     }
 
-    .curso_informacion {
+
+    .curso .curso_imagen {
+        width: 60%;
+    }
+
+    .curso .curso_informacion {
         display: flex;
         margin-top: 1.5em;
         flex-direction: column;
         gap: 20px;
-        margin-right: 1em;
+        margin-right: 0em;
         padding-right: 0em;
     }
 
-    .curso_informacion_button{
-        width: 100%;
-        padding: 0.5em;
-        font-size: 0.85em;
+    .curso .curso_informacion p {
+        font-size: 0.9em;
     }
 
-    details{
-        margin-top: 1.5em;
+    .curso .curso_informacion .curso_informacion_button {
         width: 80%;
+        padding: 0.5em;
+        font-size: 0.85em;
+        align-self: center;
+        margin: 2.3em 0em;
     }
+
+    details {
+        margin-top: 1em;
+        width: 100%;
+    }
+
+    details .curso_contenido-por-clase p {
+        font-size: 0.8em;
+    }
+
+    section .docente-titulo {
+        margin-top: 2.5em;
+    }
+
+    .docente {
+        display: flex;
+        flex-direction: column;
+        margin-top: 2em;
+    }
+
+    .docente .docente_info_nombre {
+        align-self: flex-start;
+        margin-left: 2em;
+    }
+
+    .docente .docente_imagen {
+        display: none;
+    }
+
+    .docente .docente_info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1em 0.5em;
+    }
+
+    .docente_info .docente_info_imagen_celular {
+        display: flex !important;
+        margin-top: 1%;
+        max-width: 80%;
+    }
+
+    .docente .docente_info .docente_info_nombre {
+        display: none;
+    }
+
+
+    .docente .docente_info .docente_info_nombre_celular {
+        align-self: flex-start;
+        display: flex !important;
+        margin-left: 0.4em;
+        margin-top: 1.2%;
+        font-weight: 600;
+    }
+
+    .docente_info .docente_info_calificacion-del-curso {
+        display: flex;
+        margin-top: 0.3em;
+        align-self: flex-start;
+        max-width: 50%;
+        margin-bottom: 0.8em;
+    }
+
+
+
+    .contenedor-tarjetas{
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .contenedor-tarjetas .tarjeta{
+        width: 100%;
+    }
+
+
+    .curso-relacionado-titulo{
+        margin-top: 3em !important;
+        margin-bottom: 1.5em !important;
+    }
+
 
 
 }
+
+
