@@ -11,57 +11,58 @@
 </head>
 
 <body>
-
     <header id="home">
         <nav class="navprimario">
             <div class="navprimario__menu-items">
                 <div class="navprimario__menu-items-logo">
                     <a class="navprimario__menu-logo" href="../index.html">
                         <img class="navprimario__menu-logo-img" src="../assets/logo.png" alt="logo">
+                        <h1 class="navprimario__menu-items-nombre">DevX</h1>
                     </a>
-                    <h1 class="navprimario__menu-items-nombre">DevX</h1>
                 </div>
-
                 <div class="navprimario__menu-items-buscador">
-                    <input class="navprimario__menu-items-buscador-input" type="text" placeholder="Buscar">
-                    <button class="navprimario__menu-items-buscador-button" type="submit">
-                        <img class="navprimario__menu-items-buscador-button-img" src="../assets/lupa.png" alt="Bus">
+                    <input class="navprimario__menu-items-buscador-input" list="buscador" type="text" placeholder="Buscar">
+                    <datalist id="buscador">
+                        <option value="Curso Javascript"></option>
+                        <option value="Css5"></option>
+                        <option value="Calendario"></option>
+                        <option value="Java para principiantes"></option>
+                        <option value="Gifcards"></option>
+                        <option value="Cursos destacados"></option>
+                      </datalist>
+                    <button action="#" class="navprimario__menu-items-buscador-button" id="buscador" type="submit">
+                        <img class="navprimario__menu-items-buscador-button-img" src="../assets/lupa.png" alt="Buscar">
                     </button>
                 </div>
-
-
-
                 <div class="navprimario__menu-items-carrito">
                     <div class="navprimario__menu-login">
-                        <a class="navprimario__menu-login-btn" href="./inicio-sesion.html">INGRESAR</a>
-                        <a class="navprimario__menu-login-btn" href="./crear-cuenta.html">REGISTRARSE</a>
+                        <a class="navprimario__menu-login-btn" href="../pages/inicio-sesion.html">INGRESAR</a>
                     </div>
-                    <a class="navprimario__menu-items-carrito-link" href="./carrito-compras.html">
+                    <a class="navprimario__menu-items-carrito-link" href="../pages/carrito-compras.html">
                         <img class="navprimario__menu-items-carrito-img" src="../assets/carrito.png"
                             alt="Carrito de compras">
+                        <p class="navprimario__menu-items-carrito-numero">4</p>
                     </a>
                 </div>
             </div>
         </nav>
-
         <nav class="navsecundario">
             <ul class="navsecundario__menu">
                 <li class="navsecundario__menu-item">
-                    <a class="navsecundario__menu-item-link" href="./giftcard.html">Gifcards</a>
+                    <a class="navsecundario__menu-item-link" href="../pages/oferta-cursos.html">Cursos</a>
                 </li>
-
                 <li class="navsecundario__menu-item">
-                    <a class="navsecundario__menu-item-link" href="./calendario.html">Calendario</a>
+                    <a class="navsecundario__menu-item-link" href="../pages/giftcard.html">Gifcards</a>
                 </li>
-
                 <li class="navsecundario__menu-item">
-                    <a class="navsecundario__menu-item-link" href="#">Contacto</a>
+                    <a class="navsecundario__menu-item-link" href="../pages/calendario.html">Calendario</a>
+                </li>
+                <li class="navsecundario__menu-item">
+                    <a class="navsecundario__menu-item-link" href="../pages/contacto.html">Contacto</a>
                 </li>
             </ul>
         </nav>
-
     </header>
-
     <main>
         <section>
             <article class="curso">

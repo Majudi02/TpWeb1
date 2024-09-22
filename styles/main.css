@@ -34,6 +34,7 @@
     height: 3em;
 }
 
+
 .section-pasos {
     background-color: rgb(39, 39, 39);
     width: 80%;
@@ -230,6 +231,14 @@
 }
 
 
+@media screen and (max-width: 64em){
+    .section-imagenprincipal-flecha {
+        bottom: 15em;
+    }
+    .section-imagenprincipal {
+        margin-bottom: -5.3%;
+    }
+}
 /*--------------------------------------------------------------*/
 /*Mobile Devices*/
 @media screen and (max-width: 47.9em) {
