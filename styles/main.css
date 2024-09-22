@@ -33,9 +33,6 @@
     width: 3em;
     height: 3em;
 }
-.section-imagenprincipal-flecha-derecha{
-
-}
 
 
 .section-pasos {
@@ -227,4 +224,14 @@
 .medio-de-pago--flecha{
     width: 5%;
     max-height: 3em;
+}
+
+
+@media screen and (max-width: 64em){
+    .section-imagenprincipal-flecha {
+        bottom: 15em;
+    }
+    .section-imagenprincipal {
+        margin-bottom: -5.3%;
+    }
 }
