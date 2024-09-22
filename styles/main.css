@@ -33,7 +33,10 @@
     width: 3em;
     height: 3em;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> bbabb45cfc6f231647c422014b240edeaa204a52
 
 .section-pasos {
     background-color: rgb(39, 39, 39);
@@ -79,7 +82,11 @@
 
 /*Cursos destacados*/
 
-.main__subtitulo {
+.main{
+    box-sizing: border-box;
+}
+
+.main .main__subtitulo {
     background-color: rgb(39, 39, 39);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: rgb(255, 255, 255);
@@ -101,7 +108,7 @@
     padding-right: 10em;
 }
 
-.tarjeta {
+.contenedor-tarjetas .tarjeta {
     display: grid;
     grid-template-areas: "img-precio img-precio"
         "titulo titulo"
@@ -116,7 +123,7 @@
     box-shadow: 0 0 0.3em rgb(255, 255, 255);
 }
 
-.tarjeta__img-precio{
+.contenedor-tarjetas .tarjeta .tarjeta__img-precio{
     grid-area: img-precio;
     position: relative;
     text-align: center;
@@ -125,7 +132,7 @@
     margin: 0.2em;
 }
 
-.tarjeta__imagen {
+.contenedor-tarjetas .tarjeta .tarjeta__img-precio .tarjeta__imagen {
     width: 90%;
     margin: 0.5em;
 }
@@ -141,7 +148,7 @@
     padding: 0.5em;
 }
 */
-.tarjeta__precio {
+.contenedor-tarjetas .tarjeta .tarjeta__img-precio .tarjeta__precio {
     position: absolute;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
@@ -151,7 +158,7 @@
     padding: 0.5em;
 }
 
-.tarjeta__titulo {
+.contenedor-tarjetas .tarjeta .tarjeta__titulo {
     grid-area: titulo;
     font-size: 1.3em;
     text-align: right;
@@ -165,24 +172,24 @@
 }
     */
 
-.tarjeta__horas {
+.contenedor-tarjetas .tarjeta .tarjeta__horas {
     grid-area: horas;
     font-size: 1.2em;
     margin-left: 5.5%;
 }
-.tarjeta__modalidad {   
+.contenedor-tarjetas .tarjeta .tarjeta__modalidad {   
     grid-area: modalidad;
     text-align: right;
     font-size: 0.8em;
 }
 
-.tarjeta__detalle {
+.contenedor-tarjetas .tarjeta .tarjeta__detalle {
     grid-area: detalle;
     text-align: right;
     text-shadow: 0 0 1em rgb(17, 17, 17);
 }
 
-.tarjeta__comprar {
+.contenedor-tarjetas .tarjeta .tarjeta__comprar {
     grid-area: comprar;
     text-align: center;
     padding: 1em;
@@ -196,13 +203,13 @@
     border-radius: 3em;
 }
 
-.boton--comprar{
+.boton.boton--comprar{
     background-color: rgb(45, 86, 161);
     color: rgb(255, 255, 255);
     border-color: rgb(0, 0, 0);
 }
 
-.boton--ver-detalle{
+.boton.boton--ver-detalle{
     color: rgb(45, 86, 161);
     font-weight: 700;
 }
@@ -216,17 +223,18 @@
     padding-bottom: 1.5em;
 }
 
-.medio-de-pago{
+.contenedor-medios-de-pago .medio-de-pago{
     width: 10%;
     padding: 0.5em;
 }
 
-.medio-de-pago--flecha{
+.contenedor-medios-de-pago .medio-de-pago--flecha{
     width: 5%;
     max-height: 3em;
 }
 
 
+<<<<<<< HEAD
 @media screen and (max-width: 64em){
     .section-imagenprincipal-flecha {
         bottom: 15em;
@@ -235,3 +243,22 @@
         margin-bottom: -5.3%;
     }
 }
+=======
+/*--------------------------------------------------------------*/
+/*Mobile Devices*/
+@media screen and (max-width: 47.9em) {
+
+    .contenedor-tarjetas {
+        display: flex;
+        min-width: 40%;
+        padding-left: 1em;
+        padding-right: 1em;
+        gap: 1em;
+        overflow-x: auto;
+        overscroll-behavior-inline: contain;
+    }
+
+    
+
+}
+>>>>>>> bbabb45cfc6f231647c422014b240edeaa204a52
