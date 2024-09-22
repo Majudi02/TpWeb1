@@ -44,8 +44,8 @@ body {
     margin-top: 1%;
     font-size: 1em;
     font-weight: bold;
-    width: 12%;
-    padding: 0.7% 2%;
+    width: 20%;
+    padding: 0.7% 1.5%;
     text-align: center;
     background-color: rgb(45, 86, 161);
     text-transform: uppercase;
@@ -144,12 +144,13 @@ details[open] summary::after {
 }
 
 
-.docente-titulo , .curso-relacionado-titulo{
+.docente-titulo,
+.curso-relacionado-titulo {
     font-size: 1.5em;
     text-align: center;
 }
 
-.docente-titulo{
+.docente-titulo {
     margin-top: 7%;
     margin-bottom: 1.5%;
 }
@@ -168,12 +169,12 @@ details[open] summary::after {
 .docente_info_imagen_celular {
     margin-right: 1%;
     margin-left: 2%;
-    border-radius:50%;
+    border-radius: 50%;
     padding: 1%;
 }
 
 .docente_imagen {
-    max-width: 8.5%;
+    max-width: 11%;
 }
 
 .docente .docente_info .docente_info_imagen_celular {
@@ -215,8 +216,8 @@ input[type="checkbox"] {
 /*inicio aside*/
 
 
-.curso-relacionado-titulo{
-    margin:4em 0em;
+.curso-relacionado-titulo {
+    margin: 4em 0em;
 }
 
 .contenedor-tarjetas {
@@ -361,12 +362,119 @@ input[type="checkbox"] {
     padding-right: 4%;
 }
 
+/*  Portatil   */
+@media screen and (min-width:1024px) and (max-width:1439px) {
+    
+    .curso .curso_imagen {
+        width: 20%;
+        margin-right: 8%;
+    }
+
+    .curso .curso_informacion .curso_informacion_button {
+        width: 40%;
+        padding: 1.5% 0%;
+    }
+
+    details{
+        width: 70%;
+        margin: 1.5em 0em;
+    }
+
+    .docente_imagen {
+        max-width: 17%;
+    }
+
+    .tarjeta .tarjeta__precio {
+        font-size: 0.75em;
+    }
 
 
+}
+
+
+
+/*  Tablet   */
+@media screen and (min-width:426px) and (max-width:1023px) {
+
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    main .volver-atras {
+        display: none;
+    }
+
+    .curso {
+        margin: 2em 2em;
+
+    }
+
+
+    .curso .curso_imagen {
+        width: 22%;
+    }
+
+    .curso .curso_informacion {
+        padding: 0;
+    }
+
+
+    .curso .curso_informacion .curso_informacion_button {
+        width: 80%;
+        padding: 1.5% 0%;
+        align-self: center;
+        margin: 2.5em 0em;
+    }
+
+    details {
+        width: 70%;
+        margin: 1.5em 0em;
+    }
+
+
+    .docente .docente_info {
+        font-size: 0.9em;
+        padding: 0.4em 1.5em;
+    }
+
+    .docente .docente_info .docente_info_nombre {
+        margin-left: 0.25em;
+    }
+
+    .docente_imagen {
+        max-width: 22%;
+    }
+
+    .docente_info_calificacion-del-curso {
+        max-width: 20%;
+    }
+
+
+    /* aside */
+
+    .contenedor-tarjetas {
+        flex-wrap: wrap;
+        gap: 3em;
+    }
+
+    .tarjeta {
+        width: 30%;
+        margin-bottom: 2em;
+    }
+
+    .tarjeta .tarjeta__precio {
+        font-size: 0.85em;
+    }
+
+}
+
+/*  End Tablet   */
 
 
 /*      Celular        */
-@media screen and (max-width:400px) {
+@media screen and (max-width:425px) {
 
     * {
         padding: 0%;
@@ -421,7 +529,7 @@ input[type="checkbox"] {
     }
 
     details {
-        margin-top: 1em;
+        margin: 1.5em 0em;
         width: 100%;
     }
 
@@ -482,26 +590,39 @@ input[type="checkbox"] {
         margin-bottom: 0.8em;
     }
 
+    /*  aside */
 
-
-    .contenedor-tarjetas{
-        display: flex;
-        flex-direction: column;
-        gap: 2em;
+    aside {
+        margin: 1em 1em;
     }
 
-    .contenedor-tarjetas .tarjeta{
-        width: 100%;
-    }
-
-
-    .curso-relacionado-titulo{
+    .curso-relacionado-titulo {
         margin-top: 3em !important;
         margin-bottom: 1.5em !important;
     }
 
+    .contenedor-tarjetas {
+        flex-direction: column;
+        gap: 2em;
+    }
 
+    .contenedor-tarjetas .tarjeta {
+        width:95%;
+        margin-bottom: 2em;
+    }
+
+
+    .tarjeta .tarjeta__precio {
+        font-size: 0.95em;
+    }
+
+    .tarjeta .tarjeta__titulo{
+        font-size: 1.2em;
+    }
+
+ 
+    
 
 }
 
-
+/*      End Celular        */
