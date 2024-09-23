@@ -167,15 +167,70 @@ display: none;
     font-size: 0.8em;
 }
 
+@media screen and (max-width: 22.9em){
+    .navprimario {
+        padding: 8px 12px 0px 12px;
+    }
+    .navsecundario__menu{
+        width: 40%;
+    }
+    .navprimario__menu-items-nombre{
+        display: none !important;
+
+    }
+    .navprimario__menu-logo-img {
+        display: flex;
+        width: 40px;
+    }
+    .navprimario__menu-items-carrito-btn {
+        display: none !important;
+    }
+    .navprimario__menu-items-carrito-img {
+    margin-left: 81%;
+    }
+
+    .navprimario__menu-login {
+        width: 84%;
+        margin-right: 8%;
+    }
+    .navprimario__menu-login-icono{
+        display: flex;
+    }
+    .navprimario__menu-login-btn{
+        display: none;
+    }
+    .navprimario__menu-login-icono-img{
+        width: 2em;
+        display: block;
+    }
+    .navsecundario__menu {
+        width: 90%;
+        font-size: 0.7em;
+    }
+    .navprimario__menu-items-buscador-button {
+        width: 19%;
+    }
+    
+}
 
 /*Mobile Devices*/
-@media screen  and (max-width: 47.9em){
+@media screen and (min-width: 23em) and (max-width: 47.9em){
 
     .navsecundario__menu{
-        width: 60%;
+        width: 80%;
+        font-size: 0.9em;
+    }
+    .navprimario__menu-items-nombre{
+        display: none !important;
     }
     .navprimario__menu-logo {
         width: 31%;
+    }
+    
+    .navprimario__menu-logo-img {
+        display: flex;
+        width: 48px;
+        top: 1.5%;
     }
     .navprimario__menu-items-buscador-button {
         display: inline-block;
@@ -198,7 +253,7 @@ display: none;
 
     .navprimario__menu-login {
         width: 32%;
-        margin-right: 8%;
+        margin-right: 19%;
     }
     .navprimario__menu-login-icono{
         display: flex;
