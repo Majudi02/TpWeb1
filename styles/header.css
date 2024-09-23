@@ -117,6 +117,12 @@
     margin-right: 9%;
     font-size: 0.7em;
 }
+.navprimario__menu-login-icono-img{
+display: none;
+}
+.navprimario__menu-login-icono-img{
+    width: 2em;
+}
 .navprimario__menu-items-carrito-numero{
     font-weight: 700;
     font-size: 0.8em;
@@ -160,17 +166,11 @@
     text-transform: uppercase;
     font-size: 0.8em;
 }
-@media screen and (max-width: 64em){
-    .navprimario__menu-login {
-        
-        width: 30%;
-        margin-right: 14%;
-    }
-}
 
 
-@media screen and (max-width: 48em){
-   
+/*Mobile Devices*/
+@media screen  and (max-width: 47.9em){
+
     .navsecundario__menu{
         width: 60%;
     }
@@ -184,10 +184,13 @@
     .navprimario__menu-items-buscador-button-img{
         width: 75%;
     }
-    
+
     .navprimario__menu-items-carrito {
         /* display: flex; */
         width: 25%;
+    }
+    .navprimario__menu-items-carrito-btn {
+        display: none !important;
     }
     .navprimario__menu-items-carrito-img {
     margin-left: 81%;
@@ -195,52 +198,35 @@
 
     .navprimario__menu-login {
         width: 32%;
-        margin-right: 24%;
+        margin-right: 8%;
+    }
+    .navprimario__menu-login-icono{
+        display: flex;
+    }
+    .navprimario__menu-login-btn{
+        display: none;
+    }
+    .navprimario__menu-login-icono-img{
+        width: 2em;
+        display: block;
     }
 }
-@media screen and (max-width: 20em){
-    .navprimario{
-        padding: 0px 10px 0px 10px;
-    }
 
-    .navprimario__menu-logo {
-        width: 82%;
-    }
-    .navprimario__menu-items-logo {
-        width: 20%;
-    }
-    .navprimario__menu-items-nombre {
-        display: none !important;
-    }
-    .navprimario__menu-items-buscador-input {
-        text-indent: 7px;  
-        height: 80%;
-    }
-    
-    .navprimario__menu-items-buscador-button {
-        display: inline-block;
-        width: 16%;
-        height: 82%;
-    }
-    .navprimario__menu-items-buscador-button-img {
-        width: 75%;
-    }
+/*Tablet Devices*/
+@media screen and (min-width: 47.9em) and (max-width: 63.9em){
+    .navprimario__menu-login {
 
-    .navsecundario{
-        height: 26px;
+        width: 30%;
+        margin-right: 16%;
     }
-    
-    .navsecundario__menu {
-        width: 90%;
-    }
+}
 
-    .navsecundario__menu-item {
-        width: 23%;
-        list-style: none;
-        height: 90%;
-    }
-    .navsecundario__menu-item-link {
-        font-size: 0.6em;
-    }
 
+/*Laptop Devices*/
+@media screen and (min-width: 63.9em) and (max-width: 90em){
+    .navprimario__menu-login {
+
+        width: 30%;
+        margin-right: 16%;
+    }
 }
