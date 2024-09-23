@@ -23,7 +23,8 @@
                 </div>
 
                 <div class="navprimario__menu-items-buscador">
-                    <input class="navprimario__menu-items-buscador-input" list="buscador" type="text" placeholder="Buscar">
+                    <input class="navprimario__menu-items-buscador-input" list="buscador" type="text"
+                        placeholder="Buscar">
                     <datalist id="buscador">
                         <option value="Curso Javascript"></option>
                         <option value="Css5"></option>
@@ -31,13 +32,13 @@
                         <option value="Java para principiantes"></option>
                         <option value="Gifcards"></option>
                         <option value="Cursos destacados"></option>
-                      </datalist>
+                    </datalist>
                     <button action="#" class="navprimario__menu-items-buscador-button" id="buscador" type="submit">
                         <img class="navprimario__menu-items-buscador-button-img" src="./assets/lupa.png" alt="Bus">
                     </button>
                 </div>
-                
-                
+
+
 
 
 
@@ -51,7 +52,7 @@
                             alt="Carrito de compras">
                         <p class="navprimario__menu-items-carrito-numero">4</p>
                     </a>
-                   
+
                 </div>
             </div>
         </nav>
@@ -59,7 +60,7 @@
         <nav class="navsecundario">
             <ul class="navsecundario__menu">
                 <li class="navsecundario__menu-item">
-                    <a class="navsecundario__menu-item-link" href="./pages/giftcard.html">Cursos</a>
+                    <a class="navsecundario__menu-item-link" href="./pages/oferta-cursos.html">Cursos</a>
                 </li>
 
                 <li class="navsecundario__menu-item">
@@ -78,34 +79,28 @@
 
     </header>
 
-    <main class="main">
-        <section class="section-imagenprincipal">
-            <div class="banner" >
-                <img class="section-imagenprincipal-imagen-principal" src="./assets/imagen-principal.png"
-                alt="Imagen principal">
-            <div class="section-imagenprincipal-flecha">
+    <main>
+        <section class="section-slider">
+            <img class="section-slider__imagen" src="./assets/imagen-principal.png" alt="Imagen principal">
+            <a href="#">
+                <img class="section-slider__flecha-izquierda" src="./assets/flecha-izq-b.png" alt="flecha-izq">
+            </a>
 
-                <a class="section-imagenprincipal-flecha-link" href="#">
-                    <img class="section-imagenprincipal-flecha-izquierda" src="./assets/flecha-izq-b.png" alt="">
-                </a>
-
-                <a class="section-imagenprincipal-flecha-link" href="#">
-                    <img class="section-imagenprincipal-flecha-derecha" src="./assets/flecha-der-b.png" alt="">
-                </a>
-            </div>
-            
-            </div>
+            <a href="#">
+                <img class="section-slider__flecha-derecha" src="./assets/flecha-der-b.png" alt="flecha-der">
+            </a>
         </section>
+        
         <section class="section-pasos">
             <div class="main__subtitulo">
                 <h2>pasos a seguir</h2>
             </div>
 
             <div class="section-pasos-recuadros">
-                <h3 class="section-pasos-recuadros__titulo">1</h3>
-                <h3 class="section-pasos-recuadros__titulo">2</h3>
-                <h3 class="section-pasos-recuadros__titulo">3</h3>
-                <h3 class="section-pasos-recuadros__titulo">4</h3>
+                <h3 class="section-pasos-recuadros__numero">1</h3>
+                <h3 class="section-pasos-recuadros__numero">2</h3>
+                <h3 class="section-pasos-recuadros__numero">3</h3>
+                <h3 class="section-pasos-recuadros__numero">4</h3>
 
                 <p class="section-pasos-recuadros__contenido">
                     Creá tu cuenta y logueate
@@ -152,8 +147,8 @@
                         <img src="./assets/java.png" alt="logo-java" class="tarjeta__imagen" />
                         <h3 class="tarjeta__precio">U$D 50</h3>
                     </div>
-                    <h2 class="tarjeta__titulo">Java - Nivel 2</h2>
-                    <h3 class="tarjeta__horas">150 hs</h3>
+                    <h2 class="tarjeta__titulo">Java - Nivel intermedio</h2>
+                    <h3 class="tarjeta__horas">85 hs</h3>
                     <h3 class="tarjeta__modalidad">Modalidad virtual</h3>
                     <div class="tarjeta__detalle">
                         <a class="boton boton--ver-detalle" href="./pages/descripcion-del-curso-virtual.html">Ver
@@ -171,7 +166,7 @@
                         <h3 class="tarjeta__precio">U$D 60</h3>
                     </div>
                     <h2 class="tarjeta__titulo">FrontEnd Intensivo</h2>
-                    <h3 class="tarjeta__horas">100 hs</h3>
+                    <h3 class="tarjeta__horas">90 hs</h3>
                     <h3 class="tarjeta__modalidad">Modalidad virtual</h3>
                     <div class="tarjeta__detalle">
                         <a class="boton boton--ver-detalle" href="./pages/descripcion-del-curso-virtual.html">Ver
@@ -214,7 +209,8 @@
                         <!--Completar con pagina de curso presencial-->
                     </div>
                     <div class="tarjeta__comprar">
-                        <a class="boton boton--comprar" href="./pages/form-de-inscripcion.html">COMPRAR</a> <!--Completar con link a comprar-->
+                        <a class="boton boton--comprar" href="./pages/form-de-inscripcion.html">COMPRAR</a>
+                        <!--Completar con link a comprar-->
                     </div>
                 </article>
 
@@ -223,7 +219,7 @@
                         <img src="./assets/c++.png" alt="logo-c++" class="tarjeta__imagen" />
                         <h3 class="tarjeta__precio">U$D 30</h3>
                     </div>
-                    <h2 class="tarjeta__titulo">Aprenda a programar en C++</h2>
+                    <h2 class="tarjeta__titulo">Programación en C++</h2>
                     <h3 class="tarjeta__horas">50 hs</h3>
                     <h3 class="tarjeta__modalidad">Modalidad virtual</h3>
                     <div class="tarjeta__detalle">
@@ -269,7 +265,7 @@
                     <li><a class="link-menu" href="./pages/oferta-cursos.html">NUESTROS CURSOS</a></li>
                     <li><a class="link-menu" href="./pages/calendario.html">CALENDARIO</a></li>
                     <li><a class="link-menu" href="./pages/giftcard.html">GIFCARD</a></li>
-                    <li><a class="link-menu" href="./pages/contacto.html">CONTACTO</a></li> 
+                    <li><a class="link-menu" href="./pages/contacto.html">CONTACTO</a></li>
                 </ul>
             </nav>
         </div>

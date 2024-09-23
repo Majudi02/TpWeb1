@@ -66,3 +66,34 @@
     background: #3498db;
     border-radius: 50%;
 }
+.volver-atras{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 0.5em;
+    background-color: rgb(39, 39, 39);
+}
+
+.volver-atras .volver-atras__flecha{
+  width: 2%;  
+}
+
+.volver-atras .volver-atras__flecha .volver-atras__flecha--img{
+    display: inline;
+    background-color: rgb(255, 255, 255);
+    width: 95%;
+    border-radius: 50%;
+    text-align: right;
+}
+
+
+.volver-atras .volver-atras__texto{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 0.9em;
+    width: 3%;
+    text-align: right;
+    padding-right: 4%;
+}

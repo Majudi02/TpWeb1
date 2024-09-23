@@ -2,57 +2,68 @@
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+
 }
 
-.section-imagenprincipal {
+.main__subtitulo {
+    background-color: rgb(39, 39, 39);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(255, 255, 255);
     width: 100%;
-    margin-bottom: -4.3%;
-
+    padding-bottom: 2em;
+    padding-top: 2em;
+    text-align: center;
+    font-size: 1em;
+    text-transform: uppercase;
 }
 
 
-.section-imagenprincipal-imagen-principal {
+.section-slider {
     width: 100%;
-}
-
-.section-imagenprincipal-flecha {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
+    background-color: rgb(39, 39, 39);
     position: relative;
-    bottom: 20em;
 }
 
-.section-imagenprincipal-flecha-link {
-    display: flex;
+.section-slider .section-slider__imagen {
+    width: 100%;
 }
 
-.section-imagenprincipal-flecha-izquierda,
-.section-imagenprincipal-flecha-derecha {
-    width: 3em;
-    height: 3em;
+.section-slider .section-slider__flecha-derecha{
+    width: 6%;
+    position: absolute;
+    top: 50%;
+    right: 2%;    
 }
+
+.section-slider .section-slider__flecha-izquierda{
+    width: 6%;
+    position: absolute;
+    top: 50%;
+    left: 2%;
+}
+
+/*Sección pasos*/
 
 .section-pasos {
     background-color: rgb(39, 39, 39);
-    width: 80%;
-    padding-bottom: 3%;
-    padding-left: 10%;
-    padding-right: 10%;
- }
+    width: 100%;
+    padding-bottom: 1em;
+    padding-left: 5em;
+    padding-right: 5em;
+}
 
 
-.section-pasos-recuadros {
+.section-pasos .section-pasos-recuadros {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0.7fr 1fr;
     grid-row-gap: 0.5em;
     align-items: center;
     justify-items: center;
 }
 
-.section-pasos-recuadros__titulo{
+.section-pasos .section-pasos-recuadros .section-pasos-recuadros__numero {
     display: block;
     box-shadow: 0 0 0.4em rgb(153, 151, 151);
     border-radius: 50%;
@@ -62,12 +73,11 @@
     font-size: 2.5em;
     font-weight: 800;
     color: rgb(0, 0, 0);
-    width: 1.3em;
-
+    width: 2.2em;
 }
 
 
-.section-pasos-recuadros__contenido {
+.section-pasos .section-pasos-recuadros .section-pasos-recuadros__contenido {
     color: rgb(255, 255, 255);
     font-weight: 600;
     font-size: 1em;
@@ -78,21 +88,6 @@
 
 /*Cursos destacados*/
 
-.main{
-    box-sizing: border-box;
-}
-
-.main .main__subtitulo {
-    background-color: rgb(39, 39, 39);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: rgb(255, 255, 255);
-    width: 100%;
-    padding-bottom: 3%;
-    padding-top: 3%;
-    text-align: center;
-    font-size: 1em;
-    text-transform: uppercase;
-}
 
 .contenedor-tarjetas {
     background-color: rgb(39, 39, 39);
@@ -119,11 +114,11 @@
     box-shadow: 0 0 0.3em rgb(255, 255, 255);
 }
 
-.contenedor-tarjetas .tarjeta .tarjeta__img-precio{
+.contenedor-tarjetas .tarjeta .tarjeta__img-precio {
     grid-area: img-precio;
     position: relative;
     text-align: center;
-    border-color: hwb(0 0% 100%);
+    border-color: rgba(0, 0, 0, 0.8);
     border-style: solid;
     margin: 0.2em;
 }
@@ -133,23 +128,12 @@
     margin: 0.5em;
 }
 
-/*
-.tarjeta__precio {
-    position: absolute;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    top: 75%;
-    left: 73.5%;
-    font-size: 1em;
-    padding: 0.5em;
-}
-*/
 .contenedor-tarjetas .tarjeta .tarjeta__img-precio .tarjeta__precio {
     position: absolute;
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.8);
     color: rgb(255, 255, 255);
     bottom: 5%;
-    right: 3%;
+    right: 0.1%;
     font-size: 1em;
     padding: 0.5em;
 }
@@ -160,20 +144,13 @@
     text-align: right;
 }
 
-/*
-.tarjeta__horas {
-    grid-area: horas;
-    text-align: center;
-    font-size: 1.2em;
-}
-    */
-
 .contenedor-tarjetas .tarjeta .tarjeta__horas {
     grid-area: horas;
     font-size: 1.2em;
-    margin-left: 5.5%;
+    text-align: center;
 }
-.contenedor-tarjetas .tarjeta .tarjeta__modalidad {   
+
+.contenedor-tarjetas .tarjeta .tarjeta__modalidad {
     grid-area: modalidad;
     text-align: right;
     font-size: 0.8em;
@@ -191,7 +168,7 @@
     padding: 1em;
 }
 
-.boton{
+.boton {
     font-size: 0.8em;
     padding: 1.5em;
     text-decoration: none;
@@ -199,18 +176,20 @@
     border-radius: 3em;
 }
 
-.boton.boton--comprar{
+.boton.boton--comprar {
     background-color: rgb(45, 86, 161);
     color: rgb(255, 255, 255);
     border-color: rgb(0, 0, 0);
 }
 
-.boton.boton--ver-detalle{
+.boton.boton--ver-detalle {
     color: rgb(45, 86, 161);
     font-weight: 700;
 }
 
-.contenedor-medios-de-pago{
+/*Medios de pago*/
+
+.contenedor-medios-de-pago {
     display: flex;
     width: 100%;
     justify-content: center;
@@ -219,20 +198,61 @@
     padding-bottom: 1.5em;
 }
 
-.contenedor-medios-de-pago .medio-de-pago{
+.contenedor-medios-de-pago .medio-de-pago {
     width: 10%;
     padding: 0.5em;
 }
 
-.contenedor-medios-de-pago .medio-de-pago--flecha{
+.contenedor-medios-de-pago .medio-de-pago--flecha {
     width: 5%;
     max-height: 3em;
 }
 
 
+@media screen and (max-width: 64em) {
+    .section-imagenprincipal-flecha {
+        bottom: 15em;
+    }
+
+    .section-imagenprincipal {
+        margin-bottom: -5.3%;
+    }
+}
+
 /*--------------------------------------------------------------*/
 /*Mobile Devices*/
 @media screen and (max-width: 47.9em) {
+
+    .main__subtitulo{
+        padding-bottom: 0.9em;
+        padding-top: 0.9em;
+        font-size: 0.6em;
+    }
+
+    /*Pasos*/
+    .section-pasos {
+        width: 100%;
+        padding-bottom: 1.5%;
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .section-pasos .section-pasos-recuadros .section-pasos-recuadros__numero {
+        padding: 0.2em;
+        font-size: 1em;
+        font-weight: 600;
+        color: rgb(0, 0, 0);
+    }
+
+
+    .section-pasos .section-pasos-recuadros .section-pasos-recuadros__contenido {
+        font-weight: 400;
+        font-size: 0.5em;
+        width: 70%;
+        text-transform: uppercase;
+    }
+
+    /*Tarjetas*/
 
     .contenedor-tarjetas {
         display: flex;
@@ -244,6 +264,68 @@
         overscroll-behavior-inline: contain;
     }
 
+    .contenedor-tarjetas .tarjeta {
+        column-gap: 0.2em;
+        row-gap: 0.1em;
+        height: fit-content;
+        
+    }
     
+    .contenedor-tarjetas .tarjeta .tarjeta__img-precio {
+        margin: 0.1em;
+        /*agregar min-heigh??*/
+    }
+    
+    .contenedor-tarjetas .tarjeta .tarjeta__img-precio .tarjeta__imagen {
+        margin: 0.2em;
+    }
+    
+    .contenedor-tarjetas .tarjeta .tarjeta__img-precio .tarjeta__precio {
+        font-size: 0.5em;
+        padding: 0.4em;
+    }
+    
+    .contenedor-tarjetas .tarjeta .tarjeta__titulo {
+        font-size: 0.8em;
+    }
+    
+    .contenedor-tarjetas .tarjeta .tarjeta__horas {
+        font-size: 0.6em;
+    }
+    
+    .contenedor-tarjetas .tarjeta .tarjeta__modalidad {
+        font-size: 0.5em;
+        padding-top: 0.2em;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__detalle{
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+    
+    .contenedor-tarjetas .tarjeta .tarjeta__comprar {
+        padding-top: 0.2em;
+        padding-bottom: 0.6em;
+    }
+    
+    .boton {
+        font-size: 0.5em;
+        padding: 0.8em;
+    }
+    
+    .boton.boton--ver-detalle {
+        font-weight: 500;
+        text-align: right;
+    }
+    
+    /*Medios de pago*/
+    
+    .contenedor-medios-de-pago {
+        padding-bottom: 0.7em;
+    }
+
+    .contenedor-medios-de-pago .medio-de-pago--flecha {
+        max-height: 2em;
+    }
 
 }

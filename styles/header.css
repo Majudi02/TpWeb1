@@ -160,7 +160,13 @@
     text-transform: uppercase;
     font-size: 0.8em;
 }
-
+@media screen and (max-width: 64em){
+    .navprimario__menu-login {
+        
+        width: 30%;
+        margin-right: 14%;
+    }
+}
 
 
 @media screen and (max-width: 48em){
