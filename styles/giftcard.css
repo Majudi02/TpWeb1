@@ -307,7 +307,7 @@ input[type="radio"] {
         padding: 1.5em;
     }
 
-
+ 
     .contenido .contenido_personalizacion_titulo {
         font-size: 1.2em;
         margin-top: 1.5em;
@@ -316,6 +316,11 @@ input[type="radio"] {
     .contenido .contenido_personalizacion_nombre-del-destinatario {
         max-width: 90%;
     }
+
+    .contenido_personalizacion_seleccionar-tamaño {
+        max-width: 90%;
+    }
+
 
     .contenido_personalizacion_seleccionar-tamaño_opciones {
         margin: 0;
