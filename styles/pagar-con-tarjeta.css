@@ -68,6 +68,9 @@ input{
     margin-bottom: 10%;
 }
 
+.precio-total-celular{
+    display: none;
+}
 
 .botones{
     display: flex;
@@ -195,3 +198,99 @@ button{
 }
 
 
+/*      Mobile Devices       */
+@media screen and (max-width: 47.9em) {
+
+    body{
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+
+    section{
+        flex-direction: column;
+        flex-direction: column-reverse;
+    }
+
+    article{
+        width: 100%;
+    }
+
+
+    article form{
+        display: flex;
+        align-items: center;
+    }
+        
+
+    form{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    label{
+        font-size: 1.2em;
+    }
+    
+    input{
+        width: 70%;
+    }
+
+    .informacion-tarjeta-fila{
+        width: 72.5%;
+    }
+
+    article .precio-total{
+        display: none;
+    }
+
+    form .precio-total-celular{
+        display: flex;
+    }
+
+    form .botones{
+        width: 80%;
+        margin-bottom: 2em;
+    }
+
+    section .cursos{
+        max-width: 90%;
+        margin: 3em 0.5em;
+    }
+    
+    section .cursos .curso-a-comprar{
+        width: 100%;
+    }
+
+    section article form .precio-total-celular{
+        display: flex;
+        width: 100%;
+        margin-top: 3.5em;
+
+    }
+
+    section article form .precio-total-celular .total{
+        align-self: center;
+        font-size: 1.2em;
+        margin-left: 1.5em;
+        font-weight: bold;
+    }
+
+}
+
+
+/*  Tablet Devices  */
+@media screen and (min-width: 47.9em) and (max-width: 63.9em){
+    body {
+        background-color: red;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    section{
+        flex-direction: column;
+    }
+
+  
+
+}

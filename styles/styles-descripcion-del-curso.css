@@ -24,7 +24,6 @@ body {
     margin-right: 2%;
 }
 
-/*  hacerlo asi por que el profe quiere */
 .curso .curso_imagen {
     width: 12%;
     margin-right: 8%;
@@ -37,8 +36,6 @@ body {
     margin-right: 3%;
     padding-right: 12%;
 }
-
-
 
 .curso .curso_informacion .curso_informacion_button {
     margin-top: 1%;
@@ -393,9 +390,8 @@ input[type="checkbox"] {
 
 
 
-/*  Tablet   */
-@media screen and (min-width:426px) and (max-width:1023px) {
-
+/*  Tablet Devices  */
+@media screen and (min-width: 47.9em) and (max-width: 63.9em){
 
     body {
         width: 100%;
@@ -408,7 +404,6 @@ input[type="checkbox"] {
 
     .curso {
         margin: 2em 2em;
-
     }
 
 
@@ -470,11 +465,12 @@ input[type="checkbox"] {
 
 }
 
-/*  End Tablet   */
+/*  End Tablet Devices   */
 
 
-/*      Celular        */
-@media screen and (max-width:425px) {
+/*      Mobile Devices       */
+
+@media screen and (max-width: 47.9em) {
 
     * {
         padding: 0%;
@@ -620,9 +616,5 @@ input[type="checkbox"] {
         font-size: 1.2em;
     }
 
- 
-    
-
 }
-
-/*      End Celular        */
+/*      End Mobile Devices        */
