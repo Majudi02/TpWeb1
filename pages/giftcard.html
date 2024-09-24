@@ -11,18 +11,19 @@
 </head>
 
 <body>
-<!--
     <header id="home">
         <nav class="navprimario">
             <div class="navprimario__menu-items">
                 <div class="navprimario__menu-items-logo">
                     <a class="navprimario__menu-logo" href="../index.html">
-                        <img class="navprimario__menu-logo-img" src="../assets/logo.png" alt="logo">
+                        <img class="navprimario__menu-logo-img" src="/assets/logo.png" alt="logo">
                         <h1 class="navprimario__menu-items-nombre">DevX</h1>
                     </a>
                 </div>
+
                 <div class="navprimario__menu-items-buscador">
-                    <input class="navprimario__menu-items-buscador-input" list="buscador" type="text" placeholder="Buscar">
+                    <input class="navprimario__menu-items-buscador-input" list="buscador" type="text"
+                        placeholder="Buscar">
                     <datalist id="buscador">
                         <option value="Curso Javascript"></option>
                         <option value="Css5"></option>
@@ -30,45 +31,57 @@
                         <option value="Java para principiantes"></option>
                         <option value="Gifcards"></option>
                         <option value="Cursos destacados"></option>
-                      </datalist>
+                    </datalist>
                     <button action="#" class="navprimario__menu-items-buscador-button" id="buscador" type="submit">
-                        <img class="navprimario__menu-items-buscador-button-img" src="../assets/lupa.png" alt="Buscar">
+                        <img class="navprimario__menu-items-buscador-button-img" src="/assets/lupa.png" alt="Bus">
                     </button>
                 </div>
+
+
+
+
+
                 <div class="navprimario__menu-items-carrito">
                     <div class="navprimario__menu-login">
-                        <a class="navprimario__menu-login-btn" href="../pages/inicio-sesion.html">INGRESAR</a>
+                        <a class="navprimario__menu-login-btn" href="/pages/inicio-sesion.html">INGRESAR</a>
+                        <a class="navprimario__menu-login-icono" href="/pages/inicio-sesion.html">
+                            <img class="navprimario__menu-login-icono-img" src="/assets/Inicio-sesion.png"
+                                alt="iniciar sesion">
+                        </a>
                     </div>
-                    <a class="navprimario__menu-items-carrito-link" href="../pages/carrito-compras.html">
-                        <img class="navprimario__menu-items-carrito-img" src="../assets/carrito.png"
+                    <a class="navprimario__menu-items-carrito-link" href="/pages/carrito-compras.html">
+                        <img class="navprimario__menu-items-carrito-img" src="/assets/carrito.png"
                             alt="Carrito de compras">
                         <p class="navprimario__menu-items-carrito-numero">4</p>
                     </a>
+
                 </div>
             </div>
         </nav>
+
         <nav class="navsecundario">
             <ul class="navsecundario__menu">
                 <li class="navsecundario__menu-item">
-                    <a class="navsecundario__menu-item-link" href="../pages/oferta-cursos.html">Cursos</a>
+                    <a class="navsecundario__menu-item-link" href="/pages/oferta-cursos.html">Cursos</a>
                 </li>
+
                 <li class="navsecundario__menu-item">
-                    <a class="navsecundario__menu-item-link" href="../pages/giftcard.html">Gifcards</a>
+                    <a class="navsecundario__menu-item-link" href="/pages/giftcard.html">Gifcards</a>
                 </li>
+
                 <li class="navsecundario__menu-item">
-                    <a class="navsecundario__menu-item-link" href="../pages/calendario.html">Calendario</a>
+                    <a class="navsecundario__menu-item-link" href="/pages/calendario.html">Calendario</a>
                 </li>
+
                 <li class="navsecundario__menu-item">
-                    <a class="navsecundario__menu-item-link" href="../pages/contacto.html">Contacto</a>
+                    <a class="navsecundario__menu-item-link" href="/pages/contacto.html">Contacto</a>
                 </li>
             </ul>
         </nav>
 
-
--->
-       
-
     </header>
+
+
     <main>
         <div class="volver-atras">
             <a class="volver-atras__flecha" href="../index.html"><img class="volver-atras__flecha--img"
@@ -79,7 +92,8 @@
             <article>
                 <div class="contenido">
                     <div class="contenido_vista-previa-giftcard">
-                        <img class="contenido_vista-previa-giftcard_visualizacion" src="../assets/giftcard.png" alt="imagen de la giftcard">
+                        <img class="contenido_vista-previa-giftcard_visualizacion" src="../assets/giftcard.png"
+                            alt="imagen de la giftcard">
                         <p> Vista previa de resultado de la personalizacion</p>
                     </div>
                     <div class="contenido_personalizacion">
@@ -92,19 +106,23 @@
                         <article class="contenido_personalizacion_seleccionar-color">
                             <p class="subtitulos">Color</p>
                             <div class="contenido_personalizacion_seleccionar-color_opciones">
-                                <label class="contenido_personalizacion_seleccionar-color_opciones_label" for="color-rojo">
+                                <label class="contenido_personalizacion_seleccionar-color_opciones_label"
+                                    for="color-rojo">
                                     <div class="circulo" style="background-color: rgb(223, 14, 14);"></div>
                                     <input type="radio" name="colores" id="color-rojo">
                                 </label>
-                                <label class="contenido_personalizacion_seleccionar-color_opciones_label" for="color-azul">
+                                <label class="contenido_personalizacion_seleccionar-color_opciones_label"
+                                    for="color-azul">
                                     <div class="circulo" style="background-color: rgb(0, 0, 255);"></div>
                                     <input type="radio" name="colores" id="color-azul">
                                 </label>
-                                <label class="contenido_personalizacion_seleccionar-color_opciones_label" for="color-verde">
+                                <label class="contenido_personalizacion_seleccionar-color_opciones_label"
+                                    for="color-verde">
                                     <div class="circulo" style="background-color: rgb(0, 255, 0);"></div>
-                                    <input type="radio" name="colores"  id="color-verde">
+                                    <input type="radio" name="colores" id="color-verde">
                                 </label>
-                                <label class="contenido_personalizacion_seleccionar-color_opciones_label" for="color-amarillo">
+                                <label class="contenido_personalizacion_seleccionar-color_opciones_label"
+                                    for="color-amarillo">
                                     <div class="circulo" style="background-color: rgb(255, 255, 0);"></div>
                                     <input type="radio" name="colores" id="color-amarillo">
                                 </label>
@@ -114,23 +132,28 @@
                         <article class="contenido_personalizacion_seleccionar-tamaño">
                             <p class="subtitulos">Tamaño de la fuente</p>
                             <div class="contenido_personalizacion_seleccionar-tamaño_opciones">
-                                <label class="contenido_personalizacion_seleccionar-tamaño_opciones_label" for="size-20px">
+                                <label class="contenido_personalizacion_seleccionar-tamaño_opciones_label"
+                                    for="size-20px">
                                     <p style="font-size: 14px;">20px</p>
                                     <input type="radio" name="tamaño" id="size-20px">
                                 </label>
-                                <label class="contenido_personalizacion_seleccionar-tamaño_opciones_label" for="size-28px">
+                                <label class="contenido_personalizacion_seleccionar-tamaño_opciones_label"
+                                    for="size-28px">
                                     <p style="font-size: 16px;">28px</p>
                                     <input type="radio" name="tamaño" id="size-28px">
                                 </label>
-                                <label class="contenido_personalizacion_seleccionar-tamaño_opciones_label" for="size-32px">
+                                <label class="contenido_personalizacion_seleccionar-tamaño_opciones_label"
+                                    for="size-32px">
                                     <p style="font-size: 18px;">32px</p>
                                     <input type="radio" name="tamaño" id="size-32px">
                                 </label>
-                                <label class="contenido_personalizacion_seleccionar-tamaño_opciones_label" for="size-48px">
+                                <label class="contenido_personalizacion_seleccionar-tamaño_opciones_label"
+                                    for="size-48px">
                                     <p style="font-size: 20px;">48px</p>
                                     <input type="radio" name="tamaño" id="size-48px">
                                 </label>
-                                <label class="contenido_personalizacion_seleccionar-tamaño_opciones_label" for="size-60px">
+                                <label class="contenido_personalizacion_seleccionar-tamaño_opciones_label"
+                                    for="size-60px">
                                     <p style="font-size: 22px;">60px</p>
                                     <input type="radio" name="tamaño" id="size-60px">
                                 </label>
@@ -138,7 +161,8 @@
                         </article>
 
                         <article class="contenido_personalizacion_monto">
-                            <p class="subtitulos">Monto $ <input class="contenido_personalizacion_monto_input"  type="number"></p>
+                            <p class="subtitulos">Monto $ <input class="contenido_personalizacion_monto_input"
+                                    type="number"></p>
 
                         </article>
 
@@ -146,17 +170,20 @@
                         <article class="contenido_personalizacion_seleccionar-ubicacion">
                             <p class="subtitulos">Ubicación</p>
                             <div class="contenido_personalizacion_seleccionar-ubicacion_opciones">
-                                <label class="contenido_personalizacion_seleccionar-ubicacion_opciones_label" for="ubicacion-1">
+                                <label class="contenido_personalizacion_seleccionar-ubicacion_opciones_label"
+                                    for="ubicacion-1">
                                     <img class="imagen-de-la-ubicacion" src="../assets/GiftCard Abajo.png"
                                         alt="ubicación abajo a la derecha">
                                     <input type="radio" name="ubicacion" value="ubicacion-1" id="ubicacion-1">
                                 </label>
-                                <label class="contenido_personalizacion_seleccionar-ubicacion_opciones_label" for="ubicacion-2">
+                                <label class="contenido_personalizacion_seleccionar-ubicacion_opciones_label"
+                                    for="ubicacion-2">
                                     <img class="imagen-de-la-ubicacion" src="../assets/GiftCard Arriba-izquierda.png"
                                         alt="ubicación arriba a la izquierda">
                                     <input type="radio" name="ubicacion" value="ubicacion-2" id="ubicacion-2">
                                 </label>
-                                <label class="contenido_personalizacion_seleccionar-ubicacion_opciones_label" for="ubicacion-3">
+                                <label class="contenido_personalizacion_seleccionar-ubicacion_opciones_label"
+                                    for="ubicacion-3">
                                     <img class="imagen-de-la-ubicacion" src="../assets/GiftCard Arriba-derecha.png"
                                         alt="ubicación arriba a la derecha">
                                     <input type="radio" name="ubicacion" value="ubicacion-3" id="ubicacion-3">
@@ -168,7 +195,8 @@
                         <article class="contenido_personalizacion_seleccionar-fondo">
                             <p class="subtitulos">Fondo</p>
                             <div class="contenido_personalizacion_seleccionar-fondo_opciones">
-                                <label class="scontenido_personalizacion_seleccionar-fondo_opciones_label" for="fondo-1">
+                                <label class="scontenido_personalizacion_seleccionar-fondo_opciones_label"
+                                    for="fondo-1">
                                     <div class="fondo" style="background-color: rgb(223, 133, 14);"></div>
                                     <input type="radio" name="fondo" id="fondo-1">
                                 </label>
