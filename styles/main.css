@@ -32,14 +32,14 @@
 .section-slider .section-slider__flecha-derecha {
     width: 6%;
     position: absolute;
-    top: 50%;
+    top: 35%;
     right: 2%;
 }
 
 .section-slider .section-slider__flecha-izquierda {
     width: 6%;
     position: absolute;
-    top: 50%;
+    top: 35%;
     left: 2%;
 }
 
