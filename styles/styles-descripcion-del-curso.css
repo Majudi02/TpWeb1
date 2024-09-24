@@ -327,20 +327,20 @@ input[type="checkbox"] {
 
 
 /*Volver*/
-.volver-atras {
+.volver-atras{
     display: flex;
     width: 100%;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: flex-end;
     padding-top: 0.5em;
-    padding-left: 3em;
+    background-color: rgb(39, 39, 39);
 }
 
-.volver-atras .volver-atras__flecha {
-    width: 2%;
+.volver-atras .volver-atras__flecha{
+  width: 2%;  
 }
 
-.volver-atras .volver-atras__flecha .volver-atras__flecha--img {
+.volver-atras .volver-atras__flecha .volver-atras__flecha--img{
     display: inline;
     background-color: rgb(255, 255, 255);
     width: 95%;
@@ -349,7 +349,7 @@ input[type="checkbox"] {
 }
 
 
-.volver-atras .volver-atras__texto {
+.volver-atras .volver-atras__texto{
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: 500;
@@ -359,7 +359,7 @@ input[type="checkbox"] {
     padding-right: 4%;
 }
 
-/*  Portatil   */
+/*  Laptop devices   */
 @media screen and (min-width:1024px) and (max-width:1439px) {
     
     .curso .curso_imagen {
