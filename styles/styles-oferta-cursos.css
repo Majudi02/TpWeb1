@@ -43,7 +43,7 @@
     box-shadow: 0 0 0.3em rgb(255, 255, 255);
 }
 
-.tarjeta__img-precio{
+.tarjeta__img-precio {
     grid-area: img-precio;
     position: relative;
     text-align: center;
@@ -61,8 +61,8 @@
     position: absolute;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-    top: 75%;
-    left: 73.5%;
+    bottom: 5%;
+    right: 0.1%;
     font-size: 1em;
     padding: 0.5em;
 }
@@ -97,7 +97,7 @@
     padding: 1em;
 }
 
-.boton{
+.boton {
     font-size: 0.8em;
     padding: 1.5em;
     text-decoration: none;
@@ -105,18 +105,18 @@
     border-radius: 3em;
 }
 
-.boton--comprar{
+.boton--comprar {
     background-color: rgb(45, 86, 161);
     color: rgb(255, 255, 255);
     border-color: rgb(0, 0, 0);
 }
 
-.boton--ver-detalle{
+.boton--ver-detalle {
     color: rgb(45, 86, 161);
     font-weight: 700;
 }
 
-.volver-atras{
+.volver-atras {
     display: flex;
     width: 100%;
     align-items: center;
@@ -125,11 +125,11 @@
     background-color: rgb(39, 39, 39);
 }
 
-.volver-atras .volver-atras__flecha{
-  width: 2%;  
+.volver-atras .volver-atras__flecha {
+    width: 2%;
 }
 
-.volver-atras .volver-atras__flecha .volver-atras__flecha--img{
+.volver-atras .volver-atras__flecha .volver-atras__flecha--img {
     display: inline;
     background-color: rgb(255, 255, 255);
     width: 95%;
@@ -138,7 +138,7 @@
 }
 
 
-.volver-atras .volver-atras__texto{
+.volver-atras .volver-atras__texto {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: 500;
@@ -146,4 +146,197 @@
     width: 3%;
     text-align: right;
     padding-right: 4%;
+}
+
+
+/*-----------------------------------*/
+/*Mobile Devices*/
+@media screen and (max-width: 47.9em) {
+
+    .main__subtitulo {
+        padding-bottom: 0.9em;
+        padding-top: 0.9em;
+        font-size: 0.6em;
+    }
+
+    .contenedor-tarjetas {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-gap: 1em 2em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        padding-bottom: 1em;
+    }
+
+    .contenedor-tarjetas .tarjeta {
+        column-gap: 0.2em;
+        row-gap: 0.1em;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__img-precio {
+        margin: 0.1em;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__img-precio .tarjeta__imagen {
+        margin: 0.2em;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__img-precio .tarjeta__precio {
+        font-size: 0.6em;
+        padding: 0.5em;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__titulo {
+        font-size: 0.8em;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__horas {
+        font-size: 0.6em;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__modalidad {
+        font-size: 0.5em;
+        padding-top: 0.2em;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__detalle {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__comprar {
+        padding-top: 0.2em;
+        padding-bottom: 0.6em;
+    }
+
+    .boton {
+        font-size: 0.5em;
+        padding: 0.8em;
+    }
+
+    .boton.boton--ver-detalle {
+        font-weight: 500;
+        text-align: right;
+    }
+
+    /*Medios de pago*/
+
+    .contenedor-medios-de-pago {
+        padding-bottom: 0.7em;
+    }
+
+    .contenedor-medios-de-pago .medio-de-pago--flecha {
+        max-height: 2em;
+    }
+
+    /*Volver*/
+    .volver-atras {
+        padding-right: 2em;
+    }
+
+    .volver-atras .volver-atras__flecha {
+        width: 1.7em;
+    }
+
+    .volver-atras .volver-atras__flecha .volver-atras__flecha--img {
+        width: 1.5em;
+    }
+
+    .volver-atras .volver-atras__texto {
+        width: 3em;
+        padding-right: 2em;
+        font-size: 0.8em;
+        padding-bottom: 0.2em;
+    }
+}
+
+/*Tablet Devices*/
+@media screen and (min-width: 47.9em) and (max-width: 63.9em) {
+
+    .main__subtitulo {
+        padding-bottom: 0.9em;
+        padding-top: 0.9em;
+        font-size: 0.6em;
+    }
+
+    /*Tarjetas*/
+
+    .contenedor-tarjetas {
+        grid-gap: 1.5em 3em;
+        padding-left: 4em;
+        padding-right: 4em;
+        padding-bottom: 0.5em;
+        padding-top: 0.2em;
+    }
+
+    .contenedor-tarjetas .tarjeta {
+        column-gap: 0.2em;
+        row-gap: 0.1em;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__img-precio {
+        margin: 0.1em;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__img-precio .tarjeta__imagen {
+        margin: 0.2em;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__img-precio .tarjeta__precio {
+        font-size: 0.7em;
+        padding: 0.4em;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__titulo {
+        font-size: 0.8em;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__horas {
+        font-size: 0.8em;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__modalidad {
+        font-size: 0.6em;
+        padding-top: 0.2em;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__detalle {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__comprar {
+        padding-top: 0.2em;
+        padding-bottom: 0.6em;
+    }
+
+    .boton {
+        font-size: 0.6em;
+        padding: 0.8em;
+    }
+
+    .boton.boton--ver-detalle {
+        font-weight: 500;
+        text-align: right;
+    }
+    
+    /*Volver*/
+    .volver-atras {
+        padding-right: 2em;
+    }
+
+    .volver-atras .volver-atras__flecha {
+        width: 1.7em;
+    }
+
+    .volver-atras .volver-atras__flecha .volver-atras__flecha--img {
+        width: 1.5em;
+    }
+
+    .volver-atras .volver-atras__texto {
+        width: 3em;
+        padding-right: 2em;
+        font-size: 0.8em;
+        padding-bottom: 0.2em;
+    }
 }

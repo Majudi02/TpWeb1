@@ -253,8 +253,6 @@
     .contenedor-tarjetas .tarjeta {
         column-gap: 0.2em;
         row-gap: 0.1em;
-        height: fit-content;
-
     }
 
     .contenedor-tarjetas .tarjeta .tarjeta__img-precio {
