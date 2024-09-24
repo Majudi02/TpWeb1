@@ -327,7 +327,7 @@ input[type="checkbox"] {
 
 
 /*Volver*/
-.volver-atras {
+.volver-atras{
     display: flex;
     width: 100%;
     align-items: center;
@@ -340,7 +340,7 @@ input[type="checkbox"] {
     width: 1.8em;
 }
 
-.volver-atras .volver-atras__flecha .volver-atras__flecha--img {
+.volver-atras .volver-atras__flecha .volver-atras__flecha--img{
     display: inline;
     background-color: rgb(255, 255, 255);
     width: 1.5em;
@@ -349,7 +349,7 @@ input[type="checkbox"] {
 }
 
 
-.volver-atras .volver-atras__texto {
+.volver-atras .volver-atras__texto{
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: 500;
@@ -360,7 +360,7 @@ input[type="checkbox"] {
     padding-bottom: 0.2em;
 }
 
-/*  Portatil   */
+/*  Laptop devices   */
 @media screen and (min-width:1024px) and (max-width:1439px) {
 
     .curso .curso_imagen {

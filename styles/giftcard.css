@@ -21,7 +21,7 @@ body {
 }
 
 .contenido {
-    margin-top: 4%;
+    margin-top: 2%;
     display: flex;
     gap: 10%;
 }
@@ -214,6 +214,39 @@ input[type="radio"] {
 }
 
 
+.volver-atras{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 0.5em;
+    background-color: rgb(39, 39, 39);
+}
+
+.volver-atras .volver-atras__flecha{
+  width: 2%;  
+}
+
+.volver-atras .volver-atras__flecha .volver-atras__flecha--img{
+    display: inline;
+    background-color: rgb(255, 255, 255);
+    width: 95%;
+    border-radius: 50%;
+    text-align: right;
+}
+
+
+.volver-atras .volver-atras__texto{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 0.9em;
+    width: 3%;
+    text-align: right;
+    padding-right: 4%;
+}
+
+
 
 /*  Tablet Devices  */
 @media screen and (min-width: 47.9em) and (max-width: 63.9em){
@@ -221,7 +254,7 @@ input[type="radio"] {
         width: 100%;
         overflow-x: hidden;
     }
-    .link-volver-atras {
+    .volver-atras{
         display: none;
     }
     main{
@@ -283,7 +316,7 @@ input[type="radio"] {
         margin: 0em 1em;
     }
 
-    .link-volver-atras {
+    .volver-atras{
         display: none;
     }
 

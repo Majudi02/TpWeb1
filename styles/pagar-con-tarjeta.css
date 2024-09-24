@@ -8,13 +8,20 @@ body {
     background-color: rgb(39, 39, 39);
     color: white;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    min-height: 35em;
+}
+
+main{
+   height: 47.7em;
 }
 
 section {
     display: flex; 
     justify-content: space-between; 
     align-items: flex-start; 
-    margin-top: 3%;
+    margin-top: 4%;
 }
 article {
     flex: 1; /* Los artículos tomarán el mismo ancho */
@@ -136,48 +143,48 @@ button{
 }
 
 
-.curso-a-comprar {
+.curso_seleccionado {
     display: flex;
     margin-right: 23%;
     background-color: #333;
     border-radius: 30px; 
 }
 
-.curso-imagen {
+.curso_seleccionado_imagen {
     padding: 2%;
     width: 12%;
     height: auto; 
 }
 
-.contenido-del-curso {
+.curso_seleccionado_contenido {
     width: 100%;
     padding: 0 1%;
 }
 
-.contenido-del-curso p {
+.curso_seleccionado_contenido p {
     font-size: 0.85em;
     color: rgb(241, 239, 235);
 }
 
-.contenedor-del-precio{
+.curso_seleccionado_contenedor-del-precio{
     display: flex;
     margin-top: 2%;
     justify-content:space-between; 
     align-items: center; 
 }
 
-.contenedor-del-precio .titulo-del-curso{
+.curso_seleccionado_contenedor-del-precio .curso_seleccionado_contenedor-del-precio_titulo{
   margin-left: 2%;
   font-weight: bolder;
 }
 
 
-.contenedor-del-precio .precio-del-curso{
+.curso_seleccionado_contenedor-del-precio .curso_seleccionado_contenedor-del-precio_precio{
     font-size: 1em;
     margin-right: 5%;
 }
 
-.contenido-del-curso .modalidad-del-curso{
+.curso_seleccionado_contenido .curso_seleccionado_modalidad{
     margin-left: 2%;
     margin-top: 0.5%;
     font-size: 0.75em;
@@ -198,6 +205,41 @@ button{
 }
 
 
+.volver-atras{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 0.5em;
+    background-color: rgb(39, 39, 39);
+}
+
+.volver-atras .volver-atras__flecha{
+  width: 2%;  
+}
+
+.volver-atras .volver-atras__flecha .volver-atras__flecha--img{
+    display: inline;
+    background-color: rgb(255, 255, 255);
+    width: 95%;
+    border-radius: 50%;
+    text-align: right;
+}
+
+
+.volver-atras .volver-atras__texto{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 0.9em;
+    width: 3%;
+    text-align: right;
+    padding-right: 4%;
+}
+
+
+
+
 /*      Mobile Devices       */
 @media screen and (max-width: 47.9em) {
 
@@ -206,10 +248,20 @@ button{
         overflow-x: hidden;
     }
 
+    
+    main{
+        height: 57.8em;
+     }
+
+
+    .volver-atras{
+        display: none;
+    }
 
     section{
         flex-direction: column;
         flex-direction: column-reverse;
+        margin-top: 2%;
     }
 
     article{
@@ -237,7 +289,7 @@ button{
     }
 
     .informacion-tarjeta-fila{
-        width: 72.5%;
+        width: 70%;
     }
 
     article .precio-total{
@@ -258,7 +310,7 @@ button{
         margin: 3em 0.5em;
     }
     
-    section .cursos .curso-a-comprar{
+    section .cursos .curso_seleccionado{
         width: 100%;
     }
 
@@ -276,21 +328,91 @@ button{
         font-weight: bold;
     }
 
+    .curso_seleccionado_imagen{
+        width:17%;
+    }
 }
+/*     End Mobile Devices       */
+
 
 
 /*  Tablet Devices  */
 @media screen and (min-width: 47.9em) and (max-width: 63.9em){
     body {
-        background-color: red;
         width: 100%;
         overflow-x: hidden;
     }
 
-    section{
-        flex-direction: column;
+
+    main{
+        height: 57.8em;
+     }
+
+    .volver-atras{
+        display: none;
     }
 
-  
+    section{
+        margin-top: 26%;
+    }
 
+    .cursos{
+        max-width: 43%;
+        width: 49%;
+        font-size: 0.9em;
+    }
+
+    .curso_seleccionado_imagen{
+        width:19%;
+    }
+
+    .curso-a-comprar{
+        margin-left: 1em;
+    }
+    
+    form {
+        width: 60%;
+    }
+}
+
+/*  End Tablet Devices  */
+
+
+/*  Laptop devices   */
+@media screen and (min-width:1024px) and (max-width:1439px) {
+
+ 
+    main{
+        height: 57.8em;
+     }
+
+
+    .cursos{
+        max-width: 40%;
+        font-size: 0.9em;
+    }
+
+    section{
+        margin-top: 10%;
+    }
+
+    .curso_seleccionado_imagen{
+        width:19%;
+    }
+
+    form {
+        width: 60%;
+    }
+
+}
+
+/*  End Laptop devices   */
+
+
+/*  Laptop devices   */
+@media screen and  (max-width:1440px) {
+    main{
+        height: 55.3em;
+     }
+    
 }
