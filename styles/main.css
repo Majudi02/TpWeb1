@@ -29,14 +29,14 @@
     width: 100%;
 }
 
-.section-slider .section-slider__flecha-derecha{
+.section-slider .section-slider__flecha-derecha {
     width: 6%;
     position: absolute;
     top: 50%;
-    right: 2%;    
+    right: 2%;
 }
 
-.section-slider .section-slider__flecha-izquierda{
+.section-slider .section-slider__flecha-izquierda {
     width: 6%;
     position: absolute;
     top: 50%;
@@ -208,22 +208,11 @@
     max-height: 3em;
 }
 
-
-@media screen and (max-width: 64em) {
-    .section-imagenprincipal-flecha {
-        bottom: 15em;
-    }
-
-    .section-imagenprincipal {
-        margin-bottom: -5.3%;
-    }
-}
-
 /*--------------------------------------------------------------*/
 /*Mobile Devices*/
 @media screen and (max-width: 47.9em) {
 
-    .main__subtitulo{
+    .main__subtitulo {
         padding-bottom: 0.9em;
         padding-top: 0.9em;
         font-size: 0.6em;
@@ -232,16 +221,15 @@
     /*Pasos*/
     .section-pasos {
         width: 100%;
-        padding-bottom: 1.5%;
-        padding-left: 3%;
-        padding-right: 3%;
+        padding-bottom: 0.5em;
+        padding-left: 1em;
+        padding-right: 1em;
     }
 
     .section-pasos .section-pasos-recuadros .section-pasos-recuadros__numero {
         padding: 0.2em;
         font-size: 1em;
         font-weight: 600;
-        color: rgb(0, 0, 0);
     }
 
 
@@ -249,14 +237,12 @@
         font-weight: 400;
         font-size: 0.5em;
         width: 70%;
-        text-transform: uppercase;
     }
 
     /*Tarjetas*/
 
     .contenedor-tarjetas {
         display: flex;
-        min-width: 40%;
         padding-left: 1em;
         padding-right: 1em;
         gap: 1em;
@@ -268,58 +254,161 @@
         column-gap: 0.2em;
         row-gap: 0.1em;
         height: fit-content;
-        
+
     }
-    
+
     .contenedor-tarjetas .tarjeta .tarjeta__img-precio {
         margin: 0.1em;
-        /*agregar min-heigh??*/
     }
-    
+
     .contenedor-tarjetas .tarjeta .tarjeta__img-precio .tarjeta__imagen {
         margin: 0.2em;
     }
-    
+
     .contenedor-tarjetas .tarjeta .tarjeta__img-precio .tarjeta__precio {
         font-size: 0.5em;
         padding: 0.4em;
     }
-    
+
     .contenedor-tarjetas .tarjeta .tarjeta__titulo {
         font-size: 0.8em;
     }
-    
+
     .contenedor-tarjetas .tarjeta .tarjeta__horas {
         font-size: 0.6em;
     }
-    
+
     .contenedor-tarjetas .tarjeta .tarjeta__modalidad {
         font-size: 0.5em;
         padding-top: 0.2em;
     }
 
-    .contenedor-tarjetas .tarjeta .tarjeta__detalle{
+    .contenedor-tarjetas .tarjeta .tarjeta__detalle {
         padding-bottom: 0;
         padding-top: 0;
     }
-    
+
     .contenedor-tarjetas .tarjeta .tarjeta__comprar {
         padding-top: 0.2em;
         padding-bottom: 0.6em;
     }
-    
+
     .boton {
         font-size: 0.5em;
         padding: 0.8em;
     }
-    
+
     .boton.boton--ver-detalle {
         font-weight: 500;
         text-align: right;
     }
-    
+
     /*Medios de pago*/
-    
+
+    .contenedor-medios-de-pago {
+        padding-bottom: 0.7em;
+    }
+
+    .contenedor-medios-de-pago .medio-de-pago--flecha {
+        max-height: 2em;
+    }
+
+}
+
+
+/*Tablet Devices*/
+@media screen and (min-width: 47.9em) and (max-width: 63.9em) {
+
+    .main__subtitulo {
+        padding-bottom: 0.9em;
+        padding-top: 0.9em;
+        font-size: 0.9em;
+    }
+
+    /*Pasos*/
+    .section-pasos {
+        width: 100%;
+        padding-bottom: 1em;
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+
+    .section-pasos .section-pasos-recuadros .section-pasos-recuadros__numero {
+        padding: 0.5em;
+        font-size: 1.3em;
+        font-weight: 750;
+    }
+
+
+    .section-pasos .section-pasos-recuadros .section-pasos-recuadros__contenido {
+        font-weight: 400;
+        font-size: 0.8em;
+        width: 70%;
+    }
+
+    /*Tarjetas*/
+
+    .contenedor-tarjetas {
+        grid-gap: 1.5em 3em;
+        padding-left: 4em;
+        padding-right: 4em;
+        padding-bottom: 0.5em;
+        padding-top: 0.2em;
+    }
+
+    .contenedor-tarjetas .tarjeta {
+        column-gap: 0.2em;
+        row-gap: 0.1em;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__img-precio {
+        margin: 0.1em;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__img-precio .tarjeta__imagen {
+        margin: 0.2em;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__img-precio .tarjeta__precio {
+        font-size: 0.7em;
+        padding: 0.4em;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__titulo {
+        font-size: 0.8em;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__horas {
+        font-size: 0.8em;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__modalidad {
+        font-size: 0.6em;
+        padding-top: 0.2em;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__detalle {
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .contenedor-tarjetas .tarjeta .tarjeta__comprar {
+        padding-top: 0.2em;
+        padding-bottom: 0.6em;
+    }
+
+    .boton {
+        font-size: 0.6em;
+        padding: 0.8em;
+    }
+
+    .boton.boton--ver-detalle {
+        font-weight: 500;
+        text-align: right;
+    }
+
+    /*Medios de pago*/
+
     .contenedor-medios-de-pago {
         padding-bottom: 0.7em;
     }

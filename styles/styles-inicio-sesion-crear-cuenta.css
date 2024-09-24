@@ -2,19 +2,21 @@
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
 }
 
-.main{
+.main {
     display: flex;
     flex-direction: column;
     background-color: rgb(39, 39, 39);
+    min-height: 33em;
 }
 
 .contenedor-formulario {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 30em;
+    padding-top: 3em;
 }
 
 .contenedor-formulario .formulario {
@@ -56,7 +58,7 @@
 }
 
 
-.contenedor-formulario .formulario .formulario__olvido{
+.contenedor-formulario .formulario .formulario__olvido {
     text-decoration: none;
     font-style: italic;
     font-weight: 700;
@@ -67,7 +69,7 @@
 }
 
 
-.contenedor-formulario .formulario .formulario__boton{
+.contenedor-formulario .formulario .formulario__boton {
     padding: 0.5em;
     text-decoration: none;
     text-align: center;
@@ -79,7 +81,7 @@
     margin-top: 1em;
 }
 
-.contenedor-formulario .formulario .formulario__crear-cuenta{
+.contenedor-formulario .formulario .formulario__crear-cuenta {
     text-align: center;
     font-size: 1em;
     margin-bottom: 0.6em;
@@ -88,13 +90,13 @@
     font-weight: 300;
 }
 
-.contenedor-formulario .formulario .formulario__link-crear-cuenta{
-text-decoration: none;
-color: rgb(255, 255, 255);
-font-weight: 700;
+.contenedor-formulario .formulario .formulario__link-crear-cuenta {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
 }
 
-.contenedor-formulario .formulario .formulario__indicaciones{
+.contenedor-formulario .formulario .formulario__indicaciones {
     text-align: center;
     font-size: 1em;
     color: rgb(255, 255, 255);
@@ -103,19 +105,20 @@ font-weight: 700;
 }
 
 /*Volver*/
-.volver-atras{
+.volver-atras {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: flex-end;
     padding-top: 0.5em;
+    padding-right: 1em;
 }
 
-.volver-atras .volver-atras__flecha{
-  width: 2%;  
+.volver-atras .volver-atras__flecha {
+    width: 2%;
 }
 
-.volver-atras .volver-atras__flecha .volver-atras__flecha--img{
+.volver-atras .volver-atras__flecha .volver-atras__flecha--img {
     display: inline;
     background-color: rgb(255, 255, 255);
     width: 95%;
@@ -124,7 +127,7 @@ font-weight: 700;
 }
 
 
-.volver-atras .volver-atras__texto{
+.volver-atras .volver-atras__texto {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: 500;
@@ -132,4 +135,189 @@ font-weight: 700;
     width: 3%;
     text-align: right;
     padding-right: 4%;
+}
+
+
+
+
+/*-----------------------------------*/
+/*Mobile Devices*/
+@media screen and (max-width: 47.9em) {
+
+    .main {
+        min-height: 35em;
+    }
+
+    .contenedor-formulario {
+        padding-top: 6em;
+    }
+
+    .contenedor-formulario .formulario {
+        padding: 0.5em;
+        width: 65%;
+        border-radius: 1em;
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+    }
+
+    .contenedor-formulario .formulario .formulario__titulo {
+        font-size: 1.2em;
+        margin-bottom: 0.2em;
+    }
+
+    .contenedor-formulario .formulario .formulario__label {
+        font-size: 0.9em;
+        margin-top: 0.4em;
+    }
+
+    .contenedor-formulario .formulario .formulario__input {
+        border-radius: 0.5em;
+        font-size: 0.6em;
+    }
+
+
+    .contenedor-formulario .formulario .formulario__olvido {
+        font-weight: 600;
+        font-size: 0.9em;
+        margin-top: 0.4em;
+    }
+
+
+    .contenedor-formulario .formulario .formulario__boton {
+        padding: 0.4em;
+        border-radius: 1em;
+        font-size: 0.8em;
+        margin-top: 0.8em;
+    }
+
+    .contenedor-formulario .formulario .formulario__crear-cuenta {
+        font-size: 0.9em;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+    }
+
+    .contenedor-formulario .formulario .formulario__link-crear-cuenta {
+        font-weight: 650;
+    }
+
+    .contenedor-formulario .formulario .formulario__indicaciones {
+        font-size: 0.8em;
+        padding-bottom: 0.7em;
+    }
+
+    /*Volver*/
+    .volver-atras {
+        padding-right: 2em;
+    }
+
+    .volver-atras .volver-atras__flecha {
+        width: 1.7em;
+    }
+
+    .volver-atras .volver-atras__flecha .volver-atras__flecha--img {
+        width: 1.5em;
+    }
+
+    .volver-atras .volver-atras__texto {
+        width: 3em;
+        padding-right: 2em;
+        font-size: 0.8em;
+        padding-bottom: 0.2em;
+    }
+}
+
+
+/*Tablet Devices*/
+@media screen and (min-width: 47.9em) and (max-width: 63.9em) {
+
+    .contenedor-formulario {
+        padding-top: 5em;
+    }
+
+    .contenedor-formulario .formulario {
+        padding: 0.5em;
+        width: 45%;
+        border-radius: 1em;
+        margin-top: 0.2em;
+        margin-bottom: 0.2em;
+    }
+
+    .contenedor-formulario .formulario .formulario__titulo {
+        font-size: 1.5em;
+        margin-bottom: 0.2em;
+    }
+
+    .contenedor-formulario .formulario .formulario__label {
+        font-size: 1em;
+        margin-top: 0.4em;
+    }
+
+    .contenedor-formulario .formulario .formulario__input {
+        border-radius: 0.5em;
+        font-size: 0.6em;
+    }
+
+
+    .contenedor-formulario .formulario .formulario__olvido {
+        font-weight: 600;
+        font-size: 0.9em;
+        margin-top: 0.4em;
+    }
+
+
+    .contenedor-formulario .formulario .formulario__boton {
+        padding: 0.4em;
+        border-radius: 1em;
+        font-size: 0.8em;
+        margin-top: 0.8em;
+    }
+
+    .contenedor-formulario .formulario .formulario__crear-cuenta {
+        font-size: 0.9em;
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+    }
+
+    .contenedor-formulario .formulario .formulario__link-crear-cuenta {
+        font-weight: 650;
+    }
+
+    .contenedor-formulario .formulario .formulario__indicaciones {
+        font-size: 0.8em;
+        padding-bottom: 0.7em;
+    }
+
+    /*Volver*/
+    .volver-atras {
+        padding-right: 2em;
+    }
+
+    .volver-atras .volver-atras__flecha {
+        width: 1.7em;
+    }
+
+    .volver-atras .volver-atras__flecha .volver-atras__flecha--img {
+        width: 1.5em;
+    }
+
+    .volver-atras .volver-atras__texto {
+        width: 3em;
+        padding-right: 2em;
+        font-size: 0.8em;
+        padding-bottom: 0.2em;
+    }
+
+}
+
+
+/*Dispositivos con mayor altura*/
+@media screen and (min-width: 63.9em) and (min-height: 49.9em){
+    .main {
+        min-height: 38em;
+    }
+
+    .contenedor-formulario {
+        padding-top: 6em;
+    }
+
 }
