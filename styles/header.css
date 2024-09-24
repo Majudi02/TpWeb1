@@ -45,6 +45,7 @@
 
 .navprimario__menu-items-buscador{
     display: flex;
+    position: relative;
     align-items: center;
     width: 50%;
     height: 60%;
@@ -63,13 +64,15 @@
 
 .navprimario__menu-items-buscador-button{
     display: flex;
-    height: 90%;
+    position: absolute;
+    height: 68%;
     background: white;
     border: none;
     align-items: center;
     justify-content: center;
     width: 5%;
     cursor: pointer;
+    right: 0;
 }
 
 .navprimario__menu-items-buscador-button-img{
@@ -134,9 +137,6 @@ display: none;
     bottom: 0.6em;
 }
 
-
-
-
 .navsecundario{
     display: flex;
     width: 100%;
@@ -148,7 +148,7 @@ display: none;
 .navsecundario__menu{
     display: flex;
     align-items: center;
-    width: 40%;
+    width: 55%;
     justify-content: space-evenly;
 }
 .navsecundario__menu-item{
@@ -208,9 +208,9 @@ display: none;
         font-size: 0.55em;
     }
     .navprimario__menu-items-buscador-button {
-        width: 19%;
+        width: 7%
     }
-    
+
 }
 
 /*Mobile Devices*/
@@ -226,14 +226,13 @@ display: none;
     .navprimario__menu-logo {
         width: 31%;
     }
-    
+
     .navprimario__menu-logo-img {
         display: flex;
         width: 48px;
         top: 1.5%;
     }
     .navprimario__menu-items-buscador-button {
-        display: inline-block;
         width: 7%
     }
     .navprimario__menu-items-buscador-button-img{
@@ -273,6 +272,9 @@ display: none;
         width: 30%;
         margin-right: 16%;
     }
+    .navprimario__menu-items-buscador-button {
+        width: 7%
+    }
 }
 
 
@@ -282,5 +284,8 @@ display: none;
 
         width: 30%;
         margin-right: 16%;
+    }
+    .navprimario__menu-items-buscador-button {
+        width: 5%
     }
 }
