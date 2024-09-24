@@ -126,11 +126,14 @@
 }
 .seccion-total-btn{
    padding: 7% 100%;
-    background-color: #3498db91;
-    /* margin-left: 1%; */
     font-size: 1.6em;
-    color: white;
     cursor: pointer;
+    background-color: rgb(45, 86, 161);
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+    text-align: center;
 }
 
 
@@ -140,7 +143,146 @@
 }
 
 
+.seccion-seguir-btn{
+    margin-right: 44%;
+    font-size: 0.9em;
+    padding: 0.9%;
+    background-color: #77ff9f91;
+    cursor: pointer;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    border-radius: 20px;
+}
 
+/*Mobile Devices*/
+@media screen  and (max-width: 23em){
+    .carrito {
+        grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+    }
+    .titulo-principal {
+        font-size: 1.em;
+    }
+    .carrito-titulo-h3 {
+        font-size: 0.7em;
+    }
+    .carrito-producto-link, .carrito-precio-p, .carrito-subtotal-p {
+        font-size: 0.6em;
+    }
+    .carrito-cantidad-input {
+        height: 50%;
+        width: 40%;
+    }
+    .carrito-borrar {
+        height: 61%;
+        align-items: center;
+    }
+    .carrito-borrar-img {
+        width: 23%;
+    }
+    .seccion-seguir-btn {
+        margin-right: 35%;
+        font-size: 0.65em;
+        padding: 1.2%;
+    }
+    .seccion-total-h3, .seccion-total-p {
+        font-size: 1em;
+    }
+    .seccion-total-h3 {
+        width: 6%;
+    }
+    .seccion-total-btn {
+        font-size: 1.3em
+    }
+    .seccion-total-finalizar {
+        font-size: 0.5em;
+        margin-left: 13%;
+    }
+    
+
+}
+
+
+/*Mobile Devices*/
+@media screen  and (max-width: 47.9em){
+    .titulo-principal {
+        font-size: 1.3em;
+    }
+    .carrito-titulo-h3 {
+        font-size: 1em;
+    }
+    .carrito-producto-link, .carrito-precio-p, .carrito-subtotal-p {
+        font-size: 0.8em;
+    }
+    .carrito-cantidad-input {
+        height: 50%;
+        width: 40%;
+    }
+    .carrito-borrar {
+        height: 61%;
+        align-items: center;
+    }
+    .carrito-borrar-img {
+        width: 23%;
+    }
+    .seccion-seguir-btn {
+        margin-right: 35%;
+        font-size: 0.65em;
+        padding: 1.2%;
+    }
+    .seccion-total-h3, .seccion-total-p {
+        font-size: 1em;
+    }
+    .seccion-total-h3 {
+        width: 6%;
+    }
+    .seccion-total-btn {
+        font-size: 1.3em
+    }
+    .seccion-total-finalizar {
+        font-size: 0.5em;
+        margin-left: 13%;
+    }
+    
+
+}
+
+/*Tablet Devices*/
+@media screen and (min-width: 47.9em) and (max-width: 63.9em){
+    .titulo-principal {
+        font-size: 1.5em;
+    }
+    .carrito-cantidad-input {
+        height: 60%;
+    }
+    .carrito-borrar {
+        height: 61%;
+        align-items: center;
+    }
+    .carrito-borrar-img {
+        width: 18%;
+    }
+    .seccion-seguir-btn {
+        margin-right: 38%;
+        font-size: 0.75em;
+        padding: 1%;
+    }
+    .seccion-total-h3, .seccion-total-p {
+        font-size: 1.1em;
+    }
+    .seccion-total-h3 {
+        width: 5%;
+    }
+    .seccion-total-btn {
+        font-size: 1.5em
+    }
+    .seccion-total-finalizar {
+        font-size: 0.5em;
+        margin-left: 13%;
+    }
+    
+
+}
 
 
 
