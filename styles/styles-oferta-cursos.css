@@ -116,6 +116,7 @@
     font-weight: 700;
 }
 
+/*Volver*/
 .volver-atras {
     display: flex;
     width: 100%;
@@ -147,7 +148,7 @@
     width: 3em;
     text-align: right;
     padding-right: 2em;
-    padding-bottom: 0.2em;
+    padding-bottom: 0.4em;
 }
 
 
@@ -233,22 +234,7 @@
 
     /*Volver*/
     .volver-atras {
-        padding-right: 2em;
-    }
-
-    .volver-atras .volver-atras__flecha {
-        width: 1.7em;
-    }
-
-    .volver-atras .volver-atras__flecha .volver-atras__flecha--img {
-        width: 1.5em;
-    }
-
-    .volver-atras .volver-atras__texto {
-        width: 3em;
-        padding-right: 2em;
-        font-size: 0.8em;
-        padding-bottom: 0.2em;
+        display: none !important;
     }
 }
 
@@ -321,7 +307,7 @@
         font-weight: 500;
         text-align: right;
     }
-    
+
     /*Volver*/
     .volver-atras {
         padding-right: 2em;
@@ -339,6 +325,5 @@
         width: 3em;
         padding-right: 2em;
         font-size: 0.8em;
-        padding-bottom: 0.2em;
     }
 }

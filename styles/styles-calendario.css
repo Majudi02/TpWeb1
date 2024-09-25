@@ -2,10 +2,7 @@
     margin: 0;
     padding: 0;
 }
-.volver_atras{
-    text-decoration: none;
-    color: rgb(57, 57, 212);
-}
+
 .section{
     width: 100%;
     display: grid;
@@ -15,6 +12,7 @@
     padding: 0% 5%;
     box-sizing: border-box;
     background: rgb(39, 39, 39);
+    padding-bottom: 2em;
 }
 
 .section-recuadro{
@@ -64,41 +62,51 @@
     background: #3498db;
     border-radius: 50%;
 }
-.volver-atras{
+
+
+/*Volver*/
+.volver-atras {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: flex-end;
     padding-top: 0.5em;
-    background-color: rgb(39, 39, 39);
     padding-right: 1em;
+    background-color: rgb(39, 39, 39);
 }
 
-.volver-atras .volver-atras__flecha{
-  width: 2%;  
+.volver-atras .volver-atras__flecha {
+    width: 1.8em;
 }
 
-.volver-atras .volver-atras__flecha .volver-atras__flecha--img{
+.volver-atras .volver-atras__flecha .volver-atras__flecha--img {
     display: inline;
     background-color: rgb(255, 255, 255);
-    width: 95%;
+    width: 1.5em;
     border-radius: 50%;
     text-align: right;
 }
 
 
-.volver-atras .volver-atras__texto{
+.volver-atras .volver-atras__texto {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: 500;
     font-size: 0.9em;
-    width: 3%;
+    width: 3em;
     text-align: right;
-    padding-right: 4%;
+    padding-right: 2em;
+    padding-bottom: 0.4em;
 }
 
 /*Mobile Devices*/
-@media screen and (min-width: 23em) and (max-width: 47.9em){
+@media screen and (max-width: 47.9em){
+    main{
+        min-height: 36em;
+        background-color: rgb(39, 39, 39);
+        padding-top: 3em;
+    }
+
     .section-recuadro {
         margin-bottom: 13%;
     }
@@ -120,17 +128,10 @@
     .dia-hoy {
         padding: 3%;
     }
-    .volver-atras{
-        padding-right: 3em;
-
-    }
-    .volver-atras .volver-atras__flecha {
-        width: 15px;
-    }
-    .volver-atras .volver-atras__texto {
-        font-size: 0.8em;
-    }
-   
+    
+    .volver-atras {
+        display: none !important;
+    } 
 
 }
 
@@ -149,7 +150,22 @@
         font-size: 0.65em;
         width: 95%;
     }
+
     .volver-atras {
-        padding-right: 3em;
+        padding-right: 2em;
+    }
+
+    .volver-atras .volver-atras__flecha {
+        width: 1.7em;
+    }
+
+    .volver-atras .volver-atras__flecha .volver-atras__flecha--img {
+        width: 1.5em;
+    }
+
+    .volver-atras .volver-atras__texto {
+        width: 3em;
+        padding-right: 2em;
+        font-size: 0.8em;
     }
 }

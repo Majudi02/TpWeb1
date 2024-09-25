@@ -13,11 +13,13 @@ body {
 }
 
 main {
-    flex: 1;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 5%;
+    padding-bottom: 2em;
+    padding-left: 3em;
+    padding-right: 3em;
 }
 
 .contenedor-formulario {
@@ -26,10 +28,10 @@ main {
     border-radius: 5%;
     box-shadow: 0 4% 10% rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 900px; 
+    max-width: 900px;
 }
 
-.contenedor-formulario h3{
+.contenedor-formulario h3 {
     margin: 15px;
 }
 
@@ -41,10 +43,10 @@ main {
 }
 
 .grupo-formulario input {
-    padding: 10px; 
+    padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 100%; 
+    width: 100%;
 }
 
 .boton-eliminar {
@@ -91,7 +93,7 @@ main {
     font-weight: bold;
     margin-top: 3%;
     margin-bottom: 5%;
-    text-align:right;
+    text-align: right;
 }
 
 .contenedor-botones {
@@ -100,12 +102,13 @@ main {
     gap: 10px;
 }
 
-.boton-inscribirse, .boton-cancelar {
+.boton-inscribirse,
+.boton-cancelar {
     padding: 10px 30px;
     border: none;
     font-size: 1em;
-    text-align: center;  
-    display: inline-block;  
+    text-align: center;
+    display: inline-block;
     text-transform: uppercase;
     text-decoration: none;
     color: white;
@@ -135,56 +138,117 @@ main {
     display: flex;
 }
 
-.titulo-del-curso h2{
+.titulo-del-curso h2 {
     padding: 15px;
     margin: 5px;
 }
 
-.titulo-del-curso img{
+.titulo-del-curso img {
     width: 70px;
     height: 50px;
+}
+
+/*Volver*/
+.volver-atras {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 0.5em;
+    padding-right: 1em;
+    background-color: rgb(39, 39, 39);
+}
+
+.volver-atras .volver-atras__flecha {
+    width: 1.8em;
+}
+
+.volver-atras .volver-atras__flecha .volver-atras__flecha--img {
+    display: inline;
+    background-color: rgb(255, 255, 255);
+    width: 1.5em;
+    border-radius: 50%;
+    text-align: right;
+}
+
+
+.volver-atras .volver-atras__texto {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 0.9em;
+    width: 3em;
+    text-align: right;
+    padding-right: 2em;
+    padding-bottom: 0.4em;
 }
 
 /*      Mobile Devices       */
 @media screen and (max-width: 47.9em) {
 
-    main{
+    main {
         font-size: 0.7em;
+        min-height: 50em;
+        padding-top: 3em;
     }
 
-    .contenedor-formulario{
+    .contenedor-formulario {
         padding: 5%;
     }
 
-    .contenedor-formulario h3{
+    .contenedor-formulario h3 {
         margin: 15px 0 10px 5px;
     }
 
-    .grupo-formulario{
+    .grupo-formulario {
         margin-right: 0px;
         margin-bottom: 20px;
     }
 
-    .titulo-del-curso h2{
+    .titulo-del-curso h2 {
         margin-top: 0px;
         margin-left: 5%;
         padding: 0px;
     }
 
-    .boton-agregar-persona{
+    .boton-agregar-persona {
         margin: 5% 5% 5% 0%;
     }
 
-    .precio h3{
+    .precio h3 {
         margin-top: 0;
     }
-    
+
+    /*Volver*/
+    .volver-atras {
+        display: none !important;
+    }
+
 }
 
 /*    End Mobile Devices       */
 
 /*Tablet Devices*/
 
-@media screen and (min-width: 47.9em) and (max-width: 63.9em){
+@media screen and (min-width: 47.9em) and (max-width: 63.9em) {
+
+    /*Volver*/
+    .volver-atras {
+        padding-right: 2em;
+    }
+
+    .volver-atras .volver-atras__flecha {
+        width: 1.7em;
+    }
+
+    .volver-atras .volver-atras__flecha .volver-atras__flecha--img {
+        width: 1.5em;
+    }
+
+    .volver-atras .volver-atras__texto {
+        width: 3em;
+        padding-right: 2em;
+        font-size: 0.8em;
+    }
 
 }

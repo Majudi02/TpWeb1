@@ -334,6 +334,7 @@ input[type="checkbox"] {
     justify-content: flex-end;
     padding-top: 0.5em;
     padding-right: 1em;
+    background-color: rgb(39, 39, 39);
 }
 
 .volver-atras .volver-atras__flecha {
@@ -357,8 +358,9 @@ input[type="checkbox"] {
     width: 3em;
     text-align: right;
     padding-right: 2em;
-    padding-bottom: 0.2em;
+    padding-bottom: 0.4em;
 }
+
 
 /*  Laptop devices   */
 @media screen and (min-width:1024px) and (max-width:1439px) {
@@ -398,10 +400,7 @@ input[type="checkbox"] {
         overflow-x: hidden;
     }
 
-    .volver-atras {
-        display: none;
-    }
-
+    
     .curso {
         margin: 2em 2em;
     }
@@ -444,6 +443,25 @@ input[type="checkbox"] {
 
     .docente_info_calificacion-del-curso {
         max-width: 20%;
+    }
+
+    /*Volver*/
+    .volver-atras {
+        padding-right: 2em;
+    }
+
+    .volver-atras .volver-atras__flecha {
+        width: 1.7em;
+    }
+
+    .volver-atras .volver-atras__flecha .volver-atras__flecha--img {
+        width: 1.5em;
+    }
+
+    .volver-atras .volver-atras__texto {
+        width: 3em;
+        padding-right: 2em;
+        font-size: 0.8em;
     }
 
 
@@ -529,7 +547,7 @@ input[type="checkbox"] {
     }
 
     .volver-atras {
-        display: none;
+        display: none !important;
     }
 
 
