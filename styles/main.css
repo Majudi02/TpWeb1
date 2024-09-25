@@ -239,22 +239,20 @@
         width: 70%;
     }
 
-    /*Tarjetas*/
+    /*Tarjetas*/ 
 
     .contenedor-tarjetas {
-        display: flex;
-        padding-left: 1em;
-        padding-right: 1em;
-        gap: 1em;
-        overflow-x: auto;
-        overscroll-behavior-inline: contain;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-gap: 1em 2em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        padding-bottom: 1em;
     }
 
     .contenedor-tarjetas .tarjeta {
         column-gap: 0.2em;
         row-gap: 0.1em;
-        height: fit-content;
-
     }
 
     .contenedor-tarjetas .tarjeta .tarjeta__img-precio {
@@ -266,8 +264,8 @@
     }
 
     .contenedor-tarjetas .tarjeta .tarjeta__img-precio .tarjeta__precio {
-        font-size: 0.5em;
-        padding: 0.4em;
+        font-size: 0.6em;
+        padding: 0.5em;
     }
 
     .contenedor-tarjetas .tarjeta .tarjeta__titulo {
@@ -301,8 +299,8 @@
     .boton.boton--ver-detalle {
         font-weight: 500;
         text-align: right;
-    }
-
+    }    
+  
     /*Medios de pago*/
 
     .contenedor-medios-de-pago {
