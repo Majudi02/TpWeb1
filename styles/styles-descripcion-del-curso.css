@@ -487,6 +487,10 @@ input[type="checkbox"] {
     }
 
 
+    .navprimario__menu-items-buscador {
+        display: none !important;
+    }
+
     .curso {
         display: flex;
         flex-direction: column;
