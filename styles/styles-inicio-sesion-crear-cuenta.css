@@ -146,7 +146,7 @@
 @media screen and (max-width: 47.9em) {
 
     .main {
-        min-height: 35em;
+        min-height: 37em;
     }
 
     .contenedor-formulario {
@@ -208,23 +208,9 @@
 
     /*Volver*/
     .volver-atras {
-        padding-right: 2em;
+        display: none;
     }
 
-    .volver-atras .volver-atras__flecha {
-        width: 1.7em;
-    }
-
-    .volver-atras .volver-atras__flecha .volver-atras__flecha--img {
-        width: 1.5em;
-    }
-
-    .volver-atras .volver-atras__texto {
-        width: 3em;
-        padding-right: 2em;
-        font-size: 0.8em;
-        padding-bottom: 0.2em;
-    }
 }
 
 
