@@ -130,7 +130,7 @@ input[type="radio"] {
 }
 
 
-.contenido_personalizacion_monto_input{
+.contenido_personalizacion_monto_input {
     width: 55%;
     padding: 1%;
     background-color: white;
@@ -193,6 +193,13 @@ input[type="radio"] {
 /*             End Seleccionar el fondo                       */
 
 
+.contenido .contenido_personalizacion_seleccionar-ubicacion,
+.contenido .contenido_personalizacion_monto,
+.contenido .contenido_personalizacion_seleccionar-ubicacion,
+.contenido .contenido_personalizacion_seleccionar-fondo {
+    margin-top: 2em;
+}
+
 
 .contenido .contenido_boton {
     margin-top: 10%;
@@ -214,7 +221,7 @@ input[type="radio"] {
 }
 
 
-.volver-atras{
+.volver-atras {
     display: flex;
     width: 100%;
     align-items: center;
@@ -223,11 +230,11 @@ input[type="radio"] {
     background-color: rgb(39, 39, 39);
 }
 
-.volver-atras .volver-atras__flecha{
-  width: 2%;  
+.volver-atras .volver-atras__flecha {
+    width: 2%;
 }
 
-.volver-atras .volver-atras__flecha .volver-atras__flecha--img{
+.volver-atras .volver-atras__flecha .volver-atras__flecha--img {
     display: inline;
     background-color: rgb(255, 255, 255);
     width: 95%;
@@ -236,7 +243,7 @@ input[type="radio"] {
 }
 
 
-.volver-atras .volver-atras__texto{
+.volver-atras .volver-atras__texto {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: 500;
@@ -249,23 +256,30 @@ input[type="radio"] {
 
 
 /*  Tablet Devices  */
-@media screen and (min-width: 47.9em) and (max-width: 63.9em){
+@media screen and (min-width: 47.9em) and (max-width: 63.9em) {
     body {
         width: 100%;
         overflow-x: hidden;
     }
-    .volver-atras{
+
+    .volver-atras {
         display: none;
     }
-    main{
+
+    main {
         margin: 0em 1em;
+        height: 57em;
     }
 
-    .contenido{
+    .contenido {
+        margin-top:2em;
         gap: 5%;
     }
 
+  
+
     .contenido_vista-previa-giftcard p {
+        font-size: 0.8em;
         margin-right: 3%;
     }
 
@@ -274,18 +288,18 @@ input[type="radio"] {
         margin-top: 1.5em;
     }
 
-    .contenido .contenido_personalizacion .contenido_personalizacion_nombre-del-destinatario{
+    .contenido .contenido_personalizacion .contenido_personalizacion_nombre-del-destinatario {
         max-width: 80%;
     }
 
-    .subtitulos{
+    .subtitulos {
         width: 100%;
-        font-size: 1.17em;
+        font-size: 1.1em;
     }
 
     .contenido_personalizacion_seleccionar-tamaño_opciones {
         margin: 0;
-        margin-top: 1em;
+        margin-top: 0.3em;
     }
 
     .contenido .contenido_vista-previa-giftcard {
@@ -293,13 +307,24 @@ input[type="radio"] {
     }
 
     .contenido .contenido_vista-previa-giftcard .contenido_vista-previa-giftcard_visualizacion {
-        max-width: 85%;
+        max-width: 65%;
     }
 
-    .contenido .contenido_personalizacion .contenido_personalizacion_seleccionar-tamaño{
-        max-width: 60%;
-
+    .contenido .contenido_personalizacion .contenido_personalizacion_seleccionar-tamaño {
+        max-width: 45%;
     }
+
+    .contenido .contenido_personalizacion_seleccionar-ubicacion,
+    .contenido .contenido_personalizacion_monto,
+    .contenido .contenido_personalizacion_seleccionar-ubicacion,
+    .contenido .contenido_personalizacion_seleccionar-fondo {
+        margin-top: 1.5em;
+    }
+
+    .imagen-de-la-ubicacion{
+        width: 65%;
+    }
+
 }
 
 /*  End Tablet Devices  */
@@ -316,12 +341,12 @@ input[type="radio"] {
         margin: 0em 1em;
     }
 
-    .volver-atras{
+    .volver-atras {
         display: none;
     }
 
     .subtitulos {
-        font-size: 1.1em;
+        font-size: 1.25em;
     }
 
     .contenido {
@@ -329,8 +354,9 @@ input[type="radio"] {
     }
 
     .contenido .contenido_vista-previa-giftcard .contenido_vista-previa-giftcard_visualizacion {
-        max-width: 100%;
+        max-width: 70%;
     }
+
 
     .contenido .contenido_vista-previa-giftcard {
         display: flex;
@@ -340,9 +366,13 @@ input[type="radio"] {
         padding: 1.5em;
     }
 
- 
+    .contenido .contenido_vista-previa-giftcard p {
+        font-size: 0.85em;
+    }
+
+
     .contenido .contenido_personalizacion_titulo {
-        font-size: 1.2em;
+        font-size: 1.4em;
         margin-top: 1.5em;
     }
 
@@ -350,8 +380,9 @@ input[type="radio"] {
         max-width: 90%;
     }
 
-    .contenido_personalizacion_seleccionar-tamaño {
-        max-width: 90%;
+    .contenido .contenido_personalizacion_seleccionar-tamaño {
+        max-width: 80%;
+        margin-top: 4em;
     }
 
 
@@ -360,26 +391,39 @@ input[type="radio"] {
         margin-top: 1em;
     }
 
-    .contenido .contenido_personalizacion_seleccionar-ubicacion{
-        margin: 2em 0em;
+    .contenido .contenido_personalizacion_seleccionar-ubicacion,
+    .contenido .contenido_personalizacion_monto,
+    .contenido .contenido_personalizacion_seleccionar-ubicacion,
+    .contenido .contenido_personalizacion_seleccionar-fondo {
+        margin-top: 3.5em;
     }
-    .contenido .contenido_personalizacion_monto{
-        margin: 2em 0em;
-    }
-    .contenido .contenido_personalizacion_seleccionar-ubicacion{
-        margin: 2em 0em;
+
+    .imagen-de-la-ubicacion{
+        width: 80%;
     }
 
     .contenido .contenido_boton {
-        width: 85%;
+        margin: 7em 0em;
+        width: 100%;
     }
 
     .contenido .contenido_boton .contenido_boton_confirmar {
-        display: block; 
-        text-align: center; 
+        display: block;
+        text-align: center;
         margin: 3em 0em;
+        padding: 0.7em 0em;
+        width: 100%;
     }
 
 }
 
 /*    End Mobile Devices       */
+
+/*  Laptop devices   */
+@media screen and (min-width:1024px) and (max-width:1439px) {
+
+
+    main {
+        height: 55.8em;
+    }
+}
