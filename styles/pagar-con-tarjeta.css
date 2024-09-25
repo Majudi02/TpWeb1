@@ -101,8 +101,7 @@ input{
 .boton_cancelar {
     background-color: rgb(199, 58, 58);
     font-size: 0.9em;
-
-    padding: 2% 1%;
+    padding: 2.2% 1%;
     height: 10%;
 }
 
@@ -332,6 +331,10 @@ button{
 
     .curso_seleccionado_imagen{
         width:17%;
+    }
+
+    .boton_cancelar, .boton_confirmar {
+        width: 50%;
     }
 }
 /*     End Mobile Devices       */
