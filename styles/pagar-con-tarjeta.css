@@ -205,38 +205,40 @@ button{
 }
 
 
-.volver-atras{
+/*Volver*/
+.volver-atras {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: flex-end;
     padding-top: 0.5em;
+    padding-right: 1em;
     background-color: rgb(39, 39, 39);
 }
 
-.volver-atras .volver-atras__flecha{
-  width: 2%;  
+.volver-atras .volver-atras__flecha {
+    width: 1.8em;
 }
 
-.volver-atras .volver-atras__flecha .volver-atras__flecha--img{
+.volver-atras .volver-atras__flecha .volver-atras__flecha--img {
     display: inline;
     background-color: rgb(255, 255, 255);
-    width: 95%;
+    width: 1.5em;
     border-radius: 50%;
     text-align: right;
 }
 
 
-.volver-atras .volver-atras__texto{
+.volver-atras .volver-atras__texto {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: 500;
     font-size: 0.9em;
-    width: 3%;
+    width: 3em;
     text-align: right;
-    padding-right: 4%;
+    padding-right: 2em;
+    padding-bottom: 0.4em;
 }
-
 
 
 
@@ -255,7 +257,7 @@ button{
 
 
     .volver-atras{
-        display: none;
+        display: none !important;
     }
 
     section{
@@ -348,10 +350,7 @@ button{
         height: 57.8em;
      }
 
-    .volver-atras{
-        display: none;
-    }
-
+    
     section{
         margin-top: 26%;
     }
@@ -373,6 +372,28 @@ button{
     form {
         width: 60%;
     }
+
+    /*Volver*/
+    .volver-atras {
+        padding-right: 2em;
+    }
+
+    .volver-atras .volver-atras__flecha {
+        width: 1.7em;
+    }
+
+    .volver-atras .volver-atras__flecha .volver-atras__flecha--img {
+        width: 1.5em;
+    }
+
+    .volver-atras .volver-atras__texto {
+        width: 3em;
+        padding-right: 2em;
+        font-size: 0.8em;
+    }
+
+
+
 }
 
 /*  End Tablet Devices  */
