@@ -242,6 +242,7 @@ display: none;
 
     .navprimario__menu-items-carrito {
         width: 25%;
+        
     }
     .navprimario__menu-items-carrito-btn {
         display: none !important;
@@ -275,6 +276,9 @@ display: none;
     }
     .navprimario__menu-items-buscador-button {
         width: 7%
+    }
+    .navprimario__menu-items-carrito {
+        gap: 1em;
     }
 }
 

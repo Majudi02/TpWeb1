@@ -9,7 +9,7 @@
     display: flex;
     flex-direction: column;
     background-color: rgb(39, 39, 39);
-    min-height: 33em;
+    min-height: 35em;
 }
 
 .contenedor-formulario {
@@ -295,15 +295,3 @@
 
 }
 
-
-/*Dispositivos con mayor altura*/
-@media screen and (min-width: 63.9em) and (min-height: 49.9em){
-    .main {
-        min-height: 38em;
-    }
-
-    .contenedor-formulario {
-        padding-top: 6em;
-    }
-
-}
