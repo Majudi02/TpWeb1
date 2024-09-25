@@ -193,6 +193,13 @@ input[type="radio"] {
 /*             End Seleccionar el fondo                       */
 
 
+.contenido .contenido_personalizacion_seleccionar-ubicacion,
+.contenido .contenido_personalizacion_monto,
+.contenido .contenido_personalizacion_seleccionar-ubicacion,
+.contenido .contenido_personalizacion_seleccionar-fondo {
+    margin-top: 2em;
+}
+
 
 .contenido .contenido_boton {
     margin-top: 10%;
@@ -265,10 +272,14 @@ input[type="radio"] {
     }
 
     .contenido {
+        margin-top:2em;
         gap: 5%;
     }
 
+  
+
     .contenido_vista-previa-giftcard p {
+        font-size: 0.8em;
         margin-right: 3%;
     }
 
@@ -283,12 +294,12 @@ input[type="radio"] {
 
     .subtitulos {
         width: 100%;
-        font-size: 1.17em;
+        font-size: 1.1em;
     }
 
     .contenido_personalizacion_seleccionar-tamaño_opciones {
         margin: 0;
-        margin-top: 1em;
+        margin-top: 0.3em;
     }
 
     .contenido .contenido_vista-previa-giftcard {
@@ -296,13 +307,24 @@ input[type="radio"] {
     }
 
     .contenido .contenido_vista-previa-giftcard .contenido_vista-previa-giftcard_visualizacion {
-        max-width: 85%;
+        max-width: 65%;
     }
 
     .contenido .contenido_personalizacion .contenido_personalizacion_seleccionar-tamaño {
         max-width: 45%;
-
     }
+
+    .contenido .contenido_personalizacion_seleccionar-ubicacion,
+    .contenido .contenido_personalizacion_monto,
+    .contenido .contenido_personalizacion_seleccionar-ubicacion,
+    .contenido .contenido_personalizacion_seleccionar-fondo {
+        margin-top: 1.5em;
+    }
+
+    .imagen-de-la-ubicacion{
+        width: 65%;
+    }
+
 }
 
 /*  End Tablet Devices  */
@@ -324,7 +346,7 @@ input[type="radio"] {
     }
 
     .subtitulos {
-        font-size: 1.1em;
+        font-size: 1.25em;
     }
 
     .contenido {
@@ -332,8 +354,9 @@ input[type="radio"] {
     }
 
     .contenido .contenido_vista-previa-giftcard .contenido_vista-previa-giftcard_visualizacion {
-        max-width: 100%;
+        max-width: 70%;
     }
+
 
     .contenido .contenido_vista-previa-giftcard {
         display: flex;
@@ -343,9 +366,13 @@ input[type="radio"] {
         padding: 1.5em;
     }
 
+    .contenido .contenido_vista-previa-giftcard p {
+        font-size: 0.85em;
+    }
+
 
     .contenido .contenido_personalizacion_titulo {
-        font-size: 1.2em;
+        font-size: 1.4em;
         margin-top: 1.5em;
     }
 
@@ -353,8 +380,9 @@ input[type="radio"] {
         max-width: 90%;
     }
 
-    .contenido_personalizacion_seleccionar-tamaño {
+    .contenido .contenido_personalizacion_seleccionar-tamaño {
         max-width: 80%;
+        margin-top: 4em;
     }
 
 
@@ -363,26 +391,28 @@ input[type="radio"] {
         margin-top: 1em;
     }
 
-    .contenido .contenido_personalizacion_seleccionar-ubicacion {
-        margin: 2em 0em;
+    .contenido .contenido_personalizacion_seleccionar-ubicacion,
+    .contenido .contenido_personalizacion_monto,
+    .contenido .contenido_personalizacion_seleccionar-ubicacion,
+    .contenido .contenido_personalizacion_seleccionar-fondo {
+        margin-top: 3.5em;
     }
 
-    .contenido .contenido_personalizacion_monto {
-        margin: 2em 0em;
-    }
-
-    .contenido .contenido_personalizacion_seleccionar-ubicacion {
-        margin: 2em 0em;
+    .imagen-de-la-ubicacion{
+        width: 80%;
     }
 
     .contenido .contenido_boton {
-        width: 85%;
+        margin: 7em 0em;
+        width: 100%;
     }
 
     .contenido .contenido_boton .contenido_boton_confirmar {
         display: block;
         text-align: center;
         margin: 3em 0em;
+        padding: 0.7em 0em;
+        width: 100%;
     }
 
 }
