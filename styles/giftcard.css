@@ -359,7 +359,7 @@ input[type="radio"] {
     }
 
     .volver-atras {
-        display: none !important;
+        display: none;
     }
 
     .subtitulos {

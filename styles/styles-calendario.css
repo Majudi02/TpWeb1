@@ -3,16 +3,13 @@
     padding: 0;
 }
 
-html, body {
-    height: 100%;
-    margin: 0;
-    background: rgb(39, 39, 39);
-}
+
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: rgb(39, 39, 39);
 }
 
 main {
