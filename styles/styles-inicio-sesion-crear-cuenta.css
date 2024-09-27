@@ -156,6 +156,10 @@ main {
     padding-bottom: 0.4em;
 }
 
+.navsecundario__menu{
+    display: none;
+}
+
 
 
 
