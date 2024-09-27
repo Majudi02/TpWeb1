@@ -5,6 +5,22 @@
 
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  
+     background: rgb(39, 39, 39);
+}
+
+main {
+    flex-grow: 1;
+}
+
 .titulo-principal,
 .carrito-titulo {
     text-decoration: none;
@@ -232,6 +248,10 @@
         padding-top: 3em;
     }
 
+    .seccion{
+        margin-top: 3em;
+    }
+
     .titulo-principal {
         font-size: 1.2em;
         text-align: center;
@@ -311,6 +331,11 @@
         font-size: 1.5em;
     }
 
+    .seccion{
+        margin-top: 1%;
+    }
+
+
     .carrito-producto-link,
     .carrito-precio-p,
     .carrito-subtotal-p {
@@ -376,7 +401,6 @@
     }
 
 }
-
 
 
 

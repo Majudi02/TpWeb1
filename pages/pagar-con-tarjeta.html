@@ -45,7 +45,8 @@
                     <div class="navprimario__menu-login">
                         <a class="navprimario__menu-login-btn" href="../pages/inicio-sesion.html">INGRESAR</a>
                         <a class="navprimario__menu-login-icono" href="../pages/inicio-sesion.html">
-                            <img class="navprimario__menu-login-icono-img" src="../assets/Inicio-sesion.png" alt="iniciar sesion">
+                            <img class="navprimario__menu-login-icono-img" src="../assets/Inicio-sesion.png"
+                                alt="iniciar sesion">
                         </a>
                     </div>
                     <a class="navprimario__menu-items-carrito-link" href="../pages/carrito-compras.html">
@@ -81,23 +82,29 @@
     </header>
 
     <main>
+        <div class="volver-atras">
+            <a class="volver-atras__flecha" href="../index.html"><img class="volver-atras__flecha--img"
+                    src="../assets/volver.png" alt="volver-atras-flecha" /></a>
+            <a class="volver-atras__texto" href="../index.html">Volver</a>
+        </div>
         <section>
             <article>
-                <form method="get" action="#">
+                <form method="get" action="../index.html">
                     <label for="informacion-tarjeta">Informacion de la tarjeta</label>
-                    <input type="text" id="informacion-tarjeta" placeholder="1234 1234 1234 1234" required>
+                    <input type="number" id="informacion-tarjeta" placeholder="1234 1234 1234 1234"
+                    minlength="16" maxlength="16" required>
                     <div class="informacion-tarjeta-fila">
                         <input class="vencimiento" type="text" id="informacion-tarjeta"
                             placeholder="Vencimiento (MM/AA)" required>
-                        <input class="codigo-tarjeta" type="text" id="informacion-tarjeta" placeholder="Codigo (***)"
-                            required>
+                        <input class="codigo-tarjeta" type="text" id="informacion-tarjeta-codigo"
+                            placeholder="Codigo (***)"   minlength="3" maxlength="3" required>
                     </div>
 
                     <label for="correo">Correo electronico</label>
                     <input type="email" id="correo" placeholder="Correo electrónico" required>
 
                     <label for="nombre-tarjeta">Nombre del titular</label>
-                    <input type="text" id="nombre-tarjeta" required>
+                    <input type="text" id="nombre-tarjeta"  required>
 
                     <label for="direccion-tarjeta">Direccion de facturacion</label>
                     <input type="text" id="direccion-tarjeta" placeholder="Direccion 123" required>
@@ -108,8 +115,8 @@
 
                     </div>
                     <div class="botones">
-                        <button class="boton_confirmar" type="submit">CONFIRMAR</button>
-                        <a href="../index.html" class="boton_cancelar">CANCELAR</a>
+                        <button class="boton_confirmar" type="submit">CONFIRMAR </button>
+                        <button class="boton_cancelar" type="reset">CANCELAR</button>
                     </div>
 
 
@@ -118,35 +125,36 @@
 
 
             <div class="cursos">
-            <article class="curso_seleccionado">
-                <img class="curso_seleccionado_imagen" src="../assets/css-html-js.png" alt="imagen del curso a pagar">
-                <div class="curso_seleccionado_contenido">
-                    <div class="curso_seleccionado_contenedor-del-precio">
-                        <p class="curso_seleccionado_contenedor-del-precio_titulo">FrontEnd Intensivo</p>
-                        <p class="curso_seleccionado_contenedor-del-precio_precio">$200.000</p>
+                <article class="curso_seleccionado">
+                    <img class="curso_seleccionado_imagen" src="../assets/css-html-js.png"
+                        alt="imagen del curso a pagar">
+                    <div class="curso_seleccionado_contenido">
+                        <div class="curso_seleccionado_contenedor-del-precio">
+                            <p class="curso_seleccionado_contenedor-del-precio_titulo">FrontEnd Intensivo</p>
+                            <p class="curso_seleccionado_contenedor-del-precio_precio">$200.000</p>
+                        </div>
+                        <p class="curso_seleccionado_modalidad">Modalidad: Presencial</p>
                     </div>
-                    <p class="curso_seleccionado_modalidad">Modalidad: Presencial</p>
-                </div>
-            </article>
+                </article>
 
-            <article class="curso_seleccionado">
-                <img class="curso_seleccionado_imagen" src="../assets/c++.png" alt="imagen del curso a pagar">
-                <div class="curso_seleccionado_contenido">
-                    <div class="curso_seleccionado_contenedor-del-precio">
-                        <p class="curso_seleccionado_contenedor-del-precio_titulo">Curso de C++</p>
-                        <p class="curso_seleccionado_contenedor-del-precio_precio">$150.000</p>
+                <article class="curso_seleccionado">
+                    <img class="curso_seleccionado_imagen" src="../assets/c++.png" alt="imagen del curso a pagar">
+                    <div class="curso_seleccionado_contenido">
+                        <div class="curso_seleccionado_contenedor-del-precio">
+                            <p class="curso_seleccionado_contenedor-del-precio_titulo">Curso de C++</p>
+                            <p class="curso_seleccionado_contenedor-del-precio_precio">$150.000</p>
+                        </div>
+                        <p class="curso_seleccionado_modalidad">Modalidad: Virtual</p>
                     </div>
-                    <p class="curso_seleccionado_modalidad">Modalidad: Virtual</p>
-                </div>
-            </article>
+                </article>
 
-            <article>
-                <div class="precio-total">
-                    <p class="total">Total: </p>
-                    <p>$350.000</p>
-                </div>
-            </article>
-        </div>
+                <article>
+                    <div class="precio-total">
+                        <p class="total">Total: </p>
+                        <p>$350.000</p>
+                    </div>
+                </article>
+            </div>
         </section>
 
 

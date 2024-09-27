@@ -5,18 +5,36 @@
     box-sizing: border-box;
 }
 
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex-grow: 1;
+}
+
 .main {
     display: flex;
     flex-direction: column;
     background-color: rgb(39, 39, 39);
     min-height: 35em;
+    
 }
 
 .contenedor-formulario {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 3em;
+    padding-top: 7em;
+}
+
+
+.crear-cuenta{
+    padding-top:3em ;
 }
 
 .contenedor-formulario .formulario {
@@ -150,8 +168,13 @@
     }
 
     .contenedor-formulario {
-        padding-top: 6em;
+        padding-top: 13em;
     }
+
+    .crear-cuenta{
+        padding-top: 11em;
+    }
+
 
     .contenedor-formulario .formulario {
         padding: 0.5em;
@@ -218,8 +241,13 @@
 @media screen and (min-width: 47.9em) and (max-width: 63.9em) {
 
     .contenedor-formulario {
-        padding-top: 5em;
+        padding-top: 11em;
     }
+
+    .crear-cuenta{
+        padding-top: 8em;
+    }
+
 
     .contenedor-formulario .formulario {
         padding: 0.5em;
