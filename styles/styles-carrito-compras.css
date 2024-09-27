@@ -163,6 +163,10 @@
     border-radius: 20px;
     text-align: center;
 }
+.seccion-total-btn:hover {
+    background-color: rgb(114, 162, 251);
+    color:black;
+}
 
 .seccion-total-btn-h4 {
     padding: 1%;
@@ -179,6 +183,10 @@
     text-decoration: none;
     color: white;
     border-radius: 20px;
+}
+.seccion-seguir-btn:hover {
+    background-color: #a1f8bb;
+    color:black
 }
 
 /*Volver*/
@@ -262,6 +270,7 @@
         padding: 1.2% 1%;
     }
 
+   
     .seccion-total-precio {
         display: inline-flex;
         width: 34%;

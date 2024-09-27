@@ -121,6 +121,15 @@
     margin-right: 9%;
     font-size: 0.7em;
 }
+.navprimario__menu-login-btn:hover{
+border: #bfbfbf;
+background-color: #4ABAEA;
+border-style: solid;
+border-width: 0.13em;
+color: #ffffff;
+font-weight: 600;
+}
+
 .navprimario__menu-login-icono-img{
 display: none;
 }
@@ -132,7 +141,7 @@ display: none;
     font-size: 0.8em;
     color: #ffffff;
     position: relative;
-    background: #3498dbdb;
+    background: #49b6ffdb;
     border-radius: 100%;
     padding: 0.2em 0.5em;
     bottom: 0.6em;
@@ -168,6 +177,15 @@ display: none;
     font-size: 0.8em;
 }
 
+.navsecundario__menu-item-link:hover{
+    color: rgb(255, 255, 255);
+    border-color: rgba(255, 255, 255, 0.725);
+    font-weight: 500;
+    border-width: 5%;
+    background: #4ABAEA;
+
+}
+
 @media screen and (max-width: 23em){
     .navprimario {
         padding: 8px 12px 0px 12px;
@@ -176,7 +194,7 @@ display: none;
         width: 40%;
     }
     .navprimario__menu-items-nombre{
-        display: none !important;
+        display: none;
 
     }
     .navprimario__menu-logo-img {
@@ -184,7 +202,7 @@ display: none;
         width: 40px;
     }
     .navprimario__menu-items-carrito-btn {
-        display: none !important;
+        display: none;
     }
     .navprimario__menu-items-carrito-img {
     margin-left: 81%;
@@ -222,7 +240,7 @@ display: none;
         font-size: 0.7em;
     }
     .navprimario__menu-items-nombre{
-        display: none !important;
+        display: none;
     }
     .navprimario__menu-logo {
         width: 31%;
@@ -242,10 +260,10 @@ display: none;
 
     .navprimario__menu-items-carrito {
         width: 25%;
-        
+
     }
     .navprimario__menu-items-carrito-btn {
-        display: none !important;
+        display: none;
     }
     .navprimario__menu-items-carrito-img {
     margin-left: 81%;
