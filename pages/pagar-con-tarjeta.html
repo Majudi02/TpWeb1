@@ -91,23 +91,23 @@
             <article>
                 <form method="get" action="./compra-exitosa.html">
                     <label for="informacion-tarjeta">Informacion de la tarjeta</label>
-                    <input type="number" id="informacion-tarjeta" placeholder="1234 1234 1234 1234"
+                    <input type="number" id="informacion-tarjeta" name="informacion-tarjeta" placeholder="1234 1234 1234 1234"
                     minlength="16" maxlength="16" required>
                     <div class="informacion-tarjeta-fila">
-                        <input class="vencimiento" type="text" id="informacion-tarjeta"
+                        <input class="vencimiento" type="month" id="informacion-tarjeta-vencimiento"name="informacion-tarjeta-vencimiento"
                             placeholder="Vencimiento (MM/AA)" required>
-                        <input class="codigo-tarjeta" type="text" id="informacion-tarjeta-codigo"
+                        <input class="codigo-tarjeta" type="text" id="informacion-tarjeta-codigo" name="informacion-tarjeta-codigo"
                             placeholder="Codigo (***)"   minlength="3" maxlength="3" required>
                     </div>
 
                     <label for="correo">Correo electronico</label>
-                    <input type="email" id="correo" placeholder="Correo electrónico" required>
+                    <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
 
                     <label for="nombre-tarjeta">Nombre del titular</label>
-                    <input type="text" id="nombre-tarjeta"  required>
+                    <input type="text" id="nombre-tarjeta" name="nombre-tarjeta" required>
 
                     <label for="direccion-tarjeta">Direccion de facturacion</label>
-                    <input type="text" id="direccion-tarjeta" placeholder="Direccion 123" required>
+                    <input type="text" id="direccion-tarjeta" name="direccion-tarjeta" placeholder="Direccion 123" required>
 
 
                     <div class="precio-total-celular">
@@ -116,7 +116,7 @@
                     </div>
                     <div class="botones">
                         <button class="boton_confirmar" type="submit">CONFIRMAR </button>
-                        <button class="boton_cancelar" type="reset">CANCELAR</button>
+                        <a class="boton_cancelar" href="../index.html">CANCELAR</a>
                     </div>
 
 
