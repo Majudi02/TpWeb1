@@ -56,8 +56,8 @@ body {
     position: absolute;
     background-color: rgba(0, 0, 0, 0.8);
     color: rgb(255, 255, 255);
-    top: 5%;
-    right: 0.1%;
+    top: 0%;
+    right: 0%;
     font-size: 1em;
     padding: 0.5em;
 }
@@ -82,7 +82,6 @@ body {
     color: rgb(45, 86, 161);
     font-weight: 700;
     font-size: 1.9em;
-    padding-bottom: 0.5em;
 }
 
 .contenido .contenido_personalizacion .contenido_personalizacion--subtitulo {
@@ -345,6 +344,10 @@ input[type="radio"] {
 
     .contenido .contenido_vista-previa .contenido_vista-previa_nota-al-pie {
         font-size: 0.8em;
+    }
+
+    .contenido .contenido_personalizacion .contenido_personalizacion--titulo {
+        font-size: 1.6em;
     }
     
     .volver-atras {
