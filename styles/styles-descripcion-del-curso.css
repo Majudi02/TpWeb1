@@ -537,6 +537,7 @@ input[type="checkbox"] {
     * {
         padding: 0%;
         margin: 0%;
+        
     }
     
 
@@ -549,7 +550,7 @@ input[type="checkbox"] {
     }
 
     .volver-atras {
-        display: none !important;
+        display: none;
     }
 
     .curso {
@@ -655,12 +656,13 @@ input[type="checkbox"] {
     }
 
     .contenedor-tarjetas {
-        padding-left: 12.4em;
+        padding-left: 0.3em;
         padding-right: 1em;
         padding-bottom: 1.5em;
-        column-gap: 1em;
+        column-gap: 1.5em;
         overflow-x: auto;
         overscroll-behavior-inline: contain;
+        justify-content: left;
     }
 
     .contenedor-tarjetas .tarjeta {

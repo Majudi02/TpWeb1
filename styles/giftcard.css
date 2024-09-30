@@ -2,222 +2,257 @@
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
 
 }
 
 body {
     background-color: rgb(39, 39, 39);
     color: white;
-    width: 100%;
-}
-
-
-
-.contenido_personalizacion_titulo {
-    color: rgb(45, 86, 161);
-    font-weight: bolder;
-    font-size: 1.9em;
-    margin-bottom: 3%;
 }
 
 .contenido {
-    margin-top: 2%;
     display: flex;
-    gap: 10%;
+    column-gap: 0.5em;
+    justify-content: center;
+    align-items: start;
+    padding-left: 0.5em;
+    padding-right: o.5em;
 }
 
-.subtitulos {
-    font-size: 1.6em;
-    font-weight: 300;
-    color: rgb(203, 214, 238);
+/* ------section 1 ---------------------------------- */
+.contenido .contenido_vista-previa {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-top: 1em;
+    align-items: start;
+    padding-top: 3em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 1em;
+    justify-content: center;
 }
 
-.contenido_vista-previa-giftcard {
+.contenido .contenido_vista-previa .contenido_vista-previa_giftcard {
+    width: 100%;
+    background-color: rgb(155, 149, 149);
+    position: relative;
     text-align: center;
-    margin-left: 13%;
-    margin-top: 5%;
 }
 
-.contenido_vista-previa-giftcard p {
-    margin-top: 15%;
+.contenido .contenido_vista-previa .contenido_vista-previa_giftcard .contenido_vista-previa_giftcard--titulo {
+    font-size: 1em;
+    padding-top: 5em;
+}
+
+.contenido .contenido_vista-previa .contenido_vista-previa_giftcard .contenido_vista-previa_giftcard--destinatario {
+    font-size: 4em;
+    font-weight: 700;
+    padding-bottom: 2em;
+}
+
+.contenido .contenido_vista-previa .contenido_vista-previa_giftcard .contenido_vista-previa_giftcard--precio {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255);
+    top: 5%;
+    right: 0.1%;
+    font-size: 1em;
+    padding: 0.5em;
+}
+
+.contenido .contenido_vista-previa .contenido_vista-previa_nota-al-pie {
+    text-align: center;
+    padding-top: 1em;
     text-transform: uppercase;
     font-weight: bold;
-}
-
-
-.contenido_vista-previa-giftcard_visualizacion {
+    font-size: 1em;
     width: 100%;
-    object-fit: contain;
 }
 
+/* ------section 2 ---------------------------------- */
+.contenido .contenido_personalizacion {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
 
-.contenido_personalizacion_nombre-del-destinatario {
-    width: 99%;
-    padding: 1%;
+.contenido .contenido_personalizacion .contenido_personalizacion--titulo {
+    color: rgb(45, 86, 161);
+    font-weight: 700;
+    font-size: 1.9em;
+    padding-bottom: 0.5em;
+}
+
+.contenido .contenido_personalizacion .contenido_personalizacion--subtitulo {
+    font-size: 1.1em;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    padding-top: 1em;
+}
+
+.contenido .contenido_personalizacion .contenido_personalizacion--input-text {
+    width: 70%;
+    padding: 0.5em;
     background-color: white;
     border: 2px solid black;
-    border-radius: 30px;
+    border-radius: 2em;
+    margin-top: 1em;
+    font-style: italic;
 }
 
+/*              Seleccionar atributos - Color, tamanio de fuente, alineacion y fondo              */
 
-/*              Seleccionar el color               */
-
-.contenido_personalizacion_seleccionar-color {
+.contenido .contenido_personalizacion .contenido_personalizacion_atributo {
     display: flex;
     flex-direction: column;
-    margin-top: 8%;
+    row-gap: 0.5em;
 }
 
-.contenido_personalizacion_seleccionar-color_opciones {
+.contenido .contenido_personalizacion .contenido_personalizacion_atributo .contenido_personalizacion_atributo--opcion {
     display: flex;
-    gap: 6%;
-    margin-top: 4%;
+    column-gap: 1.5em;
+    flex-direction: row;
 }
 
-.contenido_personalizacion_seleccionar-color_opciones_label {
+
+.contenido .contenido_personalizacion .contenido_personalizacion_atributo .contenido_personalizacion_atributo--opcion .contenido_personalizacion_atributo--opcion_label {
     display: flex;
     flex-direction: column;
+    row-gap: 0.5em;
+    justify-content: flex-end;
     align-items: center;
-    width: 15%;
 }
 
 .circulo {
-    width: 55%;
-    aspect-ratio: 1/1;
+    width: 2em;
+    height: 2em;
     border-radius: 50%;
-    margin-bottom: 5px;
-}
-
-
-/*              End Seleccionar el color               */
-
-
-
-/*             Seleccionar tamaño de la fuente        */
-
-.contenido_personalizacion_seleccionar-tamaño {
-    display: flex;
-    flex-direction: column;
-    margin-top: 8%;
-}
-
-.contenido_personalizacion_seleccionar-tamaño_opciones {
-    display: flex;
-    gap: 10%;
-    margin-top: 3%;
-    margin-left: 2.5%;
-}
-
-.contenido_personalizacion_seleccionar-tamaño_opciones_label {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
 }
+
+/* variables color*/
+.circulo--rojo {
+    background-color: rgb(255, 0, 0);
+}
+
+.circulo--azul {
+    background-color: rgb(0, 0, 255);
+}
+
+.circulo--verde {
+    background-color: rgb(48, 216, 48);
+}
+
+.circulo--amarillo {
+    background-color: rgb(255, 255, 0);
+}
+
+.circulo--rosa {
+    background-color: rgb(240, 81, 174);
+}
+
 
 input[type="radio"] {
     margin-top: 5px;
     cursor: pointer;
 }
 
-
-/*         End Seleccionar tamaño de la fuente              */
-
-.contenido_personalizacion_monto {
-    margin-top: 8%;
-    display: flex;
-    gap: 0.3%;
+/* variables tamaño de fuente*/
+.size-1 {
+    font-size: 0.9em;
 }
 
+.size-2 {
+    font-size: 1em;
+}
 
-.contenido_personalizacion_monto_input {
-    width: 55%;
-    padding: 1%;
+.size-3 {
+    font-size: 1.1em;
+}
+
+.size-4 {
+    font-size: 1.2em;
+}
+
+.size-5 {
+    font-size: 1.3em;
+}
+
+/* input monto*/
+.contenido .contenido_personalizacion .contenido_personalizacion_atributo--opcion .contenido_personalizacion_atributo--opcion_monto-input {
+    width: 50%;
+    padding: 0.2em;
     background-color: white;
-    border: 2px solid black;
-    border-radius: 30px;
+    border: 0.2em solid black;
+    border-radius: 2em;
+    margin-top: 1.2em;
 }
 
-/*              Seleccionar el ubicacion del nombre                       */
+/* imagen de la ubicacion */
 
 .imagen-de-la-ubicacion {
     width: 75%;
 }
 
-.contenido_personalizacion_seleccionar-ubicacion {
-    margin-top: 8%;
-}
 
-.contenido_personalizacion_seleccionar-ubicacion_opciones {
-    display: flex;
-    margin-top: 3%;
-    gap: 8%;
-}
-
-.contenido_personalizacion_seleccionar-ubicacion_opciones_label {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-/*             End Seleccionar el ubicacion del nombre                       */
-
-
-/*              Seleccionar el fondo                       */
-
-.contenido_personalizacion_seleccionar-fondos {
-    margin-top: 8%;
-}
+/* fondos */
 
 .fondo {
-    width: 40px;
-    height: 40px;
-    aspect-ratio: 1/1;
-    /* Mantiene el cuadrado */
-    margin-bottom: 5%;
+    width: 2em;
+    height: 2em;
+    justify-content: center;
 }
 
-.contenido_personalizacion_seleccionar-fondo_opciones {
-    width: 100%;
-    margin-top: 3%;
-    display: flex;
-    gap: 10%;
-    margin-left: 3%;
+/* variables color*/
+.fondo--naranja {
+    background-color: rgb(255, 153, 0);
 }
 
-.contenido_personalizacion_seleccionar-fondo_opciones_label {
-    display: flex;
-    flex-direction: column;
+.fondo--violeta {
+    background-color: rgb(154, 30, 211);
 }
 
-/*             End Seleccionar el fondo                       */
+.fondo--celeste {
+    background-color: rgb(45, 145, 238);
+}
 
+.fondo--magenta {
+    background-color: rgb(233, 25, 112);
+}
 
-.contenido .contenido_personalizacion_seleccionar-ubicacion,
-.contenido .contenido_personalizacion_monto,
-.contenido .contenido_personalizacion_seleccionar-ubicacion,
-.contenido .contenido_personalizacion_seleccionar-fondo {
-    margin-top: 2em;
+.fondo--gris {
+    background-color: rgb(119, 116, 118);
 }
 
 
-.contenido .contenido_boton {
-    margin-top: 10%;
-    margin-bottom: 12%;
-}
 
-.contenido .contenido_boton .contenido_boton_confirmar {
+/* End seleccionar atributos - Color, tamanio de fuente, alineacion y fondo  */
+
+
+.contenido .contenido_personalizacion .contenido_personalizacion_atributo--opcion .contenido_personalizacion--boton {
+    display: inline-block;
     font-size: 0.9em;
     font-weight: bold;
-    background-color: rgb(45, 86, 161);
-    width: 100%;
-    padding: 2.7% 7%;
+    width: 45%;
+    padding: 0.5em;
     text-align: center;
     text-transform: uppercase;
     text-decoration: none;
     color: white;
-    border-radius: 30px;
+    border-radius: 2em;
     cursor: pointer;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.boton--confirmar {
+    background-color: rgb(45, 86, 161);
+}
+
+.boton--cancelar {
+    background-color: rgb(199, 58, 58);
 }
 
 /*volver*/
@@ -256,184 +291,63 @@ input[type="radio"] {
 }
 
 
-
-/*  Tablet Devices  */
-@media screen and (min-width: 47.9em) and (max-width: 63.9em) {
-    body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-    
-    main {
-        margin: 0em 1em;
-        height: 57em;
-    }
-
-    .contenido {
-        margin-top:2em;
-        gap: 5%;
-    }
-
-  
-    .contenido_vista-previa-giftcard p {
-        font-size: 0.8em;
-        margin-right: 3%;
-    }
-
-    .contenido .contenido_personalizacion_titulo {
-        font-size: 1.3em;
-        margin-top: 1.5em;
-    }
-
-    .contenido .contenido_personalizacion .contenido_personalizacion_nombre-del-destinatario {
-        max-width: 80%;
-    }
-
-    .subtitulos {
-        width: 100%;
-        font-size: 1.1em;
-    }
-
-    .contenido_personalizacion_seleccionar-tamaño_opciones {
-        margin: 0;
-        margin-top: 0.3em;
-    }
-
-    .contenido .contenido_vista-previa-giftcard {
-        margin-left: 0;
-    }
-
-    .contenido .contenido_vista-previa-giftcard .contenido_vista-previa-giftcard_visualizacion {
-        max-width: 65%;
-    }
-
-    .contenido .contenido_personalizacion .contenido_personalizacion_seleccionar-tamaño {
-        max-width: 45%;
-    }
-
-    .contenido .contenido_personalizacion_seleccionar-ubicacion,
-    .contenido .contenido_personalizacion_monto,
-    .contenido .contenido_personalizacion_seleccionar-ubicacion,
-    .contenido .contenido_personalizacion_seleccionar-fondo {
-        margin-top: 1.5em;
-    }
-
-    .imagen-de-la-ubicacion{
-        width: 65%;
-    }
-
-     /*Volver*/
-     .volver-atras {
-        padding-right: 2em;
-    }
-
-    .volver-atras .volver-atras__flecha {
-        width: 1.7em;
-    }
-
-    .volver-atras .volver-atras__flecha .volver-atras__flecha--img {
-        width: 1.5em;
-    }
-
-    .volver-atras .volver-atras__texto {
-        width: 3em;
-        padding-right: 2em;
-        font-size: 0.8em;
-    }
-
-}
-
-/*  End Tablet Devices  */
-
 /*      Mobile Devices       */
 @media screen and (max-width: 47.9em) {
 
-    body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-    main {
-        margin: 0em 1em;
-    }
-
-    .volver-atras {
-        display: none !important;
-    }
-
-    .subtitulos {
-        font-size: 1.25em;
-    }
-
     .contenido {
         flex-direction: column;
+        align-items: left;
     }
 
-    .contenido .contenido_vista-previa-giftcard .contenido_vista-previa-giftcard_visualizacion {
-        max-width: 70%;
-    }
-
-
-    .contenido .contenido_vista-previa-giftcard {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        margin: 0;
-        padding: 1.5em;
-    }
-
-    .contenido .contenido_vista-previa-giftcard p {
-        font-size: 0.85em;
-    }
-
-
-    .contenido .contenido_personalizacion_titulo {
-        font-size: 1.4em;
-        margin-top: 1.5em;
-    }
-
-    .contenido .contenido_personalizacion_nombre-del-destinatario {
-        max-width: 90%;
-    }
-
-    .contenido .contenido_personalizacion_seleccionar-tamaño {
-        max-width: 80%;
-        margin-top: 4em;
-    }
-
-
-    .contenido_personalizacion_seleccionar-tamaño_opciones {
-        margin: 0;
-        margin-top: 1em;
-    }
-
-    .contenido .contenido_personalizacion_seleccionar-ubicacion,
-    .contenido .contenido_personalizacion_monto,
-    .contenido .contenido_personalizacion_seleccionar-ubicacion,
-    .contenido .contenido_personalizacion_seleccionar-fondo {
-        margin-top: 3.5em;
-    }
-
-    .imagen-de-la-ubicacion{
-        width: 80%;
-    }
-
-    .contenido .contenido_boton {
-        margin: 7em 0em;
+    .contenido .contenido_vista-previa {
+        padding-top: 1em;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
         width: 100%;
     }
 
-    .contenido .contenido_boton .contenido_boton_confirmar {
-        display: block;
-        text-align: center;
-        margin: 3em 0em;
-        padding: 0.7em 0em;
+    .contenido .contenido_vista-previa .contenido_vista-previa_giftcard .contenido_vista-previa_giftcard--destinatario {
+        font-size: 2em;
+        font-weight: 700;
+        padding-bottom: 2em;
+    }
+
+
+    .contenido .contenido_vista-previa .contenido_vista-previa_nota-al-pie {
+        font-size: 0.8em;
+    }
+
+    .contenido .contenido_personalizacion {
         width: 100%;
+        padding-left: 1em;
+    }
+
+    .contenido .contenido_personalizacion .contenido_personalizacion--titulo {
+        font-size: 1.6em;
     }
 
     /*Volver*/
     .volver-atras {
+        display: none;
+    }
+
+}
+
+
+/*  Tablet Devices  */
+@media screen and (min-width: 47.9em) and (max-width: 63.9em) {
+    
+    .contenido .contenido_vista-previa .contenido_vista-previa_giftcard .contenido_vista-previa_giftcard--destinatario {
+        font-size: 2em;
+        font-weight: 700;
+    }
+
+
+    .contenido .contenido_vista-previa .contenido_vista-previa_nota-al-pie {
+        font-size: 0.8em;
+    }
+    
+    .volver-atras {
         padding-right: 2em;
     }
 
@@ -450,16 +364,7 @@ input[type="radio"] {
         padding-right: 2em;
         font-size: 0.8em;
     }
-
 }
 
-/*    End Mobile Devices       */
+/*  End Tablet Devices  */
 
-/*  Laptop devices   */
-@media screen and (min-width:1024px) and (max-width:1439px) {
-
-
-    main {
-        height: 55.8em;
-    }
-}
