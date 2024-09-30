@@ -437,6 +437,8 @@ input[type="checkbox"] {
         margin-left: 0.25em;
     }
 
+
+
     .docente_imagen {
         max-width: 22%;
     }
@@ -542,6 +544,7 @@ input[type="checkbox"] {
     
 
     main {
+        margin-top: 2em;
         margin-inline: 1em;
     }
 
@@ -621,10 +624,10 @@ input[type="checkbox"] {
         margin: 1em 0.5em;
     }
 
-    .docente_info .docente_info_imagen_celular {
-        display: flex !important;
+    .docente .docente_info .docente_info_imagen_celular  {
+        display: flex;
         margin-top: 1%;
-        max-width: 80%;
+        max-width: 65%;
     }
 
     .docente .docente_info .docente_info_nombre {
@@ -634,7 +637,7 @@ input[type="checkbox"] {
 
     .docente .docente_info .docente_info_nombre_celular {
         align-self: flex-start;
-        display: flex !important;
+        display: flex ;
         margin-left: 0.4em;
         margin-top: 1.2%;
         font-weight: 600;

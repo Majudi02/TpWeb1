@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -10,21 +10,23 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    min-height: 35em;
+    min-height: 100vh;
 }
 
-main{
-   height: 47.7em;
+main {
+    flex-grow: 1;
 }
+
 
 section {
-    display: flex; 
-    justify-content: space-between; 
-    align-items: flex-start; 
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-top: 4%;
 }
+
 article {
-    flex: 1; /* Los artículos tomarán el mismo ancho */
+    flex: 1;
 }
 
 form {
@@ -32,61 +34,63 @@ form {
     flex-direction: column;
     width: 40%;
     margin-left: 20%;
-   /* margin-top: 12%; */
+    /* margin-top: 12%; */
 }
 
 
-label{
+label {
     margin-top: 4%;
     margin-bottom: 2%;
     font-size: 1.5em;
     font-weight: 500;
 }
 
-input{
+input {
     margin: 0;
     padding: 1.5%;
-    border-radius:30px;
+    border-radius: 30px;
     border: none;
 }
 
-.informacion-tarjeta-fila{
+.informacion-tarjeta-fila {
     display: flex;
     margin-top: 0.7%;
 }
 
-.vencimiento,.codigo-tarjeta{
+.vencimiento,
+.codigo-tarjeta {
     margin-top: 1%;
 }
 
-.informacion-tarjeta-fila .vencimiento{
-    width:70%;
+.informacion-tarjeta-fila .vencimiento {
+    width: 70%;
 }
 
-.informacion-tarjeta-fila .codigo-tarjeta{
+.informacion-tarjeta-fila .codigo-tarjeta {
     margin-left: 1.5%;
     width: 30%;
 }
 
 .monto {
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-between;
     margin-top: 10%;
     margin-bottom: 10%;
 }
 
-.precio-total-celular{
+.precio-total-celular {
     display: none;
 }
 
-.botones{
+.botones {
     display: flex;
-    justify-content: center; /* Centra los botones horizontalmente */
-    gap: 20px; /* Añade un espacio entre los botones si es necesario */
+    justify-content: center;
+    gap: 20px;
 }
 
-.boton_cancelar, .boton_confirmar {
-    display: inline-block; /* Asegura que ambos sean elementos inline-block */
+.boton_cancelar,
+.boton_confirmar {
+    display: inline-block;
     text-align: center;
     padding: 2.5% 6%;
     border-radius: 25px;
@@ -95,7 +99,8 @@ input{
     border: none;
     cursor: pointer;
     margin-top: 20%;
-    text-decoration: none; /* Elimina el subrayado del enlace */
+    text-decoration: none;
+    font-size: 0.9em;
 }
 
 .boton_cancelar {
@@ -110,15 +115,21 @@ input{
 }
 
 
-.cursos{
+a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.cursos {
     display: flex;
     flex-direction: column;
     margin-top: 1%;
 }
 
-.cursos{
+.cursos {
     gap: 30px;
-    max-width: 37%; 
+    max-width: 37%;
 }
 
 
@@ -126,13 +137,13 @@ input{
     display: flex;
     margin-right: 23%;
     background-color: #333;
-    border-radius: 30px; 
+    border-radius: 30px;
 }
 
 .curso_seleccionado_imagen {
     padding: 2%;
     width: 12%;
-    height: auto; 
+    height: auto;
 }
 
 .curso_seleccionado_contenido {
@@ -145,41 +156,41 @@ input{
     color: rgb(241, 239, 235);
 }
 
-.curso_seleccionado_contenedor-del-precio{
+.curso_seleccionado_contenedor-del-precio {
     display: flex;
     margin-top: 2%;
-    justify-content:space-between; 
-    align-items: center; 
+    justify-content: space-between;
+    align-items: center;
 }
 
-.curso_seleccionado_contenedor-del-precio .curso_seleccionado_contenedor-del-precio_titulo{
-  margin-left: 2%;
-  font-weight: bolder;
+.curso_seleccionado_contenedor-del-precio .curso_seleccionado_contenedor-del-precio_titulo {
+    margin-left: 2%;
+    font-weight: bolder;
 }
 
 
-.curso_seleccionado_contenedor-del-precio .curso_seleccionado_contenedor-del-precio_precio{
+.curso_seleccionado_contenedor-del-precio .curso_seleccionado_contenedor-del-precio_precio {
     font-size: 1em;
     margin-right: 5%;
 }
 
-.curso_seleccionado_contenido .curso_seleccionado_modalidad{
+.curso_seleccionado_contenido .curso_seleccionado_modalidad {
     margin-left: 2%;
     margin-top: 0.5%;
     font-size: 0.75em;
     color: darkgray;
 }
 
-.precio-total{
+.precio-total {
     display: flex;
     justify-content: space-between;
-    max-width: 75%; 
+    max-width: 75%;
     font-weight: bold;
     font-size: 1em;
-    margin-top: 2% ;
+    margin-top: 2%;
 }
 
-.precio-total .total{
+.precio-total .total {
     margin-left: 1%;
 }
 
@@ -219,142 +230,186 @@ input{
     padding-bottom: 0.4em;
 }
 
+/*Volver*/
+.volver-atras {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-end;
+    padding-top: 0.5em;
+    padding-right: 1em;
+    background-color: rgb(39, 39, 39);
+}
+
+.volver-atras .volver-atras__flecha {
+    width: 1.8em;
+}
+
+.volver-atras .volver-atras__flecha .volver-atras__flecha--img {
+    display: inline;
+    background-color: rgb(255, 255, 255);
+    width: 1.5em;
+    border-radius: 50%;
+    text-align: right;
+}
+
+
+.volver-atras .volver-atras__texto {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: 500;
+    font-size: 0.9em;
+    width: 3em;
+    text-align: right;
+    padding-right: 2em;
+    padding-bottom: 0.4em;
+}
+
+/* Elimina el boton en el input number */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
 
 
 /*      Mobile Devices       */
 @media screen and (max-width: 47.9em) {
 
-    body{
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-    
-    main{
-        height: 57.8em;
-     }
-
-
-    .volver-atras{
-        display: none !important;
-    }
-
-    section{
-        flex-direction: column;
-        flex-direction: column-reverse;
-        margin-top: 2%;
-    }
-
-    article{
-        width: 100%;
-    }
-
-
-    article form{
-        display: flex;
-        align-items: center;
-    }
-        
-
-    form{
-        width: 100%;
-        margin-left: 0;
-    }
-
-    label{
-        font-size: 1.2em;
-    }
-    
-    input{
-        width: 70%;
-    }
-
-    .informacion-tarjeta-fila{
-        width: 70%;
-    }
-
-    article .precio-total{
-        display: none;
-    }
-
-    form .precio-total-celular{
-        display: flex;
-    }
-
-    form .botones{
-        width: 80%;
-        margin-bottom: 2em;
-    }
-
-    section .cursos{
-        max-width: 90%;
-        margin: 3em 0.5em;
-    }
-    
-    section .cursos .curso_seleccionado{
-        width: 100%;
-    }
-
-    section article form .precio-total-celular{
-        display: flex;
-        width: 100%;
-        margin-top: 3.5em;
-
-    }
-
-    section article form .precio-total-celular .total{
-        align-self: center;
-        font-size: 1.2em;
-        margin-left: 1.5em;
-        font-weight: bold;
-    }
-
-    .curso_seleccionado_imagen{
-        width:17%;
-    }
-
-    .boton_cancelar, .boton_confirmar {
-        width: 50%;
-    }
-}
-/*     End Mobile Devices       */
-
-
-
-/*  Tablet Devices  */
-@media screen and (min-width: 47.9em) and (max-width: 63.9em){
     body {
         width: 100%;
         overflow-x: hidden;
     }
 
 
-    main{
-        height: 57.8em;
-     }
+    .volver-atras {
+        display: none;
+    }
 
-    
-    section{
+    section {
+        flex-direction: column;
+        flex-direction: column-reverse;
+        margin-top: 2%;
+    }
+
+    article {
+        width: 100%;
+    }
+
+
+    article form {
+        display: flex;
+        align-items: center;
+    }
+
+
+    form {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    label {
+        font-size: 1.2em;
+    }
+
+    input {
+        width: 70%;
+    }
+
+    .informacion-tarjeta-fila {
+        width: 70%;
+    }
+
+    article .precio-total {
+        display: none;
+    }
+
+    form .precio-total-celular {
+        display: flex;
+    }
+
+    form .botones {
+        width: 80%;
+        margin-bottom: 10em;
+    }
+
+    section .cursos {
+        max-width: 90%;
+        margin: 3em 0.5em;
+    }
+
+    section .cursos .curso_seleccionado {
+        width: 100%;
+    }
+
+    section article form .precio-total-celular {
+        display: flex;
+        width: 100%;
+        margin-top: 3.5em;
+
+    }
+
+    section article form .precio-total-celular .total {
+        align-self: center;
+        font-size: 1.2em;
+        margin-left: 1.5em;
+        font-weight: bold;
+    }
+
+    .curso_seleccionado_imagen {
+        width: 17%;
+    }
+
+    .boton_cancelar,
+    .boton_confirmar {
+        width: 50%;
+    }
+}
+
+/*     End Mobile Devices       */
+
+
+
+/*  Tablet Devices  */
+@media screen and (min-width: 47.9em) and (max-width: 63.9em) {
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    section {
         margin-top: 26%;
     }
 
-    .cursos{
+    .cursos {
         max-width: 43%;
         width: 49%;
         font-size: 0.9em;
     }
 
-    .curso_seleccionado_imagen{
-        width:19%;
+    .curso_seleccionado_imagen {
+        width: 19%;
     }
 
-    .curso-a-comprar{
+    .curso-a-comprar {
         margin-left: 1em;
     }
-    
+
     form {
         width: 60%;
     }
+
+    .boton_cancelar,
+    .boton_confirmar {
+        width: 100%;
+    }
+
+
+
 
     /*Volver*/
     .volver-atras {
@@ -374,9 +429,6 @@ input{
         padding-right: 2em;
         font-size: 0.8em;
     }
-
-
-
 }
 
 /*  End Tablet Devices  */
@@ -385,23 +437,17 @@ input{
 /*  Laptop devices   */
 @media screen and (min-width:1024px) and (max-width:1439px) {
 
- 
-    main{
-        height: 57.8em;
-     }
-
-
-    .cursos{
+    .cursos {
         max-width: 40%;
         font-size: 0.9em;
     }
 
-    section{
+    section {
         margin-top: 10%;
     }
 
-    .curso_seleccionado_imagen{
-        width:19%;
+    .curso_seleccionado_imagen {
+        width: 19%;
     }
 
     form {
@@ -411,12 +457,3 @@ input{
 }
 
 /*  End Laptop devices   */
-
-
-/*  Laptop devices   */
-@media screen and  (max-width:1440px) {
-    main{
-        height: 55.3em;
-     }
-    
-}
