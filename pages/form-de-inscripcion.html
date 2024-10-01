@@ -79,7 +79,7 @@
         </nav>
 
     </header>
-
+    
     <main>
         <div class="volver-atras">
             <a class="volver-atras__flecha" href="./descripcion-del-curso-presencial.html"><img class="volver-atras__flecha--img"
@@ -88,45 +88,41 @@
         </div>
         <section class="contenedor-formulario">
             <div class="titulo-del-curso">
-            <img src="../assets/mysql.png">
-            <h2>MySQL para principiantes</h2>
+                <img src="../assets/mysql.png">
+                <h2>MySQL para principiantes</h2>
             </div>
             <h3>INSCRIPCIÓN</h3>
-
-            <form action="#">
+            <form method="get" action="./pagar-con-tarjeta.html">
                 <div class="grupo-formulario">
                     <input type="text" name="name" id="name" placeholder="Nombre y Apellido" required>
-                    <input type="text" name="dni" id="id" placeholder="DNI" required>
-                    <button class="boton-eliminar">-</button>
+                    <input type="number" name="dni" id="id" placeholder="DNI" required>
+                    <a href="" class="boton-eliminar">-</a>
                 </div>
 
                 <div class="grupo-formulario">
                     <input type="text" name="name" id="name" placeholder="Nombre y Apellido" required>
-                    <input type="text" name="dni" id="id" placeholder="DNI" required>
-                    <button class="boton-eliminar">-</button>
+                    <input type="number" name="dni" id="id" placeholder="DNI" required>
+                    <a href="" class="boton-eliminar">-</a>
                 </div>
 
                 <div class="grupo-formulario">
                     <input type="text" name="name" id="name" placeholder="Nombre y Apellido" required>
-                    <input type="text" name="dni" id="id" placeholder="DNI" required>
-                    <button class="boton-eliminar">-</button>
+                    <input type="number" name="dni" id="id" placeholder="DNI" required>
+                    <a href="" class="boton-eliminar">-</a>
                 </div>
 
                 <a href="" class="boton-agregar-persona">
-                    <div class="icono">+</div><div class="texto"></div>
+                    <div class="icono">+</div>
+                    <div class="texto"></div>
                     Agregar Persona
                 </a>
-                
-
                 <div class="precio">
                     <h3>Total: <small>U$D 40.00</small></h3>
                 </div>
                 <div class="contenedor-botones">
-                    <a href="./pagar-con-tarjeta.html" class="boton-inscribirse">PAGAR</a>
+                    <button href="./pagar-con-tarjeta.html" class="boton-inscribirse">PAGAR</button>
                     <a href="../index.html" class="boton-cancelar">CANCELAR</a>
                 </div>
-                
-
             </form>
         </section>
     </main>

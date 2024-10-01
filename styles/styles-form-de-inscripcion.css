@@ -60,6 +60,7 @@ main {
     font-size: 18px;
     transition: background-color 0.3s ease;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .boton-eliminar:hover {
