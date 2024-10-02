@@ -340,7 +340,8 @@ input[type=number] {
 
     section .cursos {
         max-width: 90%;
-        margin: 3em 0.5em;
+        margin: 0em 1em;
+        padding: 3em;
     }
 
     section .cursos .curso_seleccionado {
@@ -350,8 +351,8 @@ input[type=number] {
     section article form .precio-total-celular {
         display: flex;
         width: 100%;
-        margin-top: 3.5em;
-
+        margin-top: 5em;
+        justify-content: center;
     }
 
     section article form .precio-total-celular .total {
@@ -362,12 +363,12 @@ input[type=number] {
     }
 
     .curso_seleccionado_imagen {
-        width: 17%;
+        width: 15%;
     }
 
     .boton_cancelar,
     .boton_confirmar {
-        width: 50%;
+        width: 35%;
     }
 }
 
@@ -383,12 +384,11 @@ input[type=number] {
     }
 
     section {
-        margin-top: 26%;
+        margin-top: 10%;
     }
 
     .cursos {
         max-width: 43%;
-        width: 49%;
         font-size: 0.9em;
     }
 
@@ -402,6 +402,10 @@ input[type=number] {
 
     form {
         width: 60%;
+    }
+
+    label{
+        font-size: 1em;
     }
 
     .boton_cancelar,
@@ -444,7 +448,7 @@ input[type=number] {
     }
 
     section {
-        margin-top: 10%;
+        margin-top: 3%;
     }
 
     .curso_seleccionado_imagen {
