@@ -22,7 +22,8 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 4%;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 article {
