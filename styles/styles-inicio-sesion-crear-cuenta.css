@@ -75,6 +75,13 @@ main {
     font-size: 0.7em;
 }
 
+.formulario_mensaje-error{
+    color: rgb(247, 15, 15);
+    background-color: rgba(255, 202, 201, 0.8);
+    font-size: 0.8em;
+    font-weight: 600;
+    text-align: center;
+}
 
 .contenedor-formulario .formulario .formulario__olvido {
     text-decoration: none;
