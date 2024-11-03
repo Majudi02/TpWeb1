@@ -88,20 +88,21 @@
         </div>
         <section class="contenedor-formulario">
 
-            <form class="formulario" method="get" action="../index.html">
+            <form class="formulario" method="get" id="form_iniciar-sesion">
                 <h2 class="formulario__titulo">Iniciar sesión</h2>
 
-                <label class="formulario__label" for="nombre-usuario">Nombre de usuario</label>
-                <input class="formulario__input" type="text" name="nombre-usuario" id="nombre-usuario"
+                <label class="formulario__label" for="email-usuario">Dirección de correo electrónico</label>
+                <input class="formulario__input" type="email" name="email-usuario" id="email-usuario"
                     placeholder="Usuario" required />
 
-                <label class="formulario__label" for="contraseña">Contraseña</label>
-                <input class="formulario__input" type="password" name="contraseña" id="contraseña"
+                <label class="formulario__label" for="password-usuario">Contraseña</label>
+                <input class="formulario__input" type="password" name="password-usuario" id="password-usuario"
                     placeholder="Contraseña" required />
+                <span class="formulario_mensaje-error" id="mensaje_pw_incorrecta"></span>
 
                 <a class="formulario__olvido" href="./olvido-contraseña.html">Olvidaste tu contraseña</a>
 
-                <button class="formulario__boton">INICIAR SESIÓN</button>
+                <button type="submit" class="formulario__boton" id="btn_iniciar_sesion">INICIAR SESIÓN</button>
 
                 <div>
                     <p class="formulario__crear-cuenta">¿No tienes cueta?<a class="formulario__link-crear-cuenta"
@@ -145,7 +146,7 @@
         </section>
     </footer>
 
-
+    <script src="../js/inicio_sesion.js"></script>
 </body>
 
 </html>
