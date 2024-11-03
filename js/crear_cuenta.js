@@ -46,6 +46,8 @@ function guardarUsuarioNuevo() {
         alert('Ya existe un usuario registrado con este email.'); //Aca podemos probar un pop-up
         const nodoFormulario = document.querySelector('#form_crear-cuenta');
         nodoFormulario.reset();
+        const nodoError = document.querySelector('#mensaje_error');
+        nodoError.textContent = '';
         return false;
     }
     
