@@ -65,10 +65,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
     descripcionCurso.textContent = cursosInformacion[0].descripcion;
 });
 
-irAlCurso.addEventListener('click', ()=>{
-    irAlCurso.href =  
+// irAlCurso.addEventListener('click', ()=>{
+//     irAlCurso.href =
 
-});
+// });
 
 
 const cerrarPopup = document.querySelector('.popup-cerrar');
