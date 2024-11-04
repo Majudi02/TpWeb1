@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevX-Iniciar sesion</title>
+    <title>DevX-Crear cuenta</title>
     <link rel="stylesheet" href="../styles/header.css" />
     <link rel="stylesheet" href="../styles/footer.css" />
     <link rel="stylesheet" href="../styles/styles-inicio-sesion-crear-cuenta.css" />
 </head>
 
-<body>
+<body class="fuente">
     <header id="home">
         <nav class="navprimario">
             <div class="navprimario__menu-items">
@@ -36,25 +36,13 @@
                         <img class="navprimario__menu-items-buscador-button-img" src="../assets/lupa.png" alt="Bus">
                     </button>
                 </div>
-
-
-
-
-
                 <div class="navprimario__menu-items-carrito">
                     <div class="navprimario__menu-login">
                         <a class="navprimario__menu-login-btn" href="../pages/inicio-sesion.html">INGRESAR</a>
                         <a class="navprimario__menu-login-icono" href="../pages/inicio-sesion.html">
-                            <img class="navprimario__menu-login-icono-img" src="../assets/Inicio-sesion.png" alt="iniciar sesion">
+                            <img class="navprimario__menu-login-icono-img" src="../assets/Inicio-sesion.png"
+                                alt="iniciar sesion">
                         </a>
-                    </div>
-                    <!--Prueba Mi perfil-->
-                    <div class="navprimario__perfil-dropdown">
-                        <button id="btn-mi-perfil" class="boton">Mi perfil</button>
-                        <div id="dropdown-menu" class="dropdown-menu">
-                            <button id="cerrar-sesion" class="dropdown-item">Cerrar sesión</button>
-                            <button id="eliminar-cuenta" class="dropdown-item">Eliminar cuenta</button>
-                        </div>
                     </div>
                     <a class="navprimario__menu-items-carrito-link" href="../pages/carrito-compras.html">
                         <img class="navprimario__menu-items-carrito-img" src="../assets/carrito.png"
@@ -87,39 +75,33 @@
         </nav>
 
     </header>
-    
+
     <main class="main">
         <div class="volver-atras">
-            <a class="volver-atras__flecha" href="../index.html"><img class="volver-atras__flecha--img"
+            <a class="volver-atras__flecha" href="./inicio-sesion.html"><img class="volver-atras__flecha--img"
                     src="../assets/volver.png" alt="volver-atras-flecha" /></a>
-            <a class="volver-atras__texto" href="../index.html">Volver</a>
+            <a class="volver-atras__texto" href="./inicio-sesion.html">Volver</a>
         </div>
+
         <section class="contenedor-formulario">
+            <form class="formulario" method="get" id="form_mi-perfil">
+                <h2 class="formulario__titulo">Mi perfil</h2>
 
-            <form class="formulario" method="get" id="form_iniciar-sesion">
-                <h2 class="formulario__titulo">Iniciar sesión</h2>
+                <label class="formulario__label" for="nombre-perfil">Nombre</label>
+                <input class="formulario__input" type="text" name="nombre" id="nombre-perfil" placeholder="Nombre" readonly />
 
-                <label class="formulario__label" for="email-usuario">Dirección de correo electrónico</label>
-                <input class="formulario__input" type="email" name="email-usuario" id="email-usuario"
-                    placeholder="Usuario" required />
+                <label class="formulario__label" for="apellido-perfil">Apellido</label>
+                <input class="formulario__input" type="text" name="apellido" id="apellido-perfil" placeholder="Apellido"
+                    readonly />
 
-                <label class="formulario__label" for="password-usuario">Contraseña</label>
-                <input class="formulario__input" type="password" name="password-usuario" id="password-usuario"
-                    placeholder="Contraseña" required />
-                <span class="formulario_mensaje-error" id="mensaje_pw_incorrecta"></span>
-
-                <a class="formulario__olvido" href="./olvido-contraseña.html">Olvidaste tu contraseña</a>
-
-                <button type="submit" class="formulario__boton" id="btn_iniciar_sesion">INICIAR SESIÓN</button>
-
-                <div>
-                    <p class="formulario__crear-cuenta">¿No tienes cueta?<a class="formulario__link-crear-cuenta"
-                            href="./crear-cuenta.html"> Crear una</a> </p>
-                </div>
+                <label class="formulario__label" for="email-perfil">Correo electrónico</label>
+                <input class="formulario__input" type="email" name="email" id="email-perfil" placeholder="Correo electrónico"
+                    readonly />
+                
+                <button type="button" class="formulario__boton" id="btn_eliminar-cuenta">ELIMINAR CUENTA</button>
             </form>
         </section>
     </main>
-
 
     <footer class="footer">
         <section class="footer__columna">
@@ -154,7 +136,7 @@
         </section>
     </footer>
 
-    <script src="../js/inicio_sesion.js"></script>
+    <script src="../js/administracion-de-usuario.js"></script>
 </body>
 
 </html>

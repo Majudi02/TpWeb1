@@ -179,7 +179,6 @@ main {
     background-color: #020202;
     border: 0.3em solid #c2c2c2;
     border-radius: 1em;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
@@ -193,7 +192,6 @@ main {
 
 .popup .popup__boton {
     padding: 0.5em;
-    /*text-decoration: none;*/
     text-align: center;
     border: 0.1em solid rgb(39, 39, 39);
     border-radius: 1.5em;
@@ -279,6 +277,21 @@ main {
         display: none !important;
     }
 
+    .popup {
+        top: 40%;
+        left: 25%;
+        width: 50%;
+        padding: 1em;
+    }
+    
+    .popup .popup__texto{
+        font-size: 0.8em;
+        padding-bottom: 0.5em;
+    }
+    
+    .popup .popup__boton {
+        font-size: 0.8em;
+    }
 }
 
 
@@ -363,6 +376,22 @@ main {
     .volver-atras .volver-atras__texto {
         width: 3em;
         padding-right: 2em;
+        font-size: 0.8em;
+    }
+
+    .popup {
+        top: 42%;
+        left: 30%;
+        width: 40%;
+        padding: 1em;
+    }
+    
+    .popup .popup__texto{
+        font-size: 0.8em;
+        padding-bottom: 0.5em;
+    }
+    
+    .popup .popup__boton {
         font-size: 0.8em;
     }
 

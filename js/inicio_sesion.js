@@ -15,6 +15,11 @@ function validarFormIniciarSesion() {
     return true;
 }
 
+//Función para guardar usuario en el session storage
+function guardarUsuarioSesion (emailUsuario){
+    sessionStorage.setItem('ultimoUsuarioLogueado', emailUsuario)
+}
+
 //2. Verificar si el usuario existe y si su contraseña es correcta
 
 function validarUsuario(evento){
@@ -47,6 +52,7 @@ function validarUsuario(evento){
     
     const usuarioPorValidar = usuariosRegistrados[emailUsuario];
     if(usuarioPorValidar.password === passwordUsuario){
+            guardarUsuarioSesion(usuarioPorValidar.email)
             window.location.assign('../index.html');
         }else{
             const nodoPwError = document.querySelector('#mensaje_pw_incorrecta');
