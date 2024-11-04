@@ -25,3 +25,10 @@ function cargarDatosUsuario (email){
 }
 
 cargarDatosUsuario(mailUsuarioActivo);
+
+
+//Falta botón para eliminar
+
+function eliminarCuenta (){
+    
+}

@@ -1,10 +1,10 @@
-*{
+* {
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.navprimario{
+.navprimario {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -15,35 +15,37 @@
 }
 
 
-.navprimario__menu-items{
+.navprimario__menu-items {
     display: flex;
     align-items: center;
     width: 100%;
 
 }
-.navprimario__menu-items-logo{
+
+.navprimario__menu-items-logo {
     display: flex;
     width: 25%;
 }
 
-.navprimario__menu-logo{
+.navprimario__menu-logo {
     text-decoration: none;
     display: flex;
     width: 18%;
 }
-.navprimario__menu-logo-img{
+
+.navprimario__menu-logo-img {
     display: flex;
     width: 90%;
 }
 
-.navprimario__menu-items-nombre{
+.navprimario__menu-items-nombre {
     color: #3498DB;
     display: flex;
     align-items: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.navprimario__menu-items-buscador{
+.navprimario__menu-items-buscador {
     display: flex;
     position: relative;
     align-items: center;
@@ -53,7 +55,7 @@
 }
 
 
-.navprimario__menu-items-buscador-input{
+.navprimario__menu-items-buscador-input {
     width: 100%;
     border-style: none;
     text-indent: 10px;
@@ -63,7 +65,7 @@
 }
 
 
-.navprimario__menu-items-buscador-button{
+.navprimario__menu-items-buscador-button {
     display: flex;
     position: absolute;
     height: 68%;
@@ -76,14 +78,14 @@
     right: 0;
 }
 
-.navprimario__menu-items-buscador-button-img{
+.navprimario__menu-items-buscador-button-img {
     width: 54%;
     display: flex;
     justify-content: center;
 
 }
 
-.navprimario__menu-items-carrito{
+.navprimario__menu-items-carrito {
     display: flex;
     width: 25%;
     align-items: center;
@@ -91,18 +93,19 @@
     justify-content: flex-end;
 
 }
-.navprimario__menu-items-carrito-link{
+
+.navprimario__menu-items-carrito-link {
     display: contents;
     width: 19%;
 }
 
 
-.navprimario__menu-items-carrito-img{
+.navprimario__menu-items-carrito-img {
     position: absolute;
     width: 2.4em;
 }
 
-.navprimario__menu-login{
+.navprimario__menu-login {
     display: flex;
     width: 28%;
     justify-content: space-evenly;
@@ -110,7 +113,7 @@
     margin-right: 5%;
 }
 
-.navprimario__menu-login-btn{
+.navprimario__menu-login-btn {
     text-decoration: none;
     border: white;
     border-style: solid;
@@ -121,22 +124,25 @@
     margin-right: 9%;
     font-size: 0.7em;
 }
-.navprimario__menu-login-btn:hover{
-border: #bfbfbf;
-background-color: #4ABAEA;
-border-style: solid;
-border-width: 0.13em;
-color: #ffffff;
-font-weight: 600;
+
+.navprimario__menu-login-btn:hover {
+    border: #bfbfbf;
+    background-color: #4ABAEA;
+    border-style: solid;
+    border-width: 0.13em;
+    color: #ffffff;
+    font-weight: 600;
 }
 
-.navprimario__menu-login-icono-img{
-display: none;
+.navprimario__menu-login-icono-img {
+    display: none;
 }
-.navprimario__menu-login-icono-img{
+
+.navprimario__menu-login-icono-img {
     width: 2em;
 }
-.navprimario__menu-items-carrito-numero{
+
+.navprimario__menu-items-carrito-numero {
     font-weight: 700;
     font-size: 0.8em;
     color: #ffffff;
@@ -147,7 +153,66 @@ display: none;
     bottom: 0.6em;
 }
 
-.navsecundario{
+/*Prueba MI PERFIL*/
+.navprimario__perfil-dropdown {
+    position: relative;
+    display: none;
+    width: 28%;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin-right: 5%;
+}
+
+.boton_mi-perfil {
+    border: white;
+    border-style: solid;
+    border-width: 0.13em;
+    background-color: transparent;
+    color: white;
+    padding: 6% 18%;
+    margin-right: 9%;
+    font-size: 0.7em;
+}
+
+.boton_mi-perfil:hover {
+    border: #bfbfbf;
+    background-color: #4ABAEA;
+    border-style: solid;
+    border-width: 0.13em;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.dropdown-menu {
+    display: none; /* Oculto inicialmente */
+    position: absolute;
+    top: 100%;
+    background-color: rgb(82, 79, 79);
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(148, 146, 146, 0.2);
+    padding: 0.2em;
+    min-width: 6.5em;
+    z-index: 1;
+}
+
+.dropdown-item {
+    background: none;
+    border: none;
+    color: #ebeaea;
+    padding: 0.2em;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #5f5d5d;
+}
+
+
+/*FIN Prueba MI PERFIL*/
+
+.navsecundario {
     display: flex;
     width: 100%;
     background-color: rgb(0 0 0);
@@ -155,18 +220,21 @@ display: none;
     justify-content: center;
 
 }
-.navsecundario__menu{
+
+.navsecundario__menu {
     display: flex;
     align-items: center;
     width: 55%;
     justify-content: space-evenly;
 }
-.navsecundario__menu-item{
+
+.navsecundario__menu-item {
     width: 23%;
     list-style: none;
     height: 70%;
 }
-.navsecundario__menu-item-link{
+
+.navsecundario__menu-item-link {
     display: flex;
     justify-content: space-around;
     text-decoration: none;
@@ -177,7 +245,7 @@ display: none;
     font-size: 0.8em;
 }
 
-.navsecundario__menu-item-link:hover{
+.navsecundario__menu-item-link:hover {
     color: rgb(255, 255, 255);
     border-color: rgba(255, 255, 255, 0.725);
     font-weight: 500;
@@ -186,46 +254,56 @@ display: none;
 
 }
 
-@media screen and (max-width: 23em){
+@media screen and (max-width: 23em) {
     .navprimario {
         padding: 8px 12px 0px 12px;
     }
-    .navsecundario__menu{
+
+    .navsecundario__menu {
         width: 40%;
     }
-    .navprimario__menu-items-nombre{
+
+    .navprimario__menu-items-nombre {
         display: none;
 
     }
+
     .navprimario__menu-logo-img {
         display: flex;
         width: 40px;
     }
+
     .navprimario__menu-items-carrito-btn {
         display: none;
     }
+
     .navprimario__menu-items-carrito-img {
-    margin-left: 81%;
+        margin-left: 81%;
     }
 
     .navprimario__menu-login {
         width: 84%;
         margin-right: 8%;
     }
-    .navprimario__menu-login-icono{
+
+    .navprimario__menu-login-icono {
         display: flex;
     }
-    .navprimario__menu-login-btn{
+
+    .navprimario__menu-login-btn {
         display: none;
     }
-    .navprimario__menu-login-icono-img{
+
+    .navprimario__menu-login-icono-img {
         width: 2em;
         display: block;
     }
+
     .navsecundario__menu {
         width: 90%;
         font-size: 0.55em;
     }
+
     .navprimario__menu-items-buscador-button {
         width: 7%
     }
@@ -233,15 +311,17 @@ display: none;
 }
 
 /*Mobile Devices*/
-@media screen and (min-width: 23em) and (max-width: 47.9em){
+@media screen and (min-width: 23em) and (max-width: 47.9em) {
 
-    .navsecundario__menu{
+    .navsecundario__menu {
         width: 80%;
         font-size: 0.7em;
     }
-    .navprimario__menu-items-nombre{
+
+    .navprimario__menu-items-nombre {
         display: none;
     }
+
     .navprimario__menu-logo {
         width: 31%;
     }
@@ -251,10 +331,12 @@ display: none;
         width: 48px;
         top: 1.5%;
     }
+
     .navprimario__menu-items-buscador-button {
         width: 7%
     }
-    .navprimario__menu-items-buscador-button-img{
+
+    .navprimario__menu-items-buscador-button-img {
         width: 75%;
     }
 
@@ -262,39 +344,46 @@ display: none;
         width: 25%;
 
     }
+
     .navprimario__menu-items-carrito-btn {
         display: none;
     }
+
     .navprimario__menu-items-carrito-img {
-    margin-left: 81%;
+        margin-left: 81%;
     }
 
     .navprimario__menu-login {
         width: 32%;
         margin-right: 19%;
     }
-    .navprimario__menu-login-icono{
+
+    .navprimario__menu-login-icono {
         display: flex;
     }
-    .navprimario__menu-login-btn{
+
+    .navprimario__menu-login-btn {
         display: none;
     }
-    .navprimario__menu-login-icono-img{
+
+    .navprimario__menu-login-icono-img {
         width: 2em;
         display: block;
     }
 }
 
 /*Tablet Devices*/
-@media screen and (min-width: 47.9em) and (max-width: 63.9em){
+@media screen and (min-width: 47.9em) and (max-width: 63.9em) {
     .navprimario__menu-login {
 
         width: 30%;
         margin-right: 16%;
     }
+
     .navprimario__menu-items-buscador-button {
         width: 7%
     }
+
     .navprimario__menu-items-carrito {
         gap: 1em;
     }
@@ -302,12 +391,13 @@ display: none;
 
 
 /*Laptop Devices*/
-@media screen and (min-width: 63.9em) and (max-width: 90em){
+@media screen and (min-width: 63.9em) and (max-width: 90em) {
     .navprimario__menu-login {
 
         width: 30%;
         margin-right: 16%;
     }
+
     .navprimario__menu-items-buscador-button {
         width: 5%
     }
