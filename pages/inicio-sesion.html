@@ -42,12 +42,23 @@
 
 
                 <div class="navprimario__menu-items-carrito">
-                    <div class="navprimario__menu-login">
+                    <div class="navprimario__menu-login" id="espacio-btn-login">
                         <a class="navprimario__menu-login-btn" href="../pages/inicio-sesion.html">INGRESAR</a>
                         <a class="navprimario__menu-login-icono" href="../pages/inicio-sesion.html">
                             <img class="navprimario__menu-login-icono-img" src="../assets/Inicio-sesion.png" alt="iniciar sesion">
                         </a>
                     </div>
+
+                    <!--Prueba Mi perfil-->
+                    <div class="navprimario__perfil-dropdown" id="espacio-btn-perfil">
+                        <button id="btn-mi-perfil" class="boton_mi-perfil">Mi perfil</button>
+                        <div id="dropdown-menu" class="dropdown-menu">
+                            <button id="cerrar-sesion" class="dropdown-item">Cerrar sesión</button>
+                            <button id="eliminar-cuenta" class="dropdown-item">Eliminar cuenta</button>
+                        </div>
+                    </div>
+                    <!--Fin prueba Mi perfil-->
+
                     <a class="navprimario__menu-items-carrito-link" href="../pages/carrito-compras.html">
                         <img class="navprimario__menu-items-carrito-img" src="../assets/carrito.png"
                             alt="Carrito de compras">
@@ -88,20 +99,21 @@
         </div>
         <section class="contenedor-formulario">
 
-            <form class="formulario" method="get" action="../index.html">
+            <form class="formulario" method="get" id="form_iniciar-sesion">
                 <h2 class="formulario__titulo">Iniciar sesión</h2>
 
-                <label class="formulario__label" for="nombre-usuario">Nombre de usuario</label>
-                <input class="formulario__input" type="text" name="nombre-usuario" id="nombre-usuario"
+                <label class="formulario__label" for="email-usuario">Dirección de correo electrónico</label>
+                <input class="formulario__input" type="email" name="email-usuario" id="email-usuario"
                     placeholder="Usuario" required />
 
-                <label class="formulario__label" for="contraseña">Contraseña</label>
-                <input class="formulario__input" type="password" name="contraseña" id="contraseña"
+                <label class="formulario__label" for="password-usuario">Contraseña</label>
+                <input class="formulario__input" type="password" name="password-usuario" id="password-usuario"
                     placeholder="Contraseña" required />
+                <span class="formulario_mensaje-error" id="mensaje_pw_incorrecta"></span>
 
                 <a class="formulario__olvido" href="./olvido-contraseña.html">Olvidaste tu contraseña</a>
 
-                <button class="formulario__boton">INICIAR SESIÓN</button>
+                <button type="submit" class="formulario__boton" id="btn_iniciar_sesion">INICIAR SESIÓN</button>
 
                 <div>
                     <p class="formulario__crear-cuenta">¿No tienes cueta?<a class="formulario__link-crear-cuenta"
@@ -145,7 +157,9 @@
         </section>
     </footer>
 
-
+    <script src="../js/login-no-login.js"></script>
+    <script src="../js/inicio_sesion.js"></script>
+    
 </body>
 
 </html>

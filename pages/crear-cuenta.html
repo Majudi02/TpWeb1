@@ -40,7 +40,8 @@
                     <div class="navprimario__menu-login">
                         <a class="navprimario__menu-login-btn" href="../pages/inicio-sesion.html">INGRESAR</a>
                         <a class="navprimario__menu-login-icono" href="../pages/inicio-sesion.html">
-                            <img class="navprimario__menu-login-icono-img" src="../assets/Inicio-sesion.png" alt="iniciar sesion">
+                            <img class="navprimario__menu-login-icono-img" src="../assets/Inicio-sesion.png"
+                                alt="iniciar sesion">
                         </a>
                     </div>
                     <a class="navprimario__menu-items-carrito-link" href="../pages/carrito-compras.html">
@@ -82,8 +83,8 @@
             <a class="volver-atras__texto" href="./inicio-sesion.html">Volver</a>
         </div>
 
-        <section class="contenedor-formulario crear-cuenta">
-            <form class="formulario" method="get" action="./inicio-sesion.html">
+        <section class="contenedor-formulario corregir-padding">
+            <form class="formulario" method="get" id="form_crear-cuenta">
                 <h2 class="formulario__titulo">Crear nueva cuenta</h2>
 
                 <div>
@@ -91,21 +92,22 @@
                 </div>
 
                 <label class="formulario__label" for="nombre">Nombre</label>
-                <input class="formulario__input" type="text" name="nombre" id="nombre" placeholder="Nombre" required/>
+                <input class="formulario__input" type="text" name="nombre" id="nombre" placeholder="Nombre" required />
 
                 <label class="formulario__label" for="apellido">Apellido</label>
-                <input class="formulario__input" type="text" name="apellido" id="apellido" placeholder="Apellido" required/>
+                <input class="formulario__input" type="text" name="apellido" id="apellido" placeholder="Apellido"
+                    required />
 
                 <label class="formulario__label" for="email">Correo electrónico</label>
-                <input class="formulario__input" type="email" name="email" id="email"
-                    placeholder="Correo electrónico" required/>
+                <input class="formulario__input" type="email" name="email" id="email" placeholder="Correo electrónico"
+                    required />
 
-                <label class="formulario__label" for="contraseña">Contraseña</label>
-                <input class="formulario__input" type="password" name="contraseña" id="contraseña"
-                    placeholder="Contraseña" required/>
+                <label class="formulario__label" for="password">Contraseña</label>
+                <input class="formulario__input" type="password" name="password" id="password"
+                    placeholder="Contraseña" required />
+                <span id="mensaje_error" class="formulario_mensaje-error"></span>
 
-                    <button class="formulario__boton">CREAR CUENTA</button>
-
+                <button type="submit" class="formulario__boton" id="btn_crear_cuenta">CREAR CUENTA</button>
             </form>
         </section>
     </main>
@@ -143,7 +145,7 @@
         </section>
     </footer>
 
-
+    <script src="../js/crear_cuenta.js"></script>
 </body>
 
 </html>

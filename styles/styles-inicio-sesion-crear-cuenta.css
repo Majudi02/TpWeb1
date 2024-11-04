@@ -33,7 +33,7 @@ main {
 }
 
 
-.crear-cuenta{
+.corregir-padding{
     padding-top:3em ;
 }
 
@@ -75,6 +75,13 @@ main {
     font-size: 0.7em;
 }
 
+.formulario_mensaje-error{
+    color: rgb(247, 15, 15);
+    background-color: rgba(255, 202, 201, 0.8);
+    font-size: 0.8em;
+    font-weight: 600;
+    text-align: center;
+}
 
 .contenedor-formulario .formulario .formulario__olvido {
     text-decoration: none;
@@ -161,8 +168,39 @@ main {
     display: none;
 }
 
+/*Pop-up*/
+.popup {
+    display: none;
+    position: fixed;
+    top: 40%;
+    left: 35%;
+    width: 30%;
+    padding: 2em;
+    background-color: #020202;
+    border: 0.3em solid #c2c2c2;
+    border-radius: 1em;
+    text-align: center;
+}
 
+.popup .popup__texto{
+    text-align: center;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    padding-bottom: 1em;
+}
 
+.popup .popup__boton {
+    padding: 0.5em;
+    text-align: center;
+    border: 0.1em solid rgb(39, 39, 39);
+    border-radius: 1.5em;
+    background-color: rgb(45, 86, 161);
+    color: rgb(255, 255, 255);
+    font-size: 1em;
+    margin-top: 1em;
+    cursor: pointer;
+}
 
 /*-----------------------------------*/
 /*Mobile Devices*/
@@ -176,7 +214,7 @@ main {
         padding-top: 13em;
     }
 
-    .crear-cuenta{
+    .corregir-padding{
         padding-top: 11em;
     }
 
@@ -239,6 +277,21 @@ main {
         display: none !important;
     }
 
+    .popup {
+        top: 40%;
+        left: 25%;
+        width: 50%;
+        padding: 1em;
+    }
+    
+    .popup .popup__texto{
+        font-size: 0.8em;
+        padding-bottom: 0.5em;
+    }
+    
+    .popup .popup__boton {
+        font-size: 0.8em;
+    }
 }
 
 
@@ -249,7 +302,7 @@ main {
         padding-top: 11em;
     }
 
-    .crear-cuenta{
+    .corregir-padding{
         padding-top: 8em;
     }
 
@@ -323,6 +376,22 @@ main {
     .volver-atras .volver-atras__texto {
         width: 3em;
         padding-right: 2em;
+        font-size: 0.8em;
+    }
+
+    .popup {
+        top: 42%;
+        left: 30%;
+        width: 40%;
+        padding: 1em;
+    }
+    
+    .popup .popup__texto{
+        font-size: 0.8em;
+        padding-bottom: 0.5em;
+    }
+    
+    .popup .popup__boton {
         font-size: 0.8em;
     }
 
