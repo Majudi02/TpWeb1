@@ -94,8 +94,9 @@
                     <input type="number" id="informacion-tarjeta" name="informacion-tarjeta"
                         placeholder="1234 1234 1234 1234" minlength="16" maxlength="16" required>
                     <div class="informacion-tarjeta-fila">
-                        <input class="vencimiento" type="month" id="informacion-tarjeta-vencimiento"
-                            name="informacion-tarjeta-vencimiento" placeholder="Vencimiento (MM/AA)" required>
+                        <input class="vencimiento" type="text" id="informacion-tarjeta"
+                            placeholder="Vencimiento (MM/AA)" required pattern="^\d{2}\/\d{2}$"
+                            title="Ingrese la fecha en formato MM/AA" required>
                         <input class="codigo-tarjeta" type="text" id="informacion-tarjeta-codigo"
                             name="informacion-tarjeta-codigo" placeholder="Codigo (***)" minlength="3" maxlength="3"
                             required>

@@ -37,7 +37,8 @@ body {
     padding-right: 12%;
 }
 
-.curso .curso_informacion .curso_informacion_button {
+.curso_informacion__boton .curso .curso_informacion,
+.curso_informacion__button {
     margin-top: 1%;
     font-size: 1em;
     font-weight: bold;
@@ -61,7 +62,9 @@ details {
     width: 32%;
 }
 
-summary {
+
+
+.curso_summary{
     cursor: pointer;
     padding: 3.2%;
     background-color: white;
@@ -122,7 +125,7 @@ details[open] summary::after {
 }
 
 
-.icono-introduccion {
+.curso_summary__tema__imagen {
     width: 16px;
     height: auto;
 }
@@ -200,13 +203,20 @@ details[open] summary::after {
     margin-left: auto;
 }
 
-input[type="checkbox"] {
+.curso_summary__tema{
+    position: relative;
+}
+
+.curso_summary__tema__checkbox {
+    position: absolute;
     width: 15px;
     height: 15px;
     background-color: #ccc;
     border-radius: 10px;
     cursor: pointer;
-    border: 2px solid #ccc;
+    border: 2px solid #ccc; 
+
+    margin-left: 20.8em; 
 }
 
 
@@ -397,7 +407,7 @@ input[type="checkbox"] {
         overflow-x: hidden;
     }
 
-    
+
     .curso {
         margin: 2em 2em;
     }
@@ -537,14 +547,14 @@ input[type="checkbox"] {
         padding: 0%;
         margin: 0%;
     }
-    
+
 
     main {
         margin-top: 2em;
         margin-inline: 1em;
     }
 
-    aside{
+    aside {
         margin: 0;
     }
 
@@ -620,7 +630,7 @@ input[type="checkbox"] {
         margin: 1em 0.5em;
     }
 
-    .docente .docente_info .docente_info_imagen_celular  {
+    .docente .docente_info .docente_info_imagen_celular {
         display: flex;
         margin-top: 1%;
         max-width: 65%;
@@ -633,7 +643,7 @@ input[type="checkbox"] {
 
     .docente .docente_info .docente_info_nombre_celular {
         align-self: flex-start;
-        display: flex ;
+        display: flex;
         margin-left: 0.4em;
         margin-top: 1.2%;
         font-weight: 600;
@@ -714,8 +724,8 @@ input[type="checkbox"] {
     .boton.boton--ver-detalle {
         font-weight: 500;
         text-align: right;
-    }    
-  
+    }
+
 
 }
 

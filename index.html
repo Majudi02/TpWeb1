@@ -46,13 +46,14 @@
                     <div class="navprimario__menu-login">
                         <a class="navprimario__menu-login-btn" href="./pages/inicio-sesion.html">INGRESAR</a>
                         <a class="navprimario__menu-login-icono" href="./pages/inicio-sesion.html">
-                            <img class="navprimario__menu-login-icono-img" src="./assets/Inicio-sesion.png" alt="iniciar sesion">
+                            <img class="navprimario__menu-login-icono-img" src="./assets/Inicio-sesion.png"
+                                alt="iniciar sesion">
                         </a>
                     </div>
-                    <a class="navprimario__menu-items-carrito-link" href="./pages/carrito-compras.html">
+                    <a class="navprimario__menu-items-carrito-link" href="">
                         <img class="navprimario__menu-items-carrito-img" src="./assets/carrito.png"
                             alt="Carrito de compras">
-                        <p class="navprimario__menu-items-carrito-numero">4</p>
+                        <p class="navprimario__menu-items-carrito-numero">0</p>
                     </a>
 
                 </div>
@@ -92,7 +93,7 @@
                 <img class="section-slider__flecha-derecha" src="./assets/flecha-der-b.png" alt="flecha-der">
             </a>
         </section>
-        
+
         <section class="section-pasos">
             <div class="main__subtitulo">
                 <h2>pasos a seguir</h2>
@@ -136,11 +137,14 @@
                     <h3 class="tarjeta__horas">60 hs</h3>
                     <h3 class="tarjeta__modalidad">Modalidad virtual</h3>
                     <div class="tarjeta__detalle">
-                        <a class="boton boton--ver-detalle" href="./pages/descripcion-del-curso-virtual.html">Ver
+                        <a class="boton boton--ver-detalle" href="./pages/descripcion.del-curso.html?id=3">Ver
                             detalle</a>
                     </div>
                     <div class="tarjeta__comprar">
-                        <a class="boton boton--comprar" href="./pages/pagar-con-tarjeta.html">COMPRAR</a> 
+                        <a class="boton boton--comprar" href="#"
+                            onclick="event.preventDefault(); agregarCursoAlCarrito(3)">
+                            Agregar al carrito
+                        </a>
                     </div>
                 </article>
 
@@ -153,11 +157,13 @@
                     <h3 class="tarjeta__horas">85 hs</h3>
                     <h3 class="tarjeta__modalidad">Modalidad virtual</h3>
                     <div class="tarjeta__detalle">
-                        <a class="boton boton--ver-detalle" href="./pages/descripcion-del-curso-virtual.html">Ver
+                        <a class="boton boton--ver-detalle" href="./pages/descripcion.del-curso.html?id=4">Ver
                             detalle</a>
                     </div>
                     <div class="tarjeta__comprar">
-                        <a class="boton boton--comprar" href="./pages/pagar-con-tarjeta.html">COMPRAR</a> 
+                        <a class="boton boton--comprar" href=""
+                            onclick="event.preventDefault(); agregarCursoAlCarrito(4)">Agregar
+                            al carrito</a>
                     </div>
 
                 </article>
@@ -171,11 +177,13 @@
                     <h3 class="tarjeta__horas">90 hs</h3>
                     <h3 class="tarjeta__modalidad">Modalidad virtual</h3>
                     <div class="tarjeta__detalle">
-                        <a class="boton boton--ver-detalle" href="./pages/descripcion-del-curso-virtual.html">Ver
+                        <a class="boton boton--ver-detalle" href="./pages/descripcion.del-curso.html?id=2">Ver
                             detalle</a>
                     </div>
                     <div class="tarjeta__comprar">
-                        <a class="boton boton--comprar" href="./pages/pagar-con-tarjeta.html">COMPRAR</a>
+                        <a class="boton boton--comprar" href=""
+                            onclick="event.preventDefault(); agregarCursoAlCarrito(2)">Agregar
+                            al carrito</a>
                     </div>
                 </article>
 
@@ -188,11 +196,13 @@
                     <h3 class="tarjeta__horas">20 hs</h3>
                     <h3 class="tarjeta__modalidad">Modalidad presencial</h3>
                     <div class="tarjeta__detalle">
-                        <a class="boton boton--ver-detalle" href="./pages/descripcion-del-curso-presencial.html">Ver
+                        <a class="boton boton--ver-detalle" href="./pages/descripcion.del-curso.html?id=6">Ver
                             detalle</a>
                     </div>
                     <div class="tarjeta__comprar">
-                        <a class="boton boton--comprar" href="./pages/form-de-inscripcion.html">COMPRAR</a>
+                        <a class="boton boton--comprar" href=""
+                            onclick="event.preventDefault(); agregarCursoAlCarrito(6)">Agregar
+                            al carrito</a>
                     </div>
                 </article>
 
@@ -205,11 +215,13 @@
                     <h3 class="tarjeta__horas">20 hs</h3>
                     <h3 class="tarjeta__modalidad">Modalidad presencial</h3>
                     <div class="tarjeta__detalle">
-                        <a class="boton boton--ver-detalle" href="./pages/descripcion-del-curso-presencial.html">Ver
+                        <a class="boton boton--ver-detalle" href="./pages/descripcion.del-curso.html?id=1">Ver
                             detalle</a>
                     </div>
                     <div class="tarjeta__comprar">
-                        <a class="boton boton--comprar" href="./pages/form-de-inscripcion.html">COMPRAR</a>
+                        <a class="boton boton--comprar" href=""
+                            onclick="event.preventDefault(); agregarCursoAlCarrito(1)">Agregar
+                            al carrito</a>
                     </div>
                 </article>
 
@@ -222,10 +234,11 @@
                     <h3 class="tarjeta__horas">50 hs</h3>
                     <h3 class="tarjeta__modalidad">Modalidad virtual</h3>
                     <div class="tarjeta__detalle">
-                        <a class="boton boton--ver-detalle" href="./pages/descripcion-del-curso-virtual.html">Ver detalle</a>
+                        <a class="boton boton--ver-detalle" href="./pages/descripcion.del-curso.html?id=5">Ver
+                            detalle</a>
                     </div>
                     <div class="tarjeta__comprar">
-                        <a class="boton boton--comprar" href="./pages/pagar-con-tarjeta.html">COMPRAR</a>
+                        <a class="boton boton--comprar" href="" onclick="event.preventDefault(); agregarCursoAlCarrito(5)">Agregar al carrito</a>
                     </div>
                 </article>
             </div>
@@ -244,7 +257,89 @@
                 <img class="medio-de-pago--flecha" src="./assets/flecha-der-b.png" alt="flecha-derecha">
             </div>
         </section>
+
+
+        <section class="carrito-sidebar">
+            <article class="carrito-sidebar__header">
+                <img class="carrito-sidebar__header__carrito-img" src="./assets/carrito.png" alt="imagen del carrito">
+                <div class="carrito-sidebar__header__titulo">
+                    <h2>Tu carrito</h2>
+                    <p class="js-carrito-sidebar__header__titulo__contador">4</p>
+                </div>
+                <span class="carrito-sidebar__salir">X</span>
+            </article>
+
+            <article class="carrito-sidebar__contenedor-carrito-vacio">
+                <p class="carrito-sidebar__contenedor-carrito-vacio__contenido">No hay cursos en el carrito</p>
+            </article>
+
+
+            <div class="js-carrito-sidebar__cursos">
+
+
+
+                <article class="carrito-sidebar__cursos__item">
+                    <img class="carrito-sidebar__cursos__item__imagen" src="./assets/c++.png" alt="">
+                    <div class="carrito-sidebar__cursos__item__descripcion">
+                        <p class="carrito-sidebar__cursos__item__titulo">Curso de c++</p>
+                        <p class="carrito-sidebar__cursos__item__precio">$250.000</p>
+                        <div class="carrito-sidebar__cursos__item__contenedor-cantidad">
+                            <span class="carrito-sidebar__cursos__item__contenedor-cantidad__eliminar"
+                                onclick="eliminarCantidadDeCurso()">-</span>
+                            <P class="carrito-sidebar__cursos__item__contenedor-cantidad__numero">1</P>
+                            <span class="carrito-sidebar__cursos__item__contenedor-cantidad__agregar"
+                                onclick="agregarCantidadDeCurso()">+</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="carrito-sidebar__cursos__item">
+                    <img class="carrito-sidebar__cursos__item__imagen" src="./assets/css-html-js.png" alt="">
+                    <div class="carrito-sidebar__cursos__item__descripcion">
+                        <p class="carrito-sidebar__cursos__item__titulo">Curso de JSasdfasdfasd</p>
+                        <p class="carrito-sidebar__cursos__item__precio">$100.000</p>
+                        <div class="carrito-sidebar__cursos__item__contenedor-cantidad">
+                            <span class="carrito-sidebar__cursos__item__contenedor-cantidad__eliminar">-</span>
+                            <P class="carrito-sidebar__cursos__item__contenedor-cantidad__numero">1</P>
+                            <span class="carrito-sidebar__cursos__item__contenedor-cantidad__agregar">+</span>
+                        </div>
+                    </div>
+                </article>
+
+
+                <article class="carrito-sidebar__cursos__item">
+                    <img class="carrito-sidebar__cursos__item__imagen" src="./assets/diseño-grafico.png" alt="">
+                    <div class="carrito-sidebar__cursos__item__descripcion">
+                        <p class="carrito-sidebar__cursos__item__titulo">Curso de Diseño grafico</p>
+                        <p class="carrito-sidebar__cursos__item__precio">$320.000</p>
+                        <div class="carrito-sidebar__cursos__item__contenedor-cantidad">
+                            <span class="carrito-sidebar__cursos__item__contenedor-cantidad__eliminar">-</span>
+                            <P class="carrito-sidebar__cursos__item__contenedor-cantidad__numero">2</P>
+                            <span class="carrito-sidebar__cursos__item__contenedor-cantidad__agregar">+</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+
+
+
+            <article class="carrito-sidebar_botones">
+                <div class="carrito-sidebar_botones__subtotal">
+                    <p>Subtotal</p>
+                    <p class="js-carrito-sidebar_botones__subtotal__precioTotalCarrito">0</p>
+                </div>
+                <a class="carrito-sidebar_botones__subtotal__botones" href="./pages/carrito-compras.html">Ir al
+                    carrito</a>
+                <a class="carrito-sidebar_botones__subtotal__botones" href="./index.html">Seguir comprando</a>
+            </article>
+        </section>
+
     </main>
+
+
+
 
     <footer class="footer">
         <div class="footer__columna">
@@ -281,6 +376,9 @@
 
     </footer>
 
+
+
+    <script src="./contadorCarrito.js"></script>
 </body>
 
 </html>
