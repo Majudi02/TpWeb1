@@ -89,14 +89,16 @@
         </div>
         <section class="contenedor-formulario">      
             <div class="formulario-contacto">
-                <form class="grupo-formulario" method="get" action="../index.html">
+                <form class="grupo-formulario" method="post" action="../index.html">
                     <h2>Contactate con nosotros</h2>
                     <input type="text" name="name" id="name" placeholder="Nombre" required>
                     <input type="email" name="email" id="email" placeholder="Correo" required>
                     <input type="tel" name="tel" id="tel" placeholder="Teléfono" required>
-                    <textarea name="mensaje" id="mensaje" placeholder="Mensaje" required></textarea>
+                    <textarea name="mensaje" id="mensaje" placeholder="Mensaje" maxlength="1000" required></textarea>
+                    <p id="contador-caracteres">1000 caracteres restantes</p>
+                    <article id="mensaje_error" class="error"></article>  
                     <button class="boton-enviar">Enviar</button>
-                </form>
+                    </form>
                 <div class="grupo-formulario datos-contacto">
                     <h2>Información de contacto</h2>
                     <p><strong>Dirección</strong></p><p>Av. Maipú 1234, Piso 3, CABA, Argentina</p>
@@ -105,6 +107,14 @@
                 </div>
             </div>
         </section>
+
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h2>Consulta enviada</h2>
+                <button id="boton-modal">Aceptar</button>
+            </div>
+        </div>
+
         <section class="ubicacion">
             <h2>Ubicación</h2>
             <div class="mapa">
@@ -145,7 +155,8 @@
             </div>
         </section>
     </footer>
-
+    
+    <script src="../js/contacto.js"></script>
 </body>
 
 </html>
