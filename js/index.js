@@ -1,10 +1,11 @@
+
 const cursosInformacion = [
     {
         id: 1,
         nombre: "MySQL para principiantes",
         imagen: "../assets/mysql.png",
         precio: 40,
-        duracion: "20 horas",
+        duracion: 20,
         descripcion: `Aprende a gestionar y manipular bases de datos con SQL,
                             el lenguaje estándar de consultas. En este curso, descubrirás cómo realizar consultas básicas y
                             avanzadas, desde seleccionar datos hasta crear y modificar estructuras de bases de datos.
@@ -50,7 +51,7 @@ const cursosInformacion = [
         nombre: "FrontEnd Intensivo",
         imagen: "../assets/css-html-js.png",
         precio: 60,
-        duracion: "90 horas",
+        duracion: 90,
         descripcion: `Domina el desarrollo de interfaces web interactivas y visualmente atractivas.
                             En este curso intensivo, aprenderás las tecnologías fundamentales del Front End como HTML, CSS, y JavaScript,
                             así como frameworks populares como React para crear aplicaciones web dinámicas y responsivas.`,
@@ -93,7 +94,7 @@ const cursosInformacion = [
         nombre: "Python para principiantes",
         imagen: "../assets/python.png",
         precio: 20,
-        duracion: "60 horas",
+        duracion: 60,
         descripcion: `Aprende a programar en Python, uno de los lenguajes de programación más populares y versátiles del mundo. Este curso está diseñado para principiantes y te enseñará desde los fundamentos de la programación hasta conceptos más avanzados, utilizando ejercicios prácticos y proyectos reales.`,
         requisitos: `No se requieren conocimientos previos en programación. Se recomienda tener un ordenador y una conexión a internet para las prácticas en línea. La disposición para aprender y experimentar es esencial.`,
         modalidad: "Virtual",
@@ -132,7 +133,7 @@ const cursosInformacion = [
         nombre: "Java - Nivel intermedio",
         imagen: "../assets/java.png",
         precio: 50,
-        duracion: "85 horas",
+        duracion: 85,
         descripcion: `Este curso intermedio de Java te ayudará a profundizar en conceptos avanzados del lenguaje, 
                       como la programación orientada a objetos, el manejo de excepciones, y las estructuras de datos. 
                       Ideal para aquellos que ya tienen conocimientos básicos de Java y desean llevar sus habilidades al siguiente nivel.`,
@@ -175,11 +176,11 @@ const cursosInformacion = [
         nombre: "Programación en C++",
         imagen: "../assets/c++.png",
         precio: 30,
-        duracion: "50 horas",
+        duracion: 50,
         descripcion: `Este curso te introduce a la programación en C++, cubriendo desde los fundamentos del lenguaje hasta conceptos intermedios.
                       Aprende a trabajar con variables, estructuras de control, funciones y punteros para desarrollar programas eficientes.`,
         requisitos: `Conocimientos básicos de programación y lógica. No es necesario haber trabajado previamente con C++.`,
-        modalidad: "Presencial",
+        modalidad: "Virtual",
         contenido: [
             {
                 nombre: "Introducción",
@@ -217,11 +218,11 @@ const cursosInformacion = [
         nombre: "Aterrizando en R-Studio",
         imagen: "../assets/r-studio.png",
         precio: 28,
-        duracion: "20 horas",
+        duracion: 20,
         descripcion: `Explora el lenguaje de programación R y su entorno R-Studio para el análisis y la visualización de datos. 
                       Aprende a trabajar con datos, crear gráficos y aplicar técnicas estadísticas básicas.`,
         requisitos: `Conocimientos básicos de estadística y análisis de datos. No se requiere experiencia previa en programación.`,
-        modalidad: "Virtual",
+        modalidad: "Presencial",
         contenido: [
             {
                 nombre: "Introducción",
@@ -251,7 +252,126 @@ const cursosInformacion = [
                 ]
             }
         ],
-        docenteId: 3
+        docenteId: 4
+    },
+    {
+        id: 7,
+        nombre: "Fundamentos de Programación",
+        imagen: "../assets/fundamentos-progra.png",
+        precio: 25,
+        duracion: 30,
+        descripcion: `Este curso está diseñado para quienes desean iniciarse en el mundo de la programación. Aprenderás conceptos clave como tipos de datos, estructuras de control y la lógica básica de programación, utilizando un lenguaje de programación fácil de entender.`,
+        requisitos: `No se requieren conocimientos previos. Solo necesitas interés en aprender y un ordenador para realizar las prácticas.`,
+        modalidad: "Virtual",
+        contenido: [
+            {
+                nombre: "Introducción",
+                temas: [
+                    { tema: "Conceptos básicos de programación", icono: "../assets/play.png" },
+                    { tema: "Tipos de datos y variables", icono: "../assets/reloj.png" },
+                    { tema: "Estructuras de control: condicionales y bucles", icono: "../assets/reloj.png" },
+                    { tema: "Examen", icono: "../assets/examen.png" }
+                ]
+            },
+            {
+                nombre: "Unidad 1",
+                temas: [
+                    { tema: "Funciones y procedimientos", icono: "../assets/play.png" },
+                    { tema: "Arreglos y estructuras de datos", icono: "../assets/play.png" },
+                    { tema: "Algoritmos básicos y su aplicación", icono: "../assets/reloj.png" },
+                    { tema: "Examen", icono: "../assets/examen.png" }
+                ]
+            },
+            {
+                nombre: "Unidad 2",
+                temas: [
+                    { tema: "Programación modular y buenas prácticas", icono: "../assets/play.png" },
+                    { tema: "Proyecto final", icono: "../assets/reloj.png" },
+                    { tema: "Evaluación final del curso", icono: "../assets/examen.png" }
+                ]
+            }
+        ],
+        docenteId: 1
+    },
+    {
+        id: 8,
+        nombre: "Bases de Datos - Nivel Avanzado",
+        imagen: "../assets/bases-de-datos.png",
+        precio: 70,
+        duracion: 50,
+        descripcion: `Este curso avanzado de bases de datos te proporcionará conocimientos en diseño avanzado, optimización de consultas y administración de bases de datos, ideal para aquellos que desean mejorar su manejo de grandes volúmenes de datos y sistemas complejos.`,
+        requisitos: `Conocimientos intermedios de bases de datos y experiencia en consultas SQL.`,
+        modalidad: "Virtual",
+        contenido: [
+            {
+                nombre: "Introducción",
+                temas: [
+                    { tema: "Repaso de consultas SQL avanzadas", icono: "../assets/play.png" },
+                    { tema: "Optimización de bases de datos", icono: "../assets/reloj.png" },
+                    { tema: "Indices y su aplicación en bases de datos", icono: "../assets/reloj.png" },
+                    { tema: "Examen", icono: "../assets/examen.png" }
+                ]
+            },
+            {
+                nombre: "Unidad 1",
+                temas: [
+                    { tema: "Particionamiento y replicación de datos", icono: "../assets/play.png" },
+                    { tema: "Administración de bases de datos en sistemas distribuidos", icono: "../assets/play.png" },
+                    { tema: "Monitoreo y gestión de bases de datos", icono: "../assets/reloj.png" },
+                    { tema: "Examen", icono: "../assets/examen.png" }
+                ]
+            },
+            {
+                nombre: "Unidad 2",
+                temas: [
+                    { tema: "Seguridad y encriptación en bases de datos", icono: "../assets/play.png" },
+                    { tema: "Bases de datos NoSQL y su integración", icono: "../assets/play.png" },
+                    { tema: "Proyecto final y prácticas avanzadas", icono: "../assets/reloj.png" },
+                    { tema: "Evaluación final", icono: "../assets/examen.png" }
+                ]
+            }
+        ],
+        docenteId: 4
+    },
+    {
+        id: 9,
+        nombre: "Diseño Gráfico desde Cero",
+        imagen: "../assets/diseño-grafico.png",
+        precio: 45,
+        duracion: 40,
+        descripcion: `Un curso introductorio ideal para quienes desean explorar el diseño gráfico. Aprenderás conceptos de color, tipografía y composición, así como las herramientas esenciales como Adobe Photoshop e Illustrator para la creación de gráficos y elementos visuales atractivos.`,
+        requisitos: `No se requiere experiencia previa. Es recomendable contar con una computadora que soporte programas de diseño gráfico.`,
+        modalidad: "Presencial",
+        contenido: [
+            {
+                nombre: "Introducción",
+                temas: [
+                    { tema: "Fundamentos del diseño gráfico", icono: "../assets/play.png" },
+                    { tema: "Teoría del color y su aplicación", icono: "../assets/reloj.png" },
+                    { tema: "Tipografía y legibilidad", icono: "../assets/reloj.png" },
+                    { tema: "Examen", icono: "../assets/examen.png" }
+                ]
+            },
+            {
+                nombre: "Unidad 1",
+                temas: [
+                    { tema: "Uso básico de Adobe Photoshop", icono: "../assets/play.png" },
+                    { tema: "Creación de composiciones visuales", icono: "../assets/play.png" },
+                    { tema: "Herramientas avanzadas de edición", icono: "../assets/reloj.png" },
+                    { tema: "Examen", icono: "../assets/examen.png" }
+                ]
+            },
+            {
+                nombre: "Unidad 2",
+                temas: [
+                    { tema: "Diseño vectorial en Adobe Illustrator", icono: "../assets/play.png" },
+                    { tema: "Creación de logotipos y branding", icono: "../assets/play.png" },
+                    { tema: "Proyecto final y entrega de portafolio", icono: "../assets/reloj.png" },
+                    { tema: "Evaluación final", icono: "../assets/examen.png" }
+                ]
+            }
+        ],
+        docenteId: 2
     }
 ];
 
@@ -293,114 +413,10 @@ const docentes = [
     }
 ];
 
-localStorage.setItem('ListaDeCursos', JSON.stringify(cursosInformacion));
-
-const url = new URL(location.href);
-const idCurso = parseInt(url.searchParams.get('id'));
 
 
-const cursos = JSON.parse(localStorage.getItem('ListaDeCursos'));
-
-const cursoSeleccionado = cursos.find(cursos => cursos.id === idCurso);
-
-console.log(cursoSeleccionado);
-console.log(cursoSeleccionado.docenteId);
-
-/*
-document.addEventListener("DOMContentLoaded", () => {
-    const imagen = document.querySelector(".curso_imagen");
-    if (imagen) {
-        imagen.src = `${cursoSeleccionado.imagen}`;
-    }
+document.addEventListener("DOMContentLoaded",()=>{
+    sessionStorage.setItem('ListaDeCursos', JSON.stringify(cursosInformacion));
+    sessionStorage.setItem('Docentes', JSON.stringify(docentes));
+    mostrarTarjetas(6);
 });
-*/
-
-const imagen = document.querySelector(".curso_imagen");
-imagen.src = `${cursoSeleccionado.imagen}`;
-
-
-const titulo = document.querySelector(".curso_informacion__titulo");
-titulo.textContent = cursoSeleccionado.nombre;
-
-const valor = document.querySelector(".curso_informacion__valor");
-valor.textContent = `Precio: USD $${cursoSeleccionado.precio} `;
-
-const duracion = document.querySelector(".curso_informacion__duracion");
-duracion.textContent = `Tiempo de dedicación necesario: ${cursoSeleccionado.duracion} `;
-
-const descripcion = document.querySelector(".curso_informacion__descripcion");
-descripcion.textContent = `Descripcion del curso: ${cursoSeleccionado.descripcion} `;
-
-const requisitos = document.querySelector(".curso_informacion__requisitos");
-requisitos.textContent = `Requisitos previos: ${cursoSeleccionado.requisitos} `;
-
-
-document.addEventListener("DOMContentLoaded", () => {
-    const boton = document.querySelector(".curso_informacion__button");
-    if (cursoSeleccionado.modalidad === "Virtual") {
-        boton.textContent = `Pagar`;
-        boton.href = `./pagar-con-tarjeta.html`;
-    } else {
-        boton.textContent = "Inscribirse";
-        boton.href = `./form-de-inscripcion.html`;
-    }
-});
-
-/*
-const boton = document.querySelector(".curso_informacion__boton");
-if (cursoSeleccionado.modalidad === "Virtual") {
-    boton.textContent = `Pagar`;
-    boton.href = ""
-} else {
-    boton.textContent = "Inscribirse";
-}
-    */
-document.addEventListener("DOMContentLoaded", () => {
-    const unidades = document.querySelectorAll(".curso_summary");
-
-    cursoSeleccionado.contenido.forEach((unidad, unidadesIndex) => {
-        unidades[unidadesIndex].textContent = unidad.nombre;
-
-        const contenedorTemas = unidades[unidadesIndex].parentElement.querySelectorAll(".curso_summary__tema");
-        const contenedorImagenes = unidades[unidadesIndex].parentElement.querySelectorAll(".curso_summary__tema__imagen");
-
-        unidad.temas.forEach((contenido, indice) => {
-            if (contenedorTemas[indice]) {
-                contenedorTemas[indice].innerHTML = ` <p class="curso_summary__tema">
-                                    <img class="curso_summary__tema__imagen" src="${contenido.icono}" alt="icono">
-                                    ${contenido.tema}
-                                    <input class="curso_summary__tema__checkbox" type="checkbox" class="checkbox">
-                                </p>`;
-            }
-        });
-    });
-});
-
-
-
-
-
-
-const idDocente = cursoSeleccionado.docenteId;
-const docente = docentes.find(docente => docente.id === idDocente);
-
-
-
-const imagenDocente = document.querySelector(".docente_imagen");
-imagenDocente.src = docente.imagen;
-
-
-const imagenDocenteCelular = document.querySelector(".docente_info_imagen_celular");
-imagenDocenteCelular.src = docente.imagen;
-
-
-
-const nombreDocente = document.querySelector(".docente_info_nombre");
-nombreDocente.textContent = docente.nombre;
-
-const nombreDocenteCelular = document.querySelector(".docente_info_nombre_celular");
-nombreDocenteCelular.textContent = docente.nombre;
-
-
-const descripcionDelDocente = document.querySelector(".docente_info_descripcion");
-descripcionDelDocente.textContent = docente.descripcion;

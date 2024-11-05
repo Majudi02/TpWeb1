@@ -1,4 +1,4 @@
-let contadorPersonas = 1; 
+let contadorPersonas = 1;
 
 function agregarPersona() {
     contadorPersonas++;

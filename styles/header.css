@@ -402,3 +402,206 @@
         width: 5%
     }
 }
+
+
+
+
+
+
+
+.carrito-sidebar {
+    position: fixed;
+    top: 0;
+    right: -30em;
+    height: 100vh;
+    width: 25em;
+    background-color: rgb(39, 39, 39);
+    box-shadow: -5px 0 15px lightgray;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    transition: ease-in-out 0.4s;
+    overflow-y: auto;
+}
+
+.carrito-sidebar.abierto {
+    right: 0; 
+}
+
+.carrito-sidebar.cerrado{
+    right: -30em;
+}
+
+.carrito-sidebar__salir{
+    text-decoration: none;
+    color: white;
+    font-size:1.4em;
+    margin-top: 0.6em;
+    cursor: pointer;
+}
+
+.carrito-sidebar__header {
+    display: flex;
+    height: 5%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    margin-top: 1em;
+    border-bottom: 2px solid white;
+    padding-bottom: 1.5em;
+    margin-inline:1em;
+}
+
+.carrito-sidebar__header__carrito-img,
+.carrito-cerrar-carrito-img {
+    margin-top: 1em;
+}
+
+.carrito-sidebar__header__carrito-img {
+    width: 2.7em;
+}
+
+.carrito-cerrar-carrito-img {
+    max-width: 2em;
+    height: 1.1em;
+}
+
+.carrito-sidebar__header__titulo {
+    position: relative
+}
+
+.carrito-sidebar__header__titulo h2 {
+    margin-top: 0.5em;
+}
+
+.js-carrito-sidebar__header__titulo__contador {
+    position: absolute;
+    top: 0;
+    right: -15px;
+    background: #49b6ffdb;
+    border-radius: 100%;
+    padding: 0.2em 0.5em;
+    font-weight: 700;
+    font-size: 0.8em;
+
+}
+
+/*  ********************* FIN HEADER ******************************/
+
+
+
+
+.carrito-sidebar__contenedor-carrito-vacio{
+    width: 100%;
+}
+
+.carrito-sidebar__contenedor-carrito-vacio__contenido{
+    text-align: center;
+    margin-top: 100%;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.carrito-sidebar__contenedor-carrito-vacio.oculto{
+    display: none;
+}
+
+
+
+/*  ITEM  */
+
+.carrito-sidebar__cursos__item{
+    display: flex;
+    padding: 1em;
+    margin-top: 1em;
+    align-items: center;
+}
+
+.carrito-sidebar__cursos__item__imagen{
+    max-width: 32%;
+
+    height: fit-content;
+}
+
+.carrito-sidebar__cursos__item__descripcion{
+    display: flex;
+    flex-direction: column;
+    margin-left:1.2em ;
+    width: 100%; 
+}
+
+.carrito-sidebar__cursos__item__titulo{
+    font-weight: 400;
+    font-size: 1.1em;
+    margin-bottom:0.6em;
+}
+
+.carrito-sidebar__cursos__item__modalidad{
+    margin-bottom:0.5em;
+    font-size: 0.9em;
+}
+
+.carrito-sidebar__cursos__item__precio{
+    font-weight: bolder;
+    margin-bottom:0.2em;
+}
+
+
+
+.carrito-sidebar__cursos__item__contenedor-cantidad{
+    display: flex;
+    align-items: center;
+    gap: 1em;    
+    margin: 0.5em 0;
+}
+
+.carrito-sidebar__cursos__item__contenedor-cantidad__numero{
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 0.15em;
+    min-width: 5%;
+}
+.carrito-sidebar__cursos__item__contenedor-cantidad span{
+    width: 30px;
+    height: 30px;
+    background-color:#fff;
+    color: black;
+    border-radius: 50%;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 0 0.4em rgb(153, 151, 151);
+    line-height: 1;
+    text-align: center;
+}
+
+
+
+/* Fin del Item */
+
+
+
+/*    BOtones    */
+.carrito-sidebar_botones {
+    margin-top: auto; /* Empuja el elemento hacia abajo */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+}
+
+.carrito-sidebar_botones__subtotal {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 2em;
+    margin-bottom: 1em;
+}
+
+.carrito-sidebar_botones__subtotal__botones {
+    text-decoration: none;
+    width: 90%;
+    text-align: center;
+    background-color: rgb(45, 86, 161);
+    color: white;
+    padding: 0.5em ;
+    border-radius: 30px;
+    margin: 0.4em auto;
+}
