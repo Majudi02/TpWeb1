@@ -134,13 +134,13 @@
     font-weight: 600;
 }
 
-.navprimario__menu-login-icono-img {
+/*.navprimario__menu-login-icono-img {
     display: none;
 }
 
 .navprimario__menu-login-icono-img {
     width: 2em;
-}
+}*/
 
 .navprimario__menu-items-carrito-numero {
     font-weight: 700;
@@ -153,10 +153,9 @@
     bottom: 0.6em;
 }
 
-/*Prueba MI PERFIL*/
+/*MI PERFIL*/
 .navprimario__perfil-dropdown {
     position: relative;
-    display: none;
     width: 28%;
     justify-content: space-evenly;
     flex-direction: row;
@@ -164,6 +163,7 @@
 }
 
 .boton_mi-perfil {
+    display: none;
     border: white;
     border-style: solid;
     border-width: 0.13em;
@@ -208,9 +208,7 @@
 .dropdown-item:hover {
     background-color: #5f5d5d;
 }
-
-
-/*FIN Prueba MI PERFIL*/
+/*FIN MI PERFIL*/
 
 .navsecundario {
     display: flex;
@@ -286,7 +284,7 @@
         margin-right: 8%;
     }
 
-    .navprimario__menu-login-icono {
+    /*.navprimario__menu-login-icono {
         display: flex;
     }
 
@@ -297,7 +295,7 @@
     .navprimario__menu-login-icono-img {
         width: 2em;
         display: block;
-    }
+    }*/
 
     .navsecundario__menu {
         width: 90%;
@@ -362,14 +360,14 @@
         display: flex;
     }
 
-    .navprimario__menu-login-btn {
+    /*.navprimario__menu-login-btn {
         display: none;
     }
 
     .navprimario__menu-login-icono-img {
         width: 2em;
         display: block;
-    }
+    }*/
 }
 
 /*Tablet Devices*/

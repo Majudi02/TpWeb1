@@ -43,12 +43,17 @@
 
                 <div class="navprimario__menu-items-carrito">
                     <div class="navprimario__menu-login">
-                        <a class="navprimario__menu-login-btn" href="../pages/inicio-sesion.html">INGRESAR</a>
-                        <a class="navprimario__menu-login-icono" href="../pages/inicio-sesion.html">
-                            <img class="navprimario__menu-login-icono-img" src="../assets/Inicio-sesion.png"
-                                alt="iniciar sesion">
-                        </a>
+                        <a id="btn-login" class="navprimario__menu-login-btn" href="../pages/inicio-sesion.html">INGRESAR</a>
                     </div>
+                    <!--Btn Mi perfil-->
+                    <div class="navprimario__perfil-dropdown">
+                        <button id="btn-mi-perfil" class="boton_mi-perfil">Mi perfil</button>
+                        <div id="dropdown-menu" class="dropdown-menu">
+                            <button id="cerrar-sesion" class="dropdown-item">Cerrar sesión</button>
+                            <button id="eliminar-cuenta" class="dropdown-item">Eliminar cuenta</button>
+                        </div>
+                    </div>
+                    <!--Fin Mi perfil-->
                     <a class="navprimario__menu-items-carrito-link" href="../pages/carrito-compras.html">
                         <img class="navprimario__menu-items-carrito-img" src="../assets/carrito.png"
                             alt="Carrito de compras">
@@ -101,7 +106,7 @@
 
 
             <section class="contenido_personalizacion">
-                <form method="get" action="./pagar-con-tarjeta.html">
+                <form method="get" action="./pagar-con-tarjeta.html" id="form_giftcard">
                     <article class="contenido_personalizacion_atributo">
                         <h2 class="contenido_personalizacion--titulo">Personalizacion de la GiftCard</h2>
                         <label class="contenido_personalizacion--subtitulo" for="destinatario">Nombre del
@@ -228,9 +233,8 @@
                         </div>
                     </article>
                     <article class="contenido_personalizacion_atributo--opcion">
-                        <button class="contenido_personalizacion--boton boton--confirmar">confirmar</button>
+                        <button type="submit" id="btn-confirmar-giftcard" class="contenido_personalizacion--boton boton--confirmar">Agregar al carrito</button>
                         <a class="contenido_personalizacion--boton boton--cancelar" href="../index.html">cancelar</a>
-
                     </article>
                 </form>
             </section>
@@ -269,7 +273,7 @@
             </div>
         </section>
     </footer>
-
+    <script src="../js/giftcard.js"></script>
 </body>
 
 </html>

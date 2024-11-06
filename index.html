@@ -44,11 +44,21 @@
 
                 <div class="navprimario__menu-items-carrito">
                     <div class="navprimario__menu-login">
-                        <a class="navprimario__menu-login-btn" href="./pages/inicio-sesion.html">INGRESAR</a>
-                        <a class="navprimario__menu-login-icono" href="./pages/inicio-sesion.html">
+                        <a id="btn-login" class="navprimario__menu-login-btn" href="./pages/inicio-sesion.html">INGRESAR</a>
+                        <!-- <a class="navprimario__menu-login-icono" href="./pages/inicio-sesion.html">
                             <img class="navprimario__menu-login-icono-img" src="./assets/Inicio-sesion.png"
                                 alt="iniciar sesion">
-                        </a>
+                        </a>-->
+                        <!--Btn Mi perfil-->
+                        <div class="navprimario__perfil-dropdown" id="espacio-btn-perfil">
+                            <button id="btn-mi-perfil" class="boton_mi-perfil">Mi perfil</button>
+                            <div id="dropdown-menu" class="dropdown-menu">
+                                <button id="cerrar-sesion" class="dropdown-item">Cerrar sesión</button>
+                                <button id="eliminar-cuenta" class="dropdown-item">Eliminar cuenta</button>
+                            </div>
+                        </div>
+                        <!--Fin Mi perfil-->
+
                     </div>
                     <a class="navprimario__menu-items-carrito-link" href="">
                         <img class="navprimario__menu-items-carrito-img" src="./assets/carrito.png"
@@ -238,7 +248,8 @@
                             detalle</a>
                     </div>
                     <div class="tarjeta__comprar">
-                        <a class="boton boton--comprar" href="" onclick="event.preventDefault(); agregarCursoAlCarrito(5)">Agregar al carrito</a>
+                        <a class="boton boton--comprar" href=""
+                            onclick="event.preventDefault(); agregarCursoAlCarrito(5)">Agregar al carrito</a>
                     </div>
                 </article>
             </div>
@@ -379,6 +390,7 @@
 
 
     <script src="./contadorCarrito.js"></script>
+    <script src="./js/login-no-login.js"></script>
 </body>
 
 </html>
