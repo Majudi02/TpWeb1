@@ -11,7 +11,8 @@ function getIdJs() {
 const cursos = JSON.parse(sessionStorage.getItem('ListaDeCursos'));
 
 const cursoSeleccionado = cursos.find(curso => curso.id === idCurso);
-// Actualiza titulo y precio
+
+// Actualiza el título y el precio del curso
 function actualizarCurso() {
     if (cursoSeleccionado) {
         document.getElementById('titulo-curso').textContent = cursoSeleccionado.nombre;
@@ -48,7 +49,7 @@ function eliminarPersona(elemento) {
         grupoPersonas.removeChild(persona);
         contadorPersonas--;
     } else {
-        // Limpia los valores de la primera persona
+        // Limpiar los valores de la primera persona
         persona.querySelector('input[name="name"]').value = '';
         persona.querySelector('input[name="dni"]').value = '';
         persona.querySelector('input[name="email"]').value = '';
@@ -58,12 +59,80 @@ function eliminarPersona(elemento) {
 }
 
 function actualizarTotal() {
-    const totalElement = document.getElementById("total");
-    const total = 20.00 * contadorPersonas; 
+    const totalElement = document.getElementById("precio-curso");
+    const total = cursoSeleccionado.precio * contadorPersonas;
     totalElement.innerHTML = `U$D ${total.toFixed(2)}`;
 }
 
+function actualizarCarrito() {
+    let cursoCarrito = JSON.parse(sessionStorage.getItem('cursoCarrito')) || { curso: [], precioTotalDelCarrito: 0 };
+    const cursoEnCarrito = cursoCarrito.curso.find(curso => curso.id === idCurso);
+
+    if (cursoEnCarrito) {
+        cursoEnCarrito.cantidad = contadorPersonas;
+        cursoEnCarrito.precioTotal = cursoEnCarrito.cantidad * cursoEnCarrito.precio;
+    } else {
+        cursoCarrito.curso.push({
+            id: cursoSeleccionado.id,
+            titulo: cursoSeleccionado.nombre,
+            imagen: cursoSeleccionado.imagen,
+            modalidad: cursoSeleccionado.modalidad,
+            precio: cursoSeleccionado.precio,
+            cantidad: contadorPersonas
+        });
+    }
+
+    calcularPrecioTotalDelCarrito(cursoCarrito);
+    guardarCursoEnElCarrito(cursoCarrito);
+    actualizarContadorDeCarrito();
+}
+
+
+function calcularPrecioTotalDelCarrito(cursoCarrito) {
+    cursoCarrito.precioTotalDelCarrito = cursoCarrito.curso.reduce((suma, curso) => suma + (curso.cantidad * curso.precio), 0);
+}
+
+function guardarCursoEnElCarrito(cursoCarrito) {
+    sessionStorage.setItem('cursoCarrito', JSON.stringify(cursoCarrito));
+}
+
+function actualizarContadorDeCarrito() {
+    const cursoInformacion = JSON.parse(sessionStorage.getItem('cursoCarrito')) || { curso: [], precioTotalDelCarrito: 0 };
+    const contadorElemento = document.querySelector(".navprimario__menu-items-carrito-numero");
+    const contadorDeCursosSidebar = document.querySelector(".js-carrito-sidebar__header__titulo__contador");
+    const totalCursos = cursoInformacion.curso.reduce((contador, curso) => contador + curso.cantidad, 0);
+    contadorElemento.innerText = totalCursos;
+    contadorDeCursosSidebar.innerText = totalCursos;
+
+    const mensajeCarritoVacio = document.querySelector(".carrito-sidebar__contenedor-carrito-vacio");
+    mensajeCarritoVacio.classList.toggle("oculto", totalCursos > 0);
+}
+
+function validarFormulario() {
+    const personas = document.querySelectorAll(".grupo-formulario");
+    let esValido = true;
+
+    personas.forEach(persona => {
+        const inputs = persona.querySelectorAll("input");
+        inputs.forEach(input => {
+            if (!input.checkValidity()) {
+                esValido = false;
+                input.reportValidity(); 
+                return;
+            }
+        });
+    });
+
+    return esValido;
+}
+
+// Mostrar el resumen de personas agregadas
 function mostrarResumen() {
+    
+    if (!validarFormulario()) {
+        return; 
+    }
+
     const resumenElement = document.getElementById("resumen-personas");
     const personas = document.querySelectorAll(".grupo-formulario");
 
@@ -83,6 +152,7 @@ function mostrarResumen() {
 }
 
 function cerrarModal() {
+    actualizarCarrito();
     document.getElementById("modalResumen").style.display = "none";
     window.location.href = "oferta-cursos.html";
 }
