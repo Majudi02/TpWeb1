@@ -1,5 +1,27 @@
 let contadorPersonas = 1;
 
+const url = new URL(location.href);
+const idCurso = parseInt(url.searchParams.get('id'));
+
+function getIdJs() {
+    const url = new URL(location.href);
+    return parseInt(url.searchParams.get('id'));
+}
+
+const cursos = JSON.parse(sessionStorage.getItem('ListaDeCursos'));
+
+const cursoSeleccionado = cursos.find(curso => curso.id === idCurso);
+// Actualiza titulo y precio
+function actualizarCurso() {
+    if (cursoSeleccionado) {
+        document.getElementById('titulo-curso').textContent = cursoSeleccionado.nombre;
+        document.getElementById('precio-curso').textContent = `U$D ${cursoSeleccionado.precio.toFixed(2)}`;
+    } else {
+        document.getElementById('titulo-curso').textContent = 'Curso no encontrado';
+        document.getElementById('precio-curso').textContent = 'U$D 0.00';
+    }
+}
+
 function agregarPersona() {
     contadorPersonas++;
     const grupoPersonas = document.getElementById("grupo-personas");
@@ -26,7 +48,7 @@ function eliminarPersona(elemento) {
         grupoPersonas.removeChild(persona);
         contadorPersonas--;
     } else {
-        // Limpiar los valores de la primera persona
+        // Limpia los valores de la primera persona
         persona.querySelector('input[name="name"]').value = '';
         persona.querySelector('input[name="dni"]').value = '';
         persona.querySelector('input[name="email"]').value = '';
@@ -37,7 +59,7 @@ function eliminarPersona(elemento) {
 
 function actualizarTotal() {
     const totalElement = document.getElementById("total");
-    const total = 20.00 * contadorPersonas; // U$D 20 por persona
+    const total = 20.00 * contadorPersonas; 
     totalElement.innerHTML = `U$D ${total.toFixed(2)}`;
 }
 
@@ -45,7 +67,7 @@ function mostrarResumen() {
     const resumenElement = document.getElementById("resumen-personas");
     const personas = document.querySelectorAll(".grupo-formulario");
 
-    resumenElement.innerHTML = ''; // Limpiar el resumen anterior
+    resumenElement.innerHTML = ''; // Limpia el resumen anterior
     personas.forEach((persona, index) => {
         const nombre = persona.querySelector('input[name="name"]').value;
         const dni = persona.querySelector('input[name="dni"]').value;
@@ -62,4 +84,7 @@ function mostrarResumen() {
 
 function cerrarModal() {
     document.getElementById("modalResumen").style.display = "none";
+    window.location.href = "oferta-cursos.html";
 }
+
+window.onload = actualizarCurso;

@@ -37,16 +37,16 @@ main {
 }
 
 .grupo-formulario {
-    display: flex; /* Cambiar a flex para que todos los inputs estén en la misma línea */
-    gap: 10px; /* Espaciado entre los inputs */
-    margin-bottom: 3%; /* Espaciado inferior */
+    display: flex; 
+    gap: 10px; 
+    margin-bottom: 3%; 
 }
 
 .grupo-formulario input {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    flex: 1; /* Hacer que los inputs ocupen el mismo espacio */
+    flex: 1; 
 }
 
 
@@ -61,6 +61,7 @@ main {
     transition: background-color 0.3s ease;
     font-weight: bold;
     text-decoration: none;
+    appearance: none;
 }
 
 .boton-eliminar:hover {
@@ -70,13 +71,16 @@ main {
 .boton-agregar-persona {
     display: flex;
     align-items: center;
+    background: none;
+    border: none;
     color: #333;
     font-size: 14px;
     font-family: Arial, sans-serif;
     cursor: pointer;
     text-decoration: none;
     max-width: 170px;
-    max-height: 20px;
+    max-height: 50px;
+    padding: 5px;
 }
 
 .boton-agregar-persona .icono {
@@ -89,6 +93,7 @@ main {
     font-weight: bold;
     margin-bottom: 5%;
 }
+
 
 .precio {
     font-size: 1.2em;
@@ -223,6 +228,8 @@ main {
     }
 
     .grupo-formulario {
+        display: flex;
+        flex-direction: column;
         margin-right: 0px;
         margin-bottom: 20px;
     }
@@ -233,6 +240,9 @@ main {
         padding: 0px;
     }
 
+    .boton-eliminar{
+        width: 20%;
+    }
     .boton-agregar-persona {
         margin: 5% 5% 5% 0%;
     }
@@ -253,6 +263,15 @@ main {
 /*Tablet Devices*/
 
 @media screen and (min-width: 47.9em) and (max-width: 63.9em) {
+
+    .grupo-formulario{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .boton-eliminar{
+        width: 20%;
+    }
 
     /*Volver*/
     .volver-atras {
