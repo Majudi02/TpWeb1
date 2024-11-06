@@ -103,22 +103,8 @@ function displayCurso() {
   document.querySelector(".js-carrito-sidebar_botones__subtotal__precioTotalCarrito").textContent = `U$D ${cursoInformacion.precioTotalDelCarrito}`;
 }
 
-// Función para vaciar el carrito
-function vaciarCarrito() {
-  // Elimina todos los cursos del carrito en sessionStorage
-  sessionStorage.removeItem('cursoCarrito');
 
-  // Actualiza el contador de cursos en la barra de navegación y en el sidebar
-  actualizarContadorDeCarrito();
 
-  // Limpia la visualización del carrito
-  const cartItemsContainer = document.querySelector(".js-carrito-sidebar__cursos");
-  cartItemsContainer.innerHTML = "";
-
-  // Muestra el mensaje de carrito vacío
-  const mensajeCarritoVacio = document.querySelector(".carrito-sidebar__contenedor-carrito-vacio");
-  mensajeCarritoVacio.classList.remove("oculto");
-}
 function aumentarCantidadDeCursos(titulo) {
   const cursoInformacion = getCursosEnElCarrito();
   const curso = cursoInformacion.curso.find(curso => curso.titulo === titulo);
