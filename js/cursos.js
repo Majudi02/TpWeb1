@@ -1,5 +1,5 @@
 
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded", () => {
     mostrarTarjetas(4);
 });
 
@@ -43,27 +43,28 @@ const modalidad = document.querySelector(".curso_informacion__modadalidad");
 modalidad.textContent = `Modalidad: ${cursoSeleccionado.modalidad}`;
 
 
-const botonConfimar = document.querySelector(".curso_informacion__button");
-
 
 const botonAgregarAlCarrito = document.querySelector(".curso_informacion__button");
 
-botonAgregarAlCarrito.addEventListener("click", (event) => {
 
-    agregarCursoAlCarrito(cursoSeleccionado.id);
+if (cursoSeleccionado.modalidad === "Virtual") {
+    botonAgregarAlCarrito.textContent = 'Pagar';
+} else {
+    botonAgregarAlCarrito.textContent = 'Inscribirse';
+    botonAgregarAlCarrito.href = `./form-de-inscripcion.html?id=${idCurso}`;
+}
+
+
+botonAgregarAlCarrito.addEventListener("click", (event) => {
     if (cursoSeleccionado.modalidad === "Virtual") {
+        agregarCursoAlCarrito(cursoSeleccionado.id);
         event.preventDefault();
         carritoSidebar.classList.toggle("abierto");
+    } else {
+        botonAgregarAlCarrito.href = `./form-de-inscripcion.html?id=${idCurso}`;
     }
 });
 
-
-if (cursoSeleccionado.modalidad === "Virtual") {
-    botonConfimar.textContent = 'Pagar';
-} else {
-    botonConfimar.textContent = 'Inscribirse';
-    botonConfimar.href = `./form-de-inscripcion.html?id=${idCurso}`;
-}
 
 
 document.addEventListener("DOMContentLoaded", () => {
