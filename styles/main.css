@@ -19,28 +19,46 @@
 }
 
 
+/* Sección del carrusel */
 .section-slider {
     width: 100%;
     background-color: rgb(39, 39, 39);
     position: relative;
+    overflow: hidden;
 }
 
 .section-slider .section-slider__imagen {
     width: 100%;
+    opacity: 0;
+    position: absolute;
+    transition: opacity 0.5s ease;
 }
 
-.section-slider .section-slider__flecha-derecha {
-    width: 6%;
-    position: absolute;
-    top: 35%;
-    right: 2%;
+.section-slider .section-slider__imagen.active {
+    opacity: 1;
+    position: relative;
 }
 
-.section-slider .section-slider__flecha-izquierda {
-    width: 6%;
+.section-slider button {
+    background: none;  
+    border: none;      
+    color: white;      
+    font-size: 30px;   
+    cursor: pointer;  
     position: absolute;
-    top: 35%;
-    left: 2%;
+    top: 50%;          
+    transform: translateY(-50%);  
+    z-index: 10;       
+    padding: 10px;     
+    font-family: sans-serif;  
+}
+
+.section-slider .next-button {
+    right: 2%; 
+}
+
+.section-slider .prev-button {
+    left: 2%; 
 }
 
 /*Sección pasos*/
