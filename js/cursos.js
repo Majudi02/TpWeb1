@@ -5,8 +5,8 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 
 
-const url = new URL(location.href);
-const idCurso = parseInt(url.searchParams.get('id'));
+
+const idCurso = getIdJs();
 
 function getIdJs() {
     const url = new URL(location.href);
@@ -73,7 +73,6 @@ document.addEventListener("DOMContentLoaded", () => {
         unidades[unidadesIndex].textContent = unidad.nombre;
 
         const contenedorTemas = unidades[unidadesIndex].parentElement.querySelectorAll(".curso_summary__tema");
-        const contenedorImagenes = unidades[unidadesIndex].parentElement.querySelectorAll(".curso_summary__tema__imagen");
 
         unidad.temas.forEach((contenido, indice) => {
             if (contenedorTemas[indice]) {

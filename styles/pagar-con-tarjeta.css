@@ -130,20 +130,24 @@ a {
 .cursos {
     gap: 30px;
     max-width: 37%;
+    margin-bottom: 10em;
 }
 
 
 .curso_seleccionado {
     display: flex;
+    align-items: center; 
+    justify-content: start; 
     margin-right: 23%;
     background-color: #333;
     border-radius: 30px;
+    padding: 1em; 
 }
 
 .curso_seleccionado_imagen {
-    padding: 2%;
-    width: 12%;
-    height: auto;
+    width: 15%; 
+    height: auto; 
+    margin-right: 0.5em; 
 }
 
 .curso_seleccionado_contenido {
@@ -162,6 +166,8 @@ a {
     justify-content: space-between;
     align-items: center;
 }
+    
+
 
 .curso_seleccionado_contenedor-del-precio .curso_seleccionado_contenedor-del-precio_titulo {
     margin-left: 2%;
@@ -174,7 +180,7 @@ a {
     margin-right: 5%;
 }
 
-.curso_seleccionado_contenido .curso_seleccionado_modalidad {
+.curso_seleccionado_contenido .curso_seleccionado_modalidad,.curso_seleccionado_cantidad {
     margin-left: 2%;
     margin-top: 0.5%;
     font-size: 0.75em;
@@ -194,6 +200,11 @@ a {
     margin-left: 1%;
 }
 
+.vacio{
+    margin-right: 15em;
+    margin-top:0em;
+
+}
 
 /*Volver*/
 .volver-atras {
@@ -362,7 +373,8 @@ input[type=number] {
     }
 
     .curso_seleccionado_imagen {
-        width: 15%;
+        width: 25%;
+        height: auto;
     }
 
     .boton_cancelar,
@@ -390,6 +402,8 @@ input[type=number] {
         max-width: 43%;
         font-size: 0.9em;
     }
+
+
 
     .curso_seleccionado_imagen {
         width: 19%;

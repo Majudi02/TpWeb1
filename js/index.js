@@ -415,6 +415,8 @@ const docentes = [
 
 
 
+
+
 document.addEventListener("DOMContentLoaded",()=>{
     sessionStorage.setItem('ListaDeCursos', JSON.stringify(cursosInformacion));
     sessionStorage.setItem('Docentes', JSON.stringify(docentes));

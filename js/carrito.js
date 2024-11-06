@@ -79,6 +79,7 @@ function displayCurso() {
 
     const precioTotal = item.precio * item.cantidad;
 
+
     cartItemElement.innerHTML = `  
             <img class="carrito-sidebar__cursos__item__imagen" src="${item.imagen}" alt="">
             <div class="carrito-sidebar__cursos__item__descripcion">
