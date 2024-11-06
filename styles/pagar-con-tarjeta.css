@@ -22,7 +22,7 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: 4%;
+
 }
 
 article {
@@ -395,7 +395,7 @@ input[type=number] {
     }
 
     section {
-        margin-top: 10%;
+   /*     margin-top: 10%; */
     }
 
     .cursos {
@@ -475,3 +475,25 @@ input[type=number] {
 }
 
 /*  End Laptop devices   */
+
+
+.carrito-sidebar__header {
+    display: flex;
+    height: 5%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    margin-top: 1em;
+    border-bottom: 2px solid white;
+    padding-bottom: 1.5em;
+    margin-inline:1em;
+    width: 95%;
+}
+
+.carrito-sidebar_botones {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1em;
+    width: 100%;
+}
