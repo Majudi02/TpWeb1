@@ -98,7 +98,7 @@ function aplicarUbicacionPrecio(event) {
     giftCardPrecio.style.right = ubicacionRight[ubicacionSeleccionada];
 }
 
-inputsUbicacion.forEach(input => input.addEventListener("change", aplicarUbicacionPrecio));
+inputsUbicacion.forEach(input => input.addEventListener('change', aplicarUbicacionPrecio));
 
 // COLOR FONDO
 function aplicarColorFondo(event) {
@@ -108,26 +108,53 @@ function aplicarColorFondo(event) {
     }
 }
 
-inputsFondo.forEach(input => input.addEventListener("change", aplicarColorFondo));
+inputsFondo.forEach(input => input.addEventListener('change', aplicarColorFondo));
 
 
-//Generar código aleatorio para la giftcard
-function generarCodigo() {
-    const caracteres = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-    let codigo = '';
-    for (let i = 0; i < 6; i++) { 
-        codigo += caracteres.charAt(Math.floor(Math.random() * caracteres.length));
-    }
+//Creo array giftCards
+let giftCards = JSON.parse(localStorage.getItem('giftCards')) || [];
+
+if (!giftCards) {
+    giftCards = [];
+}
+
+//Generar código aleatorio único para la giftcard
+function generarCodigoUnico(giftCards) {
+    let codigo;
+    do {
+        codigo = Math.random().toString(36).substring(2, 8);
+    } while (giftCards.some(giftCardExistente => giftCardExistente.codigo === codigo));
     return codigo;
 }
 
-// Guardar el código en el localStorage
-function guardarCodigoEnLocalStorage(codigo) {
-    localStorage.setItem('giftcard_codigo', codigo);
+
+
+//Creo objeto nuevaGiftCard y lo agrego al array. 
+function crearNuevaGiftCard() {
+    const codigoUnico = generarCodigoUnico(giftCards);
+    const monto = inputMonto.value;
+
+    const nuevaGiftCard = {
+        nombre: 'GiftCard',
+        imagen: '../assets/giftcard.png',
+        codigo: codigoUnico,
+        monto: monto
+    }
+    giftCards.push(nuevaGiftCard);
+    localStorage.setItem("giftCards", JSON.stringify(giftCards));
+    return nuevaGiftCard;
 }
 
-//Constante del form nodoFormGiftCard
 
 
+// Guardar el código en el localStorage
+function agregarGiftCardAlCarritoDesdeForm(event) {
+    event.preventDefault();
+  //creo la gift card y la guardo
+    const nuevaGiftCard = crearNuevaGiftCard();
+    //Agregar al carrito
+    agregarGiftCardAlCarrito(nuevaGiftCard.codigo);
+    alert(`¡Tu gift card ha sido añadida al carrito con el código: ${nuevaGiftCard.codigo}!`);
+}
 
-
+nodoFormGiftCard.addEventListener('submit', agregarGiftCardAlCarritoDesdeForm);
