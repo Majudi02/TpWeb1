@@ -43,13 +43,24 @@
 
                 <div class="navprimario__menu-items-carrito">
                     <div class="navprimario__menu-login">
-                        <a class="navprimario__menu-login-btn" href="../pages/inicio-sesion.html">INGRESAR</a>
-                        <a class="navprimario__menu-login-icono" href="../pages/inicio-sesion.html">
-                            <img class="navprimario__menu-login-icono-img" src="../assets/Inicio-sesion.png"
-                                alt="iniciar sesion">
-                        </a>
+                        <a id="btn-login" class="navprimario__menu-login-btn"
+                            href="../pages/inicio-sesion.html">INGRESAR</a>
+                        <!--Btn Mi perfil-->
+                        <div class="navprimario__perfil-dropdown">
+                            <button id="btn-mi-perfil" class="boton_mi-perfil">MI PERFIL</button>
+                            <div id="dropdown-menu" class="dropdown-menu">
+                                <button id="cerrar-sesion" class="dropdown-item">Cerrar sesión</button>
+                                <button id="eliminar-cuenta" class="dropdown-item">Eliminar cuenta</button>
+                            </div>
+                        </div>
+                        <!--Fin Mi perfil-->
                     </div>
+<<<<<<< HEAD
+
+                    <a class="navprimario__menu-items-carrito-link" href="../pages/carrito-compras.html">
+=======
                     <a class="navprimario__menu-items-carrito-link" href="">
+>>>>>>> 8484e48f7ee68f7c35b2115ae62d6f448a43afbe
                         <img class="navprimario__menu-items-carrito-img" src="../assets/carrito.png"
                             alt="Carrito de compras">
                         <p class="navprimario__menu-items-carrito-numero">0</p>
@@ -66,7 +77,7 @@
                 </li>
 
                 <li class="navsecundario__menu-item">
-                    <a class="navsecundario__menu-item-link" href="../pages/giftcard.html">Gifcards</a>
+                    <a class="navsecundario__menu-item-link" href="../pages/giftcard.html">Giftcards</a>
                 </li>
 
                 <li class="navsecundario__menu-item">
@@ -128,9 +139,9 @@
 
 
             <div class="cursos">
-               
 
-           
+
+
             </div>
         </section>
 
@@ -208,7 +219,8 @@
 
     <script src="../js/carrito.js"></script>
     <script src="../js/pagar-con-tarjeta.js"></script>
-    
+    <script src="../js/login-no-login.js"></script>
+
 
 </body>
 

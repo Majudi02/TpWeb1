@@ -1,8 +1,21 @@
+/*nodos a utilizar
+#espacio-btn-login
+#espacio-btn-perfil
+
+
+#btn-login
+#btn-mi-perfil
+#dropdown-menu
+#cerrar-sesion
+#eliminar-cuenta
+*/
+
 
 function actualizarBotonHeader() {
     const emailUsuario = sessionStorage.getItem('ultimoUsuarioLogueado');
-    const btnIngresar = document.querySelector('#espacio-btn-login');
-    const btnMiPerfil = document.querySelector('#espacio-btn-perfil');
+    const btnIngresar = document.querySelector('#btn-login');
+    const btnMiPerfil = document.querySelector('#btn-mi-perfil');
+
 
     if (emailUsuario) {
         // Usuario logueado: muestra "Mi perfil" y oculta "Ingresar"
@@ -14,12 +27,28 @@ function actualizarBotonHeader() {
         btnIngresar.style.display = 'flex';
         btnMiPerfil.style.display = 'none';
     }
+
 }
+
 
 // Llama a la función al cargar la página
 document.addEventListener('DOMContentLoaded', actualizarBotonHeader);
 
+function redirigirAInicio(ruta){
+    if (window.location.pathname.includes('/pages/')){
+        window.location.assign(`../${ruta}`);
+    }else{
+        window.location.assign(ruta);
+    }
+}
 
+function redirigirAEliminarCuenta(ruta){
+    if (window.location.pathname.includes('/pages/')){
+        window.location.assign(ruta);
+    }else{
+        window.location.assign(`./pages/${ruta}`);
+    }
+}
 
 // Variables de elementos
 const btnMiPerfil = document.querySelector('#btn-mi-perfil');
@@ -32,20 +61,14 @@ btnMiPerfil.addEventListener('click', () => {
     dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
 });
 
-// Cerrar el menú si se hace clic fuera de él
-document.addEventListener('click', (e) => {
-    if (!btnMiPerfil.contains(e.target) && !dropdownMenu.contains(e.target)) {
-        dropdownMenu.style.display = 'none';
-    }
-});
-
 // Funcionalidad del botón "Cerrar sesión"
 btnCerrarSesion.addEventListener('click', () => {
-    sessionStorage.removeItem('ultimoUsuarioLogueado'); // Elimina el usuario de la sesión
-    window.location.assign('../index.html');
+    //sessionStorage.removeItem('ultimoUsuarioLogueado'); 
+    sessionStorage.clear();// Elimina toda la información almacenada hasta el momento en el session storage
+    redirigirAInicio('index.html');
 });
 
 // Me redirecciona a la vista de eliminar cuenta
 btnEliminarCuenta.addEventListener('click', () => {
-    window.location.assign('administracion-de-usuario.html');
+    redirigirAEliminarCuenta('administracion-de-usuario.html');
 });
