@@ -63,8 +63,8 @@ btnMiPerfil.addEventListener('click', () => {
 
 // Funcionalidad del botón "Cerrar sesión"
 btnCerrarSesion.addEventListener('click', () => {
-    sessionStorage.removeItem('ultimoUsuarioLogueado'); 
-    //sessionStorage.clear();// Elimina toda la información almacenada hasta el momento en el session storage
+    //sessionStorage.removeItem('ultimoUsuarioLogueado'); 
+    sessionStorage.clear();// Elimina toda la información almacenada hasta el momento en el session storage
     redirigirAInicio('index.html');
 });
 
