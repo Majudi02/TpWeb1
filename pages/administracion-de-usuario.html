@@ -38,18 +38,23 @@
                 </div>
                 <div class="navprimario__menu-items-carrito">
                     <div class="navprimario__menu-login">
-                        <a class="navprimario__menu-login-btn" href="../pages/inicio-sesion.html">INGRESAR</a>
-                        <a class="navprimario__menu-login-icono" href="../pages/inicio-sesion.html">
-                            <img class="navprimario__menu-login-icono-img" src="../assets/Inicio-sesion.png"
-                                alt="iniciar sesion">
-                        </a>
+                        <a id="btn-login" class="navprimario__menu-login-btn"
+                            href="../pages/inicio-sesion.html">INGRESAR</a>
                     </div>
+                    <!--Btn Mi perfil-->
+                    <div class="navprimario__perfil-dropdown">
+                        <button id="btn-mi-perfil" class="boton_mi-perfil">MI PERFIL</button>
+                        <div id="dropdown-menu" class="dropdown-menu">
+                            <button id="cerrar-sesion" class="dropdown-item">Cerrar sesión</button>
+                            <button id="eliminar-cuenta" class="dropdown-item">Eliminar cuenta</button>
+                        </div>
+                    </div>
+                    <!--Fin Mi perfil-->
                     <a class="navprimario__menu-items-carrito-link" href="../pages/carrito-compras.html">
                         <img class="navprimario__menu-items-carrito-img" src="../assets/carrito.png"
                             alt="Carrito de compras">
                         <p class="navprimario__menu-items-carrito-numero">4</p>
                     </a>
-
                 </div>
             </div>
         </nav>
@@ -84,24 +89,24 @@
         </div>
 
         <section class="contenedor-formulario corregir-padding">
-            <form class="formulario" id="form_mi-perfil">
-                <h2 class="formulario__titulo">Usted está por eliminar la siguiente cuenta</h2>
-                <div>
-                    <p class="formulario__indicaciones">Una vez que presione el botón su cuenta se eliminará automáticamente</p>
-                </div>
+            <article class="formulario">
+            <h2 class="formulario__titulo">Usted está por eliminar la siguiente cuenta</h2>
+            <div>
+                <p class="formulario__indicaciones">Una vez que presione el botón, su cuenta se eliminará automáticamente
+                </p>
+            </div>
 
-                <label class="formulario__label" for="nombre-perfil">Nombre</label>
-                <input class="formulario__input" type="text" name="nombre" id="nombre-perfil" placeholder="Nombre" readonly />
+            <h3 class="formulario__label">Nombre</h3>
+            <p id="nombre-perfil" class="campo-autocompletado"></p>
 
-                <label class="formulario__label" for="apellido-perfil">Apellido</label>
-                <input class="formulario__input" type="text" name="apellido" id="apellido-perfil" placeholder="Apellido"
-                    readonly />
+            <h3 class="formulario__label">Apellido</h3>
+            <p id="apellido-perfil" class="campo-autocompletado"></p>
 
-                <label class="formulario__label" for="email-perfil">Correo electrónico</label>
-                <input class="formulario__input" type="email" name="email" id="email-perfil" placeholder="Correo electrónico"
-                    readonly />
-            </form>
+            <h3 class="formulario__label">Correo electrónico</h3>
+            <p id="email-perfil" class="campo-autocompletado"></p>
+
             <button type="button" class="formulario__boton" id="btn_eliminar-cuenta">ELIMINAR CUENTA</button>
+        </article>
         </section>
     </main>
 

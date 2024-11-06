@@ -202,6 +202,15 @@ main {
     cursor: pointer;
 }
 
+.campo-autocompletado{
+    text-align: left;
+    font-size: 1em;
+    color: rgb(175, 174, 174);
+    font-weight: 600;
+    padding-bottom: 1em;
+}
+
+
 /*-----------------------------------*/
 /*Mobile Devices*/
 @media screen and (max-width: 47.9em) {

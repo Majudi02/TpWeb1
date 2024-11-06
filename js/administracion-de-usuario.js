@@ -16,10 +16,14 @@ function cargarDatosUsuario (email){
     const usuariosRegistradosJSON = localStorage.getItem('usuarios');
     const usuariosRegistrados = JSON.parse(usuariosRegistradosJSON);
     const usuarioActual = usuariosRegistrados[email]; 
+    const nodoNombre = document.querySelector('#nombre-perfil');
+    const nodoApellido = document.querySelector('#apellido-perfil');
+    const nodoEmail = document.querySelector('#email-perfil');
 
-    document.querySelector('#nombre-perfil').value = usuarioActual.nombre;
-    document.querySelector('#apellido-perfil').value = usuarioActual.apellido;
-    document.querySelector('#email-perfil').value = usuarioActual.email;
+
+    nodoNombre.textContent = usuarioActual.nombre;
+    nodoApellido.textContent = usuarioActual.apellido;
+    nodoEmail.textContent = usuarioActual.email;
 }
 
 cargarDatosUsuario(emailUsuarioActivo);
