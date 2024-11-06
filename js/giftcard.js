@@ -38,7 +38,7 @@ const ubicacionTop = {
 
 const ubicacionRight = {
     "ubicacion-1": '0%',
-    "ubicacion-2": '87%',
+    "ubicacion-2": '83%',
     "ubicacion-3": '0%',
 };
 
@@ -85,7 +85,7 @@ inputsTamañoFuente.forEach(input => input.addEventListener("change", aplicarTam
 //MONTO
 function actualizarMonto() {
     const monto = inputMonto.value; 
-    giftCardPrecio.textContent = `$${monto}.-` || '$0000.-'; 
+    giftCardPrecio.textContent = `U$D ${monto}.-` || 'U$D 0000.-'; 
 }
 
 inputMonto.addEventListener('input', actualizarMonto);

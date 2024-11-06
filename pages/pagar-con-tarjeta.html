@@ -43,12 +43,19 @@
 
                 <div class="navprimario__menu-items-carrito">
                     <div class="navprimario__menu-login">
-                        <a class="navprimario__menu-login-btn" href="../pages/inicio-sesion.html">INGRESAR</a>
-                        <a class="navprimario__menu-login-icono" href="../pages/inicio-sesion.html">
-                            <img class="navprimario__menu-login-icono-img" src="../assets/Inicio-sesion.png"
-                                alt="iniciar sesion">
-                        </a>
+                        <a id="btn-login" class="navprimario__menu-login-btn"
+                            href="../pages/inicio-sesion.html">INGRESAR</a>
+                        <!--Btn Mi perfil-->
+                        <div class="navprimario__perfil-dropdown">
+                            <button id="btn-mi-perfil" class="boton_mi-perfil">MI PERFIL</button>
+                            <div id="dropdown-menu" class="dropdown-menu">
+                                <button id="cerrar-sesion" class="dropdown-item">Cerrar sesión</button>
+                                <button id="eliminar-cuenta" class="dropdown-item">Eliminar cuenta</button>
+                            </div>
+                        </div>
+                        <!--Fin Mi perfil-->
                     </div>
+
                     <a class="navprimario__menu-items-carrito-link" href="../pages/carrito-compras.html">
                         <img class="navprimario__menu-items-carrito-img" src="../assets/carrito.png"
                             alt="Carrito de compras">
@@ -66,7 +73,7 @@
                 </li>
 
                 <li class="navsecundario__menu-item">
-                    <a class="navsecundario__menu-item-link" href="../pages/giftcard.html">Gifcards</a>
+                    <a class="navsecundario__menu-item-link" href="../pages/giftcard.html">Giftcards</a>
                 </li>
 
                 <li class="navsecundario__menu-item">
@@ -128,45 +135,46 @@
 
 
             <div class="cursos">
-               
 
-           
+
+
             </div>
         </section>
 
 
-          <section class="carrito-sidebar">
-                <article class="carrito-sidebar__header">
-                    <img class="carrito-sidebar__header__carrito-img" src="../assets/carrito.png" alt="imagen del carrito">
-                    <div class="carrito-sidebar__header__titulo">
-                        <h2>Tu carrito</h2>
-                        <p class="js-carrito-sidebar__header__titulo__contador">4</p>
-                    </div>
-                    <span class="carrito-sidebar__salir">X</span>
-                </article>
-    
-                <article class="carrito-sidebar__contenedor-carrito-vacio">
-                    <p class="carrito-sidebar__contenedor-carrito-vacio__contenido">No hay cursos en el carrito</p>
-                </article>
-    
-    
-                <div class="js-carrito-sidebar__cursos">
-
+        <section class="carrito-sidebar">
+            <article class="carrito-sidebar__header">
+                <img class="carrito-sidebar__header__carrito-img" src="../assets/carrito.png" alt="imagen del carrito">
+                <div class="carrito-sidebar__header__titulo">
+                    <h2>Tu carrito</h2>
+                    <p class="js-carrito-sidebar__header__titulo__contador">4</p>
                 </div>
-    
-    
-    
-    
-                <article class="carrito-sidebar_botones">
-                    <div class="carrito-sidebar_botones__subtotal">
-                        <p>Subtotal</p>
-                        <p class="js-carrito-sidebar_botones__subtotal__precioTotalCarrito">0</p>
-                    </div>
-                    <a class="carrito-sidebar_botones__subtotal__botones" href="../pages/pagar-con-tarjeta.html">Finalizar comprar</a>
-                    <a class="carrito-sidebar_botones__subtotal__botones" href="../index.html">Seguir comprando</a>
-                </article>
-            </section>
-    
+                <span class="carrito-sidebar__salir">X</span>
+            </article>
+
+            <article class="carrito-sidebar__contenedor-carrito-vacio">
+                <p class="carrito-sidebar__contenedor-carrito-vacio__contenido">No hay cursos en el carrito</p>
+            </article>
+
+
+            <div class="js-carrito-sidebar__cursos">
+
+            </div>
+
+
+
+
+            <article class="carrito-sidebar_botones">
+                <div class="carrito-sidebar_botones__subtotal">
+                    <p>Subtotal</p>
+                    <p class="js-carrito-sidebar_botones__subtotal__precioTotalCarrito">0</p>
+                </div>
+                <a class="carrito-sidebar_botones__subtotal__botones" href="../pages/pagar-con-tarjeta.html">Finalizar
+                    comprar</a>
+                <a class="carrito-sidebar_botones__subtotal__botones" href="../index.html">Seguir comprando</a>
+            </article>
+        </section>
+
 
 
     </main>
@@ -206,7 +214,8 @@
 
     <script src="../js/carrito.js"></script>
     <script src="../js/pagar-con-tarjeta.js"></script>
-    
+    <script src="../js/login-no-login.js"></script>
+
 
 </body>
 

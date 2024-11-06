@@ -40,17 +40,18 @@
                     <div class="navprimario__menu-login">
                         <a id="btn-login" class="navprimario__menu-login-btn"
                             href="../pages/inicio-sesion.html">INGRESAR</a>
-                    </div>
-                    <!--Btn Mi perfil-->
-                    <div class="navprimario__perfil-dropdown">
-                        <button id="btn-mi-perfil" class="boton_mi-perfil">MI PERFIL</button>
-                        <div id="dropdown-menu" class="dropdown-menu">
-                            <button id="cerrar-sesion" class="dropdown-item">Cerrar sesión</button>
-                            <button id="eliminar-cuenta" class="dropdown-item">Eliminar cuenta</button>
+                        <!--Btn Mi perfil-->
+                        <div class="navprimario__perfil-dropdown">
+                            <button id="btn-mi-perfil" class="boton_mi-perfil">MI PERFIL</button>
+                            <div id="dropdown-menu" class="dropdown-menu">
+                                <button id="cerrar-sesion" class="dropdown-item">Cerrar sesión</button>
+                                <button id="eliminar-cuenta" class="dropdown-item">Eliminar cuenta</button>
+                            </div>
                         </div>
+                        <!--Fin Mi perfil-->
                     </div>
-                    <!--Fin Mi perfil-->
-                    <a class="navprimario__menu-items-carrito-link" href="../pages/carrito-compras.html">
+
+                    <a class="navprimario__menu-items-carrito-link">
                         <img class="navprimario__menu-items-carrito-img" src="../assets/carrito.png"
                             alt="Carrito de compras">
                         <p class="navprimario__menu-items-carrito-numero">4</p>
@@ -66,7 +67,7 @@
                 </li>
 
                 <li class="navsecundario__menu-item">
-                    <a class="navsecundario__menu-item-link" href="../pages/giftcard.html">Gifcards</a>
+                    <a class="navsecundario__menu-item-link" href="../pages/giftcard.html">Giftcards</a>
                 </li>
 
                 <li class="navsecundario__menu-item">
@@ -90,24 +91,58 @@
 
         <section class="contenedor-formulario corregir-padding">
             <article class="formulario">
-            <h2 class="formulario__titulo">Usted está por eliminar la siguiente cuenta</h2>
-            <div>
-                <p class="formulario__indicaciones">Una vez que presione el botón, su cuenta se eliminará automáticamente
-                </p>
+                <h2 class="formulario__titulo">Usted está por eliminar la siguiente cuenta</h2>
+                <div>
+                    <p class="formulario__indicaciones">Una vez que presione el botón, su cuenta se eliminará
+                        automáticamente
+                    </p>
+                </div>
+
+                <h3 class="formulario__label">Nombre</h3>
+                <p id="nombre-perfil" class="campo-autocompletado"></p>
+
+                <h3 class="formulario__label">Apellido</h3>
+                <p id="apellido-perfil" class="campo-autocompletado"></p>
+
+                <h3 class="formulario__label">Correo electrónico</h3>
+                <p id="email-perfil" class="campo-autocompletado"></p>
+
+                <button type="button" class="formulario__boton" id="btn_eliminar-cuenta">ELIMINAR CUENTA</button>
+            </article>
+        </section>
+
+        <section class="carrito-sidebar">
+            <article class="carrito-sidebar__header">
+                <img class="carrito-sidebar__header__carrito-img" src="../assets/carrito.png" alt="imagen del carrito">
+                <div class="carrito-sidebar__header__titulo">
+                    <h2>Tu carrito</h2>
+                    <p class="js-carrito-sidebar__header__titulo__contador">4</p>
+                </div>
+                <span class="carrito-sidebar__salir">X</span>
+            </article>
+
+            <article class="carrito-sidebar__contenedor-carrito-vacio">
+                <p class="carrito-sidebar__contenedor-carrito-vacio__contenido">No hay cursos en el carrito</p>
+            </article>
+
+
+            <div class="js-carrito-sidebar__cursos">
+
             </div>
 
-            <h3 class="formulario__label">Nombre</h3>
-            <p id="nombre-perfil" class="campo-autocompletado"></p>
 
-            <h3 class="formulario__label">Apellido</h3>
-            <p id="apellido-perfil" class="campo-autocompletado"></p>
 
-            <h3 class="formulario__label">Correo electrónico</h3>
-            <p id="email-perfil" class="campo-autocompletado"></p>
 
-            <button type="button" class="formulario__boton" id="btn_eliminar-cuenta">ELIMINAR CUENTA</button>
-        </article>
+            <article class="carrito-sidebar_botones">
+                <div class="carrito-sidebar_botones__subtotal">
+                    <p>Subtotal</p>
+                    <p class="js-carrito-sidebar_botones__subtotal__precioTotalCarrito">0</p>
+                </div>
+                <a class="carrito-sidebar_botones__subtotal__botones" href="./pagar-con-tarjeta.html">Pagar</a>
+                <a class="carrito-sidebar_botones__subtotal__botones" href="./oferta-cursos.html">Seguir comprando</a>
+            </article>
         </section>
+
     </main>
 
     <footer class="footer">
@@ -144,6 +179,8 @@
     </footer>
 
     <script src="../js/administracion-de-usuario.js"></script>
+    <script src="../js/carrito.js"></script>
+    <script src="../js/login-no-login.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="../styles/footer.css">
     <link rel="stylesheet" href="../styles/styles-compra-exitosa.css">
 </head>
+
 <body>
     <header id="home">
         <nav class="navprimario">
@@ -41,13 +43,19 @@
 
                 <div class="navprimario__menu-items-carrito">
                     <div class="navprimario__menu-login">
-                        <a class="navprimario__menu-login-btn" href="../pages/inicio-sesion.html">INGRESAR</a>
-                        <a class="navprimario__menu-login-icono" href="../pages/inicio-sesion.html">
-                            <img class="navprimario__menu-login-icono-img" src="../assets/Inicio-sesion.png"
-                                alt="iniciar sesion">
-                        </a>
+                        <a id="btn-login" class="navprimario__menu-login-btn"
+                            href="../pages/inicio-sesion.html">INGRESAR</a>
+                        <!--Btn Mi perfil-->
+                        <div class="navprimario__perfil-dropdown">
+                            <button id="btn-mi-perfil" class="boton_mi-perfil">MI PERFIL</button>
+                            <div id="dropdown-menu" class="dropdown-menu">
+                                <button id="cerrar-sesion" class="dropdown-item">Cerrar sesión</button>
+                                <button id="eliminar-cuenta" class="dropdown-item">Eliminar cuenta</button>
+                            </div>
+                        </div>
+                        <!--Fin Mi perfil-->
                     </div>
-                    <a class="navprimario__menu-items-carrito-link" href="../pages/carrito-compras.html">
+                    <a class="navprimario__menu-items-carrito-link">
                         <img class="navprimario__menu-items-carrito-img" src="../assets/carrito.png"
                             alt="Carrito de compras">
                         <p class="navprimario__menu-items-carrito-numero">4</p>
@@ -64,7 +72,7 @@
                 </li>
 
                 <li class="navsecundario__menu-item">
-                    <a class="navsecundario__menu-item-link" href="../pages/giftcard.html">Gifcards</a>
+                    <a class="navsecundario__menu-item-link" href="../pages/giftcard.html">Giftcards</a>
                 </li>
 
                 <li class="navsecundario__menu-item">
@@ -82,16 +90,17 @@
     <main>
         <section>
             <article class="article-pago">
-                <div class="pago-container" >
+                <div class="pago-container">
                     <img class="pago__img" src="../assets/check-pago.png" alt="check">
                     <p class="pago-pago_exitoso">Pago exitoso</p>
                     <p class="pago-su_pago">Su pago fue procesado con éxito</p>
-                    <p class="pago-info_correo">En su correo electrónico encontrará toda la información sobre la compra y el comprobante de pago correspondiente</p>
+                    <p class="pago-info_correo">En su correo electrónico encontrará toda la información sobre la compra
+                        y el comprobante de pago correspondiente</p>
                 </div>
                 <div class="article-pago-volver">
                     <a class="article-pago-btn_volver" href="../index.html">
-                    Volver al inicio
-                </a>
+                        Volver al inicio
+                    </a>
                 </div>
             </article>
         </section>
@@ -115,7 +124,7 @@
                     <li><a class="link-menu" href="../index.html">HOME</a></li>
                     <li><a class="link-menu" href="./oferta-cursos.html">CURSOS</a></li>
                     <li><a class="link-menu" href="./calendario.html">CALENDARIO</a></li>
-                    <li><a class="link-menu" href="./giftcard.html">GIFCARD</a></li>
+                    <li><a class="link-menu" href="./giftcard.html">GIFTCARD</a></li>
                     <li><a class="link-menu" href="./contacto.html">CONTACTO</a></li>
                 </ul>
             </nav>
@@ -130,6 +139,8 @@
             </div>
         </section>
     </footer>
+
+    <script src="../js/login-no-login.js"></script>
 </body>
 
 </html>
