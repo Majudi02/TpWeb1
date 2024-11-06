@@ -28,6 +28,7 @@ cursosAPagar.forEach(item => {
 
 
     containerCursos.appendChild(article);
+    actualizarContadorDeCarrito();
 });
 
 
@@ -47,20 +48,14 @@ if (cursosAPagar.length === 0) {
     containerCursos.appendChild(containerPrecio);
 }
 
-
-
+const cursoCarrito = sessionStorage.getItem('cursoCarrito');
 const formularioPago = document.querySelector(".boton_confirmar");
 
-formularioPago.addEventListener('submit', (e) => {
-    e.preventDefault(); // Evita el envío inmediato
+formularioPago.addEventListener('click', (event) => {
+    event.preventDefault();
 
-    console.log("Antes de eliminar:", sessionStorage.getItem('cursoCarrito')); // Verifica si existe antes
+    sessionStorage.removeItem('cursoCarrito');
 
-    sessionStorage.removeItem('cursoCarrito'); // Elimina la lista de cursos
+    formularioPago.closest('form').submit();
 
-    console.log("Después de eliminar:", sessionStorage.getItem('cursoCarrito')); // Verifica si fue eliminado
-
-    formularioPago.submit(); // Envía el formulario después de eliminar los datos
 });
-
-

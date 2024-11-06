@@ -103,6 +103,8 @@ function displayCurso() {
   document.querySelector(".js-carrito-sidebar_botones__subtotal__precioTotalCarrito").textContent = `U$D ${cursoInformacion.precioTotalDelCarrito}`;
 }
 
+
+
 function aumentarCantidadDeCursos(titulo) {
   const cursoInformacion = getCursosEnElCarrito();
   const curso = cursoInformacion.curso.find(curso => curso.titulo === titulo);
