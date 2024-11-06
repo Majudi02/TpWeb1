@@ -1,4 +1,5 @@
-const cursos = JSON.parse(localStorage.getItem('ListaDeCursos'));
+const listaDeCursos = JSON.parse(sessionStorage.getItem('ListaDeCursos'));
+
 
 const carritoSidebar = document.querySelector(".carrito-sidebar");
 const botonAbrirCarrito = document.querySelector(".navprimario__menu-items-carrito-link");
@@ -14,15 +15,14 @@ botonCerrarCarrito.addEventListener("click", carrito);
 
 
 
-
 function getCursosEnElCarrito() {
-  const cursoCarrito = JSON.parse(localStorage.getItem('cursoCarrito'));
+  const cursoCarrito = JSON.parse(sessionStorage.getItem('cursoCarrito'));
   return cursoCarrito || { curso: [], precioTotalDelCarrito: 0 };
 }
 
 function agregarCursoAlCarrito(id) {
   let cursoInformacion = getCursosEnElCarrito();
-  const cursoSeleccionado = cursos.find(curso => curso.id === id);
+  const cursoSeleccionado = listaDeCursos.find(curso => curso.id === id);
 
   const cursoEnCarrito = cursoInformacion.curso.find(curso => curso.id === id);
 
@@ -48,6 +48,7 @@ function agregarCursoAlCarrito(id) {
   displayCurso();
 }
 
+
 function actualizarContadorDeCarrito() {
   const cursoInformacion = getCursosEnElCarrito();
   const contadorElemento = document.querySelector(".navprimario__menu-items-carrito-numero");
@@ -60,11 +61,11 @@ function actualizarContadorDeCarrito() {
   const mensajeCarritoVacio = document.querySelector(".carrito-sidebar__contenedor-carrito-vacio");
   mensajeCarritoVacio.classList.toggle("oculto", totalCursos > 0);
 
-  localStorage.setItem("contador-carrito", totalCursos);
+  sessionStorage.setItem("contador-carrito", totalCursos);
 }
 
 function guardarCursoEnElCarrito(cursoInformacion) {
-  localStorage.setItem("cursoCarrito", JSON.stringify(cursoInformacion));
+  sessionStorage.setItem("cursoCarrito", JSON.stringify(cursoInformacion));
 }
 
 function displayCurso() {
@@ -79,18 +80,18 @@ function displayCurso() {
     const precioTotal = item.precio * item.cantidad;
 
     cartItemElement.innerHTML = `  
-          <img class="carrito-sidebar__cursos__item__imagen" src="${item.imagen}" alt="">
-          <div class="carrito-sidebar__cursos__item__descripcion">
-              <p class="carrito-sidebar__cursos__item__titulo">${item.titulo}</p>
-              <p class="carrito-sidebar__cursos__item__modalidad">Modalidad: ${item.modalidad}</p>
-              <p class="carrito-sidebar__cursos__item__precio">U$D ${precioTotal}</p>
-              <div class="carrito-sidebar__cursos__item__contenedor-cantidad">
-                  <span class="carrito-sidebar__cursos__item__contenedor-cantidad__eliminar" 
-          onclick="disminuirCantidadDeCursos('${item.titulo}')">-</span>
-                  <p class="carrito-sidebar__cursos__item__contenedor-cantidad__numero">${item.cantidad}</p>
-                  <span class="carrito-sidebar__cursos__item__contenedor-cantidad__agregar" onclick="aumentarCantidadDeCursos('${item.titulo}')">+</span>
-              </div>
-          </div>`;
+            <img class="carrito-sidebar__cursos__item__imagen" src="${item.imagen}" alt="">
+            <div class="carrito-sidebar__cursos__item__descripcion">
+                <p class="carrito-sidebar__cursos__item__titulo">${item.titulo}</p>
+                <p class="carrito-sidebar__cursos__item__modalidad">Modalidad: ${item.modalidad}</p>
+                <p class="carrito-sidebar__cursos__item__precio">U$D ${precioTotal}</p>
+                <div class="carrito-sidebar__cursos__item__contenedor-cantidad">
+                    <span class="carrito-sidebar__cursos__item__contenedor-cantidad__eliminar" 
+            onclick="disminuirCantidadDeCursos('${item.titulo}')">-</span>
+                    <p class="carrito-sidebar__cursos__item__contenedor-cantidad__numero">${item.cantidad}</p>
+                    <span class="carrito-sidebar__cursos__item__contenedor-cantidad__agregar" onclick="aumentarCantidadDeCursos('${item.titulo}')">+</span>
+                </div>
+            </div>`;
     cartItemsContainer.appendChild(cartItemElement);
   });
 
@@ -138,3 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
   displayCurso();
   actualizarContadorDeCarrito();
 });
+
+
+
+

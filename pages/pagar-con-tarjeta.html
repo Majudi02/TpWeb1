@@ -128,37 +128,45 @@
 
 
             <div class="cursos">
-                <article class="curso_seleccionado">
-                    <img class="curso_seleccionado_imagen" src="../assets/css-html-js.png"
-                        alt="imagen del curso a pagar">
-                    <div class="curso_seleccionado_contenido">
-                        <div class="curso_seleccionado_contenedor-del-precio">
-                            <p class="curso_seleccionado_contenedor-del-precio_titulo">FrontEnd Intensivo</p>
-                            <p class="curso_seleccionado_contenedor-del-precio_precio">$200.000</p>
-                        </div>
-                        <p class="curso_seleccionado_modalidad">Modalidad: Presencial</p>
-                    </div>
-                </article>
+               
 
-                <article class="curso_seleccionado">
-                    <img class="curso_seleccionado_imagen" src="../assets/c++.png" alt="imagen del curso a pagar">
-                    <div class="curso_seleccionado_contenido">
-                        <div class="curso_seleccionado_contenedor-del-precio">
-                            <p class="curso_seleccionado_contenedor-del-precio_titulo">Curso de C++</p>
-                            <p class="curso_seleccionado_contenedor-del-precio_precio">$150.000</p>
-                        </div>
-                        <p class="curso_seleccionado_modalidad">Modalidad: Virtual</p>
-                    </div>
-                </article>
-
-                <article>
-                    <div class="precio-total">
-                        <p class="total">Total: </p>
-                        <p>$350.000</p>
-                    </div>
-                </article>
+           
             </div>
         </section>
+
+
+          <section class="carrito-sidebar">
+                <article class="carrito-sidebar__header">
+                    <img class="carrito-sidebar__header__carrito-img" src="../assets/carrito.png" alt="imagen del carrito">
+                    <div class="carrito-sidebar__header__titulo">
+                        <h2>Tu carrito</h2>
+                        <p class="js-carrito-sidebar__header__titulo__contador">4</p>
+                    </div>
+                    <span class="carrito-sidebar__salir">X</span>
+                </article>
+    
+                <article class="carrito-sidebar__contenedor-carrito-vacio">
+                    <p class="carrito-sidebar__contenedor-carrito-vacio__contenido">No hay cursos en el carrito</p>
+                </article>
+    
+    
+                <div class="js-carrito-sidebar__cursos">
+
+                </div>
+    
+    
+    
+    
+                <article class="carrito-sidebar_botones">
+                    <div class="carrito-sidebar_botones__subtotal">
+                        <p>Subtotal</p>
+                        <p class="js-carrito-sidebar_botones__subtotal__precioTotalCarrito">0</p>
+                    </div>
+                    <a class="carrito-sidebar_botones__subtotal__botones" href="../pages/pagar-con-tarjeta.html">Finalizar comprar</a>
+                    <a class="carrito-sidebar_botones__subtotal__botones" href="../index.html">Seguir comprando</a>
+                </article>
+            </section>
+    
 
 
     </main>
@@ -195,6 +203,11 @@
             </div>
         </div>
     </footer>
+
+    <script src="../js/carrito.js"></script>
+    <script src="../js/pagar-con-tarjeta.js"></script>
+    
+
 </body>
 
 </html>

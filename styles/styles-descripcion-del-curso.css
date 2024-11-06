@@ -13,7 +13,12 @@ body {
 
 }
 
-
+.modal-agregar-al-carrito{
+    background-color: white;
+    color: black;
+    width: 35em;
+    height: 25em;
+}
 
 /* Informacion del curso */
 .curso {
