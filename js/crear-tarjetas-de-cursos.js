@@ -26,7 +26,7 @@ function mostrarTarjetas(cantidad) {
                 <a class="boton boton--ver-detalle" href="${href}">Ver detalle</a>
             </div>
             <div class="tarjeta__comprar">
-                <a class="boton boton--comprar" onclick="event.preventDefault(); agregarCursoAlCarrito(${item.id})">Agregar al carrito</a>
+                <a class="boton boton--comprar" onclick="  agregarCursoAlCarrito(${item.id})">Agregar al carrito</a>
             </div>`;
 
         container.appendChild(tarjeta);

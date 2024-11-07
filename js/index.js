@@ -1,4 +1,3 @@
-
 const cursosInformacion = [
     {
         id: 1,
@@ -415,10 +414,11 @@ const docentes = [
 
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    if (!sessionStorage.getItem('ListaDeCursos')) {
+        sessionStorage.setItem('ListaDeCursos', JSON.stringify(cursosInformacion));
+        sessionStorage.setItem('Docentes', JSON.stringify(docentes));
+    }
 
-
-document.addEventListener("DOMContentLoaded",()=>{
-    sessionStorage.setItem('ListaDeCursos', JSON.stringify(cursosInformacion));
-    sessionStorage.setItem('Docentes', JSON.stringify(docentes));
     mostrarTarjetas(6);
 });

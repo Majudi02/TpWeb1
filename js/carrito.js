@@ -1,4 +1,13 @@
+document.addEventListener("DOMContentLoaded", () => {
+  displayCurso();
+  actualizarContadorDeCarrito();
+  getCursosEnElCarrito();
+});
+
+
 const listaDeCursos = JSON.parse(sessionStorage.getItem('ListaDeCursos'));
+
+
 
 
 const carritoSidebar = document.querySelector(".carrito-sidebar");
@@ -16,8 +25,14 @@ botonCerrarCarrito.addEventListener("click", carrito);
 
 
 function getCursosEnElCarrito() {
-  const cursoCarrito = JSON.parse(sessionStorage.getItem('cursoCarrito'));
-  return cursoCarrito || { curso: [], precioTotalDelCarrito: 0 };
+  let cursoCarrito = JSON.parse(sessionStorage.getItem('cursoCarrito'));
+
+  if (!cursoCarrito) {
+    cursoCarrito = { curso: [], precioTotalDelCarrito: 0, giftCard: [] };
+    sessionStorage.setItem('cursoCarrito', JSON.stringify(cursoCarrito));
+  }
+
+  return cursoCarrito;
 }
 
 function agregarCursoAlCarrito(id) {
@@ -53,15 +68,19 @@ function actualizarContadorDeCarrito() {
   const cursoInformacion = getCursosEnElCarrito();
   const contadorElemento = document.querySelector(".navprimario__menu-items-carrito-numero");
   const contadorDeCursosSidebar = document.querySelector(".js-carrito-sidebar__header__titulo__contador");
-  const totalCursos = cursoInformacion.curso.reduce((contador, curso) => contador + curso.cantidad, 0);
-  contadorElemento.innerText = totalCursos;
-  contadorDeCursosSidebar.innerText = totalCursos;
 
+
+  const totalCursos = cursoInformacion.curso.reduce((contador, curso) => contador + curso.cantidad, 0);
+  const totalGiftCards = cursoInformacion.giftCard.length;
+
+  const totalItems = totalCursos + totalGiftCards;
+  contadorElemento.innerText = totalItems;
+  contadorDeCursosSidebar.innerText = totalItems;
 
   const mensajeCarritoVacio = document.querySelector(".carrito-sidebar__contenedor-carrito-vacio");
-  mensajeCarritoVacio.classList.toggle("oculto", totalCursos > 0);
+  mensajeCarritoVacio.classList.toggle("oculto", totalItems > 0);
 
-  sessionStorage.setItem("contador-carrito", totalCursos);
+  sessionStorage.setItem("contador-carrito", totalItems);
 }
 
 function guardarCursoEnElCarrito(cursoInformacion) {
@@ -73,36 +92,48 @@ function displayCurso() {
   const cartItemsContainer = document.querySelector(".js-carrito-sidebar__cursos");
   cartItemsContainer.innerHTML = "";
 
+  // Renderizar cada curso
   cursoInformacion.curso.forEach(item => {
-    const cartItemElement = document.createElement("article");
-    cartItemElement.classList.add("carrito-sidebar__cursos__item");
+      const cartItemElement = document.createElement("article");
+      cartItemElement.classList.add("carrito-sidebar__cursos__item");
 
-    const precioTotal = item.precio * item.cantidad;
+      const precioTotal = item.precio * item.cantidad;
 
-
-    cartItemElement.innerHTML = `  
-            <img class="carrito-sidebar__cursos__item__imagen" src="${item.imagen}" alt="">
-            <div class="carrito-sidebar__cursos__item__descripcion">
-                <p class="carrito-sidebar__cursos__item__titulo">${item.titulo}</p>
-                <p class="carrito-sidebar__cursos__item__modalidad">Modalidad: ${item.modalidad}</p>
-                <p class="carrito-sidebar__cursos__item__precio">U$D ${precioTotal}</p>
-                <div class="carrito-sidebar__cursos__item__contenedor-cantidad">
-                    <span class="carrito-sidebar__cursos__item__contenedor-cantidad__eliminar" 
-            onclick="disminuirCantidadDeCursos('${item.titulo}')">-</span>
-                    <p class="carrito-sidebar__cursos__item__contenedor-cantidad__numero">${item.cantidad}</p>
-                    <span class="carrito-sidebar__cursos__item__contenedor-cantidad__agregar" onclick="aumentarCantidadDeCursos('${item.titulo}')">+</span>
-                </div>
-            </div>`;
-    cartItemsContainer.appendChild(cartItemElement);
+      cartItemElement.innerHTML = `  
+          <img class="carrito-sidebar__cursos__item__imagen" src="${item.imagen}" alt="">
+          <div class="carrito-sidebar__cursos__item__descripcion">
+              <p class="carrito-sidebar__cursos__item__titulo">${item.titulo}</p>
+              <p class="carrito-sidebar__cursos__item__modalidad">Modalidad: ${item.modalidad}</p>
+              <p class="carrito-sidebar__cursos__item__precio">U$D ${precioTotal}</p>
+              <div class="carrito-sidebar__cursos__item__contenedor-cantidad">
+                  <span class="carrito-sidebar__cursos__item__contenedor-cantidad__eliminar" 
+          onclick="disminuirCantidadDeCursos('${item.titulo}')">-</span>
+                  <p class="carrito-sidebar__cursos__item__contenedor-cantidad__numero">${item.cantidad}</p>
+                  <span class="carrito-sidebar__cursos__item__contenedor-cantidad__agregar" onclick="aumentarCantidadDeCursos('${item.titulo}')">+</span>
+              </div>
+          </div>`;
+      cartItemsContainer.appendChild(cartItemElement);
   });
 
+  cursoInformacion.giftCard.forEach(giftCard => {
+      const cartItemElement = document.createElement("article");
+      cartItemElement.classList.add("carrito-sidebar__cursos__item");
+
+      cartItemElement.innerHTML = `  
+          <img class="carrito-sidebar__cursos__item__imagen" src="${giftCard.imagen}" alt="">
+          <div class="carrito-sidebar__cursos__item__descripcion">
+              <p class="carrito-sidebar__cursos__item__titulo">${giftCard.titulo}</p>
+              <p class="carrito-sidebar__cursos__item__modalidad">Código: ${giftCard.codigo}</p>
+              <p class="carrito-sidebar__cursos__item__precio">U$D ${giftCard.monto}</p>
+          </div>`;
+      cartItemsContainer.appendChild(cartItemElement);
+  });
 
   const mensajeCarritoVacio = document.querySelector(".carrito-sidebar__contenedor-carrito-vacio");
-  mensajeCarritoVacio.classList.toggle("oculto", cursoInformacion.curso.length > 0);
+  mensajeCarritoVacio.classList.toggle("oculto", cursoInformacion.curso.length + cursoInformacion.giftCard.length > 0);
 
   document.querySelector(".js-carrito-sidebar_botones__subtotal__precioTotalCarrito").textContent = `U$D ${cursoInformacion.precioTotalDelCarrito}`;
 }
-
 
 
 function aumentarCantidadDeCursos(titulo) {
@@ -135,14 +166,42 @@ function disminuirCantidadDeCursos(titulo) {
 }
 
 function calcularPrecioTotalDelCarrito(cursoInformacion) {
-  cursoInformacion.precioTotalDelCarrito = cursoInformacion.curso.reduce((suma, curso) => suma + (curso.cantidad * curso.precio), 0);
+  const totalCursos = cursoInformacion.curso.reduce(
+    (suma, curso) => suma + (curso.cantidad * curso.precio), 0
+  );
+
+  const totalGiftCards = cursoInformacion.giftCard.reduce(
+    (suma, giftCard) => suma + giftCard.monto, 0
+  );
+
+  cursoInformacion.precioTotalDelCarrito = totalCursos + totalGiftCards;
+
 }
 
-document.addEventListener("DOMContentLoaded", () => {
-  displayCurso();
+
+
+
+
+
+const arrayGiftCards = JSON.parse(localStorage.getItem('giftCards'));
+
+function agregarGiftCardAlCarrito(codigo) {
+
+  let cursoInformacion = getCursosEnElCarrito();
+
+  const giftCardEnLocalStorage = JSON.parse(localStorage.getItem('giftCards')).find(gift => gift.codigo === codigo);
+
+
+  cursoInformacion.giftCard.push({
+    codigo: giftCardEnLocalStorage.codigo,
+    titulo: giftCardEnLocalStorage.nombre,
+    monto: parseFloat(giftCardEnLocalStorage.monto),
+    imagen: giftCardEnLocalStorage.imagen
+  });
+
+
+  calcularPrecioTotalDelCarrito(cursoInformacion);
+  guardarCursoEnElCarrito(cursoInformacion);
   actualizarContadorDeCarrito();
-});
-
-
-
-
+  displayCurso();
+}

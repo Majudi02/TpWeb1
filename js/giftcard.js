@@ -114,9 +114,9 @@ inputsFondo.forEach(input => input.addEventListener('change', aplicarColorFondo)
 //Creo array giftCards
 let giftCards = JSON.parse(localStorage.getItem('giftCards')) || [];
 
-if (!giftCards) {
+/*if (!giftCards) {
     giftCards = [];
-}
+}*/
 
 //Generar código aleatorio único para la giftcard
 function generarCodigoUnico(giftCards) {
@@ -127,18 +127,15 @@ function generarCodigoUnico(giftCards) {
     return codigo;
 }
 
-
-
 //Creo objeto nuevaGiftCard y lo agrego al array. 
 function crearNuevaGiftCard() {
     const codigoUnico = generarCodigoUnico(giftCards);
-    const monto = inputMonto.value;
 
     const nuevaGiftCard = {
         nombre: 'GiftCard',
         imagen: '../assets/giftcard.png',
         codigo: codigoUnico,
-        monto: monto
+        monto: inputMonto.value
     }
     giftCards.push(nuevaGiftCard);
     localStorage.setItem("giftCards", JSON.stringify(giftCards));
