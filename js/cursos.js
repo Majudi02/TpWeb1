@@ -55,13 +55,16 @@ if (cursoSeleccionado.modalidad === "Virtual") {
 }
 
 
+
 botonAgregarAlCarrito.addEventListener("click", (event) => {
     if (cursoSeleccionado.modalidad === "Virtual") {
         agregarCursoAlCarrito(cursoSeleccionado.id);
         event.preventDefault();
-        carritoSidebar.classList.toggle("abierto");
+        if (!carritoSidebar.classList.contains("abierto")) {
+            carritoSidebar.classList.add("abierto");
+        }
     } else {
-        botonAgregarAlCarrito.href = `./form-de-inscripcion.html?id=${idCurso}`;
+        botonAgregarAlCarrito.href = `./form-de-inscripcion.html?id=${cursoSeleccionado.id}`;
     }
 });
 

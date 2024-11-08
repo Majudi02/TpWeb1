@@ -422,3 +422,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     mostrarTarjetas(6);
 });
+
+
+

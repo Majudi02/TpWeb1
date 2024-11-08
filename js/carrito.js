@@ -1,3 +1,8 @@
+const listaDeCursos = JSON.parse(sessionStorage.getItem('ListaDeCursos')) || cursosInformacion;
+if (!sessionStorage.getItem('ListaDeCursos')) {
+  sessionStorage.setItem('ListaDeCursos', JSON.stringify(listaDeCursos));
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   displayCurso();
   actualizarContadorDeCarrito();
@@ -5,23 +10,31 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-const listaDeCursos = JSON.parse(sessionStorage.getItem('ListaDeCursos'));
 
+document.addEventListener("DOMContentLoaded", () => {
+  const carritoSidebar = document.querySelector(".carrito-sidebar");
+  const botonAbrirCarrito = document.querySelector(".navprimario__menu-items-carrito-link");
+  const botonCerrarCarrito = document.querySelector(".carrito-sidebar__salir");
 
+  function carrito(event) {
+    event.preventDefault();
+    carritoSidebar.classList.toggle("abierto");
+  }
 
+  botonAbrirCarrito.addEventListener("click", carrito);
+  botonCerrarCarrito.addEventListener("click", carrito);
 
-const carritoSidebar = document.querySelector(".carrito-sidebar");
-const botonAbrirCarrito = document.querySelector(".navprimario__menu-items-carrito-link");
-const botonCerrarCarrito = document.querySelector(".carrito-sidebar__salir");
+  const botonAgregarAlCarrito = document.querySelectorAll(".boton.boton--comprar");
 
-function carrito(event) {
-  event.preventDefault();
-  carritoSidebar.classList.toggle("abierto");
-}
-
-botonAbrirCarrito.addEventListener("click", carrito);
-botonCerrarCarrito.addEventListener("click", carrito);
-
+  botonAgregarAlCarrito.forEach(boton => {
+    boton.addEventListener("click", (event) => {
+      event.preventDefault();
+      if (!carritoSidebar.classList.contains("abierto")) {
+        carritoSidebar.classList.add("abierto");
+      }
+    });
+  });
+});
 
 
 function getCursosEnElCarrito() {
@@ -36,7 +49,13 @@ function getCursosEnElCarrito() {
 }
 
 function agregarCursoAlCarrito(id) {
+  if (typeof listaDeCursos === 'undefined' || listaDeCursos === null) {
+    console.error("listaDeCursos no está definida");
+    return;
+  }
+
   let cursoInformacion = getCursosEnElCarrito();
+
   const cursoSeleccionado = listaDeCursos.find(curso => curso.id === id);
 
   const cursoEnCarrito = cursoInformacion.curso.find(curso => curso.id === id);
@@ -55,14 +74,11 @@ function agregarCursoAlCarrito(id) {
     });
   }
 
-
   calcularPrecioTotalDelCarrito(cursoInformacion);
   guardarCursoEnElCarrito(cursoInformacion);
   actualizarContadorDeCarrito();
-
   displayCurso();
 }
-
 
 function actualizarContadorDeCarrito() {
   const cursoInformacion = getCursosEnElCarrito();
@@ -92,14 +108,13 @@ function displayCurso() {
   const cartItemsContainer = document.querySelector(".js-carrito-sidebar__cursos");
   cartItemsContainer.innerHTML = "";
 
-  // Renderizar cada curso
   cursoInformacion.curso.forEach(item => {
-      const cartItemElement = document.createElement("article");
-      cartItemElement.classList.add("carrito-sidebar__cursos__item");
+    const cartItemElement = document.createElement("article");
+    cartItemElement.classList.add("carrito-sidebar__cursos__item");
 
-      const precioTotal = item.precio * item.cantidad;
+    const precioTotal = item.precio * item.cantidad;
 
-      cartItemElement.innerHTML = `  
+    cartItemElement.innerHTML = `  
           <img class="carrito-sidebar__cursos__item__imagen" src="${item.imagen}" alt="">
           <div class="carrito-sidebar__cursos__item__descripcion">
               <p class="carrito-sidebar__cursos__item__titulo">${item.titulo}</p>
@@ -112,21 +127,22 @@ function displayCurso() {
                   <span class="carrito-sidebar__cursos__item__contenedor-cantidad__agregar" onclick="aumentarCantidadDeCursos('${item.titulo}')">+</span>
               </div>
           </div>`;
-      cartItemsContainer.appendChild(cartItemElement);
+    cartItemsContainer.appendChild(cartItemElement);
   });
 
-  cursoInformacion.giftCard.forEach(giftCard => {
-      const cartItemElement = document.createElement("article");
-      cartItemElement.classList.add("carrito-sidebar__cursos__item");
 
-      cartItemElement.innerHTML = `  
+  cursoInformacion.giftCard.forEach(giftCard => {
+    const cartItemElement = document.createElement("article");
+    cartItemElement.classList.add("carrito-sidebar__cursos__item");
+
+    cartItemElement.innerHTML = `  
           <img class="carrito-sidebar__cursos__item__imagen" src="${giftCard.imagen}" alt="">
           <div class="carrito-sidebar__cursos__item__descripcion">
               <p class="carrito-sidebar__cursos__item__titulo">${giftCard.titulo}</p>
               <p class="carrito-sidebar__cursos__item__modalidad">Código: ${giftCard.codigo}</p>
               <p class="carrito-sidebar__cursos__item__precio">U$D ${giftCard.monto}</p>
           </div>`;
-      cartItemsContainer.appendChild(cartItemElement);
+    cartItemsContainer.appendChild(cartItemElement);
   });
 
   const mensajeCarritoVacio = document.querySelector(".carrito-sidebar__contenedor-carrito-vacio");

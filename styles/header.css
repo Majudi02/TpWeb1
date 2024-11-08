@@ -4,6 +4,9 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+
+
+
 .navprimario {
     display: flex;
     justify-content: space-between;
@@ -385,6 +388,7 @@
 
 .carrito-sidebar {
     position: fixed;
+    z-index: 2;
     top: 0;
     right: -30em;
     height: 100vh;
