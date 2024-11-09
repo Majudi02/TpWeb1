@@ -11,30 +11,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-  const carritoSidebar = document.querySelector(".carrito-sidebar");
-  const botonAbrirCarrito = document.querySelector(".navprimario__menu-items-carrito-link");
-  const botonCerrarCarrito = document.querySelector(".carrito-sidebar__salir");
 
-  function carrito(event) {
-    event.preventDefault();
-    carritoSidebar.classList.toggle("abierto");
-  }
+const carritoSidebar = document.querySelector(".carrito-sidebar");
+const botonAbrirCarrito = document.querySelector(".navprimario__menu-items-carrito-link");
+const botonCerrarCarrito = document.querySelector(".carrito-sidebar__salir");
 
-  botonAbrirCarrito.addEventListener("click", carrito);
-  botonCerrarCarrito.addEventListener("click", carrito);
+function carrito(event) {
+  event.preventDefault();
+  carritoSidebar.classList.toggle("abierto");
+}
 
-  const botonAgregarAlCarrito = document.querySelectorAll(".boton.boton--comprar");
+botonAbrirCarrito.addEventListener("click", carrito);
+botonCerrarCarrito.addEventListener("click", carrito);
 
-  botonAgregarAlCarrito.forEach(boton => {
-    boton.addEventListener("click", (event) => {
-      event.preventDefault();
-      if (!carritoSidebar.classList.contains("abierto")) {
-        carritoSidebar.classList.add("abierto");
-      }
-    });
-  });
-});
 
 
 function getCursosEnElCarrito() {

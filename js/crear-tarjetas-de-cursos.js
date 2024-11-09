@@ -2,7 +2,6 @@ function mostrarTarjetas(cantidad) {
     const cursosGuardados = JSON.parse(sessionStorage.getItem('ListaDeCursos'));
     const container = document.querySelector(".contenedor-tarjetas");
 
-
     const cursosMostrados = cursosGuardados.slice(0, cantidad);
 
     cursosMostrados.forEach(item => {
@@ -26,9 +25,21 @@ function mostrarTarjetas(cantidad) {
                 <a class="boton boton--ver-detalle" href="${href}">Ver detalle</a>
             </div>
             <div class="tarjeta__comprar">
-                <a class="boton boton--comprar" onclick="agregarCursoAlCarrito(${item.id})">Agregar al carrito</a>
+                <a class="boton boton--comprar" href="#" data-id="${item.id}">Agregar al carrito</a>
             </div>`;
 
         container.appendChild(tarjeta);
+
+   
+        const botonComprar = tarjeta.querySelector(".boton--comprar");
+        botonComprar.addEventListener("click", (event) => {
+            event.preventDefault();
+            agregarCursoAlCarrito(item.id);
+            
+       
+            if (!carritoSidebar.classList.contains("abierto")) {
+                carritoSidebar.classList.add("abierto");
+            }
+        });
     });
 }
