@@ -130,9 +130,10 @@ function validarFormulario() {
     const personas = document.querySelectorAll('.grupo-formulario');
     let esValido = true;
 
-    personas.forEach((persona) => {
+    for(const persona of personas) {
         const inputs = persona.querySelectorAll('input');
-        inputs.forEach((input) => {
+        
+        for (const input of inputs){
             // Validar el formato del Nombre
             if (input.name === 'name') {
                 const reglaNombre = /^[a-zA-Z\s]+$/;
@@ -141,6 +142,7 @@ function validarFormulario() {
                     esValido = false;
                     input.classList.add('error');
                     input.placeholder = 'Ingrese un nombre válido.';
+                    break;
                 } else {
                     input.classList.remove('error');
                     input.placeholder = 'Nombre y Apellido';
@@ -155,6 +157,7 @@ function validarFormulario() {
                     esValido = false;
                     input.classList.add('error');
                     input.placeholder = 'Ingrese un DNI válido.';
+                    break;
                 } else {
                     input.classList.remove('error');
                     input.placeholder = 'DNI';
@@ -169,6 +172,7 @@ function validarFormulario() {
                     esValido = false;
                     input.classList.add('error');
                     input.placeholder = 'Ingrese un email válido.';
+                    break;
                 } else {
                     input.classList.remove('error');
                     input.placeholder = 'Email';
@@ -183,16 +187,20 @@ function validarFormulario() {
                     esValido = false;
                     input.classList.add('error');
                     input.placeholder = 'Ingrese un teléfono válido.';
+                    break;
                 } else {
                     input.classList.remove('error');
                     input.placeholder = 'Teléfono';
                 }
             }
-        });
-
-    });
+        };
+        if(!esValido){
+            break;
+        }
+    };
 
     return esValido;
+    
 }
 
 const modal = document.getElementById("modalResumen");
@@ -200,9 +208,7 @@ const modal = document.getElementById("modalResumen");
 // Mostrar el resumen de personas agregadas
 function mostrarResumen(event) {
     event.preventDefault();
-    if (!validarFormulario()) {
-        return;
-    }
+    if (!validarFormulario()) return;
 
     const resumenElement = document.getElementById("resumen-personas");
     const personas = document.querySelectorAll(".grupo-formulario");

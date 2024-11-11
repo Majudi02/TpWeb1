@@ -114,10 +114,6 @@ inputsFondo.forEach(input => input.addEventListener('change', aplicarColorFondo)
 //Creo array giftCards
 let giftCards = JSON.parse(localStorage.getItem('giftCards')) || [];
 
-/*if (!giftCards) {
-    giftCards = [];
-}*/
-
 //Generar código aleatorio único para la giftcard
 function generarCodigoUnico(giftCards) {
     let codigo;

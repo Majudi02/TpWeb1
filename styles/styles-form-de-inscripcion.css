@@ -175,6 +175,22 @@ main {
     text-align: center;
 }
 
+.titulo-inscriptos{
+    text-align: center;
+    font-size: 1.1em;
+    color: rgb(39, 16, 243);
+    font-weight: 600;
+    padding-bottom: 0.5em;
+}
+
+.summary-inscriptos{
+    text-align: center;
+    font-size: 0.8em;
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+    padding-bottom: 0.3em;
+}
+
 /*Volver*/
 .volver-atras {
     display: flex;

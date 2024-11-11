@@ -111,7 +111,7 @@
                     </div>
                 </div>
         
-                <button class="boton-agregar-persona" onclick="agregarPersona()">
+                <button type="button" class="boton-agregar-persona" onclick="agregarPersona()">
                     <div class="icono">+</div>
                     Agregar Persona
                 </button>
@@ -127,12 +127,12 @@
         
         <dialog class="modal" id="modalResumen">
             <div class="modal-content">
-                <h3>Resumen de Inscripción</h3>
+                <h3 class="titulo-inscriptos">Resumen de Inscripción</h3>
                 <details>
-                    <summary>Inscriptos</summary>
+                    <summary class="summary-inscriptos">Detalle de personas inscriptas</summary>
                     <div id="resumen-personas"></div>
                 </details>
-                <button class="boton-inscribirse" onclick="cerrarModal()">Aceptar</button>
+                <button type="button" class="boton-inscribirse" onclick="cerrarModal()">Aceptar</button>
             </div>
         </dialog>
 
