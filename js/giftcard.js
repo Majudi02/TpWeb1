@@ -142,16 +142,53 @@ function crearNuevaGiftCard() {
     return nuevaGiftCard;
 }
 
+//Modal
+const nodoModalGiftCard = document.querySelector('#modal_giftCard');
+const nodoModalContenidoGiftCard = document.querySelector('#modal_contenido_giftCard');
+const nodoModalBotonGiftCard =  document.querySelector('#modal_boton_giftCard');
+
+nodoModalBotonGiftCard.addEventListener('click', (evento) => {
+    nodoModalGiftCard.close();
+    window.location.assign('../index.html');
+})
+
+//validación del formulario
+function validarFormGiftCard() {
+    const nombreDestinatario = document.querySelector('#destinatario');
+    const montoIngresado = document.querySelector('#monto');
+
+    // Validación del nombre del destinatario
+    if (nombreDestinatario.value.trim() === '') {
+        nombreDestinatario.placeholder = 'Complete el nombre del destinatario';
+        nombreDestinatario.classList.add('error');
+        return false;
+    } else {
+        nombreDestinatario.classList.remove('error');
+    }
+    // Validación del monto ingresado
+    const reglaMonto = /^[0-9]+$/;
+        if (!reglaMonto.test(montoIngresado.value.trim()) || montoIngresado.value.trim() === '') {
+        montoIngresado.placeholder = 'Ingrese un monto';
+        montoIngresado.classList.add('error-monto');
+        return false;
+    } else {
+        montoIngresado.classList.remove('error-monto');
+    }
+    return true;
+}
 
 
 // Guardar el código en el localStorage
 function agregarGiftCardAlCarritoDesdeForm(event) {
     event.preventDefault();
+    //Valido el formulario
+    if(!validarFormGiftCard()) return;
   //creo la gift card y la guardo
     const nuevaGiftCard = crearNuevaGiftCard();
     //Agregar al carrito
     agregarGiftCardAlCarrito(nuevaGiftCard.codigo);
-    alert(`¡Tu gift card ha sido añadida al carrito con el código: ${nuevaGiftCard.codigo}!`);
+    nodoModalContenidoGiftCard.textContent = `El código de tu GiftCard es: ${nuevaGiftCard.codigo}.`;
+    nodoModalGiftCard.showModal();
 }
 
 nodoFormGiftCard.addEventListener('submit', agregarGiftCardAlCarritoDesdeForm);

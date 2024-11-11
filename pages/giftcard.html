@@ -114,7 +114,7 @@
                         <label class="contenido_personalizacion--subtitulo" for="destinatario">Nombre del
                             destinatario</label>
                         <input class="contenido_personalizacion--input-text" type="text" name="destinatario"
-                            id="destinatario" placeholder="Nombre del destinatario" required>
+                            id="destinatario" placeholder="Nombre del destinatario">
                     </article>
 
                     <article class="contenido_personalizacion_atributo">
@@ -178,7 +178,7 @@
                         <label class="contenido_personalizacion--subtitulo" for="monto">
                             Monto U$D</label>
                         <input class="contenido_personalizacion_atributo--opcion_monto-input" type="number" name="monto"
-                            id="monto" min="1" required />
+                            id="monto" min="1" />
                     </article>
 
 
@@ -241,6 +241,13 @@
                     </article>
                 </form>
             </section>
+           
+            <dialog id="modal_giftCard" class="modal">
+                <h3 class="modal__titulo" id="modal_titulo_giftCard">¡GiftCard agregada al carrito exitosamente!</h3>
+                <p class="modal__contenido" id="modal_contenido_giftCard"></p>
+                <button class="modal__boton" id="modal_boton_giftCard">Ok</button>
+            </dialog>
+
         </div>
 
         <section class="carrito-sidebar">

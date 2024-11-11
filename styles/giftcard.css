@@ -291,6 +291,66 @@ input[type="radio"] {
 }
 
 
+/*Modal INICIO*/
+.modal {
+    position: fixed;
+    top: 40%;
+    left: 35%;
+    width: 30%;
+    padding: 1em;
+    background-color: #020202;
+    border: 0.3em solid #c2c2c2;
+    border-radius: 1em;
+    text-align: center;
+}
+
+.modal .modal__titulo {
+    text-align: center;
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    padding-bottom: 0.5em;
+}
+
+.modal .modal__contenido {
+    text-align: center;
+    font-size: 1em;
+    color: rgb(255, 255, 255);
+    font-weight: 400;
+    padding-bottom: 0.3em;
+}
+
+.modal .modal__boton {
+    padding: 0.8em;
+    text-align: center;
+    border: 0.1em solid rgb(39, 39, 39);
+    border-radius: 0.5em;
+    background-color: rgb(45, 86, 161);
+    color: rgb(255, 255, 255);
+    font-size: 0.8em;
+    margin-top: 0.3em;
+    cursor: pointer;
+}
+/*Modal FIN*/
+.contenido .contenido_personalizacion .error {
+    padding: 0.5em;
+    border-radius: 0.7em;
+    color: rgb(255, 0, 0);
+    font-size: 0.7em;
+    border: 0.2em solid rgb(255, 0, 0);
+    background-color: rgb(255, 205, 205);
+}
+
+.contenido .contenido_personalizacion .contenido_personalizacion_atributo--opcion .error-monto{
+    padding: 0.5em;
+    border-radius: 0.7em;
+    color: rgb(255, 0, 0);
+    font-size: 0.7em;
+    border: 0.2em solid rgb(255, 0, 0);
+    background-color: rgb(255, 205, 205);
+}
+
+
 /*      Mobile Devices       */
 @media screen and (max-width: 47.9em) {
 
@@ -331,6 +391,26 @@ input[type="radio"] {
         display: none;
     }
 
+    .modal {
+        top: 40%;
+        left: 25%;
+        width: 50%;
+        padding: 1em;
+    }
+
+    .modal .modal__titulo {
+        font-size: 0.9em;
+        font-weight: 500;
+        padding-bottom: 0.3em;
+    }
+
+    .modal .modal__contenido {
+        font-size: 0.7em;
+    }
+
+    .modal .modal__boton {
+        font-size: 0.7em;
+    }
 }
 
 
@@ -367,6 +447,27 @@ input[type="radio"] {
         width: 3em;
         padding-right: 2em;
         font-size: 0.8em;
+    }
+
+    .modal {
+        top: 42%;
+        left: 30%;
+        width: 40%;
+        padding: 1em;
+    }
+
+    .modal .modal__titulo {
+        font-size: 1em;
+        font-weight: 500;
+        padding-bottom: 0.3em;
+    }
+
+    .modal .modal__contenido {
+        font-size: 0.8em;
+    }
+
+    .modal .modal__boton {
+        font-size: 0.7em;
     }
 }
 

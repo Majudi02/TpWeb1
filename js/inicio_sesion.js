@@ -48,6 +48,7 @@ function crearModalUsuarioExistente() {
 
 
 //4. Verificar si el usuario existe y si su contraseña es correcta
+const nodoPwError = document.querySelector('#mensaje_pw_incorrecta');
 
 function validarUsuario(evento){
     evento.preventDefault();
@@ -62,6 +63,7 @@ function validarUsuario(evento){
 
     if(!usuariosRegistradosJSON){
         crearModalUsuarioExistente();
+        nodoPwError.textContent = '';
         return;
     }else{
         usuariosRegistrados = JSON.parse(usuariosRegistradosJSON);
@@ -74,6 +76,7 @@ function validarUsuario(evento){
     
     if(!usuariosRegistrados[emailUsuario]){
         crearModalUsuarioExistente();
+        nodoPwError.textContent = '';
         return;
     }
     
@@ -82,7 +85,6 @@ function validarUsuario(evento){
             guardarUsuarioSesion(usuarioPorValidar.email)
             window.location.assign('../index.html');
         }else{
-            const nodoPwError = document.querySelector('#mensaje_pw_incorrecta');
             nodoPwError.textContent = 'Contraseña incorrecta, vuelva a intentar';
         }
 }
