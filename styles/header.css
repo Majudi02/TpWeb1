@@ -478,6 +478,12 @@
     width: 100%; 
 }
 
+.carrito-sidebar__cursos__item__descripcion__fila{
+    display: flex;
+    justify-content: space-between;
+}
+
+
 .carrito-sidebar__cursos__item__titulo{
     font-weight: 400;
     font-size: 1.1em;
@@ -509,7 +515,7 @@
     margin-bottom: 0.15em;
     min-width: 5%;
 }
-.carrito-sidebar__cursos__item__contenedor-cantidad span{
+.carrito-sidebar__cursos__item__eliminar-giftcard,.carrito-sidebar__cursos__item__contenedor-cantidad span{
     width: 30px;
     height: 30px;
     background-color:#fff;
@@ -520,6 +526,21 @@
     box-shadow: 0 0 0.4em rgb(153, 151, 151);
     line-height: 1;
     text-align: center;
+}
+
+.carrito-sidebar__cursos__item__eliminar-giftcard{
+    font-size: 1.2em;
+    margin-right: 0.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.carrito-sidebar__cursos__item__contenedor{
+    display: flex;
+    justify-content: space-between;
+    
 }
 
 

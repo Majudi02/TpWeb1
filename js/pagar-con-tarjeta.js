@@ -3,6 +3,8 @@
 const cursosAPagar = getCursosEnElCarrito().curso;
 
 
+const giftcardAPagar= getCursosEnElCarrito().giftCard;
+
 
 const containerCursos = document.querySelector(".cursos");
 
@@ -32,8 +34,32 @@ cursosAPagar.forEach(item => {
 });
 
 
+giftcardAPagar.forEach(item =>{
+    precioTotalCarrito += item.monto;
 
-if (cursosAPagar.length === 0) {
+
+    const article = document.createElement("article");
+    article.className = "curso_seleccionado";
+    article.innerHTML = `<img class="curso_seleccionado_imagen" src=${item.imagen}
+                            alt="imagen del curso a pagar">
+                        <div class="curso_seleccionado_contenido">
+                            <div class="curso_seleccionado_contenedor-del-precio">
+                                <p class="curso_seleccionado_contenedor-del-precio_titulo">${item.titulo}</p>
+                                <p class="curso_seleccionado_contenedor-del-precio_precio"> U$D ${item.monto}</p>
+                            </div>
+                            <p class="curso_seleccionado_cantidad">Codigo: ${item.codigo}</p>
+                        </div>
+                    </article>`;
+
+
+    containerCursos.appendChild(article);
+    actualizarContadorDeCarrito();
+
+
+});
+
+
+if (cursosAPagar.length === 0 && giftcardAPagar.length===0) {
     containerCursos.classList.add("vacio");
     containerCursos.innerHTML = "<p>No hay cursos en el carrito.</p>";
 } else {
