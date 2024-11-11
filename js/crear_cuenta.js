@@ -8,7 +8,9 @@ const nodoPassword = document.querySelector('#password');
 //1.Valido el formulario
 function validarFormCrearCuenta() {
     // Validación del nombre
-    if (nodoNombre.value.trim() === '') {
+    const reglaNombre = /^[a-zA-Z\s]+$/;
+    if (!reglaNombre.test(nodoNombre.value.trim())) {
+        nodoNombre.value = '';
         nodoNombre.placeholder = 'El nombre es obligatorio';
         nodoNombre.classList.add('error');
         return false;
@@ -16,7 +18,9 @@ function validarFormCrearCuenta() {
         nodoNombre.classList.remove('error');
     }
     // Validación del apellido
-    if (nodoApellido.value.trim() === '') {
+    const reglaApellido = /^[a-zA-Z\s]+$/;
+    if (!reglaApellido.test(nodoApellido.value.trim())) {
+        nodoApellido.value = '';
         nodoApellido.placeholder = 'El apellido es obligatorio';
         nodoApellido.classList.add('error');
         return false;

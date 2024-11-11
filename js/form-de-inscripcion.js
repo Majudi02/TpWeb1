@@ -137,7 +137,7 @@ function validarFormulario() {
             // Validar el formato del Nombre
             if (input.name === 'name') {
                 const reglaNombre = /^[a-zA-Z\s]+$/;
-                if (!reglaNombre.test(input.value) || input.value.trim() === '') {
+                if (!reglaNombre.test(input.value.trim())) {
                     input.value = '';
                     esValido = false;
                     input.classList.add('error');
@@ -152,7 +152,7 @@ function validarFormulario() {
             // Validar el formato del DNI
             if (input.name === 'dni') {
                 const reglaDni = /^[0-9]+$/;
-                if (!reglaDni.test(input.value) || input.value.trim() === '') {
+                if (!reglaDni.test(input.value.trim())) {
                     input.value = '';
                     esValido = false;
                     input.classList.add('error');
@@ -167,7 +167,7 @@ function validarFormulario() {
             // Validar el formato del email
             if (input.name === 'email') {
                 const reglaEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!reglaEmail.test(input.value) || input.value.trim() === '') {
+                if (!reglaEmail.test(input.value.trim())) {
                     input.value = '';
                     esValido = false;
                     input.classList.add('error');
@@ -182,7 +182,7 @@ function validarFormulario() {
             // Validar el formato del telefono
             if (input.name === 'telefono') {
                 const reglaTel = /^[0-9]+$/;
-                if (!reglaTel.test(input.value) || input.value.trim() === '') {
+                if (!reglaTel.test(input.value.trim())) {
                     input.value = '';
                     esValido = false;
                     input.classList.add('error');

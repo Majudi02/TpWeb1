@@ -95,28 +95,26 @@
         </div>
         <section class="contenedor-principal">
             <article>
-                <form method="get" action="">
-                    <label for="informacion-tarjeta">Informacion de la tarjeta</label>
-                    <input type="number" id="informacion-tarjeta" name="informacion-tarjeta"
-                        placeholder="1234 1234 1234 1234" minlength="16" maxlength="16" required>
+                <form method="get" id="form_pagar-tarjeta">
+                    <label for="numero-tarjeta">Informacion de la tarjeta</label>
+                    <input type="number" id="numero-tarjeta" name="numero-tarjeta"
+                        placeholder="1234 1234 1234 1234">
                     <div class="informacion-tarjeta-fila">
-                        <input class="vencimiento" type="text" id="informacion-tarjeta"
-                            placeholder="Vencimiento (MM/AA)" required pattern="^\d{2}\/\d{2}$"
-                            title="Ingrese la fecha en formato MM/AA" required>
-                        <input class="codigo-tarjeta" type="text" id="informacion-tarjeta-codigo"
-                            name="informacion-tarjeta-codigo" placeholder="Codigo (***)" minlength="3" maxlength="3"
-                            required>
+                        <input class="vencimiento" type="text" id="vencimiento-tarjeta" name="vencimiento-tarjeta"
+                            placeholder="Vencimiento (MM/AA)">
+                        <input class="codigo-tarjeta" type="text" id="codigo-tarjeta"
+                            name="codigo-tarjeta" placeholder="Codigo (***)">
                     </div>
 
-                    <label for="correo">Correo electronico</label>
-                    <input type="email" id="correo" name="correo" placeholder="Correo electrónico" required>
+                    <label for="correo-tarjeta">Correo electronico</label>
+                    <input type="text" id="correo-tarjeta" name="correo-tarjeta" placeholder="Correo electrónico">
 
                     <label for="nombre-tarjeta">Nombre del titular</label>
-                    <input type="text" id="nombre-tarjeta" name="nombre-tarjeta" required>
+                    <input type="text" id="nombre-tarjeta" name="nombre-tarjeta">
 
                     <label for="direccion-tarjeta">Direccion de facturacion</label>
-                    <input type="text" id="direccion-tarjeta" name="direccion-tarjeta" placeholder="Direccion 123"
-                        required>
+                    <input type="text" id="direccion-tarjeta" name="direccion-tarjeta" placeholder="Direccion 123">
+                        
 
 
                     <div class="precio-total-celular">
@@ -132,6 +130,11 @@
                 </form>
             </article>
 
+            <dialog id="modal_pago-exitoso" class="modal">
+                <h3 class="modal__titulo" id="modal_titulo_pago-exitoso"></h3>
+                <p class="modal__contenido" id="modal_contenido_pago-exitoso"></p>
+                <button class="modal__boton" id="modal_boton_pago-exitoso">Ok</button>
+            </dialog>
 
             <div class="cursos">
 
