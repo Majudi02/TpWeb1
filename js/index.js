@@ -417,8 +417,13 @@ const docentes = [
 document.addEventListener("DOMContentLoaded", () => {
     if (!sessionStorage.getItem('ListaDeCursos')) {
         sessionStorage.setItem('ListaDeCursos', JSON.stringify(cursosInformacion));
-        sessionStorage.setItem('Docentes', JSON.stringify(docentes));
     }
+
+    if (!sessionStorage.getItem('Docentes')) {
+        sessionStorage.setItem('Docentes', JSON.stringify(docentes));
+       
+    }
+
 
     mostrarTarjetas(6);
 });

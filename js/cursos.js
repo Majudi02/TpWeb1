@@ -98,6 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
 const idDocente = cursoSeleccionado.docenteId;
 const docenteGuardados = JSON.parse(sessionStorage.getItem('Docentes'));
 
+if (!docenteGuardados) {;
+    sessionStorage.setItem('Docentes', JSON.stringify(docentes));
+}
+
+
+
+
 const docente = docenteGuardados.find(docente => docente.id === idDocente);
 
 

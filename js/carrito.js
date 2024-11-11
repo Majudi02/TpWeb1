@@ -38,10 +38,7 @@ function getCursosEnElCarrito() {
 }
 
 function agregarCursoAlCarrito(id) {
-  if (typeof listaDeCursos === 'undefined' || listaDeCursos === null) {
-    console.error("listaDeCursos no está definida");
-    return;
-  }
+
 
   let cursoInformacion = getCursosEnElCarrito();
 
@@ -127,7 +124,10 @@ function displayCurso() {
     cartItemElement.innerHTML = `  
           <img class="carrito-sidebar__cursos__item__imagen" src="${giftCard.imagen}" alt="">
           <div class="carrito-sidebar__cursos__item__descripcion">
-              <p class="carrito-sidebar__cursos__item__titulo">${giftCard.titulo}</p>
+          <div class="carrito-sidebar__cursos__item__contenedor"
+           <p class="carrito-sidebar__cursos__item__titulo">${giftCard.titulo}</p>
+           <span class="carrito-sidebar__cursos__item__eliminar-giftcard" onclick="eliminarGiftcard('${giftCard.codigo}')">X</span>
+          </div>
               <p class="carrito-sidebar__cursos__item__modalidad">Código: ${giftCard.codigo}</p>
               <p class="carrito-sidebar__cursos__item__precio">U$D ${giftCard.monto}</p>
           </div>`;
@@ -140,6 +140,20 @@ function displayCurso() {
   document.querySelector(".js-carrito-sidebar_botones__subtotal__precioTotalCarrito").textContent = `U$D ${cursoInformacion.precioTotalDelCarrito}`;
 }
 
+
+
+function eliminarGiftcard(codigo) {
+  const carrito = getCursosEnElCarrito();
+
+  
+  carrito.giftCard = carrito.giftCard.filter(giftCard => giftCard.codigo !== codigo);
+  
+  
+  guardarCursoEnElCarrito(carrito);
+
+  displayCurso();
+  actualizarContadorDeCarrito();
+}
 
 function aumentarCantidadDeCursos(titulo) {
   const cursoInformacion = getCursosEnElCarrito();
