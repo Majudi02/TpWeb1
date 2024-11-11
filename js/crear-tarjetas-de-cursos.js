@@ -13,6 +13,20 @@ function mostrarTarjetas(cantidad) {
             href = `/pages/descripcion.del-curso.html?id=${item.id}`;
         }
 
+        let boton = '';
+
+
+
+        if (item.modalidad === 'Virtual') {
+            boton = `<a class="boton boton--comprar" href="#">Agregar al carrito</a>`;
+        } else {
+            let hrefInscripcion = `./form-de-inscripcion.html?id=${item.id}`;
+            if (cantidad === 6) {
+                hrefInscripcion = `/pages/form-de-inscripcion.html?id=${item.id}`;
+            }
+            boton = `<a class="boton boton--comprar" href="${hrefInscripcion}" >Inscribirse</a>`;
+        }
+
         tarjeta.innerHTML = `
             <div class="tarjeta__img-precio">
                 <img src="${item.imagen}" alt="logo-fundamentos-progra" class="tarjeta__imagen" />
@@ -25,21 +39,23 @@ function mostrarTarjetas(cantidad) {
                 <a class="boton boton--ver-detalle" href="${href}">Ver detalle</a>
             </div>
             <div class="tarjeta__comprar">
-                <a class="boton boton--comprar" href="#" data-id="${item.id}">Agregar al carrito</a>
+                ${boton}
             </div>`;
 
         container.appendChild(tarjeta);
 
-   
+
         const botonComprar = tarjeta.querySelector(".boton--comprar");
         botonComprar.addEventListener("click", (event) => {
-            event.preventDefault();
-            agregarCursoAlCarrito(item.id);
-            
-       
-            if (!carritoSidebar.classList.contains("abierto")) {
-                carritoSidebar.classList.add("abierto");
+            if (item.modalidad === 'Virtual') {
+                event.preventDefault();
+                agregarCursoAlCarrito(item.id);
+                if (!carritoSidebar.classList.contains("abierto")) {
+                    carritoSidebar.classList.add("abierto");
+                }
             }
         });
     });
+
+
 }
