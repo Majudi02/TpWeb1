@@ -103,11 +103,11 @@
             <form id="formulario-inscripcion" method="get" action="#">
                 <div id="grupo-personas">
                     <div class="grupo-formulario" id="persona-1">
-                        <input type="text" name="name" placeholder="Nombre y Apellido" required>
-                        <input type="number" name="dni" placeholder="DNI" required>
-                        <input type="email" name="email" placeholder="Email" required>
-                        <input type="tel" name="telefono" placeholder="Teléfono" required>
-                        <button class="boton-eliminar" onclick="eliminarPersona(this)">-</button>
+                        <input type="text" name="name" placeholder="Nombre y Apellido">
+                        <input type="number" name="dni" placeholder="DNI">
+                        <input type="text" name="email" placeholder="Email">
+                        <input type="tel" name="telefono" placeholder="Teléfono">
+                        <button type="button" class="boton-eliminar" onclick="eliminarPersona(this)">-</button>
                     </div>
                 </div>
         
@@ -119,19 +119,22 @@
                     <h3>Total: <small id="precio-curso"></small></h3>
                 </div>
                 <div class="contenedor-botones">
-                    <button type="button" class="boton-inscribirse" onclick="mostrarResumen()">AÑADIR AL CARRITO</button>
+                    <button type="submit" class="boton-inscribirse" onclick="mostrarResumen(event)">AÑADIR AL CARRITO</button>
                     <button type="button" class="boton-cancelar" onclick="window.location.href='../index.html'">CANCELAR</button>
                 </div>
             </form>
         </section>
         
-        <section class="modal" id="modalResumen" style="display:none;">
+        <dialog class="modal" id="modalResumen">
             <div class="modal-content">
                 <h3>Resumen de Inscripción</h3>
-                <div id="resumen-personas"></div>
+                <details>
+                    <summary>Inscriptos</summary>
+                    <div id="resumen-personas"></div>
+                </details>
                 <button class="boton-inscribirse" onclick="cerrarModal()">Aceptar</button>
             </div>
-        </section>
+        </dialog>
 
         <section class="carrito-sidebar">
             <article class="carrito-sidebar__header">

@@ -1,58 +1,100 @@
+//CONSTANTES
+const nodoNombre = document.querySelector('#nombre');
+const nodoApellido = document.querySelector('#apellido');
+const nodoEmail = document.querySelector('#email');
+const nodoPassword = document.querySelector('#password');
+
 
 //1.Valido el formulario
-
 function validarFormCrearCuenta() {
-    const nodoFormulario = document.querySelector('#form_crear-cuenta');
-    //Validación con HTML 5
-    if (!nodoFormulario.checkValidity()) {
-        nodoFormulario.reportValidity();
+    // Validación del nombre
+    if (nodoNombre.value.trim() === '') {
+        nodoNombre.placeholder = 'El nombre es obligatorio';
+        nodoNombre.classList.add('error');
         return false;
+    } else {
+        nodoNombre.classList.remove('error');
+    }
+    // Validación del apellido
+    if (nodoApellido.value.trim() === '') {
+        nodoApellido.placeholder = 'El apellido es obligatorio';
+        nodoApellido.classList.add('error');
+        return false;
+    } else {
+        nodoApellido.classList.remove('error');
     }
 
-    //Validación personalizada para la contraseña
-    const nodoPassword = document.querySelector('#password');
-    const nodoError = document.querySelector('#mensaje_error');
-
-    //Expresion regular: al menos 4 letras y 4 números
-    const reglaPassword = /^(?=(.*[A-Za-z]){4,})(?=(.*\d){4,}).{8,}$/;
-
-    if (!reglaPassword.test(nodoPassword.value)) {
-        nodoError.textContent = 'La contraseña debe tener al menos 4 letras y 4 números';
-        //alert('La contraseña debe tener al menos 4 letras y 4 números')
+    // Validación del email
+    const reglaEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!reglaEmail.test(nodoEmail.value.trim())) {
+        nodoEmail.value = ''; 
+        nodoEmail.placeholder = 'Correo electrónico no válido. Verifique el formato ingresado';
+        nodoEmail.classList.add('error');
         return false;
+    } else {
+        nodoEmail.classList.remove('error');
+    }
+
+    // Validación de la contraseña
+    const reglaPassword = /^(?=(.*[A-Za-z]){4,})(?=(.*\d){4,}).{8,}$/;
+    if (!reglaPassword.test(nodoPassword.value.trim())) {
+        nodoPassword.value = '';
+        nodoPassword.placeholder = 'La contraseña debe tener al menos 4 letras y 4 números';
+        nodoPassword.classList.add('error');
+        return false;
+    } else {
+        nodoPassword.classList.remove('error');
     }
 
     return true;
 }
 
-//2. Verifico que el usuario no exista y lo guardo en el local storage
+//2.Preparo modales de alerta
+const nodoModalCrearCuenta = document.querySelector('#modal_crear-cuenta');
+const nodoModalTitulo = document.querySelector('#modal_titulo_crear-cuenta');
+const nodoModalContenido = document.querySelector('#modal_contenido_crear-cuenta');
+const nodoModalBoton = document.querySelector('#modal_boton_crear-cuenta');
 
-function guardarUsuarioNuevo() { 
+function crearModalUsuarioExistente() {
+    nodoModalTitulo.textContent = '¡Atención!';
+    nodoModalContenido.textContent = 'Ya existe un usuario registrado con este email.';
+    nodoModalCrearCuenta.showModal();
+    nodoModalBoton.addEventListener('click', (event) => {
+        nodoModalCrearCuenta.close();
+    });
+}
+
+function crearModalDeBienvenida() {
+    nodoModalTitulo.textContent = '¡Bienvenida/o a DevX!'
+    nodoModalContenido.textContent = 'Usuario creado exitosamente, ya puede iniciar sesión.';
+    nodoModalCrearCuenta.showModal();
+    nodoModalBoton.addEventListener('click', (event) => {
+        nodoModalCrearCuenta.close();
+        window.location.assign('inicio-sesion.html');
+    });
+}
+
+//3. Verifico que el usuario no exista y lo guardo en el local storage
+
+function guardarUsuarioNuevo() {
     let usuariosRegistrados = {};
     const usuariosRegistradosJSON = localStorage.getItem('usuarios');
 
-    const nodoNombre = document.querySelector('#nombre');
-    const nodoApellido = document.querySelector('#apellido');
-    const nodoEmail = document.querySelector('#email');
-    const nodoPassword = document.querySelector('#password');
-
     // Obtener los usuarios registrados si existen en el Local Storage
     if (usuariosRegistradosJSON) {
-            usuariosRegistrados = JSON.parse(usuariosRegistradosJSON);
-        }
+        usuariosRegistrados = JSON.parse(usuariosRegistradosJSON);
+    }
 
     // Verificar si el email ya existe
     if (usuariosRegistrados[nodoEmail.value]) {
-        alert('Ya existe un usuario registrado con este email.'); //Aca podemos probar un pop-up
+        crearModalUsuarioExistente();
         const nodoFormulario = document.querySelector('#form_crear-cuenta');
         nodoFormulario.reset();
-        const nodoError = document.querySelector('#mensaje_error');
-        nodoError.textContent = '';
         return false;
     }
-    
+
     // Agregar el nuevo usuario al objeto `usuariosRegistrados`
-    usuariosRegistrados[nodoEmail.value] = { 
+    usuariosRegistrados[nodoEmail.value] = {
         nombre: nodoNombre.value,
         apellido: nodoApellido.value,
         email: nodoEmail.value,
@@ -64,26 +106,23 @@ function guardarUsuarioNuevo() {
     return true;
 }
 
-//3. Ejecuto una función que reúne la función de verificar los datos y guardar al nuevo usuario
+//4. Ejecuto una función que reúne la función de verificar los datos y guardar al nuevo usuario
 
 function manejarEnvioFormulario(evento) {
     evento.preventDefault();
-    
+
     // Verificación de que la validación se ejecuta y retorna el valor correcto
     //El return detiene la función si la validación salió mal. Si el formulario se validó correctamente
     //se obtiene un true, pero como está negado arroja un false, por eso la ejecución sigue
-    console.log("Validando formulario...");
     if (!validarFormCrearCuenta()) return;
-    
+
     // Si la función guardarNuevoUsuario devuelve true, guardo los datos en el local storage
     if (guardarUsuarioNuevo()) {
-        console.log("Usuario guardado exitosamente en Local Storage.");
-        alert('Usuario creado exitosamente, ya puede iniciar sesión');
-        window.location.assign('inicio-sesion.html');
-    } 
+        crearModalDeBienvenida();
+    }
 }
 
-//Añado el evento al formulario
+//5. Añado el evento al formulario
 const nodoFormCrearCuenta = document.querySelector('#form_crear-cuenta');
 nodoFormCrearCuenta.addEventListener('submit', manejarEnvioFormulario);
 

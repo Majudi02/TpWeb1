@@ -43,17 +43,35 @@ function agregarPersona() {
 
 function eliminarPersona(elemento) {
     const grupoPersonas = document.getElementById("grupo-personas");
-    const persona = elemento.parentElement;
+    const persona = elemento.closest('.grupo-formulario');
 
     if (contadorPersonas > 1) {
         grupoPersonas.removeChild(persona);
         contadorPersonas--;
     } else {
         // Limpiar los valores de la primera persona
-        persona.querySelector('input[name="name"]').value = '';
-        persona.querySelector('input[name="dni"]').value = '';
-        persona.querySelector('input[name="email"]').value = '';
-        persona.querySelector('input[name="telefono"]').value = '';
+        const inputs = persona.querySelectorAll('input');
+        inputs.forEach(input => {
+            input.classList.remove('error');
+            input.value = '';
+
+            switch (input.name) {
+                case 'name':
+                    input.placeholder = 'Nombre y Apellido';
+                    break;
+                case 'dni':
+                    input.placeholder = 'DNI';
+                    break;
+                case 'email':
+                    input.placeholder = 'Email';
+                    break;
+                case 'telefono':
+                    input.placeholder = 'Teléfono';
+                    break;
+                default:
+                    input.placeholder = '';
+            }
+        })
     }
     actualizarTotal();
 }
@@ -109,28 +127,81 @@ function actualizarContadorDeCarrito() {
 }
 
 function validarFormulario() {
-    const personas = document.querySelectorAll(".grupo-formulario");
+    const personas = document.querySelectorAll('.grupo-formulario');
     let esValido = true;
 
-    personas.forEach(persona => {
-        const inputs = persona.querySelectorAll("input");
-        inputs.forEach(input => {
-            if (!input.checkValidity()) {
-                esValido = false;
-                input.reportValidity(); 
-                return;
+    personas.forEach((persona) => {
+        const inputs = persona.querySelectorAll('input');
+        inputs.forEach((input) => {
+            // Validar el formato del Nombre
+            if (input.name === 'name') {
+                const reglaNombre = /^[a-zA-Z\s]+$/;
+                if (!reglaNombre.test(input.value) || input.value.trim() === '') {
+                    input.value = '';
+                    esValido = false;
+                    input.classList.add('error');
+                    input.placeholder = 'Ingrese un nombre válido.';
+                } else {
+                    input.classList.remove('error');
+                    input.placeholder = 'Nombre y Apellido';
+                }
+            }
+
+            // Validar el formato del DNI
+            if (input.name === 'dni') {
+                const reglaDni = /^[0-9]+$/;
+                if (!reglaDni.test(input.value) || input.value.trim() === '') {
+                    input.value = '';
+                    esValido = false;
+                    input.classList.add('error');
+                    input.placeholder = 'Ingrese un DNI válido.';
+                } else {
+                    input.classList.remove('error');
+                    input.placeholder = 'DNI';
+                }
+            }
+
+            // Validar el formato del email
+            if (input.name === 'email') {
+                const reglaEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!reglaEmail.test(input.value) || input.value.trim() === '') {
+                    input.value = '';
+                    esValido = false;
+                    input.classList.add('error');
+                    input.placeholder = 'Ingrese un email válido.';
+                } else {
+                    input.classList.remove('error');
+                    input.placeholder = 'Email';
+                }
+            }
+
+            // Validar el formato del telefono
+            if (input.name === 'telefono') {
+                const reglaTel = /^[0-9]+$/;
+                if (!reglaTel.test(input.value) || input.value.trim() === '') {
+                    input.value = '';
+                    esValido = false;
+                    input.classList.add('error');
+                    input.placeholder = 'Ingrese un teléfono válido.';
+                } else {
+                    input.classList.remove('error');
+                    input.placeholder = 'Teléfono';
+                }
             }
         });
+
     });
 
     return esValido;
 }
 
+const modal = document.getElementById("modalResumen");
+
 // Mostrar el resumen de personas agregadas
-function mostrarResumen() {
-    
+function mostrarResumen(event) {
+    event.preventDefault();
     if (!validarFormulario()) {
-        return; 
+        return;
     }
 
     const resumenElement = document.getElementById("resumen-personas");
@@ -147,13 +218,13 @@ function mostrarResumen() {
             resumenElement.innerHTML += `<p>Persona ${index + 1}: ${nombre}, DNI: ${dni}, Email: ${email}, Teléfono: ${telefono}</p>`;
         }
     });
-
-    document.getElementById("modalResumen").style.display = "flex";
+    modal.showModal();
 }
+
 
 function cerrarModal() {
     actualizarCarrito();
-    document.getElementById("modalResumen").style.display = "none";
+    modal.close();
     window.location.href = "oferta-cursos.html";
 }
 

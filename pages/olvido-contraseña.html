@@ -104,18 +104,24 @@
                         enviaremos un e-mail con un enlace para reestablecer su contraseña</p>
                 </div>
 
-                <input class="formulario__input" type="email" name="email-reestablecer-pw" id="email-reestablecer-pw"
+                <input class="formulario__input" type="text" name="email-reestablecer-pw" id="email-reestablecer-pw"
                     placeholder="Correo electrónico" required />
 
                 <button type="submit" class="formulario__boton">ACEPTAR</button>
 
+                <div>
+                    <p class="formulario__crear-cuenta">¿No tienes cueta?<a class="formulario__link-crear-cuenta"
+                            href="./crear-cuenta.html"> Crear una</a> </p>
+                </div>
+                
             </form>
         </section>
 
-        <section id="popup_olvido-pw" class="popup">
-            <p id="texto_popup" class="popup__texto"></p>
-            <button class="popup__boton" onclick="cerrarPopup_JS()">Aceptar</button>
-        </section>
+        <dialog id="modal_olvido-pw" class="modal">
+            <h3 class="modal__titulo" id="modal_titulo_olvido-pw"></h3>
+            <p class="modal__contenido" id="modal_contenido_olvido-pw"></p>
+            <button class="modal__boton" id="modal_boton_olvido-pw">Ok</button>
+        </dialog>
 
         <section class="carrito-sidebar">
             <article class="carrito-sidebar__header">

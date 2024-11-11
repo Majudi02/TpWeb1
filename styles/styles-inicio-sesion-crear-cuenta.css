@@ -22,7 +22,7 @@ main {
     flex-direction: column;
     background-color: rgb(39, 39, 39);
     min-height: 35em;
-    
+
 }
 
 .contenedor-formulario {
@@ -33,8 +33,8 @@ main {
 }
 
 
-.corregir-padding{
-    padding-top:3em ;
+.corregir-padding {
+    padding-top: 3em;
 }
 
 .contenedor-formulario .formulario {
@@ -75,12 +75,13 @@ main {
     font-size: 0.7em;
 }
 
-.formulario_mensaje-error{
-    color: rgb(247, 15, 15);
-    background-color: rgba(255, 202, 201, 0.8);
-    font-size: 0.8em;
-    font-weight: 600;
-    text-align: center;
+.contenedor-formulario .formulario .error {
+    padding: 0.5em;
+    border-radius: 0.7em;
+    color: rgb(255, 0, 0);
+    font-size: 0.7em;
+    border: 0.2em solid rgb(255, 0, 0);
+    background-color: rgb(255, 205, 205);
 }
 
 .contenedor-formulario .formulario .formulario__olvido {
@@ -164,45 +165,61 @@ main {
     padding-bottom: 0.4em;
 }
 
-.navsecundario__menu{
+.navsecundario__menu {
     display: none;
 }
 
-/*Pop-up*/
-.popup {
-    display: none;
+/*Modal INICIO*/
+.modal {
     position: fixed;
     top: 40%;
     left: 35%;
     width: 30%;
-    padding: 2em;
+    padding: 1em;
     background-color: #020202;
     border: 0.3em solid #c2c2c2;
     border-radius: 1em;
     text-align: center;
 }
 
-.popup .popup__texto{
+.modal .modal__titulo {
+    text-align: center;
+    font-size: 1.5em;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    padding-bottom: 0.5em;
+}
+
+.modal .modal__contenido {
     text-align: center;
     font-size: 1em;
     color: rgb(255, 255, 255);
     font-weight: 400;
-    padding-bottom: 1em;
+    padding-bottom: 0.3em;
 }
 
-.popup .popup__boton {
-    padding: 0.5em;
+.modal .modal__boton {
+    padding: 0.8em;
     text-align: center;
     border: 0.1em solid rgb(39, 39, 39);
-    border-radius: 1.5em;
+    border-radius: 0.5em;
     background-color: rgb(45, 86, 161);
     color: rgb(255, 255, 255);
-    font-size: 1em;
-    margin-top: 1em;
+    font-size: 0.8em;
+    margin-top: 0.3em;
     cursor: pointer;
 }
+/*Modal FIN*/
 
-.campo-autocompletado{
+.formulario_mensaje-error{
+    color: rgb(247, 15, 15);
+    background-color: rgba(255, 202, 201, 0.8);
+    font-size: 0.8em;
+    font-weight: 600;
+    text-align: center;
+}
+
+.campo-autocompletado {
     text-align: left;
     font-size: 1em;
     color: rgb(175, 174, 174);
@@ -223,7 +240,7 @@ main {
         padding-top: 13em;
     }
 
-    .corregir-padding{
+    .corregir-padding {
         padding-top: 11em;
     }
 
@@ -286,20 +303,25 @@ main {
         display: none !important;
     }
 
-    .popup {
+    .modal {
         top: 40%;
         left: 25%;
         width: 50%;
         padding: 1em;
     }
-    
-    .popup .popup__texto{
-        font-size: 0.8em;
-        padding-bottom: 0.5em;
+
+    .modal .modal__titulo {
+        font-size: 0.9em;
+        font-weight: 500;
+        padding-bottom: 0.3em;
     }
-    
-    .popup .popup__boton {
-        font-size: 0.8em;
+
+    .modal .modal__contenido {
+        font-size: 0.7em;
+    }
+
+    .modal .modal__boton {
+        font-size: 0.7em;
     }
 }
 
@@ -311,7 +333,7 @@ main {
         padding-top: 11em;
     }
 
-    .corregir-padding{
+    .corregir-padding {
         padding-top: 8em;
     }
 
@@ -388,21 +410,25 @@ main {
         font-size: 0.8em;
     }
 
-    .popup {
+    .modal {
         top: 42%;
         left: 30%;
         width: 40%;
         padding: 1em;
     }
-    
-    .popup .popup__texto{
-        font-size: 0.8em;
-        padding-bottom: 0.5em;
+
+    .modal .modal__titulo {
+        font-size: 1em;
+        font-weight: 500;
+        padding-bottom: 0.3em;
     }
-    
-    .popup .popup__boton {
+
+    .modal .modal__contenido {
         font-size: 0.8em;
+    }
+
+    .modal .modal__boton {
+        font-size: 0.7em;
     }
 
 }
-

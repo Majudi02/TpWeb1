@@ -95,12 +95,12 @@
                 <h2 class="formulario__titulo">Iniciar sesión</h2>
 
                 <label class="formulario__label" for="email-usuario">Dirección de correo electrónico</label>
-                <input class="formulario__input" type="email" name="email-usuario" id="email-usuario"
-                    placeholder="Usuario" required />
+                <input class="formulario__input" type="text" name="email-usuario" id="email-usuario"
+                    placeholder="Usuario" />
 
                 <label class="formulario__label" for="password-usuario">Contraseña</label>
                 <input class="formulario__input" type="password" name="password-usuario" id="password-usuario"
-                    placeholder="Contraseña" required />
+                    placeholder="Contraseña" />
                 <span class="formulario_mensaje-error" id="mensaje_pw_incorrecta"></span>
 
                 <a class="formulario__olvido" href="./olvido-contraseña.html">Olvidaste tu contraseña</a>
@@ -113,6 +113,12 @@
                 </div>
             </form>
         </section>
+
+        <dialog id="modal_inicio-sesion" class="modal">
+            <h3 class="modal__titulo" id="modal_titulo_inicio-sesion">¡Atención!</h3>
+            <p class="modal__contenido" id="modal_contenido_inicio-sesion">El usuario no se encuentra registrado. Vuelva a intentar o cree una cuenta nueva</p>
+            <button class="modal__boton" id="modal_boton_inicio-sesion">Ok</button>
+        </dialog>
 
         <section class="carrito-sidebar">
             <article class="carrito-sidebar__header">

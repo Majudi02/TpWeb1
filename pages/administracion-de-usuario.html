@@ -91,11 +91,9 @@
 
         <section class="contenedor-formulario corregir-padding">
             <article class="formulario">
-                <h2 class="formulario__titulo">Usted está por eliminar la siguiente cuenta</h2>
+                <h2 class="formulario__titulo">Eliminar cuenta</h2>
                 <div>
-                    <p class="formulario__indicaciones">Una vez que presione el botón, su cuenta se eliminará
-                        automáticamente
-                    </p>
+                    <p class="formulario__indicaciones">Usted está por eliminar la siguiente cuenta.</p>
                 </div>
 
                 <h3 class="formulario__label">Nombre</h3>
@@ -110,6 +108,13 @@
                 <button type="button" class="formulario__boton" id="btn_eliminar-cuenta">ELIMINAR CUENTA</button>
             </article>
         </section>
+
+        <dialog id="modal_eliminar-cuenta" class="modal">
+            <h3 class="modal__titulo" id="modal_titulo_eliminar-cuenta">¡Atención!</h3>
+            <p class="modal__contenido" id="modal_contenido_eliminar-cuenta">Usted está por eliminar permanentemente su cuenta ¿Desea continuar?</p>
+            <button class="modal__boton" id="modal_boton_eliminar-cuenta-si">SI</button>
+            <button class="modal__boton" id="modal_boton_eliminar-cuenta-no">NO</button>
+        </dialog>
 
         <section class="carrito-sidebar">
             <article class="carrito-sidebar__header">

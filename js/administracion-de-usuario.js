@@ -28,9 +28,14 @@ function cargarDatosUsuario (email){
 
 cargarDatosUsuario(emailUsuarioActivo);
 
-
-//Botón para eliminar
+//Modal de confirmación para eliminar cuenta
+const nodoModalEliminarCuenta = document.querySelector('#modal_eliminar-cuenta');
+//Botón que abre el modal para confirmar eliminar
 const nodoBotonEliminarCuenta = document.querySelector('#btn_eliminar-cuenta')
+
+nodoBotonEliminarCuenta.addEventListener ('click', (evento) => {
+    nodoModalEliminarCuenta.showModal();
+});
 
 //Eliminar usuario y actualizar local storage
 function eliminarCuenta (evento){
@@ -43,8 +48,15 @@ function eliminarCuenta (evento){
     //Actualizo y redirijo
     localStorage.setItem('usuarios', JSON.stringify(usuariosRegistrados));
     sessionStorage.clear();
-    alert('Su cuenta ha sido eliminada');
     window.location.assign('../index.html')
 }
 
-nodoBotonEliminarCuenta.addEventListener('click', eliminarCuenta);
+//Botones modal
+const nodoBotonEliminarCuentaSi = document.querySelector('#modal_boton_eliminar-cuenta-si');
+const nodoBotonEliminarCuentaNo = document.querySelector('#modal_boton_eliminar-cuenta-no');
+
+nodoBotonEliminarCuentaSi.addEventListener('click', eliminarCuenta);
+
+nodoBotonEliminarCuentaNo.addEventListener('click', (evento) => {
+    nodoModalEliminarCuenta.close();
+});

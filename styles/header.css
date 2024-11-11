@@ -2,18 +2,17 @@
     margin: 0;
     padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
 }
-
-
 
 
 .navprimario {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-direction: row;
     height: 50px;
     background-color: black;
-    padding: 8px 30px 0px 30px;
+    padding-top: 0.5em;
 
 }
 
@@ -22,13 +21,14 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 100%;
+    width: 95%;
+    margin-top: 0.5em;
 
 }
 
 .navprimario__menu-items-logo {
     display: flex;
-    width: 25%;
+    width: 28%;
 }
 
 .navprimario__menu-logo {
@@ -39,7 +39,7 @@
 
 .navprimario__menu-logo-img {
     display: flex;
-    width: 90%;
+    width: 80%;
 }
 
 .navprimario__menu-items-nombre {
@@ -53,8 +53,8 @@
     display: flex;
     position: relative;
     align-items: center;
-    width: 50%;
-    height: 60%;
+    width: 40%;
+    height: 50%;
 
 }
 
@@ -64,7 +64,7 @@
     border-style: none;
     text-indent: 10px;
     background-color: white;
-    height: 90%;
+    min-height: 95%;
     border-radius: 0;
 }
 
@@ -91,7 +91,7 @@
 
 .navprimario__menu-items-carrito {
     display: flex;
-    width: 25%;
+    width: 30%;
     align-items: center;
     flex-direction: row;
     justify-content: flex-end;
@@ -110,10 +110,11 @@
 
 .navprimario__menu-login {
     display: flex;
-    width: 28%;
+    width: 80%;
     justify-content: space-between;
+    justify-content: flex-end;
     flex-direction: row;
-    margin-right: 5%;
+
 }
 
 .navprimario__menu-login-btn {
@@ -124,7 +125,6 @@
     background-color: transparent;
     color: white;
     padding: 6% 18%;
-    margin-right: 9%;
     font-size: 0.7em;
 }
 
@@ -152,7 +152,7 @@
 /*MI PERFIL*/
 .navprimario__perfil-dropdown {
     position: relative;
-    width: 28%;
+    width: 100%;
     justify-content: space-evenly;
     flex-direction: row;
     margin-right: 1%;
@@ -165,8 +165,10 @@
     border-width: 0.13em;
     background-color: transparent;
     color: white;
-    padding: 4% 12%;
-    font-size: 0.8em;
+    padding: 6% 18%;
+    font-size: 0.7em;
+    width: 100%;
+    justify-content: center;
 }
 
 .boton_mi-perfil:hover {
@@ -247,56 +249,24 @@
 
 }
 
-@media screen and (max-width: 23em) {
-    .navprimario {
-        padding: 8px 12px 0px 12px;
-    }
-
-    .navsecundario__menu {
-        width: 40%;
-    }
-
-    .navprimario__menu-items-nombre {
-        display: none;
-
-    }
-
-    .navprimario__menu-logo-img {
-        display: flex;
-        width: 40px;
-    }
-
-    .navprimario__menu-items-carrito-btn {
-        display: none;
-    }
-
-    .navprimario__menu-items-carrito-img {
-        margin-left: 81%;
-    }
-
-    .navprimario__menu-login {
-        width: 84%;
-        margin-right: 8%;
-    }
-
-
-    .navsecundario__menu {
-        width: 90%;
-        font-size: 0.55em;
-    }
-
-    .navprimario__menu-items-buscador-button {
-        width: 7%
-    }
-
-}
 
 /*Mobile Devices*/
-@media screen and (min-width: 23em) and (max-width: 47.9em) {
+@media screen and (max-width: 47.9em) {
 
+    .navprimario{
+        padding-top: 0.2em;
+    }
+    
     .navsecundario__menu {
         width: 80%;
         font-size: 0.7em;
+    }
+
+    .navprimario__menu-items-logo{
+        width: 15%;
+        justify-content: center;
+        padding-right: 1em;
+
     }
 
     .navprimario__menu-items-nombre {
@@ -304,12 +274,12 @@
     }
 
     .navprimario__menu-logo {
-        width: 31%;
+        width: 28%;
     }
 
     .navprimario__menu-logo-img {
         display: flex;
-        width: 48px;
+        width: 2.5em;
         top: 1.5%;
     }
 
@@ -323,7 +293,6 @@
 
     .navprimario__menu-items-carrito {
         width: 25%;
-
     }
 
     .navprimario__menu-items-carrito-btn {
@@ -331,16 +300,17 @@
     }
 
     .navprimario__menu-items-carrito-img {
-        margin-left: 81%;
+        margin-left: 85%;
     }
 
     .navprimario__menu-login {
         width: 32%;
-        margin-right: 19%;
+        margin-right: 50%;
     }
 
     .boton_mi-perfil {
-        font-size: 0.6em;
+        font-size: 0.5em;
+        padding: 0.2em;
     }
     .navprimario__menu-login-btn {
         font-size: 0.5em;

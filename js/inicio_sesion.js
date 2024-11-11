@@ -3,24 +3,51 @@
 //#password-usuario
 
 //1. Validar que los campos estén completos
-
 function validarFormIniciarSesion() {
-    const nodoFormularioInicio = document.querySelector('#form_iniciar-sesion');
-    //Validación con HTML 5
-    if (!nodoFormularioInicio.checkValidity()) {
-        nodoFormularioInicio.reportValidity();
+    const nodoEmail = document.querySelector('#email-usuario');
+    const nodoPassword = document.querySelector('#password-usuario');
+
+    // Validación del email
+    const reglaEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!reglaEmail.test(nodoEmail.value.trim())) {
+        nodoEmail.value = ''; 
+        nodoEmail.placeholder = 'Correo electrónico no válido. Verifique el formato ingresado';
+        nodoEmail.classList.add('error');
         return false;
+    } else {
+        nodoEmail.classList.remove('error');
+    }
+
+    //Validación de la contraseña
+    if (nodoPassword.value.trim() === '') {
+        nodoPassword.placeholder = 'Ingrese su contraseña';
+        nodoPassword.classList.add('error');
+        return false;
+    } else {
+        nodoPassword.classList.remove('error');
     }
    
     return true;
 }
 
-//Función para guardar usuario en el session storage
+//2. Función para guardar usuario en el session storage
 function guardarUsuarioSesion (emailUsuario){
     sessionStorage.setItem('ultimoUsuarioLogueado', emailUsuario)
 }
 
-//2. Verificar si el usuario existe y si su contraseña es correcta
+//3. Preparo modal de alerta
+const nodoModalInicioSesion = document.querySelector('#modal_inicio-sesion');
+const nodoModalBoton = document.querySelector('#modal_boton_inicio-sesion')
+
+function crearModalUsuarioExistente() {
+    nodoModalInicioSesion.showModal();
+    nodoModalBoton.addEventListener('click', (event) => {
+        nodoModalInicioSesion.close();
+    });
+}
+
+
+//4. Verificar si el usuario existe y si su contraseña es correcta
 
 function validarUsuario(evento){
     evento.preventDefault();
@@ -34,7 +61,7 @@ function validarUsuario(evento){
     const usuariosRegistradosJSON = localStorage.getItem('usuarios');
 
     if(!usuariosRegistradosJSON){
-        alert('El usuario no se encuentra registrado'); //Cambiar por pop-up
+        crearModalUsuarioExistente();
         return;
     }else{
         usuariosRegistrados = JSON.parse(usuariosRegistradosJSON);
@@ -46,7 +73,7 @@ function validarUsuario(evento){
     const passwordUsuario = document.querySelector('#password-usuario').value; //Contraseña ingresada por el usuario
     
     if(!usuariosRegistrados[emailUsuario]){
-        alert('El usuario no se encuentra registrado'); //Cambiar por pop-up
+        crearModalUsuarioExistente();
         return;
     }
     
@@ -60,6 +87,6 @@ function validarUsuario(evento){
         }
 }
 
-//Llamo al evento
+//5. Llamo al evento
 const nodoFormularioInicio = document.querySelector('#form_iniciar-sesion');
 nodoFormularioInicio.addEventListener('submit', validarUsuario);
