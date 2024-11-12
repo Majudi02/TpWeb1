@@ -97,16 +97,22 @@
         </div>
         <section class="contenedor-formulario">
             <div class="formulario-contacto">
-                <form class="grupo-formulario" method="post" action="../index.html">
+                <form id="form_contacto" class="grupo-formulario" method="post" action="../index.html">
                     <h2>Contactate con nosotros</h2>
-                    <input type="text" name="name" id="name" placeholder="Nombre" required>
-                    <input type="email" name="email" id="email" placeholder="Correo" required>
-                    <input type="tel" name="tel" id="tel" placeholder="Teléfono" required>
-                    <textarea name="mensaje" id="mensaje" placeholder="Mensaje" maxlength="1000" required></textarea>
+                    <input type="text" name="nombre-contacto" id="nombre-contacto" placeholder="Nombre">
+                    <input type="text" name="email-contacto" id="email-contacto" placeholder="Correo">
+                    <input type="tel" name="tel-contacto" id="tel-contacto" placeholder="Teléfono">
+                    <textarea name="mensaje-contacto" id="mensaje-contacto" placeholder="Mensaje" maxlength="1000"></textarea>
                     <p id="contador-caracteres">1000 caracteres restantes</p>
-                    <article id="mensaje_error" class="error"></article>
                     <button class="boton-enviar">Enviar</button>
                 </form>
+
+                <dialog id="modal_contacto" class="modal">
+                    <h3 class="modal__titulo" id="modal_titulo_contacto">¡Consulta enviada correctamente!</h3>
+                    <p class="modal__contenido" id="modal_contenido_contacto">Gracias por contactarse con nosotros, a la brevedad responderemos su consulta.</p>
+                    <button class="modal__boton" id="modal_boton_contacto">Ok</button>
+                </dialog>                
+
                 <div class="grupo-formulario datos-contacto">
                     <h2>Información de contacto</h2>
                     <p><strong>Dirección</strong></p>
@@ -118,13 +124,6 @@
                 </div>
             </div>
         </section>
-
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <h2>Consulta enviada</h2>
-                <button id="boton-modal">Aceptar</button>
-            </div>
-        </div>
 
         <section class="ubicacion">
             <h2>Ubicación</h2>

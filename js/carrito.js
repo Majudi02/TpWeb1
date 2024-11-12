@@ -149,8 +149,8 @@ function eliminarGiftcard(codigo) {
   carrito.giftCard = carrito.giftCard.filter(giftCard => giftCard.codigo !== codigo);
   
   
+  calcularPrecioTotalDelCarrito(carrito);
   guardarCursoEnElCarrito(carrito);
-
   displayCurso();
   actualizarContadorDeCarrito();
 }

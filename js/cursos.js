@@ -48,7 +48,7 @@ const botonPagar = document.querySelector(".curso_informacion__button");
 
 
 if (cursoSeleccionado.modalidad === "Virtual") {
-    botonPagar.textContent = 'Pagar';
+    botonPagar.textContent = 'Agregar al carrito';
 } else {
     botonPagar.textContent = 'Inscribirse';
     botonPagar.href = `./form-de-inscripcion.html?id=${idCurso}`;
