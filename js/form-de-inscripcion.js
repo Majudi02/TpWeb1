@@ -231,7 +231,7 @@ function mostrarResumen(event) {
 function cerrarModal() {
     actualizarCarrito();
     modal.close();
-    window.location.href = "index.html";
+    window.location.assign('../index.html');
 }
 
 window.onload = actualizarCurso;
