@@ -64,6 +64,33 @@
     left: 2%; 
 }
 
+.indicadores {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.indicador {
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.indicador.active {
+    opacity: 1;
+    background-color: rgb(113, 122, 248);
+}
+
 /*Sección pasos*/
 
 .section-pasos {
