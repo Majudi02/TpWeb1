@@ -65,9 +65,7 @@ btnEliminarCuenta.addEventListener('click', () => {
 
 //BUSCADOR
 //En sessionStorage: 'ListaDeCursos' -> Array con info de los cursos. Atributo de interes = 'nombre'.
-//#input-buscador
-//#datalist-buscador
-//<option></option>
+
 const nodoInputBuscador = document.querySelector('#input-buscador');
 const nodoDatalistBuscador = document.querySelector('#datalist-buscador');
 let listadoDeCursosBuscador = [];
@@ -113,8 +111,8 @@ nodoInputBuscador.addEventListener('change', () => {
         const esPage = rutaActual.includes('/pages/'); //Esto me devuelve true or false
 
         // Ajustar la ruta del enlace según la ubicación
-        const baseRuta = esPage ? '' : 'pages/';
-        window.location.href = `${baseRuta}descripcion.del-curso.html?id=${cursoEncontrado.id}`;
+        const baseRuta = esPage ? '' : './pages';
+        window.location.href = `${baseRuta}./descripcion.del-curso.html?id=${cursoEncontrado.id}`;
     } else {
         console.log('Curso no encontrado.');
     }
