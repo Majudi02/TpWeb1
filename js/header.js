@@ -111,8 +111,8 @@ nodoInputBuscador.addEventListener('change', () => {
         const esPage = rutaActual.includes('/pages/'); //Esto me devuelve true or false
 
         // Ajustar la ruta del enlace según la ubicación
-        const baseRuta = esPage ? '' : './pages';
-        window.location.href = `${baseRuta}./descripcion.del-curso.html?id=${cursoEncontrado.id}`;
+        const baseRuta = esPage ? '' : '/pages/';
+        window.location.href = `${baseRuta}descripcion.del-curso.html?id=${cursoEncontrado.id}`;
     } else {
         console.log('Curso no encontrado.');
     }
