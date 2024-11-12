@@ -21,7 +21,7 @@ function validarMail(email) {
 
 //Validar teléfono
 function validarTel(telefono) {
-    const regla = /^\d{4}-?\d{4}$/;
+    const regla = /^\d{4}-\d{4}$/;
     return regla.test(telefono);
 }
 
@@ -36,7 +36,7 @@ function validarFormContacto() {
 
     if (!validarMail(nodoEmailContacto.value.trim())) {
         nodoEmailContacto.value = '';
-        nodoEmailContacto.placeholder = 'Ingrese un correo con formato válido.';
+        nodoEmailContacto.placeholder = 'Ingrese un correo válido.';
         nodoEmailContacto.classList.add('error');
         return false;
     }
