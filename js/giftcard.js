@@ -150,28 +150,35 @@ nodoModalBotonGiftCard.addEventListener('click', (evento) => {
 
 //validación del formulario
 function validarFormGiftCard() {
-    const nombreDestinatario = document.querySelector('#destinatario');
-    const montoIngresado = document.querySelector('#monto');
-
     // Validación del nombre del destinatario
-    if (nombreDestinatario.value.trim() === '') {
-        nombreDestinatario.placeholder = 'Complete el nombre del destinatario';
-        nombreDestinatario.classList.add('error');
+    if (inputDestinatario.value.trim() === '') {
+        inputDestinatario.placeholder = 'Complete el nombre del destinatario';
+        inputDestinatario.classList.add('error');
         return false;
-    } else {
-        nombreDestinatario.classList.remove('error');
-    }
+    } 
     // Validación del monto ingresado
     const reglaMonto = /^[0-9]+$/;
-        if (!reglaMonto.test(montoIngresado.value.trim()) || montoIngresado.value.trim() === '') {
-        montoIngresado.placeholder = 'Ingrese un monto';
-        montoIngresado.classList.add('error-monto');
+        if (!reglaMonto.test(inputMonto.value.trim()) || inputMonto.value.trim() === '') {
+        inputMonto.placeholder = 'Ingrese un monto';
+        inputMonto.classList.add('error-monto');
         return false;
-    } else {
-        montoIngresado.classList.remove('error-monto');
-    }
+    } 
+
     return true;
 }
+
+//validacion: Funcion para remover clase error y error-monto
+inputDestinatario.addEventListener('input', () => {
+    if (inputDestinatario.classList.contains('error')) {
+        inputDestinatario.classList.remove('error');
+    }
+});
+
+inputMonto.addEventListener('input', () => {
+    if (inputMonto.classList.contains('error-monto')) {
+        inputMonto.classList.remove('error-monto');
+    }
+});
 
 
 // Guardar el código en el localStorage

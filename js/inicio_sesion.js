@@ -2,11 +2,12 @@
 //#email-usuario
 //#password-usuario
 
-//1. Validar que los campos estén completos
-function validarFormIniciarSesion() {
-    const nodoEmail = document.querySelector('#email-usuario');
-    const nodoPassword = document.querySelector('#password-usuario');
+const nodoEmail = document.querySelector('#email-usuario');
+const nodoPassword = document.querySelector('#password-usuario');
 
+//1. Validar que los campos estén completos
+function validarFormIniciarSesion() { 
+    
     // Validación del email
     const reglaEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!reglaEmail.test(nodoEmail.value.trim())) {
@@ -14,21 +15,37 @@ function validarFormIniciarSesion() {
         nodoEmail.placeholder = 'Correo electrónico no válido. Verifique el formato ingresado';
         nodoEmail.classList.add('error');
         return false;
-    } else {
-        nodoEmail.classList.remove('error');
-    }
+    } 
 
     //Validación de la contraseña
     if (nodoPassword.value.trim() === '') {
         nodoPassword.placeholder = 'Ingrese su contraseña';
         nodoPassword.classList.add('error');
         return false;
-    } else {
-        nodoPassword.classList.remove('error');
-    }
+    } 
    
     return true;
 }
+
+//validacion: Funcion para remover clase error
+function removerErroresDeInputs(inputs) {
+    inputs.forEach(input => {
+        input.addEventListener('input', () => {
+            if (input.classList.contains('error')) {
+                input.classList.remove('error');
+            }
+        });
+    });
+}
+
+// array de inputs
+const inputsFormularioInicioSesion = [
+    nodoEmail,
+    nodoPassword
+];
+
+removerErroresDeInputs(inputsFormularioInicioSesion);
+
 
 //2. Función para guardar usuario en el session storage
 function guardarUsuarioSesion (emailUsuario){

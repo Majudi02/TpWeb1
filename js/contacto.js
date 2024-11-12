@@ -32,8 +32,6 @@ function validarFormContacto() {
         nodoNombreContacto.placeholder = 'El nombre es obligatorio.';
         nodoNombreContacto.classList.add('error');
         return false;
-    }else {
-        nodoNombreContacto.classList.remove('error');
     }
 
     if (!validarMail(nodoEmailContacto.value.trim())) {
@@ -41,16 +39,6 @@ function validarFormContacto() {
         nodoEmailContacto.placeholder = 'Ingrese un correo con formato válido.';
         nodoEmailContacto.classList.add('error');
         return false;
-    } else {
-        nodoEmailContacto.classList.remove('error');
-    }
-
-    if (nodoMensajeContacto.value === '') {
-        nodoMensajeContacto.placeholder = 'Por favor ingrese su mensaje.';
-        nodoMensajeContacto.classList.add('error');
-        return false;
-    }else {
-        nodoMensajeContacto.classList.remove('error');
     }
 
     if (nodoTelefonoContacto.value !== '' && !validarTel(nodoTelefonoContacto.value.trim())) {
@@ -62,19 +50,48 @@ function validarFormContacto() {
         nodoTelefonoContacto.classList.remove('error');
         nodoTelefonoContacto.placeholder = 'Teléfono'
     }
+    
+    if (nodoMensajeContacto.value === '') {
+        nodoMensajeContacto.placeholder = 'Por favor ingrese su mensaje.';
+        nodoMensajeContacto.classList.add('error');
+        return false;
+    }
+
+    
 
     return true;
 }
 
+//Funcion para remover clase error
+function removerErroresDeInputs(inputs) {
+    inputs.forEach(input => {
+        input.addEventListener('input', () => {
+            if (input.classList.contains('error')) {
+                input.classList.remove('error');
+            }
+        });
+    });
+}
+
+// array de inputs
+const inputsFormularioContacto = [
+    nodoNombreContacto,
+    nodoEmailContacto,
+    nodoTelefonoContacto,
+    nodoMensajeContacto
+];
+
+removerErroresDeInputs(inputsFormularioContacto);
+
 //Eventos
-nodoModalBotonContacto.addEventListener('click', (_evento) =>{
+nodoModalBotonContacto.addEventListener('click', (_evento) => {
     nodoModalContacto.close();
     window.location.assign('../index.html');
 });
 
 nodoFormContacto.addEventListener('submit', (evento) => {
     evento.preventDefault();
-    if(!validarFormContacto()) return;
+    if (!validarFormContacto()) return;
     nodoModalContacto.showModal();
 });
 

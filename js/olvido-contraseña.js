@@ -10,12 +10,16 @@ function validarFormOlvidoPw () {
         nodoEmailIngresado.placeholder = 'Correo electrónico no válido. Verifique el formato ingresado';
         nodoEmailIngresado.classList.add('error');
         return false;
-    } else {
-        nodoEmailIngresado.classList.remove('error');
-    }
+    } 
     return true;
 }
 
+//Funcion para remover clase error
+nodoEmailIngresado.addEventListener('input', () => {
+            if (nodoEmailIngresado.classList.contains('error')) {
+                nodoEmailIngresado.classList.remove('error');
+            }
+        });
 
 //2.Preparo modales de alerta
 const nodoModalOlvidoPw = document.querySelector('#modal_olvido-pw');

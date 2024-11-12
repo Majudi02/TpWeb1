@@ -21,7 +21,7 @@
                     </a>
                 </div>
 
-                <form id class="navprimario__menu-items-buscador">
+                <div class="navprimario__menu-items-buscador">
                     <input class="navprimario__menu-items-buscador-input" list="buscador" type="text"
                         placeholder="Buscar">
                     <datalist id="buscador">
@@ -35,10 +35,7 @@
                     <button action="#" class="navprimario__menu-items-buscador-button" id="buscador" type="submit">
                         <img class="navprimario__menu-items-buscador-button-img" src="../assets/lupa.png" alt="Bus">
                     </button>
-                </form>
-
-
-
+                </div>
 
 
                 <div class="navprimario__menu-items-carrito">
@@ -93,34 +90,28 @@
                     src="../assets/volver.png" alt="volver-atras-flecha" /></a>
             <a class="volver-atras__texto" href="../index.html">Volver</a>
         </div>
-        <section class="contenedor-principal">
+        <section class="section-pago-tarjeta contenedor-principal">
             <article class="contenedor-principal__form">
-                <form method="get" id="form_pagar-tarjeta">
+                <form class="form-pago-tarjeta" method="get" id="form_pagar-tarjeta">
                     <label for="numero-tarjeta">Informacion de la tarjeta</label>
-                    <input type="number" id="numero-tarjeta" name="numero-tarjeta"
+                    <input class="input-form" type="number" id="numero-tarjeta" name="numero-tarjeta"
                         placeholder="1234 1234 1234 1234">
                     <div class="informacion-tarjeta-fila">
-                        <input class="vencimiento" type="text" id="vencimiento-tarjeta" name="vencimiento-tarjeta"
+                        <input class="input-form vencimiento" type="text" id="vencimiento-tarjeta" name="vencimiento-tarjeta"
                             placeholder="Vencimiento (MM/AA)">
-                        <input class="codigo-tarjeta" type="text" id="codigo-tarjeta"
+                        <input class="input-form codigo-tarjeta" type="text" id="codigo-tarjeta"
                             name="codigo-tarjeta" placeholder="Codigo (***)">
                     </div>
 
                     <label for="correo-tarjeta">Correo electronico</label>
-                    <input type="text" id="correo-tarjeta" name="correo-tarjeta" placeholder="Correo electrónico">
+                    <input class="input-form" type="text" id="correo-tarjeta" name="correo-tarjeta" placeholder="Correo electrónico">
 
                     <label for="nombre-tarjeta">Nombre del titular</label>
-                    <input type="text" id="nombre-tarjeta" name="nombre-tarjeta">
+                    <input class="input-form" type="text" id="nombre-tarjeta" name="nombre-tarjeta">
 
                     <label for="direccion-tarjeta">Direccion de facturacion</label>
-                    <input type="text" id="direccion-tarjeta" name="direccion-tarjeta" placeholder="Direccion 123">
-                        
+                    <input class="input-form" type="text" id="direccion-tarjeta" name="direccion-tarjeta" placeholder="Direccion 123">
 
-
-                    <div class="precio-total-celular">
-                        <p class="total">Total: $350.000</p>
-
-                    </div>
                     <div class="botones">
                         <button class="boton_confirmar" type="submit">CONFIRMAR </button>
                         <a class="boton_cancelar" href="../index.html">CANCELAR</a>
@@ -171,9 +162,8 @@
                     <p>Subtotal</p>
                     <p class="js-carrito-sidebar_botones__subtotal__precioTotalCarrito">0</p>
                 </div>
-                <a class="carrito-sidebar_botones__subtotal__botones" href="../pages/pagar-con-tarjeta.html">Finalizar
-                    comprar</a>
-                <a class="carrito-sidebar_botones__subtotal__botones" href="../index.html">Seguir comprando</a>
+                <a class="carrito-sidebar_botones__subtotal__botones" href="./pagar-con-tarjeta.html">Pagar</a>
+                <a class="carrito-sidebar_botones__subtotal__botones" href="./oferta-cursos.html">Seguir comprando</a>
             </article>
         </section>
 

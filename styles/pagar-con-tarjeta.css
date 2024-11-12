@@ -18,7 +18,7 @@ main {
 }
 
 
-section {
+.section-pago-tarjeta {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -29,12 +29,11 @@ section {
     flex: 1;
 }
 
-form {
+.form-pago-tarjeta {
     display: flex;
     flex-direction: column;
     width: 40%;
     margin-left: 20%;
-    /* margin-top: 12%; */
 }
 
 
@@ -45,7 +44,7 @@ label {
     font-weight: 500;
 }
 
-input {
+.input-form {
     margin: 0;
     padding: 1.5%;
     border-radius: 30px;
@@ -76,10 +75,6 @@ input {
     justify-content: space-between;
     margin-top: 10%;
     margin-bottom: 10%;
-}
-
-.precio-total-celular {
-    display: none;
 }
 
 .botones {
@@ -355,33 +350,28 @@ input[type=number] {
         display: none;
     }
 
-    section {
+    .section-pago-tarjeta {
         flex-direction: column;
         flex-direction: column-reverse;
         margin-top: 2%;
     }
 
-    article {
+    .contenedor-principal__form {
         width: 100%;
     }
 
-
-    article form {
+    .form-pago-tarjeta {
         display: flex;
         align-items: center;
-    }
-
-
-    form {
         width: 100%;
-        margin-left: 0;
+        margin-left: 0; 
     }
 
     label {
         font-size: 1.2em;
     }
 
-    input {
+    .input-form {
         width: 70%;
     }
 
@@ -389,42 +379,26 @@ input[type=number] {
         width: 70%;
     }
 
-    article .precio-total {
-        display: none;
+    .precio-total {
+        font-size: 0.7em;
     }
 
-    form .precio-total-celular {
-        display: flex;
-    }
-
-    form .botones {
-        width: 80%;
+    
+    .form-pago-tarjeta .botones {
+        width: 85%;
         margin-bottom: 10em;
     }
 
-    section .cursos {
+    .section-pago-tarjeta .cursos {
         max-width: 90%;
         margin: 0em 1em;
         padding: 3em;
     }
 
-    section .cursos .curso_seleccionado {
+    .section-pago-tarjeta .cursos .curso_seleccionado {
         width: 100%;
     }
 
-    section article form .precio-total-celular {
-        display: flex;
-        width: 100%;
-        margin-top: 5em;
-        justify-content: center;
-    }
-
-    section article form .precio-total-celular .total {
-        align-self: center;
-        font-size: 1.2em;
-        margin-left: 1.5em;
-        font-weight: bold;
-    }
 
     .curso_seleccionado_imagen {
         width: 25%;
@@ -462,10 +436,6 @@ input[type=number] {
         overflow-x: hidden;
     }
 
-    section {
-   /*     margin-top: 10%; */
-    }
-
     .cursos {
         max-width: 43%;
         font-size: 0.9em;
@@ -481,7 +451,7 @@ input[type=number] {
         margin-left: 1em;
     }
 
-    form {
+    .form-pago-tarjeta {
         width: 60%;
     }
 
@@ -549,7 +519,7 @@ input[type=number] {
         font-size: 0.9em;
     }
 
-    section {
+    .section-pago-tarjeta {
         margin-top: 3%;
     }
 
@@ -557,7 +527,7 @@ input[type=number] {
         width: 19%;
     }
 
-    form {
+    .form-pago-tarjeta {
         width: 60%;
     }
 
@@ -565,24 +535,3 @@ input[type=number] {
 
 /*  End Laptop devices   */
 
-
-.carrito-sidebar__header {
-    display: flex;
-    height: 5%;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 1em;
-    margin-top: 1em;
-    border-bottom: 2px solid white;
-    padding-bottom: 1.5em;
-    margin-inline:1em;
-    width: 95%;
-}
-
-.carrito-sidebar_botones {
-    margin-top: auto;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1em;
-    width: 100%;
-}

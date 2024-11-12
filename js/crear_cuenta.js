@@ -14,9 +14,7 @@ function validarFormCrearCuenta() {
         nodoNombre.placeholder = 'El nombre es obligatorio';
         nodoNombre.classList.add('error');
         return false;
-    } else {
-        nodoNombre.classList.remove('error');
-    }
+    } 
     // Validación del apellido
     const reglaApellido = /^[a-zA-Z\s]+$/;
     if (!reglaApellido.test(nodoApellido.value.trim())) {
@@ -24,9 +22,7 @@ function validarFormCrearCuenta() {
         nodoApellido.placeholder = 'El apellido es obligatorio';
         nodoApellido.classList.add('error');
         return false;
-    } else {
-        nodoApellido.classList.remove('error');
-    }
+    } 
 
     // Validación del email
     const reglaEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -35,8 +31,6 @@ function validarFormCrearCuenta() {
         nodoEmail.placeholder = 'Correo electrónico no válido. Verifique el formato ingresado';
         nodoEmail.classList.add('error');
         return false;
-    } else {
-        nodoEmail.classList.remove('error');
     }
 
     // Validación de la contraseña
@@ -46,12 +40,31 @@ function validarFormCrearCuenta() {
         nodoPassword.placeholder = 'La contraseña debe tener al menos 4 letras y 4 números';
         nodoPassword.classList.add('error');
         return false;
-    } else {
-        nodoPassword.classList.remove('error');
     }
 
     return true;
 }
+
+//Funcion para remover clase error
+function removerErroresDeInputs(inputs) {
+    inputs.forEach(input => {
+        input.addEventListener('input', () => {
+            if (input.classList.contains('error')) {
+                input.classList.remove('error');
+            }
+        });
+    });
+}
+
+// array de inputs
+const inputsFormularioCrearCuenta = [
+    nodoNombre,
+    nodoApellido,
+    nodoEmail,
+    nodoPassword
+];
+
+removerErroresDeInputs(inputsFormularioCrearCuenta);
 
 //2.Preparo modales de alerta
 const nodoModalCrearCuenta = document.querySelector('#modal_crear-cuenta');
