@@ -158,7 +158,8 @@ function validarFormGiftCard() {
     } 
     // Validación del monto ingresado
     const reglaMonto = /^[0-9]+$/;
-        if (!reglaMonto.test(inputMonto.value.trim()) || inputMonto.value.trim() === '') {
+        if (!(reglaMonto.test(inputMonto.value.trim()) && Number(inputMonto.value.trim()) >= 1) || inputMonto.value.trim() === '') {
+        inputMonto.value = '';
         inputMonto.placeholder = 'Ingrese un monto';
         inputMonto.classList.add('error-monto');
         return false;
